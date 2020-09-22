@@ -13,17 +13,14 @@ private _guer_approved = [
   "76561198151849436"  // capitan
 ];
 
-_west_approved append call compile preprocessFile "curators.sqf";
-_guer_approved append call compile preprocessFile "curators.sqf";
-_west_approved = _west_approved arrayIntersect _west_approved;
-_guer_approved = _guer_approved arrayIntersect _guer_approved;
-
 if (_player isKindOf "VirtualCurator_F") then {
   true call ZONT_fnc_checkCuratorPermission;
 };
 
+private _testZeus = { !call ZONT_fnc_checkCuratorPermission };
+
 if (side _player == blufor) then {
-  if (!(getPlayerUID _player in _west_approved)) then {
+  if (!(getPlayerUID _player in _west_approved) && _testZeus) then {
     systemChat "У вас нет прав играть за США";
     failMission "incwest";
     forceEnd;
@@ -32,8 +29,8 @@ if (side _player == blufor) then {
   _player setPos getPos MP_spawn_west;
 };
 
-if (side _player == blufor) then {
-  if (!(getPlayerUID _player in _west_approved)) then {
+if (side _player == resistance) then {
+  if (!(getPlayerUID _player in _guer_approved) && _testZeus) then {
     systemChat "У вас нет прав играть за Зеленых";
     failMission "incguer";
     forceEnd;
