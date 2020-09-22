@@ -1,7 +1,7 @@
 params [["_exit", false], ["_player", player]];
 if (typeName _exit != typeName false) then { _exit = false };
 
-if (isNil 'MPF_curators') then { MPV_curators = call compile preprocessFile "curators.sqf" };
+if (isNil 'MPV_curators') then { MPV_curators = call compile preprocessFile "curators.sqf" };
 
 private _bool = true;
 if (local _player) then {
