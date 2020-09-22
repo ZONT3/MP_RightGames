@@ -5,7 +5,18 @@ private _west_approved = [
   "76561198049381049"  // Мельников
 ];
 
+private _guer_approved = [
+  "76561198842934104", // Питяра
+  "76561198038878049", // evil
+  "76561198078315301", // Shaer
+  "76561199026327776", // Вредный коте
+  "76561198151849436"  // capitan
+];
+
 _west_approved append call compile preprocessFile "curators.sqf";
+_guer_approved append call compile preprocessFile "curators.sqf";
+_west_approved = _west_approved arrayIntersect _west_approved;
+_guer_approved = _guer_approved arrayIntersect _guer_approved;
 
 if (_player isKindOf "VirtualCurator_F") then {
   true call ZONT_fnc_checkCuratorPermission;
@@ -19,6 +30,16 @@ if (side _player == blufor) then {
     false;
   };
   _player setPos getPos MP_spawn_west;
+};
+
+if (side _player == blufor) then {
+  if (!(getPlayerUID _player in _west_approved)) then {
+    systemChat "У вас нет прав играть за Зеленых";
+    failMission "incguer";
+    forceEnd;
+    false;
+  };
+  _player setPos getPos MP_spawn_guer;
 };
 
 if (side _player == opfor) then {
