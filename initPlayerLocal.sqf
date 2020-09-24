@@ -17,10 +17,10 @@ if (_player isKindOf "VirtualCurator_F") then {
   true call ZONT_fnc_checkCuratorPermission;
 };
 
-private _testZeus = { !call ZONT_fnc_checkCuratorPermission };
+private _notGM = { !([] call ZONT_fnc_checkCuratorPermission) };
 
 if (side _player == blufor) then {
-  if (!(getPlayerUID _player in _west_approved) && _testZeus) then {
+  if (!(getPlayerUID _player in _west_approved) && _notGM) then {
     systemChat "У вас нет прав играть за США";
     failMission "incwest";
     forceEnd;
@@ -30,7 +30,7 @@ if (side _player == blufor) then {
 };
 
 if (side _player == resistance) then {
-  if (!(getPlayerUID _player in _guer_approved) && _testZeus) then {
+  if (!(getPlayerUID _player in _guer_approved) && _notGM) then {
     systemChat "У вас нет прав играть за Зеленых";
     failMission "incguer";
     forceEnd;
