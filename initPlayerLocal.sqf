@@ -13,67 +13,57 @@ private _guer_approved = [
   "76561198151849436"  // capitan
 ];
 
-if (_player isKindOf "VirtualCurator_F") then {
+private _fn_notGM = { !([] call ZONT_fnc_checkCuratorPermission) };
+
+private _fn_moveToSpawn = {
+  params ["_player", "_cg"];
+  private _side = side _player;
+  private _spawn = MP_spawn_east;
+  if (_side == west)       then { _spawn = MP_spawn_west };
+  if (_side == resistance) then { _spawn = MP_spawn_guer };
+  if (!isNil '_spawn') then {
+    _player setPosATL getPosATL _spawn;
+  };
+  if (_cg) then {
+    private _g = createGroup _side;
+    [_player] joinSilent _g;
+    _g deleteGroupWhenEmpty true;
+  };
+};
+
+private _isSlotPlayer  = side _player in [blufor, opfor, independent];
+private _isSlotCurator = !_isSlotPlayer and { _player isKindOf "VirtualCurator_F" };
+
+private _addTPB = _isSlotPlayer && _fn_notGM;
+
+if (_isSlotCurator) then {
   true call ZONT_fnc_checkCuratorPermission;
 };
 
-private _notGM = { !([] call ZONT_fnc_checkCuratorPermission) };
-
 if (side _player == blufor) then {
-  if (!(getPlayerUID _player in _west_approved) && _notGM) then {
+  if (!(getPlayerUID _player in _west_approved) && _fn_notGM) exitWith {
     systemChat "У вас нет прав играть за США";
     failMission "incwest";
     forceEnd;
-    false;
   };
-  _player setPos getPos MP_spawn_west;
+  [_player, true] call _fn_moveToSpawn;
 };
 
-if (side _player == resistance) then {
-  if (!(getPlayerUID _player in _guer_approved) && _notGM) then {
+if (side _player == independent) then {
+  if (!(getPlayerUID _player in _guer_approved) && _fn_notGM) exitWith {
     systemChat "У вас нет прав играть за Зеленых";
     failMission "incguer";
     forceEnd;
-    false;
   };
-  _player setPos getPos MP_spawn_guer;
+  [_player, false] call _fn_moveToSpawn;
 };
 
 if (side _player == opfor) then {
-  /*****                       Move player to spawn                       *****/
-  _player setPos getPos MP_spawn_east;
-  private _g = createGroup opfor;
-  [_player] joinSilent _g;
-  _g deleteGroupWhenEmpty true;
+  [_player, true] call _fn_moveToSpawn;
+};
 
-  /*****                       Markers for Leaders                        *****/
-  /* MPC_ldSpawn = [] spawn {
-    while {true} do {
-        if (leader player == player) then {
-          private _i = 0;
-          {
-            if (_x != player) then {
-              if (!isNil 'MPC_ldMrks') then {
-                {
-                  deleteMarkerLocal _x;
-                } forEach MPC_ldMrks;
-              };
-              MPC_ldMrks = [];
-              private _mrk = createMarkerLocal [format ["MPM_ldMrks_%1", _i], position _x];
-              _mrk setMarkerTextLocal name _x;
-              _mrk setMarkerShapeLocal "ICON";
-              _mrk setMarkerTypeLocal "hd_dot";
-              MPC_ldMrks pushBack _mrk;
-              _i = _i + 1;
-            }
-          } forEach units group player;
-        };
-        sleep 0.2;
-    }
-  }; */
-
-  /*****                     Add third-person blocker                     *****/
-  if ([] call ZONT_fnc_checkCuratorPermission) exitWith {};
+/*****                     Add third-person blocker                     *****/
+if (_addTPB) then {
   MPC_tpTriggers = "MPT_thirdPerson" call ZONT_fnc_getTriggers;
   MPC_tpSpawn = [] spawn {
     while {true} do {
@@ -102,8 +92,7 @@ if (side _player == opfor) then {
       systemChat "Третье лицо вне базы разрешено только в технике!"
     }
   }] call CBA_fnc_addPerFrameHandler;
-
-}; // if side == opfor
+};
 
 /*****                         Add plane reverse                          *****/
 ["AllowPlanesToReverseCheck", "onEachFrame", {
@@ -131,3 +120,29 @@ if (side _player == opfor) then {
    };
   };
 }] call BIS_fnc_addStackedEventHandler; //By: Roque_THE_GAMER
+
+/*****                       Markers for Leaders                        *****/
+/* MPC_ldSpawn = [] spawn {
+  while {true} do {
+      if (leader player == player) then {
+        private _i = 0;
+        {
+          if (_x != player) then {
+            if (!isNil 'MPC_ldMrks') then {
+              {
+                deleteMarkerLocal _x;
+              } forEach MPC_ldMrks;
+            };
+            MPC_ldMrks = [];
+            private _mrk = createMarkerLocal [format ["MPM_ldMrks_%1", _i], position _x];
+            _mrk setMarkerTextLocal name _x;
+            _mrk setMarkerShapeLocal "ICON";
+            _mrk setMarkerTypeLocal "hd_dot";
+            MPC_ldMrks pushBack _mrk;
+            _i = _i + 1;
+          }
+        } forEach units group player;
+      };
+      sleep 0.2;
+  }
+}; */
