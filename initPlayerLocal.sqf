@@ -149,4 +149,4 @@ if (_addTPB) then {
 }; */
 
 /***** Chat commands *****/
-[_isSlotPlayer, _isSlotCurator] execVM "chatCommands.sqf";
+[_isSlotPlayer, ! call _fn_notgm] execVM "chatCommands.sqf";
