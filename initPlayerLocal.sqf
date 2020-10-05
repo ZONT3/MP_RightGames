@@ -147,3 +147,6 @@ if (_addTPB) then {
       sleep 0.2;
   }
 }; */
+
+/***** Chat commands *****/
+[_isSlotPlayer, _isSlotCurator] execVM "chatCommands.sqf";
