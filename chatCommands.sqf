@@ -6,9 +6,7 @@ call {
     {   // condition
       params ["_target", "_caller", "_inpt", "_args"];
       _target == _caller or {
-        (_target distance _caller < 51) or {
-
-        }
+        (_target distance _caller < 51)
       };
     },
     {  // code
