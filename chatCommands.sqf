@@ -30,7 +30,7 @@ call {
   ] call ZONT_fnc_addChatCommand;
 
   [ "try",
-  [[ ], // args
+  [ selectRandom ["Успешно", "Неудачно"], // args
     {   // condition
       params ["_target", "_caller", "_inpt", "_args"];
       _target == _caller or {
@@ -39,8 +39,7 @@ call {
     },
     {  // code
       params ["_target", "_caller", "_inpt", "_args"];
-      private _bool = ["Успешно","Неудачно"];
-      systemChat format ["** %1 %2 | %3 **", name _caller, _inpt, selectrandom _bool];
+      systemChat format ["** %1 %2 | %3 **", name _caller, _inpt, _args];
     }]
   ] call ZONT_fnc_addChatCommand;
 
