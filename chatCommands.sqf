@@ -44,7 +44,7 @@ call {
   ] call ZONT_fnc_addChatCommand;
 
   [ "roll",
-  [[ ], // args
+  [ floor random 101, // args
     {   // condition
       params ["_target", "_caller", "_inpt", "_args"];
       _target == _caller or {
@@ -53,8 +53,7 @@ call {
     },
     {  // code
       params ["_target", "_caller", "_inpt", "_args"];
-      private _roll = floor random 101;
-      systemChat format ["** %1 бросает кубик на %2 **", name _caller, _roll];
+      systemChat format ["** %1 бросает кубик на %2 **", name _caller, _args];
     }]
   ] call ZONT_fnc_addChatCommand;
 
