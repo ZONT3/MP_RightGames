@@ -15,21 +15,27 @@
             1: OBJECT: Caller unit (player)
             2: STRING: Input string from chat
             3: ANY   : Arguments from 0 param
-          params ["_target", "_caller", "_inpt", "_args"];
+            4: ANY   : Result from parent's 3rd param
+          params ["_target", "_caller", "_inpt", "_args", "_res"];
+        3: CODE: code to be executed on caller machine, provides its result to global script (4th param)
+          params ["_caller", "_inpt", "_args"];
 */
 
 params [["_comm", "", [""]], ["_effect", [], [[]]]];
 
 
 private _code = {
-  _thisArgs params ["_args", "_cond", "_code"];
+  _thisArgs params ["_args", "_cond", "_code", "_pre"];
   private _newArgs = [player, _this select 0, _args];
+  _newArgs pushBack ( _newArgs call _pre );
   {
     if (([_x] + _newArgs) call _cond) then {
       [[_x] + _newArgs, _code] remoteExec ["BIS_fnc_call", _x];
     }
   } forEach allPlayers;
 };
+
+if (count _effect == 3) then { _effect pushBack {nil} };
 
 [
   _comm,
