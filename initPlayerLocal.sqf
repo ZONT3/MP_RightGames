@@ -32,6 +32,8 @@ private _fn_moveToSpawn = {
   };
 };
 
+private _playerUID = getPlayerUID _player;
+
 private _isSlotPlayer  = side _player in [blufor, opfor, independent];
 private _isSlotCurator = !_isSlotPlayer and { _player isKindOf "VirtualCurator_F" };
 
@@ -42,7 +44,7 @@ if (_isSlotCurator) then {
 };
 
 if (side _player == blufor) then {
-  if (!(getPlayerUID _player in _west_approved) && _fn_notGM) exitWith {
+  if (!(_playerUID in _west_approved) && _fn_notGM) exitWith {
     systemChat "У вас нет прав играть за США";
     failMission "incwest";
     forceEnd;
@@ -51,7 +53,7 @@ if (side _player == blufor) then {
 };
 
 if (side _player == independent) then {
-  if (!(getPlayerUID _player in _guer_approved) && _fn_notGM) exitWith {
+  if (!(_playerUID in _guer_approved) && _fn_notGM) exitWith {
     systemChat "У вас нет прав играть за Зеленых";
     failMission "incguer";
     forceEnd;
@@ -122,7 +124,7 @@ if (_addTPB) then {
   };
 }] call BIS_fnc_addStackedEventHandler; //By: Roque_THE_GAMER
 
-/*****                       Markers for Leaders                        *****/
+/*****                        Markers for Leaders                         *****/
 /* MPC_ldSpawn = [] spawn {
   while {true} do {
       if (leader player == player) then {
@@ -148,5 +150,32 @@ if (_addTPB) then {
   }
 }; */
 
-/***** Chat commands *****/
+/*****                    Auto save request on escape                     *****/
+MPC_AUTOSAVE_PREV = false;
+MPC_ausvHandler = [{
+  if (isNull findDisplay 49) exitWith
+    { if (MPC_AUTOSAVE_PREV) then { MPC_AUTOSAVE_PREV = false } };
+  if (MPC_AUTOSAVE_PREV) exitWith { };
+  MPC_AUTOSAVE_PREV = player call ZONT_fnc_saveProfile;
+  if (MPC_AUTOSAVE_PREV) then {
+    [findDisplay 49, "Позиция и лут сохранены", 3] call ZONT_fnc_showTextLC;
+  };
+}] call CBA_fnc_addPerFrameHandler;
+
+/*****                  Presistance for pos and loadout                   *****/
+MPC_canSave = false;
+_n = [_player, _playerUID] spawn {
+  params ["_player", "_playerUID"];
+  private _presistance = [_player, _playerUID] call ZONT_fnc_checkPresistance;
+  private _absent = isNil '_presistance' or typeName _presistance != typeName [] or { count _presistance != 2 };
+  _absent = _absent or { count (_presistance select 1) != 3 };
+  if (_absent) exitWith { };
+  _presistance params ["_load", "_pos"];
+  private _tp = ["Телепортироваться на последнее сохраненное место?\nЭкипировка будет восстановлена в любом случае", "Right Games", "Да", "Нет"] call BIS_fnc_guiMessage;
+  if (_tp) then { _player setPosATL _pos };
+  _player setUnitLoadout _load;
+  MPC_canSave = true;
+};
+
+
 [_isSlotPlayer, ! call _fn_notgm] execVM "chatCommands.sqf";
