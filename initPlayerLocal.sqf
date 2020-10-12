@@ -124,31 +124,28 @@ if (_addTPB) then {
   };
 }] call BIS_fnc_addStackedEventHandler; //By: Roque_THE_GAMER
 
-/*****                        Markers for Leaders                         *****/
-/* MPC_ldSpawn = [] spawn {
-  while {true} do {
-      if (leader player == player) then {
-        private _i = 0;
-        {
-          if (_x != player) then {
-            if (!isNil 'MPC_ldMrks') then {
-              {
-                deleteMarkerLocal _x;
-              } forEach MPC_ldMrks;
-            };
-            MPC_ldMrks = [];
-            private _mrk = createMarkerLocal [format ["MPM_ldMrks_%1", _i], position _x];
-            _mrk setMarkerTextLocal name _x;
-            _mrk setMarkerShapeLocal "ICON";
-            _mrk setMarkerTypeLocal "hd_dot";
-            MPC_ldMrks pushBack _mrk;
-            _i = _i + 1;
-          }
-        } forEach units group player;
-      };
-      sleep 0.2;
-  }
-}; */
+/*****                        Markers for GPS                             *****/
+MPC_ldHandler = [{
+  private _i = 0;
+  if (!isNil 'MPC_ldMrks') then {
+    {
+      deleteMarkerLocal _x;
+    } forEach MPC_ldMrks;
+  };
+  MPC_ldMrks = [];
+  {
+    if (side _x == side player and {"ItemGPS" in assignedItems _x}) then {
+      private _mrk = createMarkerLocal [format ["MPM_ldMrks_%1", _i], position _x];
+      //_mrk setMarkerTextLocal name _x;
+      _mrk setMarkerShapeLocal "ICON";
+      _mrk setMarkerTypeLocal "hd_dot";
+      _mrk setMarkerColorLocal "colorOPFOR";
+      MPC_ldMrks pushBack _mrk;
+      _i = _i + 1;
+    }
+  } forEach allPlayers;
+}, 0.2] call CBA_fnc_addPerFrameHandler;
+
 
 /*****                    Auto save request on escape                     *****/
 MPC_AUTOSAVE_PREV = false;
