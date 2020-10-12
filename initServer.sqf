@@ -13,7 +13,7 @@ MPS_spawn_ausav = [] spawn {
     sleep 60;
     {
       if ([owner _x, "MPC_canSave", false] call ZONT_fnc_getMNvar) then {
-        diag_log format ["Autosaving ", name _x];
+        diag_log format ["Autosaving %1", name _x];
         _x call ZONT_fnc_prs_saveProfile;
       }
     } forEach allPlayers;

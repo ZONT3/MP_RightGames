@@ -1,4 +1,5 @@
 if (isDedicated) exitWith { false };
+if !(missionNamespace getVariable ["MPC_canSave", false]) exitWith { false };
 if !(side player in [opfor, blufor, independent]) exitWith { false };
 
 if (isNil 'MPC_lastsave') then { MPC_lastsave = 0 };
