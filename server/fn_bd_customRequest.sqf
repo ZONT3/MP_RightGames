@@ -20,4 +20,6 @@ if (_res select 0 != 1) exitWith {
 };
 
 diag_log "Success.";
-(_res select 1) select 0;
+_res = _res select 1;
+if (typeName _res != typeName [] or { count _res != 1 }) exitWith [];
+(_res select 0);

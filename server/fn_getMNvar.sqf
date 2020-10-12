@@ -11,9 +11,10 @@ missionNamespace setVariable [_tmpn, "TSF_WAITING"];
   missionNamespace setVariable [_tmpn, nil];
 }] remoteExec ["bis_fnc_call", _id];
 
-waitUntil { sleep 0.1;
+private _strt = time;
+waitUntil { sleep 0.1; time - _strt > 10 or {
         typeName (missionNamespace getVariable [_tmpn, nil]) != typeName ""
-        or {(missionNamespace getVariable [_tmpn, nil]) != "TSF_WAITING"}; };
+        or {(missionNamespace getVariable [_tmpn, nil]) != "TSF_WAITING"} }};
 private _res = missionNamespace getVariable [_tmpn, nil];
 missionNamespace setVariable [_tmpn, nil];
 _res
