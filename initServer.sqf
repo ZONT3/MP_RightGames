@@ -12,7 +12,8 @@ MPS_spawn_ausav = [] spawn {
   while {true} do {
     sleep 60;
     {
-      if ([owner _x, "MPC_canSave", false] call ZONT_fnc_getMNvar) then {
+      private _res = [owner _x, "MPC_canSave", false] call ZONT_fnc_getMNvar;
+      if (typeName _res == typeName false and {_res}) then {
         diag_log format ["Autosaving %1", name _x];
         _x call ZONT_fnc_prs_saveProfile;
       }
