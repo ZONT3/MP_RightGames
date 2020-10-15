@@ -3,7 +3,7 @@ if (  !isServer   ) exitWith {[]};
 if (_label   == "") exitWith {[]};
 if (_request == "") exitWith {[]};
 
-diag_log format ["ZDB: Request for DB %1: %2, args: %3", _label, _request, _args];
+diag_log format ["ZDB: Request for DB %1: %2, argс: %3", _label, _request, count _args];
 
 private _argsArr = _args;
 _args = "";
