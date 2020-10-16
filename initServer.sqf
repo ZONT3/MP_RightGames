@@ -36,8 +36,8 @@ MPS_handler_status = [{
   private _all = [];
   private _gms = [];
   { private _guid = getPlayerUID _x;
+    _all pushBack _guid;
     if !(_guid in MPS_status_exclude) then {
-      _all pushBack _guid;
       if ([false, _x] call ZONT_fnc_checkCuratorPermission) then {
         _gms pushBack name _x;
       }
