@@ -29,7 +29,7 @@ private _playerUID = getPlayerUID _player;
 private _isSlotPlayer  = side _player in [blufor, opfor, independent];
 private _isSlotCurator = !_isSlotPlayer and { _player isKindOf "VirtualCurator_F" };
 
-private _addTPB = _isSlotPlayer && _fn_notGM;
+private _addTPB = false /*_isSlotPlayer && _fn_notGM*/;
 
 if (_isSlotCurator) then {
   true call ZONT_fnc_checkCuratorPermission;
