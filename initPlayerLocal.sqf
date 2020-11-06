@@ -1,17 +1,9 @@
 params ["_player", "_didJIP"];
 
 private _west_approved = [
-  "76561198058158985", // ya
-  "76561198049381049"  // Мельников
 ];
 
 private _guer_approved = [
-  "76561198842934104", // Питяра
-  "76561198038878049", // evil
-  "76561198078315301", // Shaer
-  "76561199026327776", // Вредный коте
-  "76561198140978135", // Veles
-  "76561198151849436"  // capitan
 ];
 
 private _fn_notGM = { !([] call ZONT_fnc_checkCuratorPermission) };
@@ -43,10 +35,10 @@ if (_isSlotCurator) then {
   true call ZONT_fnc_checkCuratorPermission;
 };
 
-if (side _player == blufor) then {
+if (side _player == opfor) then {
   if (!(_playerUID in _west_approved) && _fn_notGM) exitWith {
-    systemChat "У вас нет прав играть за США";
-    failMission "incwest";
+    systemChat "У вас нет прав играть";
+    failMission "inceast";
     forceEnd;
   };
   [_player, true] call _fn_moveToSpawn;
@@ -54,15 +46,15 @@ if (side _player == blufor) then {
 
 if (side _player == independent) then {
   if (!(_playerUID in _guer_approved) && _fn_notGM) exitWith {
-    systemChat "У вас нет прав играть за Зеленых";
+    systemChat "У вас нет прав играть";
     failMission "incguer";
     forceEnd;
   };
-  [_player, false] call _fn_moveToSpawn;
+  [_player, true] call _fn_moveToSpawn;
 };
 
-if (side _player == opfor) then {
-  [_player, true] call _fn_moveToSpawn;
+if (side _player == blufor) then {
+  [_player, false] call _fn_moveToSpawn;
 };
 
 /*****                     Add third-person blocker                     *****/
