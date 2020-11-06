@@ -159,10 +159,11 @@ _n = [_player, _playerUID] spawn {
   private _absent = isNil '_presistance' or typeName _presistance != typeName [] or { count _presistance != 2 };
   _absent = _absent or { count (_presistance select 1) != 3 };
   if (_absent) exitWith { MPC_canSave = true };
+  
   _presistance params ["_load", "_pos"];
-  private _tp = ["Телепортироваться на последнее сохраненное место? Экипировка будет восстановлена в любом случае", "Right Games", "Да", "Нет"] call BIS_fnc_guiMessage;
-  if (_tp) then { _player setPosATL _pos };
   _player setUnitLoadout _load;
+  private _tp = ["Телепортироваться на последнее сохраненное место? Экипировка восстановлена в любом случае", "Right Games", "Да", "Нет"] call BIS_fnc_guiMessage;
+  if (_tp) then { _player setPosATL _pos };
   MPC_canSave = true;
 };
 
