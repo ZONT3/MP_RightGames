@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 if (isNil 'MPV_BD_RESPS') then { MPV_BD_RESPS = [] };
 
 private _owner = owner _unit;
-private _res = [MPS_BDL_pres, "loadPlayer", [_uid]] call ZONT_fnc_bd_customRequest;
+private _res = ([MPS_BDL_pres, "loadPlayer", [_uid]] call ZONT_fnc_bd_customRequest) select 0;
 MPV_BD_RESPS pushBack [_owner, _res];
 _owner publicVariableClient 'MPV_BD_RESPS';
 MPV_BD_RESPS deleteAt (MPV_BD_RESPS findif compile format ["(_x select 0) == %1", _owner]);
