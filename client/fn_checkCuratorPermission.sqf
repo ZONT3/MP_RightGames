@@ -6,8 +6,10 @@ if (isServer) then {
   _curators = call ZONT_fnc_retrieveCurators;
 } else {
   MPC_curators = nil;
-  [clientOwner, {MPC_curators = call ZONT_fnc_retrieveCurators; _this publicVariableClient 'MPC_curators'}]
-      remoteExec ["BIS_fnc_call", 2];
+  [clientOwner, {
+    [] call ZONT_fnc_retrieveCurators;
+    _this publicVariableClient 'MPC_curators';
+  }] remoteExec ["BIS_fnc_call", 2];
   private _started = time;
   waitUntil {!isNil 'MPC_curators' or {time - _started > 5}};
   if (!isNil 'MPC_curators') then {
