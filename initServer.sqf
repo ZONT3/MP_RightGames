@@ -7,7 +7,10 @@ MPS_spawn_BDINIT = [] spawn {
       ["rgpresist"] call ZONT_fnc_bd_initCustom;
   MPS_BDL_status =
       ["rgstatus"] call ZONT_fnc_bd_initCustom;
+  MPS_BDL_crates =
+      ["rgcrates"] call ZONT_fnc_bd_initCustom;
 };
+
 
 /******                              Autosave                            ******/
 MPS_spawn_ausav = [] spawn {
@@ -22,6 +25,7 @@ MPS_spawn_ausav = [] spawn {
     } forEach allPlayers;
   };
 };
+
 
 /******                         Status commiting                         ******/
 MPS_status_exclude = [
@@ -45,3 +49,28 @@ MPS_handler_status = [{
   } forEach allPlayers;
   [MPS_BDL_status, "commitStatus", [_all, count _all, time, _gms]] call ZONT_fnc_bd_customRequest;
 }, 30] call CBA_fnc_addPerFrameHandler;
+
+
+/******                         Crates presistent                         ******/
+[] spawn {
+  private _i = 0;
+  waitUntil { _i = _i + 1; sleep 1; (!isNil 'MPS_cratesPresist') or {_i > 30} };
+
+  {
+    _x params ["_label", "_crate"];
+    private _presist = [MPS_BDL_crates, "loadCrate", [_label]] call ZONT_fnc_bd_customRequest;
+    if (count _presist > 0) then {
+      private _content = ((_presist select 0) select 0);
+      [_crate, _content] call ZONT_fnc_importCargo;
+    }
+  } forEach MPS_cratesPresist;
+
+  MPS_handler_cratesPresist = [{
+    {
+      _x params ["_label", "_crate"];
+      private _cargo = _crate call ZONT_fnc_exportCargo;
+      /* diag_log format ["Exporting cargo: %1", _cargo]; */
+      [MPS_BDL_crates, "saveCrate", [_label, _cargo]] call ZONT_fnc_bd_customRequest;
+    } forEach MPS_cratesPresist;
+  }, 90] call CBA_fnc_addPerFrameHandler;
+};
