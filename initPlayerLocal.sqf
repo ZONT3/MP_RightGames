@@ -35,7 +35,7 @@ if (_isSlotCurator) then {
   true call ZONT_fnc_checkCuratorPermission;
 };
 
-if (side _player == opfor) then {
+if (side _player == blufor) then {
   if (!(_playerUID in _west_approved) && _fn_notGM) exitWith {
     systemChat "У вас нет прав играть";
     failMission "inceast";
@@ -53,7 +53,7 @@ if (side _player == independent) then {
   [_player, true] call _fn_moveToSpawn;
 };
 
-if (side _player == blufor) then {
+if (side _player == opfor) then {
   [_player, false] call _fn_moveToSpawn;
 };
 
@@ -159,7 +159,7 @@ _n = [_player, _playerUID] spawn {
   private _absent = isNil '_presistance' or typeName _presistance != typeName [] or { count _presistance != 2 };
   _absent = _absent or { count (_presistance select 1) != 3 };
   if (_absent) exitWith { MPC_canSave = true };
-  
+
   _presistance params ["_load", "_pos"];
   _player setUnitLoadout _load;
   private _tp = ["Телепортироваться на последнее сохраненное место? Экипировка восстановлена в любом случае", "Right Games", "Да", "Нет"] call BIS_fnc_guiMessage;
