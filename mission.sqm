@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=7276;
+		nextID=7278;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=674;
+		nextID=678;
 	};
 	class Camera
 	{
-		pos[]={6941.2578,405.43527,11356.38};
-		dir[]={-0.93392211,-0.32760629,-0.14340551};
-		up[]={-0.32384217,0.94480556,-0.049727235};
-		aside[]={-0.15178239,2.0203879e-007,0.98846823};
+		pos[]={6874.6641,444.75168,11385.487};
+		dir[]={-0.30077288,-0.91282904,0.2763758};
+		up[]={-0.6721347,0.40840179,0.61761391};
+		aside[]={0.67664891,-8.6729415e-007,0.73638135};
 	};
 };
 binarizationWanted=0;
@@ -3829,7 +3829,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -5269,7 +5269,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0;
+														value=3;
 													};
 												};
 												class Item1
@@ -25088,7 +25088,7 @@ class Mission
 			name="Обьекты карты";
 			class Entities
 			{
-				items=554;
+				items=555;
 				class Item0
 				{
 					dataType="Object";
@@ -32621,12 +32621,12 @@ class Mission
 						angles[]={0.0011451211,2.2210641,0.008693628};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=4374;
 					type="rhsgref_ins_DSHKM";
-					atlOffset=10.180908;
 				};
 				class Item199
 				{
@@ -65010,7 +65010,7 @@ class Mission
 					};
 					id=4372;
 					type="CUP_O_SearchLight_static_ChDKZ";
-					atlOffset=0.0024108887;
+					atlOffset=0.0026550293;
 				};
 				class Item360
 				{
@@ -65027,7 +65027,7 @@ class Mission
 					};
 					id=4373;
 					type="CUP_O_SearchLight_static_ChDKZ";
-					atlOffset=0.048309326;
+					atlOffset=0.048553467;
 				};
 				class Item361
 				{
@@ -72357,9 +72357,238 @@ class Mission
 					type="Land_CastleRuins_01_wall_10m_F";
 					atlOffset=-1;
 				};
+				class Item554
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6875.6875,394.94693,11402.97};
+						angles[]={6.251193,4.0542426,0.041311946};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=7277;
+					type="rhs_gaz66_ammo_msv";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_repair_editorLoadedWheels";
+							expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="rhs_decalNumber_type";
+							expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cTrucksGaz4NumberPlaces, _value]]] call rhs_fnc_decalsInit";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Default";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="rhs_decalPlatoon_type";
+							expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Army";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[[[[],[]],[[],[]],[[""ToolKit""],[10]],[[],[]]],false]";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="rhs_decalArmy_type";
+							expression="_this setVariable ['rhs_decalArmy_type', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Army";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="ace_rearm_rearmCargo";
+							expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1800;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ace_isRepairVehicle";
+							expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairVehicle', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="rhs_decalArmy";
+							expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cTrucksGazRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="-1";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="ace_repair_editorLoadedTracks";
+							expression="_this setVariable ['ace_repair_editorLoadedTracks',_value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=3;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="ace_cargo_space";
+							expression="[_this,_value] call ace_cargo_fnc_setSpace;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=16;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="rhs_decalPlatoon";
+							expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cTrucksGazRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="-1";
+								};
+							};
+						};
+						nAttributes=11;
+					};
+				};
 			};
 			id=5792;
-			atlOffset=47.470428;
+			atlOffset=14.270935;
 		};
 		class Item24
 		{
