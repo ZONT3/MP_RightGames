@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=8577;
+		nextID=8583;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=749;
+		nextID=754;
 	};
 	class Camera
 	{
-		pos[]={4746.0488,354.13904,10347.185};
-		dir[]={-0.34327972,-0.56570345,-0.74992329};
-		up[]={-0.23554164,0.82441616,-0.51457882};
-		aside[]={-0.90938735,2.3138709e-006,0.41626754};
+		pos[]={4793.6416,371.38031,10254.123};
+		dir[]={-0.49533564,-0.54124326,0.67966801};
+		up[]={-0.31892928,0.84064972,0.43759418};
+		aside[]={0.80823892,1.2555975e-006,0.58905286};
 	};
 };
 binarizationWanted=0;
@@ -42453,7 +42453,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4900.2432,341.29468,10255.834};
-						angles[]={-0,4.2310057,0};
+						angles[]={0,4.2310057,0};
 					};
 					side="Empty";
 					flags=4;
@@ -71469,8 +71469,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ENH_disableAI_weaponAim";
+							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
 							class Value
 							{
 								class data
@@ -71482,7 +71482,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -71820,8 +71820,8 @@ class Mission
 						};
 						class Attribute13
 						{
-							property="ENH_disableAI_weaponAim";
-							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -71833,7 +71833,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -77989,7 +77989,7 @@ class Mission
 										};
 										class value
 										{
-											items=94;
+											items=98;
 											class Item0
 											{
 												class data
@@ -79306,6 +79306,62 @@ class Mission
 													value="FGN_SSH68_Flora";
 												};
 											};
+											class Item94
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="FGN_CauR_Smock_Schneetarn";
+												};
+											};
+											class Item95
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="CUP_lmg_PKMN";
+												};
+											};
+											class Item96
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="av_mask3";
+												};
+											};
+											class Item97
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="rhs_weap_akms_gp25";
+												};
+											};
 										};
 									};
 								};
@@ -79342,7 +79398,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -88319,7 +88375,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4905.27,341.39783,10210.264};
-				angles[]={-0,1.0980304,0};
+				angles[]={0,1.0980304,0};
 			};
 			side="Empty";
 			flags=4;
