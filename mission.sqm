@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=870;
+		nextID=876;
 	};
 	class Camera
 	{
-		pos[]={5040.4058,344.29187,9991.5107};
-		dir[]={0.036800675,-0.19132297,0.98095572};
-		up[]={0.007178036,0.98149389,0.19133911};
-		aside[]={0.99941093,-9.1868969e-007,-0.03749048};
+		pos[]={5033.0156,344.86734,10005.346};
+		dir[]={-0.21710697,-0.41788054,-0.88231736};
+		up[]={-0.099878542,0.90843022,-0.40589881};
+		aside[]={-0.97114569,-1.7182902e-006,0.23896205};
 	};
 };
 binarizationWanted=0;
@@ -63597,8 +63597,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_disableAI_weaponAim";
-							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -63610,7 +63610,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -63948,8 +63948,8 @@ class Mission
 						};
 						class Attribute13
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ENH_disableAI_weaponAim";
+							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
 							class Value
 							{
 								class data
@@ -63961,7 +63961,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -88813,7 +88813,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6035.5688,300.96713,7755.6099};
+				position[]={6035.5708,300.96713,7755.6079};
 			};
 			areaSize[]={1,-1,1};
 			id=8911;
@@ -100738,7 +100738,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6032.5054,300.94672,7756.3027};
+				position[]={6032.5024,300.94669,7756.3027};
 			};
 			areaSize[]={1,-1,1};
 			id=9084;
@@ -104781,7 +104781,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5024.9258,340.92715,9994.4502};
-				angles[]={0,5.7051973,0};
+				angles[]={0,5.7052021,0};
 			};
 			side="Empty";
 			flags=5;
@@ -104791,6 +104791,74 @@ class Mission
 			};
 			id=9099;
 			type="Land_Barracks_02_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="DoorStates";
+					expression="['init',_this,_value] call bis_fnc_3DENAttributeDoorStates;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=10;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item526
 		{
@@ -104856,6 +104924,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 				dynamicSimulation=1;
 			};
 			id=9356;
