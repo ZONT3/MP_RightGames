@@ -8,7 +8,7 @@ class EditorData
 	toggles=1546;
 	class ItemIDProvider
 	{
-		nextID=9451;
+		nextID=9457;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=876;
+		nextID=882;
 	};
 	class Camera
 	{
-		pos[]={5033.0156,344.86734,10005.346};
-		dir[]={-0.21710697,-0.41788054,-0.88231736};
-		up[]={-0.099878542,0.90843022,-0.40589881};
-		aside[]={-0.97114569,-1.7182902e-006,0.23896205};
+		pos[]={4783.603,344.97617,10271.495};
+		dir[]={-0.79386216,-0.43324766,-0.42678058};
+		up[]={-0.38161957,0.90125626,-0.20515984};
+		aside[]={-0.4735246,-5.212496e-008,0.8808161};
 	};
 };
 binarizationWanted=0;
@@ -205,7 +205,8 @@ addons[]=
 	"A3_Props_F_Exp_Civilian_Garbage",
 	"CUP_CAStructures_E_Misc_Misc_Market",
 	"CUP_CAStructures_E_Misc_Misc_Interier",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"A3_Structures_F_Civ_InfoBoards"
 };
 class AddonsMetaData
 {
@@ -12357,7 +12358,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=579;
+		items=582;
 		class Item0
 		{
 			dataType="Layer";
@@ -21624,7 +21625,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6934.4751,392.93292,11368.169};
-						angles[]={6.223259,5.4096103,6.148016};
+						angles[]={6.2232509,5.4096131,6.1480098};
 					};
 					side="Empty";
 					flags=4;
@@ -63597,8 +63598,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ENH_disableAI_path";
+							expression="if(_value) then {_this disableAI 'PATH'}";
 							class Value
 							{
 								class data
@@ -63610,7 +63611,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -63929,8 +63930,8 @@ class Mission
 						};
 						class Attribute12
 						{
-							property="ENH_disableAI_path";
-							expression="if(_value) then {_this disableAI 'PATH'}";
+							property="ENH_disableAI_weaponAim";
+							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
 							class Value
 							{
 								class data
@@ -63948,8 +63949,8 @@ class Mission
 						};
 						class Attribute13
 						{
-							property="ENH_disableAI_weaponAim";
-							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -63961,7 +63962,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -88813,7 +88814,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6035.5708,300.96713,7755.6079};
+				position[]={6035.5713,300.96716,7755.6099};
 			};
 			areaSize[]={1,-1,1};
 			id=8911;
@@ -100738,7 +100739,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6032.5024,300.94669,7756.3027};
+				position[]={6032.5044,300.94669,7756.3027};
 			};
 			areaSize[]={1,-1,1};
 			id=9084;
@@ -106998,6 +106999,57 @@ class Mission
 			id=9450;
 			type="CUP_Winter_obj_fort_rampart_ep1";
 			atlOffset=0.3291626;
+		};
+		class Item579
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4774.7124,339.79141,10262.46};
+				angles[]={0,4.1445289,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this setObjectTexture [0,""pic\shag.jpg""];" \n "}";
+			};
+			id=9451;
+			type="Land_Noticeboard_F";
+		};
+		class Item580
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4771.8809,339.79135,10267.543};
+				angles[]={0,4.1893835,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this setObjectTexture [0,""pic\che.jpg""];" \n "}";
+			};
+			id=9455;
+			type="Land_Noticeboard_F";
+		};
+		class Item581
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4769.292,339.78622,10272.084};
+				angles[]={0,4.1893315,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this setObjectTexture [0,""pic\oru.jpg""];" \n "}";
+			};
+			id=9456;
+			type="Land_Noticeboard_F";
 		};
 	};
 };
