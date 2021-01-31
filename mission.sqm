@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=9572;
+		nextID=9574;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=912;
+		nextID=918;
 	};
 	class Camera
 	{
-		pos[]={4754.7861,341.46939,10298.681};
-		dir[]={-0.23085928,-0.22625658,-0.94644791};
-		up[]={-0.053640082,0.97402728,-0.21990663};
-		aside[]={-0.97163129,-3.4564873e-006,0.23701422};
+		pos[]={4801.0371,347.65701,10300.893};
+		dir[]={-0.28777233,-0.37898025,0.87966591};
+		up[]={-0.1178548,0.92535776,0.36026034};
+		aside[]={0.95055461,-1.4742836e-006,0.31094909};
 	};
 };
 binarizationWanted=0;
@@ -1064,7 +1064,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1361,7 +1361,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -45984,7 +45984,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						disableSimulation=1;
+						dynamicSimulation=1;
 					};
 					id=7451;
 					type="Land_Mil_Barracks";
@@ -46069,7 +46069,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -53847,7 +53847,7 @@ class Mission
 				};
 			};
 			id=5792;
-			atlOffset=0.032958984;
+			atlOffset=0.05291748;
 		};
 		class Item5
 		{
@@ -65171,8 +65171,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ENH_disableAI_weaponAim";
+							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
 							class Value
 							{
 								class data
@@ -65184,7 +65184,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -65522,8 +65522,8 @@ class Mission
 						};
 						class Attribute13
 						{
-							property="ENH_disableAI_weaponAim";
-							expression="if(_value) then {_this disableAI 'WEAPONAIM'}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -65535,7 +65535,7 @@ class Mission
 											"BOOL"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
@@ -81102,7 +81102,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4754.0098,339.51993,10304.016};
-				angles[]={0,5.8619852,-0};
+				angles[]={0,5.8619852,0};
 			};
 			side="Empty";
 			flags=4;
@@ -89409,7 +89409,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6035.5679,300.96713,7755.6089};
+				position[]={6035.5679,300.96713,7755.6094};
 			};
 			areaSize[]={1,-1,1};
 			id=8911;
@@ -101334,7 +101334,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6032.5044,300.94669,7756.3027};
+				position[]={6032.5039,300.94669,7756.3037};
 			};
 			areaSize[]={1,-1,1};
 			id=9084;
@@ -109445,7 +109445,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4788.3179,339.52008,10323.343};
-				angles[]={0,5.7933936,-0};
+				angles[]={0,5.7933936,0};
 			};
 			side="Empty";
 			flags=4;
