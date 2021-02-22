@@ -1,60 +1,72 @@
+/**********                    Framework includes                    **********/
+#include "infiSTAR_AdminMenu.ext"
+#include "skills_framework\skills.ext"
+#include "profiles_framework\roles.ext"
+/**********                       RSC includes                       **********/
+#include "external\VVS\menu.ext"
+
+/**********                        Properties                        **********/
 respawnOnStart = -1;
 cba_settings_hasSettingsFile = 1;
 
-//#include "infiSTAR_AdminMenu.hpp"
-
+/**********                       Basic configs                      **********/
 class CfgFunctions {
   class ZONT {
-    class Both {
-      file = "both";
-      class getTriggers {};
-      class importCargo { };
-      class exportCargo { };
+    class Functions {
+      file = "fnc";
+      class remoteExecCallback { };
+      class giveZeus { };
+      class initTeleportTerminals { };
+      class addTeleportTerminal { };
+      class showTextLC { };
+      class showStructuredTextLC { };
+      class addChatCommand { };
+      class removeAllVars { };
+      class getConst { };
+      class forceExit { };
     };
-    class Client {
-      file = "client";
-      class checkCuratorPermission {};
-      class endMission {};
-      class addChatCommand {};
-      class showTextLC {};
-      class checkPresistance {};
-      class saveProfile {};
-    };
-    class Server {
-      file = "server";
-      class init_zeusWatcher { postInit = 1; };
-      class giveZeus {};
-
-      class init_autoEvents { /*postInit = 1;*/ };
-      class spawnEvent { };
-      class addEventPos { };
-      class completeNearestAE { };
-      class ae_toDestroy { };
-
+    class Database {
+      file = "database_framework";
       class bd_initBasic { };
       class bd_initCustom { };
       class bd_customRequest { };
 
-      class prs_saveProfile { };
-      class prs_loadProfile { };
-      class getMNvar { };
+      class commitInfo { };
       class retrieveCurators { };
-
-      class addPresistCrate { };
     };
+    class Profiles {
+      file = "profiles_framework";
+      class getRoles { };
+      class profilesGUI { };
+      class loadDone { };
+      class newProfile { };
+      class checkRole { };
+      class updProfile { };
+
+      class saveProfile { };
+      class loadProfile { };
+      class autoSaveInit { };
+    };
+    #include "dev\include.ext"
   };
+  #include "external\VVS\Functions.ext"
 };
 
-class CfgRadio {
+class CfgSounds {
   sounds[] = {};
-
+  #include "external\tts_beam\cfgSounds.ext"
 };
 
 class CfgDebriefing {
-  class loser1 {
-    title = "Пиздец";
-		subtitle = "Совсем ебанутые?";
-		description = "Вы долбоебы. Сожалеем.";
+  class force {
+    title = "Выкинут в лобби";
+		description = "Тебя выкинули в лобби скриптом.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+  class profileErr {
+    title = "Ошибка инициализации профиля";
+		description = "Попробуй НЕ нажимать Escape во время загрузки. Так же, выбери роль или профиль, если тебя об этом просят. Так же, попробуй пошаманить над своим ником в игре. Учти, что знаки [] точно НЕ влияют, можешь их НЕ убирать. Если ты не можешь играть, свяжись с ZONT_ в дискорде";
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };
@@ -88,22 +100,19 @@ class CfgDebriefing {
   };
 };
 
-class CfgSounds {
-    sounds[] = {};
-    class papich {
-        name = "";
-        sound[] = {"snd\arthas.ogg",10,1,100};
-        titles[] = {};
-        forceTitles = true;
-    };
+class CfgConsts {
+  ztt_terminals[] = {"ololo"};
 };
+
+//Discord info
+
 
 class CfgDiscordRichPresence {
 	applicationID="765658821909151805";
-	defaultDetails="AFRF Solider in Chechnya";
+	defaultDetails="Balkan Frontier";
 	defaultState="rgsv.xyz (Visit on Web)";
 	defaultLargeImageKey="rgad";
-	defaultLargeImageText="Chechnya";
+	defaultLargeImageText="Kosovo";
 	defaultSmallImageKey="a3";
 	defaultSmallImageText="ArmA 3";
 	useTimeElapsed=1;
