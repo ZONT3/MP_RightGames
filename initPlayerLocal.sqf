@@ -5,6 +5,8 @@ waitUntil {vehicle player == player};
 
 [] spawn ZONT_fnc_initTeleportTerminals;
 
+[] spawn ZONT_fnc_addReverse;
+
 [] execVM "chatCommands.sqf";
 
 /******                            Zeus list                             ******/
