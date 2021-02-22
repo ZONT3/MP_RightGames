@@ -18,8 +18,8 @@ if (isNil "_headerOverride") then {
     "<a size='2.9' href='https://discord.gg/HHdQZFE'><img image='pic\dis.paa'/></a><br/>" +
     "<a size='1.8' href='https://docs.google.com/document/d/13KvnvSIP2fGQsu39qdsHtUesWyb4LCEdPNQrOIkXULo'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
-    "<t size='0.6'>На сервере скоро будут роли, влияющие на механики. А пока - просто выбери ""Новый профиль""</t>",
-    0.49, 0.52 ]
+    "<t size='0.8'>Ниже выбери роль. Скорее всего, тебе надо выбрать ""Другой"". Иначе - наказание</t>",
+    0.49, 0.04 ]
   } else {
     [
     "Ты зашел с новым ником, либо за другую сторону. Если ты просто его поменял, "+

@@ -3,8 +3,6 @@ waitUntil {vehicle player == player};
 [] spawn ZONT_fnc_loadProfile;
 [] spawn ZONT_fnc_autoSaveInit;
 
-[] spawn ZONT_fnc_initSkills;
-
 [] spawn ZONT_fnc_initTeleportTerminals;
 
 [] execVM "chatCommands.sqf";
@@ -28,3 +26,21 @@ MCH_ZEUS_LIST = [{
   { _str = format ["%1<br/>%2", _str, _x]; } forEach mpv_current_curators;
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler;
+
+private _fn_moveToSpawn = {
+  params ["_player", "_cg"];
+  private _side = side _player;
+  private _spawn = MP_spawn_east;
+  if (_side == west)       then { _spawn = MP_spawn_west };
+  if (_side == resistance) then { _spawn = MP_spawn_guer };
+  if (!isNil '_spawn') then {
+    _player setPosATL getPosATL _spawn;
+  };
+  if (_cg) then {
+    private _g = createGroup _side;
+    [_player] joinSilent _g;
+    _g deleteGroupWhenEmpty true;
+  };
+};
+
+[player, false] call _fn_moveToSpawn;

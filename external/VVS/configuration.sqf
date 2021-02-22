@@ -27,6 +27,18 @@ VVS_Support = [];
 
 VVS_Civ_Land = [ ];
 
+VVS_AFRF_Land = [
+  "rhs_bmd4m_vdv",
+  "rhs_bmd4m_vdv",
+  "rhs_bmd4m_vdv",
+  "rhs_btr80a_vdv",
+  "rhs_btr80a_vdv",
+  "rhs_btr80a_vdv",
+  "rhs_t90am_tv",
+  "rhs_t90sm_tv",
+  "rhs_t72be_tv"
+];
+
 /*
 									Vehicle restriction
 		Again, similar to VAS's functionality. If you want to restrict a specific vehicle you can do it or
