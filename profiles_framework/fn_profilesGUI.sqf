@@ -4,7 +4,7 @@ params [
   ["_handlerEscape", nil],
   ["_headerOverride", nil],
   ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
-  ["_roles", (call ZONT_fnc_getRoles + [[0, "ДРУГОЙ"]]), [[]]]
+  ["_roles", ([[0, "ДРУГОЙ"]] + call ZONT_fnc_getRoles), [[]]]
 ];
 
 private _newUser = count _profiles == 0;
