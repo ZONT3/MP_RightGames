@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=684;
+		nextID=696;
 	};
 	class Camera
 	{
-		pos[]={14607.537,137.55443,16321.61};
-		dir[]={0.52796751,-0.72427708,0.44360265};
-		up[]={0.55454177,0.68949002,0.465929};
-		aside[]={0.64331853,2.9045623e-007,-0.76566541};
+		pos[]={14998.564,137.55443,16695.068};
+		dir[]={-0.88055193,-0.45263532,0.14093733};
+		up[]={-0.44699952,0.89167184,0.071546085};
+		aside[]={0.15805264,3.3821561e-007,0.98748517};
 	};
 };
 binarizationWanted=0;
@@ -203,8 +203,6 @@ addons[]=
 	"A3_Boat_F_Jets_Carrier_01",
 	"rhssaf_c_weapons",
 	"A3_Weapons_F_Pistols_Rook40",
-	"jsrs_soundmod_complete_edition",
-	"jsrs_soundmod_ce_reloadingsounds",
 	"ace_smallarms",
 	"ace_attach",
 	"ace_chemlights",
@@ -226,7 +224,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=143;
+		items=141;
 		class Item0
 		{
 			className="CUP_Creatures_Military_Russia";
@@ -1025,82 +1023,69 @@ class AddonsMetaData
 		};
 		class Item130
 		{
-			className="A3_Sounds_F";
-			name="Arma 3 - Sound Effects";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item131
-		{
-			className="jsrs_soundmod_ce_reloadingsounds";
-			name="jsrs_soundmod_ce_reloadingsounds";
-			author="LordJarhead";
-		};
-		class Item132
-		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item133
+		class Item131
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item134
+		class Item132
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item135
+		class Item133
 		{
 			className="rhsgref_c_weapons";
 			name="GREF Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item136
+		class Item134
 		{
 			className="ace_laserpointer";
 			name="ACE3 - Laser Pointer";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item137
+		class Item135
 		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item138
+		class Item136
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item139
+		class Item137
 		{
 			className="CUP_WheeledVehicles_S1203";
 			name="CUP_WheeledVehicles_S1203";
 		};
-		class Item140
+		class Item138
 		{
 			className="CUP_Weapons_MP5";
 			name="CUP_Weapons_MP5";
 		};
-		class Item141
+		class Item139
 		{
 			className="av_ammo2";
 			name="av_ammo2";
 		};
-		class Item142
+		class Item140
 		{
 			className="Su33_Protatype_PT";
 			name="Su33_Protatype_PT";
@@ -29257,8 +29242,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -29267,10 +29252,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -29855,8 +29840,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -29865,10 +29850,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -30080,8 +30065,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -30090,10 +30075,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -30669,8 +30654,8 @@ class Mission
 						};
 						class Attribute28
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -30679,10 +30664,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -30900,8 +30885,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -30910,10 +30895,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -31493,8 +31478,8 @@ class Mission
 						};
 						class Attribute26
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -31503,10 +31488,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -31762,8 +31747,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_checkVisible";
-							expression="if(_value) then {_this disableAI 'CHECKVISIBLE'}";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -31772,17 +31757,17 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"SCALAR"
 										};
 									};
-									value=1;
+									value=0;
 								};
 							};
 						};
 						class Attribute2
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -31791,10 +31776,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -32355,8 +32340,8 @@ class Mission
 						};
 						class Attribute26
 						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							property="ENH_disableAI_checkVisible";
+							expression="if(_value) then {_this disableAI 'CHECKVISIBLE'}";
 							class Value
 							{
 								class data
@@ -32365,17 +32350,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"BOOL"
 										};
 									};
-									value=0;
+									value=1;
 								};
 							};
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -32384,10 +32369,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -32604,8 +32589,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -32614,10 +32599,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -33272,8 +33257,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -33282,10 +33267,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -33362,8 +33347,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -33372,10 +33357,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -33974,8 +33959,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -33984,10 +33969,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -34072,8 +34057,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -34082,10 +34067,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -34670,8 +34655,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -34680,10 +34665,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -61229,8 +61214,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -61239,10 +61224,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -61813,8 +61798,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -61823,10 +61808,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -61923,8 +61908,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -61933,10 +61918,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -62549,8 +62534,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -62559,10 +62544,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -73959,8 +73944,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_checkVisible";
-							expression="if(_value) then {_this disableAI 'CHECKVISIBLE'}";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -73969,17 +73954,17 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"SCALAR"
 										};
 									};
-									value=1;
+									value=2;
 								};
 							};
 						};
 						class Attribute2
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -73988,10 +73973,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -74585,8 +74570,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							property="ENH_disableAI_checkVisible";
+							expression="if(_value) then {_this disableAI 'CHECKVISIBLE'}";
 							class Value
 							{
 								class data
@@ -74595,17 +74580,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"BOOL"
 										};
 									};
-									value=2;
+									value=1;
 								};
 							};
 						};
 						class Attribute28
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -74614,10 +74599,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -80808,8 +80793,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if(_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -80818,10 +80803,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -81406,8 +81391,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if(_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -81416,10 +81401,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -174199,7 +174184,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15059.046,17.911438,17079.951};
-						angles[]={-0,1.5381191,0};
+						angles[]={0,1.5381191,0};
 					};
 					side="East";
 					flags=6;
@@ -174215,7 +174200,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15059.046,17.911438,17079.951};
-						angles[]={-0,1.5381191,0};
+						angles[]={0,1.5381191,0};
 					};
 					side="East";
 					flags=4;
@@ -174269,7 +174254,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15059.046,19.478338,17079.889};
-				angles[]={-0,1.5381191,0};
+				angles[]={0,1.5381191,0};
 			};
 			side="East";
 			flags=6;
@@ -174294,7 +174279,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15057.566,17.911438,17070.334};
-						angles[]={-0,1.5482183,0};
+						angles[]={0,1.5482183,0};
 					};
 					side="East";
 					flags=6;
@@ -174310,7 +174295,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15057.566,17.911438,17070.334};
-						angles[]={-0,1.5482183,0};
+						angles[]={0,1.5482183,0};
 					};
 					side="East";
 					flags=4;
@@ -174364,7 +174349,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15057.566,18.196438,17070.283};
-				angles[]={-0,1.5482183,0};
+				angles[]={0,1.5482183,0};
 			};
 			side="East";
 			flags=6;
