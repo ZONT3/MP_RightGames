@@ -10,7 +10,7 @@ waitUntil {vehicle player == player};
 [] execVM "chatCommands.sqf";
 
 /******                            Zeus list                             ******/
-MCH_ZEUS_LIST = [{
+/* MCH_ZEUS_LIST = [{
   if (isnull (finddisplay 312)) exitWith {};
   mpc_cc_name = format ["%1 (%2)", name player, getPlayerUID player];
   if (isNil 'mpv_current_curators') then {mpv_current_curators = []};
@@ -27,7 +27,7 @@ MCH_ZEUS_LIST = [{
   private _str = "<t color='#00FF00'>Активные зевсы:</t>";
   { _str = format ["%1<br/>%2", _str, _x]; } forEach mpv_current_curators;
   hintSilent parseText _str;
-}, 1] call CBA_fnc_addPerFrameHandler;
+}, 1] call CBA_fnc_addPerFrameHandler; */
 
 private _fn_moveToSpawn = {
   params ["_player", "_cg"];
