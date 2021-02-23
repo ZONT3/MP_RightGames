@@ -34,6 +34,7 @@ VVS_AFRF_Land = [
   "rhs_t72be_tv",
   "CUP_O_2S6M_RU",
   "LOP_US_2S1",
+  "min_rf_sa_22",
   "min_rf_2b26"
 ];
 
