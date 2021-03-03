@@ -2,11 +2,12 @@ params ["_player"];
 if (!isServer) exitWith {};
 private _uid = getPlayerUID _player;
 if (_uid == "") exitWith {};
+if (isNil 'MP_zuus') exitWith { ["GiveZeus: MP_zuus is absent!"] call BIS_fnc_error };
 
 private _var = format ["MPS_C_%1", _uid];
 private _old = objNull;
 private _curator = objNull;
-if (!isNil format ["MPS_C_%1", _uid]) then {
+if (!isNil _var) then {
   _old = (missionNamespace getVariable _var) select 1;
   unassignCurator _old;
 };
@@ -17,17 +18,17 @@ if !(_old isKindOf "ModuleCurator_F") then {
   unassignCurator _curator;
   private _addons = curatorAddons MP_zuus;
   _curator addCuratorAddons _addons;
-  _curator setcuratorcoef["place", 0];
-  _curator setcuratorcoef["delete", 0];
+  _curator setcuratorcoef ["place", 0];
+  _curator setcuratorcoef ["delete", 0];
 } else { _curator = _old };
 
 if (!isNil "_curator" && !isNull _curator) then {
-  _null = [_this, _curator, [_var, [_player, _curator], false]] spawn {
+  _null = [_player, _curator, [_var, [_player, _curator], false]] spawn {
     params ["_player", "_curator", "_setvar"];
     sleep 0.4;
     _player assignCurator _curator;
     missionNamespace setVariable _setvar;
-    ["Вы назначены на роль куратора игры"] remoteExec ["systemChat", _player];
+    ["Вы назначены на роль зевса"] remoteExec ["systemChat", _player];
   }
 } else {
   diag_log format ["ZONT_fnc_giveZeus ERROR: _curator is null or nil for %1", _player];
