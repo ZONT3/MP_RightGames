@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=16657;
+		nextID=16659;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=756;
+		nextID=768;
 	};
 	class Camera
 	{
-		pos[]={15264.056,57.737976,17246.832};
-		dir[]={-0.7986415,-0.56795424,0.19902718};
-		up[]={-0.55110288,0.82305717,0.13733831};
-		aside[]={0.24181119,2.2584572e-008,0.97032768};
+		pos[]={15412.287,88.533569,17365.916};
+		dir[]={-0.78641748,-0.5030635,-0.35860619};
+		up[]={-0.45775506,0.86422861,-0.20873378};
+		aside[]={-0.41492596,3.2992102e-007,0.90992558};
 	};
 };
 binarizationWanted=0;
@@ -12306,7 +12306,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=708;
+		items=706;
 		class Item0
 		{
 			dataType="Group";
@@ -29256,8 +29256,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -29266,10 +29266,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -29854,8 +29854,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -29864,10 +29864,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -30079,8 +30079,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -30089,10 +30089,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -30668,8 +30668,8 @@ class Mission
 						};
 						class Attribute28
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -30678,10 +30678,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -30899,8 +30899,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -30909,10 +30909,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -31492,8 +31492,8 @@ class Mission
 						};
 						class Attribute26
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -31502,10 +31502,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -31761,8 +31761,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -31771,7 +31771,7 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"SCALAR"
 										};
 									};
 									value=0;
@@ -31780,8 +31780,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -31790,10 +31790,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="";
 								};
 							};
 						};
@@ -32354,8 +32354,8 @@ class Mission
 						};
 						class Attribute26
 						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -32364,7 +32364,7 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"BOOL"
 										};
 									};
 									value=0;
@@ -32373,8 +32373,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -32383,10 +32383,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="";
+									value=1;
 								};
 							};
 						};
@@ -32603,8 +32603,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -32613,10 +32613,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -33271,8 +33271,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -33281,10 +33281,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -33361,8 +33361,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -33371,10 +33371,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -33973,8 +33973,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -33983,10 +33983,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -34071,8 +34071,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -34081,10 +34081,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_45orp";
 								};
 							};
 						};
@@ -34669,8 +34669,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -34679,10 +34679,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_45orp";
+									value=1;
 								};
 							};
 						};
@@ -61718,8 +61718,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -61728,10 +61728,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -62302,8 +62302,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -62312,10 +62312,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -62412,8 +62412,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -62422,10 +62422,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -63038,8 +63038,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -63048,10 +63048,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -74447,8 +74447,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="ENH_allowSprint";
-							expression="_this allowSprint _value";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -74457,17 +74457,17 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"SCALAR"
 										};
 									};
-									value=0;
+									value=2;
 								};
 							};
 						};
 						class Attribute2
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -74476,10 +74476,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -75073,8 +75073,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							property="ENH_allowSprint";
+							expression="_this allowSprint _value";
 							class Value
 							{
 								class data
@@ -75083,17 +75083,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"BOOL"
 										};
 									};
-									value=2;
+									value=0;
 								};
 							};
 						};
 						class Attribute28
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -75102,10 +75102,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -81324,8 +81324,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="unitInsignia";
-							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+							property="ENH_disableAI_move";
+							expression="if (_value) then {_this disableAI 'MOVE'}";
 							class Value
 							{
 								class data
@@ -81334,10 +81334,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="PATCH_AV_rus3";
+									value=1;
 								};
 							};
 						};
@@ -81922,8 +81922,8 @@ class Mission
 						};
 						class Attribute27
 						{
-							property="ENH_disableAI_move";
-							expression="if (_value) then {_this disableAI 'MOVE'}";
+							property="unitInsignia";
+							expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 							class Value
 							{
 								class data
@@ -81932,10 +81932,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=1;
+									value="PATCH_AV_rus3";
 								};
 							};
 						};
@@ -137414,7 +137414,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15132.021,20.026028,17155.801};
-				angles[]={-0,5.4418197,0};
+				angles[]={0,5.4418197,0};
 			};
 			side="Empty";
 			flags=4;
@@ -158544,7 +158544,7 @@ class Mission
 										};
 										class value
 										{
-											items=404;
+											items=406;
 											class Item0
 											{
 												class data
@@ -164199,6 +164199,34 @@ class Mission
 														};
 													};
 													value="ACE_IR_Strobe_Item";
+												};
+											};
+											class Item404
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="AGE_Fatigues_MultiCam_Gloves";
+												};
+											};
+											class Item405
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="CUP_B_AssaultPack_Black";
 												};
 											};
 										};
@@ -176007,16 +176035,6 @@ class Mission
 		};
 		class Item703
 		{
-			dataType="Marker";
-			position[]={15074.3,17.91,17002.471};
-			name="marker_364";
-			text="100 ОКИАП";
-			type="mil_dot";
-			colorName="ColorEAST";
-			id=16633;
-		};
-		class Item704
-		{
 			dataType="Group";
 			side="East";
 			class Entities
@@ -176092,7 +176110,7 @@ class Mission
 			};
 			id=16636;
 		};
-		class Item705
+		class Item704
 		{
 			dataType="Object";
 			class PositionInfo
@@ -176111,7 +176129,7 @@ class Mission
 			id=16639;
 			type="rhs_pchela1t_vvs";
 		};
-		class Item706
+		class Item705
 		{
 			dataType="Object";
 			class PositionInfo
@@ -176127,7 +176145,7 @@ class Mission
 			};
 			id=16646;
 			type="RHS_Mi8AMTSh_vvs";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.00018119812;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -176170,16 +176188,6 @@ class Mission
 				};
 				nAttributes=2;
 			};
-		};
-		class Item707
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=16653;
-			atlOffset=185.97;
 		};
 	};
 };
