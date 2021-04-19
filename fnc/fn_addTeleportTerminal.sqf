@@ -12,7 +12,7 @@
   4: [optional] string - condition. Default - "true"
   5: [optional] priority of action. Default - 6
 
-  [this, "Переместиться на базу Наемников", [], "#33c208"] call ZONT_fnc_addTeleportTerminal
+  [this, "Переместиться на базу Наемников", [], "#33c208", "true", 6] call ZONT_fnc_addTeleportTerminal
 */
 params [["_thisTerm", objNull], ["_tooltip", ""], ["_posATL", []], ["_color", "#ffffff"], ["_cond", "true"], ["_priority", 6], ["_createCond", {true}]];
 

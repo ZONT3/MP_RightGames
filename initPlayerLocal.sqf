@@ -73,6 +73,7 @@ private _fn_moveToSpawn = {
 
   if (!isNil '_spawn') then {
     _player setPosATL getPosATL _spawn;
+    _player setDir getDir _spawn;
   };
 
   if (_cg) then {

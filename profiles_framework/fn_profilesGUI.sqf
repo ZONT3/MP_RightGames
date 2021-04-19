@@ -85,7 +85,7 @@ uiNamespace setVariable ["zpr_list", _profiles];
 
 
 {
-  _x params ["_id", "_name", "_configName", "_tags", "_allowed"];
+  _x params ["_id", "_name", "_configName", "_tags", ["_allowed", true]];
   private _alpha = if _allowed then {1} else {0.4};
   private _allow = if _allowed then {"new"} else {"rs"};
   private _c = _tv tvAdd [[], format [_str_role, _name]];
