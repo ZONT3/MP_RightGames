@@ -18,7 +18,8 @@ if (isNil "_headerOverride") then {
     "<a size='2.9' href='https://discord.gg/HHdQZFE'><img image='pic\dis.paa'/></a><br/>" +
     "<a size='1.8' href='https://docs.google.com/document/d/13KvnvSIP2fGQsu39qdsHtUesWyb4LCEdPNQrOIkXULo'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
-    "<t size='0.8'>Ниже выбери роль. Скорее всего, тебе надо выбрать ""Другой"". Иначе - наказание</t>",
+    "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>" +
+    "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",
     0.49, 0.04 ]
   } else {
     [
@@ -43,6 +44,8 @@ private _height   = _pHeight * safezoneH;
 private _startY   = safeZoneY + ((safeZoneH - _height) / 2);
 private _startX   = safeZoneX + ((safeZoneW -  _width) / 2);
 
+_height = _height max (_headerH + 0.1 * safeZoneH);
+
 disableSerialization;
 
 private _display = findDisplay 46 createDisplay "RscDisplayEmpty";
@@ -58,8 +61,11 @@ _background ctrlCommit 0;
 private _title = _display ctrlCreate ["RscStructuredText", -1];
 _title ctrlSetPosition [_startX,_startY,_width,_headerH];
 _title ctrlSetBackgroundColor [0/255,67/255,89/255,1];
-_title ctrlSetStructuredText parseText ("<t align='center'><t shadow='1' size='2.5' color='#d5d5d5'>Right Games</t><br/>" +
-    _synopsis + "<br/><t size='0.6'>Двойной клик по пункту в списке, что бы выбрать его</t></t>");
+_title ctrlSetStructuredText parseText (
+    "<t align='center'><t shadow='1' size='2.5' color='#d5d5d5'>Right Games</t><br/>" +
+    _synopsis +
+    "<br/><t size='0.6'>Двойной клик по пункту в списке, что бы выбрать его</t></t>"
+);
 _title ctrlCommit 0;
 
 private _tv = _display ctrlCreate ["RscTreeSearch", -1];
@@ -77,12 +83,15 @@ uiNamespace setVariable ["zpr_list", _profiles];
   _tv tvSetValue [[_c], _forEachIndex];
 } forEach _profiles;
 
+
 {
-  _x params ["_id", "_name"];
+  _x params ["_id", "_name", "_configName", "_tags", "_allowed"];
+  private _alpha = if _allowed then {1} else {0.4};
+  private _allow = if _allowed then {"new"} else {"rs"};
   private _c = _tv tvAdd [[], format [_str_role, _name]];
-  _tv tvSetData [[_c], "new"];
+  _tv tvSetData [[_c], _allow];
   _tv tvSetValue [[_c], _id];
-  _tv tvSetColor [[_c], [255/255,242/255,0/255, 1]];
+  _tv tvSetColor [[_c], [255/255,242/255,0/255, _alpha]];
   _tv tvSetPicture [[_c], "pic\add.paa"];
   _tv tvSetPictureColorSelected [[_c], [1,1,1,1]];
 } forEach _roles;
@@ -91,10 +100,10 @@ uiNamespace setVariable ["zpr_list", _profiles];
 if (isNil "_handlerSelect") then {
   _tv ctrlAddEventHandler ["TreeDblClick", {
     params ["_tv", "_path"];
-    private _display = ctrlParent _tv;
-    _display closeDisplay 1;
 
+    private _close = true;
     switch (_tv tvData _path) do {
+      case ("rs"):  { _close = false; hint "Эта роль доступна не всем!" };
       case ("new"): { (_tv tvValue _path) spawn ZONT_fnc_newProfile };
       case ("set"): {
         (uiNamespace getVariable ["zpr_list", []]) select (_tv tvValue _path)
@@ -102,10 +111,15 @@ if (isNil "_handlerSelect") then {
       };
       default { "profileErr" call ZONT_fnc_forceExit };
     };
+
+    if _close then {
+      (ctrlParent _tv) closeDisplay 1;
+    }
   }];
 } else {
   _tv ctrlAddEventHandler ["TreeDblClick", _handlerSelect];
 };
+
 
 if (isNil "_handlerEscape") then {
   _display displayAddEventHandler ["unload", {

@@ -9,6 +9,8 @@ waitUntil {vehicle player == player};
 
 [] execVM "chatCommands.sqf";
 
+[] execVM "initPlayerAfterRespawn.sqf";
+
 /******                            Zeus list                             ******/
 /* MCH_ZEUS_LIST = [{
   if (isnull (finddisplay 312)) exitWith {};
@@ -29,15 +31,50 @@ waitUntil {vehicle player == player};
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler; */
 
+
+private _fn_checkSlotPermission = {
+  waituntil { sleep 0.1; !isNil 'ZPR_roles' };
+  if not ([[],[],_this] call ZONT_fnc_checkRole) then {
+    ["absrole"] call ZONT_fnc_forceExit;
+  };
+};
+
+private _var = [];
+private _varg = group player getVariable ["ZPR_rr", ""];
+private _vars =       player getVariable ["ZPR_rr", ""];
+if (_varg != "") then { _var pushBack _varg };
+if (_vars != "") then { _var pushBack _vars };
+if (count _var > 0) then {
+  _var spawn _fn_checkSlotPermission;
+};
+
+
+private _fn_moveToCustomSpawn = {
+  params ['_player','_fn_moveToSpawn'];
+  waituntil { sleep 0.1; !isNil 'ZPR_roles' };
+  /*
+  private _mechanicus = [["Mechanicus"]] call ZONT_fnc_checkRole;
+  if _mechanicus exitWith { [_player, true, 'MP_spawn_mech'] call _fn_moveToSpawn };
+  */
+};
+
 private _fn_moveToSpawn = {
-  params ["_player", "_cg"];
+  params ["_player", "_cg", '_spawnName'];
   private _side = side _player;
-  private _spawn = MP_spawn_east;
-  if (_side == west)       then { _spawn = MP_spawn_west };
-  if (_side == resistance) then { _spawn = MP_spawn_guer };
+  private _spawn = objnull;
+
+  if (isNil '_spawnName') then {
+    if (_side == east)       then { _spawn = MP_spawn_east };
+    if (_side == west)       then { _spawn = MP_spawn_west };
+    if (_side == resistance) then { _spawn = MP_spawn_guer };
+  } else {
+    _spawn = missionNamespace getVariable _spawnName;
+  };
+
   if (!isNil '_spawn') then {
     _player setPosATL getPosATL _spawn;
   };
+
   if (_cg) then {
     private _g = createGroup _side;
     [_player] joinSilent _g;
@@ -46,3 +83,22 @@ private _fn_moveToSpawn = {
 };
 
 [player, false] call _fn_moveToSpawn;
+[player, _fn_moveToSpawn] spawn _fn_moveToCustomSpawn;
+
+/*
+// Delete agents
+[] spawn {
+  waitUntil {
+  	{
+  		if (
+        agent _x isKindOf "Rabbit_F" ||
+        agent _x isKindOf "Snake_random_F" ||
+        agent _x isKindOf "Servo_skull"
+      ) then {
+  			deleteVehicle agent _x;
+  		};
+  	} forEach agents;
+
+  	sleep 0.01; false;
+  };
+};*/

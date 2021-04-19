@@ -1,4 +1,5 @@
 /**********                    Framework includes                    **********/
+#include "infiSTAR_AdminMenu.ext"
 #include "profiles_framework\roles.ext"
 /**********                       RSC includes                       **********/
 #include "external\VVS\menu.ext"
@@ -62,6 +63,12 @@ class CfgDebriefing {
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };
+  class absrole {
+    title = "Нет прав играть на этом слоте";
+		description = "Если ты считаешь, что можешь играть на этом слоте, свяжись со своим командиром, либо с администрацией.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
   class profileErr {
     title = "Ошибка инициализации профиля";
 		description = "Попробуй НЕ нажимать Escape во время загрузки. Так же, выбери роль или профиль, если тебя об этом просят. Так же, попробуй пошаманить над своим ником в игре. Учти, что знаки [] точно НЕ влияют, можешь их НЕ убирать. Если ты не можешь играть, свяжись с ZONT_ в дискорде";
@@ -99,17 +106,17 @@ class CfgDebriefing {
 };
 
 class CfgConsts {
-  ztt_terminals[] = {"SRB_gaz"};
+  ztt_terminals[] = {};
 };
 
 //Discord info
 
 class CfgDiscordRichPresence {
 	applicationID="765658821909151805";
-	defaultDetails="Balkan Frontier";
+	defaultDetails="Afghanistan RP";
 	defaultState="rgsv.xyz (Visit on Web)";
 	defaultLargeImageKey="rgad";
-	defaultLargeImageText="Kosovo";
+	defaultLargeImageText="Right Games";
 	defaultSmallImageKey="a3";
 	defaultSmallImageText="ArmA 3";
 	useTimeElapsed=1;
