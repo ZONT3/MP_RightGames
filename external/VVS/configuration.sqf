@@ -28,15 +28,14 @@ VVS_Support = [];
 VVS_Civ_Land = [ ];
 
 VVS_East_Land = [
-  "oksv_uralo",
-  "oksv_ural",
-  "rhs_btr70_vdv",
-  "oksv_uralf",
-  "oksv_gaz_ammo",
-  "LOP_SLA_BMP1D",
-  "sg_sm_soviet_army_ural_ammo",
+  "rhs_bmp1_msv",
+  "RHS_Ural_MSV_01",
+  "RHS_Ural_Fuel_MSV_01",
+  "RHS_Ural_Open_MSV_01",
+  "rhs_btr70_msv",
   "RHS_Ural_Repair_VMF_01",
-  "RHS_Ural_Fuel_MSV_01"
+  "RHS_Ural_Zu23_MSV_01",
+  "oksv_bmd1"
 ];
 
 VVS_East_HQ = [
