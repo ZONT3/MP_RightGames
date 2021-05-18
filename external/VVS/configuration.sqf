@@ -35,7 +35,9 @@ VVS_East_Land = [
   "rhs_btr70_msv",
   "RHS_Ural_Repair_VMF_01",
   "RHS_Ural_Zu23_MSV_01",
-  "oksv_bmd1"
+  "oksv_bmd1",
+  "rhs_bmp2e_msv",
+  "rhs_gaz66_vdv"
 ];
 
 VVS_East_HQ = [
