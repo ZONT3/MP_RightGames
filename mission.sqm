@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1399;
+		nextID=1439;
 	};
 	class Camera
 	{
-		pos[]={8243.5918,325.57547,2154.5183};
-		dir[]={-0.90906447,-0.12245191,0.3982949};
-		up[]={-0.11217667,0.99246973,0.049148966};
-		aside[]={0.40131792,1.4051329e-007,0.91596079};
+		pos[]={12869.164,160.85365,12951.326};
+		dir[]={-0.48569819,-0.78750634,-0.37940568};
+		up[]={-0.62060702,0.61629617,-0.48479125};
+		aside[]={-0.61560565,-1.7904676e-007,0.78806853};
 	};
 };
 binarizationWanted=0;
@@ -4221,14 +4221,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12846.929,137.75749,12938.501};
+						position[]={12846.929,137.75748,12938.501};
 						angles[]={0,0.92617643,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Воин-Интернационалист";
+						description="Врач";
 						isPlayable=1;
 						class Inventory
 						{
@@ -4249,7 +4249,67 @@ class Mission
 					};
 					id=3999;
 					type="oksv_rto";
-					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03RUS";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=3;
+					};
 				};
 				class Item62
 				{
@@ -4712,14 +4772,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12844.01,137.30318,12942.063};
-						angles[]={0,0.92617637,0};
+						position[]={12844.01,137.30312,12942.063};
+						angles[]={0,0.92617643,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Воин-Интернационалист";
+						description="Врач";
 						isPlayable=1;
 						class Inventory
 						{
@@ -4740,7 +4800,6 @@ class Mission
 					};
 					id=4004;
 					type="oksv_rto";
-					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4764,6 +4823,25 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -4777,11 +4855,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="male02rus";
+									value="Male02RUS";
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -4796,11 +4874,11 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.97302622;
+									value=0.97000003;
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item67
@@ -4808,14 +4886,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12843.465,137.224,12942.801};
+						position[]={12843.465,137.22397,12942.801};
 						angles[]={0,0.92617643,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						description="Воин-Интернационалист";
+						description="Врач";
 						isPlayable=1;
 						class Inventory
 						{
@@ -4836,7 +4914,68 @@ class Mission
 					};
 					id=4005;
 					type="oksv_rto";
-					atlOffset=1.5258789e-005;
+					atlOffset=-1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01RUS";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=3;
+					};
 				};
 				class Item68
 				{
@@ -52321,7 +52460,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8200.0674,298.80783,1959.3799};
-				angles[]={-0,5.8306041,0};
+				angles[]={0,5.8306041,0};
 			};
 			side="Empty";
 			flags=4;
