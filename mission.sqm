@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1439;
+		nextID=1479;
 	};
 	class Camera
 	{
-		pos[]={12869.164,160.85365,12951.326};
-		dir[]={-0.48569819,-0.78750634,-0.37940568};
-		up[]={-0.62060702,0.61629617,-0.48479125};
-		aside[]={-0.61560565,-1.7904676e-007,0.78806853};
+		pos[]={8182.021,311.46222,2108.5137};
+		dir[]={-0.6557501,-0.49007115,0.57430512};
+		up[]={-0.36867189,0.87168205,0.32288221};
+		aside[]={0.65884727,-1.6065314e-008,0.75228107};
 	};
 };
 binarizationWanted=0;
@@ -1250,7 +1250,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=395;
+		items=393;
 		class Item0
 		{
 			dataType="Layer";
@@ -49967,8 +49967,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8142.6177,296.9942,2131.9331};
-				angles[]={0.051151726,2.6625111,0.030390549};
+				position[]={8150.9561,297.96329,2121.1245};
+				angles[]={0.062325709,2.6625171,0.0047996556};
 			};
 			side="Empty";
 			flags=4;
@@ -49978,10 +49978,28 @@ class Mission
 			};
 			id=4010;
 			type="rhs_bmd1r";
-			atlOffset=-0.003692627;
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cBMD3NumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -50285,7 +50303,64 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
 				{
 					property="crate_l3_unhide";
 					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
@@ -50304,7 +50379,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute6
 				{
 					property="crate_r3_unhide";
 					expression="[_this,_value,'crate_r3_unhide'] call rhs_fnc_setHabarEden";
@@ -50323,7 +50398,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute7
 				{
 					property="wood_2_unhide";
 					expression="[_this,_value,'wood_2_unhide'] call rhs_fnc_setHabarEden";
@@ -50342,7 +50417,26 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute8
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBMDArmySymPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute9
 				{
 					property="crate_l2_unhide";
 					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
@@ -50361,7 +50455,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute10
 				{
 					property="crate_r2_unhide";
 					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
@@ -50380,7 +50474,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute11
 				{
 					property="wood_1_unhide";
 					expression="[_this,_value,'wood_1_unhide'] call rhs_fnc_setHabarEden";
@@ -50399,7 +50493,26 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute12
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBMDPlnSymPlaces,  _this getVariable ['rhs_decalPlatoon_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute13
 				{
 					property="crate_l1_unhide";
 					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
@@ -50418,7 +50531,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute14
 				{
 					property="crate_r1_unhide";
 					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
@@ -50437,7 +50550,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=9;
+				nAttributes=15;
 			};
 		};
 		class Item389
@@ -50445,8 +50558,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8149.7305,297.13904,2135.8394};
-				angles[]={0.067090459,2.6381176,0.027192229};
+				position[]={8157.2783,298.12686,2124.0984};
+				angles[]={0.0095993113,2.6381176,0.025586527};
 			};
 			side="Empty";
 			flags=4;
@@ -50456,7 +50569,7 @@ class Mission
 			};
 			id=4011;
 			type="rhs_bmd1p";
-			atlOffset=-0.0059814453;
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50844,7 +50957,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag""],[2,9,10,5,5,2]],[[],[]],[[""rhs_sidor""],[4]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -51065,8 +51178,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8156.1284,297.09912,2139.4653};
-				angles[]={0.063913956,2.6361804,0.02078687};
+				position[]={8164.8975,298.08691,2127.8484};
+				angles[]={0.057543505,2.6361804,0.0095993113};
 			};
 			side="Empty";
 			flags=4;
@@ -51076,7 +51189,6 @@ class Mission
 			};
 			id=4012;
 			type="rhs_bmp1p_msv";
-			atlOffset=-0.0019836426;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51731,7 +51843,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[2,9,20,5,5,2,2]],[[""ToolKit""],[1]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -51762,8 +51874,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8163.4111,297.0827,2143.343};
-				angles[]={0.068696164,2.6870739,0.039985489};
+				position[]={8171.4082,298.11917,2131.9861};
+				angles[]={0.062325709,2.6870739,0.030386183};
 			};
 			side="Empty";
 			flags=4;
@@ -51773,7 +51885,6 @@ class Mission
 			};
 			id=4013;
 			type="rhs_bmp1d_msv";
-			atlOffset=0.0039672852;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52428,7 +52539,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[2,9,20,5,5,2,2]],[[""ToolKit""],[1]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -52694,276 +52805,6 @@ class Mission
 					};
 				};
 				nAttributes=4;
-			};
-		};
-		class Item393
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8198.7246,297.19775,2157.3184};
-				angles[]={0.030386183,2.7917936,0.022392575};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4015;
-			type="RHS_Ural_Repair_MSV_01";
-			atlOffset=-0.0026245117;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="rhs_decalArmy_type";
-					expression="_this setVariable ['rhs_decalArmy_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="rhs_decalNumber_type";
-					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Default";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rhs_decalArmy";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="rhs_decalPlatoon_type";
-					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="rhs_decalPlatoon";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=6;
-			};
-		};
-		class Item394
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8203.8311,297.25635,2159.4185};
-				angles[]={0.025586527,2.7699771,0.020804325};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4017;
-			type="RHS_Ural_Ammo_VDV_01";
-			atlOffset=-0.0033569336;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="rhs_decalArmy_type";
-					expression="_this setVariable ['rhs_decalArmy_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="rhs_decalNumber_type";
-					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Default";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rhs_decalArmy";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="rhs_decalPlatoon_type";
-					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="Army";
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="rhs_decalPlatoon";
-					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=6;
 			};
 		};
 	};
