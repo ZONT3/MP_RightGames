@@ -27,26 +27,44 @@ VVS_Support = [];
 
 VVS_Civ_Land = [ ];
 
-VVS_East_Land = [
-  "rhs_bmp1_msv",
+VVS_East_BMO = [
   "RHS_Ural_MSV_01",
+  "RHS_Ural_Ammo_MSV_01",
   "RHS_Ural_Fuel_MSV_01",
-  "RHS_Ural_Open_MSV_01",
-  "rhs_btr70_msv",
-  "RHS_Ural_Repair_VMF_01",
-  "RHS_Ural_Zu23_MSV_01",
-  "oksv_bmd1",
-  "rhs_bmp2e_msv",
-  "rhs_gaz66_vdv"
+  "RHS_Ural_Repair_MSV_01",
+  "RHS_Ural_Zu23_MSV_01"
 ];
 
 VVS_East_HQ = [
+  "av_uaz451_b",
+  "RHS_UAZ_MSV_01",
+  "rhs_gaz66_r142_msv",
   "rhs_uaz_open_MSV_01",
-  "RHS_UAZ_MSV_01"
+  "rhsgref_BRDM2_msv",
+  "av_UAZ451_k",
+  "rhsgref_BRDM2UM_vdv",
+  "rhsgref_BRDM2_HQ_vdv",
+  "UK3CB_CW_SOV_O_LATE_MTLB_ZU23"
 ];
 
-VVS_East_Air = [
+VVS_East_VDV = [
+  "rhs_bmd2",
+  "rhs_bmd1p"
+];
 
+VVS_East_VMF = [
+  "rhs_btr80_msv",
+  "rhs_bmp2e_vdv"
+];
+
+VVS_East_GRU = [
+  "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
+  "rhsgref_BRDM2_msv"
+];
+
+VVS_East_TV = [
+  "rhs_t72bb_tv",
+  "rhs_t80bv"
 ];
 
 /*
