@@ -86,6 +86,25 @@ private _fn_moveToSpawn = {
 [player, false] call _fn_moveToSpawn;
 [player, _fn_moveToSpawn] spawn _fn_moveToCustomSpawn;
 
+MPC_DISPLAY_OPENED = createHashMap;
+MPH_DisplyChecker = [{
+  private _tmp = [];
+  private _report = [];
+  {
+    private _id = str _x;
+    if not (_id in MPC_DISPLAY_OPENED) then {
+      _report pushBack _id;
+    };
+    _tmp pushBack [_id, true];
+  } forEach allDisplays;
+  MPC_DISPLAY_OPENED = createHashMapFromArray _tmp;
+  _report spawn {
+    {
+      [format ["%1 [%2] OPENED %3", name player, getPlayerUID player, _this]] remoteExec ["ZONT_fnc_log", 2];
+    } forEach _this;
+  };
+}, 1] call CBA_fnc_addPerFrameHandler;
+
 /*
 // Delete agents
 [] spawn {
