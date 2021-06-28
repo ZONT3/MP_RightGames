@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=23578;
+		nextID=23579;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4774;
+		nextID=4845;
 	};
 	class Camera
 	{
-		pos[]={12022.026,186.39182,12703.324};
-		dir[]={0.17724207,-0.433568,-0.88352007};
-		up[]={0.0852791,0.90112066,-0.42510033};
-		aside[]={-0.9804675,-1.6391277e-007,-0.19668999};
+		pos[]={12087.36,176.31842,12666.91};
+		dir[]={0.10618185,-0.49438322,-0.86275423};
+		up[]={0.060390431,0.8692385,-0.49069005};
+		aside[]={-0.99252945,-9.3372364e-008,-0.12215307};
 	};
 };
 binarizationWanted=0;
@@ -200,14 +200,13 @@ addons[]=
 	"rhs_c_bmp",
 	"rhs_c_btr",
 	"A3_Signs_F",
-	"ace_interaction",
-	"po_factions_eu"
+	"ace_interaction"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=127;
+		items=126;
 		class Item0
 		{
 			className="Desert";
@@ -1005,12 +1004,6 @@ class AddonsMetaData
 			name="ACE3 - Interaction";
 			author="Команда ACE";
 			url="http://ace3mod.com/";
-		};
-		class Item126
-		{
-			className="po_factions_eu";
-			name="po_factions_eu";
-			author="Leight, Keeway";
 		};
 	};
 };
@@ -12320,17 +12313,17 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12095.31,160.51175,12638.076};
-								angles[]={0,5.979248,0};
+								position[]={12095.31,160.90836,12638.076};
+								angles[]={-0,5.979248,0.02666023};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								disableSimulation=1;
 							};
 							id=7680;
 							type="Vysilacka";
-							atlOffset=0.4675293;
 						};
 						class Item60
 						{
@@ -94761,6 +94754,7 @@ class Mission
 			};
 			id=21190;
 			type="rhsgref_BRDM2_msv";
+			atlOffset=-0.0010375977;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -98367,20 +98361,58 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12024.283,160.46852,12645.509};
-				angles[]={-0,0.2753005,0};
+				position[]={12021.567,160.04558,12643.787};
+				angles[]={0,0.47331583,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				textures="LOP_Red_2";
+				textures="Camo";
 			};
-			id=23577;
-			type="LOP_CHR_Civ_Offroad";
+			id=23578;
+			type="rhs_uaz_open_MSV_01";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="rhs_hideLightCover";
+					expression="_this animate ['light_hide',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -98424,7 +98456,7 @@ class Mission
 										};
 										class value
 										{
-											items=22;
+											items=4;
 											class Item0
 											{
 												class data
@@ -98436,7 +98468,7 @@ class Mission
 															"STRING"
 														};
 													};
-													value="HideDoor1";
+													value="spare_hide";
 												};
 											};
 											class Item1
@@ -98464,262 +98496,10 @@ class Mission
 															"STRING"
 														};
 													};
-													value="HideDoor2";
+													value="light_hide";
 												};
 											};
 											class Item3
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item4
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideDoor3";
-												};
-											};
-											class Item5
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-											class Item6
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideBackpacks";
-												};
-											};
-											class Item7
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item8
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideBumper1";
-												};
-											};
-											class Item9
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item10
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideBumper2";
-												};
-											};
-											class Item11
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item12
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideConstruction";
-												};
-											};
-											class Item13
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item14
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="hidePolice";
-												};
-											};
-											class Item15
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-											class Item16
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="HideServices";
-												};
-											};
-											class Item17
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-											class Item18
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="BeaconsStart";
-												};
-											};
-											class Item19
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-											class Item20
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="BeaconsServicesStart";
-												};
-											};
-											class Item21
 											{
 												class data
 												{
@@ -98740,7 +98520,102 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute3
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				nAttributes=8;
 			};
 		};
 	};
