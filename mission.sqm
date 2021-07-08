@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=25598;
+		nextID=25615;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6000;
+		nextID=6074;
 	};
 	class Camera
 	{
-		pos[]={12261.799,171.41594,12577.724};
-		dir[]={-0.38054487,-0.33561817,-0.86176288};
-		up[]={-0.1355862,0.94198543,-0.30704442};
-		aside[]={-0.91482067,8.0982863e-007,0.40397272};
+		pos[]={12066.205,228.06848,12799.664};
+		dir[]={-0.36304474,-0.65326464,-0.66445792};
+		up[]={-0.31322661,0.75712389,-0.5732792};
+		aside[]={-0.87758404,-1.2747478e-007,0.47949103};
 	};
 };
 binarizationWanted=0;
@@ -208,13 +208,14 @@ addons[]=
 	"A3_Structures_F_Tank_Military_Fortifications",
 	"A3_Structures_F_Bootcamp_Training",
 	"A3_Props_F_Enoch_Civilian_Forest",
-	"A3_Rocks_F_Sharp"
+	"A3_Rocks_F_Sharp",
+	"UK3CB_Factions_MDF_O"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=129;
+		items=130;
 		class Item0
 		{
 			className="Desert";
@@ -1034,6 +1035,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item129
+		{
+			className="UK3CB_Factions_MDF";
+			name="3CB Factions - MDF";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
 	};
 };
 dlcs[]=
@@ -1076,7 +1084,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1340,7 +1348,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1428,7 +1436,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=424;
+		items=425;
 		class Item0
 		{
 			dataType="Comment";
@@ -24696,14 +24704,13 @@ class Mission
 				angles[]={0,0.43199483,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=6464;
 			type="UK3CB_AN2_Wreck";
-			atlOffset=-0.035980225;
+			atlOffset=1.7972717;
 		};
 		class Item11
 		{
@@ -62722,7 +62729,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1800;
+							value=2000;
 						};
 					};
 				};
@@ -62741,7 +62748,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1800;
+							value=2000;
 						};
 					};
 				};
@@ -85237,8 +85244,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12052.298,162.04007,12611.772};
-				angles[]={0,0.33592352,0};
+				position[]={12043.742,162.04007,12659.635};
+				angles[]={0,0.36848754,0};
 			};
 			side="Empty";
 			class Attributes
@@ -85250,7 +85257,7 @@ class Mission
 			};
 			id=23009;
 			type="UK3CB_CHD_I_Antonov_AN2_Armed";
-			atlOffset=0.82701111;
+			atlOffset=0.88400269;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -97748,6 +97755,47 @@ class Mission
 			colorName="ColorEAST";
 			id=25577;
 			atlOffset=1.7169037;
+		};
+		class Item424
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12052.442,161.06851,12610.306};
+				angles[]={0,0.36606538,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="CIV_8";
+			};
+			id=25599;
+			type="UK3CB_MDF_O_AC500";
+			atlOffset=1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[""rhs_d6_Parachute_backpack""],[6]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
