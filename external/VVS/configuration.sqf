@@ -6,82 +6,79 @@ VVS_SideOnly = false;
 //Only set to true if you are making pre-made vehicle lists with VVS_x (i.e VVS_Car)
 VVS_Premade_List = false;
 
-/*
-									Pre-set VVS Vehicles
-		This is similar to VAS's functionality, using these variables will only make those vehicles available.
-		Leave them the way they are if you want to auto-fetch the entire vehicle config and list every vehicle.
+ZONT_fnc_filterVVS = {
+  switch(_this) do {
+  	case "HQ": { VVS_HQ };
+  	case "TB": { VVS_TB };
+  	case "Arty": { VVS_Arty };
+  	case "AA": { VVS_AA };
+  	case "USMC": { VVS_USMC + VVS_Wheeled };
+  	case "Wheeled": { VVS_Wheeled };
 
-		Example:
-		VVS_Car = ["C_Offroad_01_F","C_Quadbike_01_F"];
-		VVS_Air = ["B_Heli_Light_01_armed_F"];
-*/
+  	default {[]};
+  };
+};
 
-VVS_Car = [	];
+ZONT_fnc_onSpawnVVS = {
+  params ["_mode", "_vehicle"];
+  switch(_mode) do {
+  	case "TB": { {
+      _vehicle setVehicleAmmo 0;
+      _vehicle setFuel 0;
+    } };
 
-VVS_Air = [ ];
-VVS_CIS = [ ];
-VVS_Ship = [];
-VVS_Armored = [];
-VVS_Autonomous = [];
-VVS_Support = [];
+  	default {nil};
+  };
+};
 
-VVS_Civ_Land = [ ];
 
-VVS_East_BMO = [
-  "RHS_Ural_MSV_01",
-  "RHS_Ural_Ammo_MSV_01",
-  "RHS_Ural_Fuel_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "RHS_Ural_Zu23_MSV_01"
+VVS_HQ = [
+  "rhsusf_M1117_W"
 ];
 
-VVS_East_HQ = [
-  "av_uaz451_b",
-  "RHS_UAZ_MSV_01",
-  "rhs_gaz66_r142_msv",
-  "rhs_uaz_open_MSV_01",
-  "rhsgref_BRDM2_msv",
-  "av_UAZ451_k",
-  "rhsgref_BRDM2UM_vdv",
-  "rhsgref_BRDM2_HQ_vdv",
-  "UK3CB_CW_SOV_O_LATE_MTLB_ZU23"
+VVS_TB = [
+  "RHS_M2A2_wd",
+  "RHS_M2A3_wd",
+  "rhsusf_m1a2sep1wd_usarmy",
+  "rhsusf_m1a1aimwd_usarmy",
+  "rhsusf_m1a1aim_tuski_wd"
 ];
 
-VVS_East_VDV = [
-  "rhs_bmd2",
-  "rhs_bmd1p"
+VVS_Arty = [
+  "CUP_B_M270_HE_BAF_WOOD",
+  "RHS_M119_WD",
+  "rhsusf_m109_usarmy"
 ];
 
-VVS_East_VMF = [
-  "rhs_btr80_msv",
-  "rhs_bmp2e_vdv"
+VVS_AA = [
+  "CUP_B_M163_USA",
+  "CUP_B_M6LineBacker_USA_W"
 ];
 
-VVS_East_GRU = [
-  "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
-  "rhsgref_BRDM2_msv"
+VVS_USMC = [
+  "rhsusf_m113_usarmy_MK19",
+  "rhsusf_m113_usarmy",
+  "rhsusf_m113_usarmy_M240",
+  "rhsusf_m998_w_2dr_fulltop",
+  "rhsusf_m998_w_2dr_halftop",
+  "rhsusf_m998_w_2dr",
+  "rhsusf_m998_w_4dr_fulltop",
+  "rhsusf_m998_w_4dr_halftop",
+  "rhsusf_m998_w_4dr",
+  "CUP_B_MTVR_BAF_WOOD",
+  "CUP_B_MTVR_Ammo_BAF_WOOD",
+  "CUP_B_MTVR_Refuel_BAF_WOOD",
+  "CUP_B_MTVR_Repair_BAF_WOOD",
+  "CUP_B_AAV_USMC"
 ];
 
-VVS_East_TV = [
-  "rhs_t72bb_tv",
-  "rhs_t80bv"
+VVS_Wheeled = [
+  "rhsusf_m1045_w",
+  "rhsusf_m1043_w_mk19",
+  "rhsusf_m1043_w_m2",
+  "rhsusf_m1043_w",
 ];
 
-/*
-									Vehicle restriction
-		Again, similar to VAS's functionality. If you want to restrict a specific vehicle you can do it or
-		you can restrict an entire vehicle set by using its base class.
-
-		Example:
-		VVS_Car = ["Quadbike_01_base_F"]; //Completely removes all quadbikes for all sides
-		VVS_Air = ["B_Heli_Light_01_armed_F"]; //Removes the Pawnee
-*/
-VVS_R_Car = [	];
-VVS_R_Air = [ ];
-VVS_R_Ship = [];
-VVS_R_Armored = [];
-VVS_R_Autonomous = [];
-VVS_R_Support = [];
 
 /*
 this disableAI "move"; this disableAI "radioprotocol"; this disableAI "autocombat"; this disableAI "weaponaim";

@@ -12,17 +12,7 @@ if(_filter == "") exitWith {[]};
 //Setup our array.
 _ret = [];
 
-_vehicleList = switch(_filter) do
-{
-	case "East_HQ":   { VVS_East_HQ };
-	case "East_BMO": { VVS_East_BMO };
-	case "East_VDV": { VVS_East_VDV };
-	case "East_GRU": { VVS_East_GRU };
-	case "East_VMF": { VVS_East_VMF };
-	case "East_TV": { VVS_East_TV };
-
-	default {[]};
-};
+_vehicleList = _filter call ZONT_fnc_filterVVS;
 
 if(count _vehicleList == 0) exitWith {[]};
 {

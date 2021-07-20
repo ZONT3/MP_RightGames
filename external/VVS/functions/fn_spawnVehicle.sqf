@@ -1,7 +1,7 @@
 /*
 	File: fn_spawnVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Spawns the selected vehicle, if a vehicle is already on the spawn point
 	then it deletes the vehicle from the spawn point.
@@ -21,8 +21,8 @@ if(isNil "_pos") exitWith {hint "Точка спавна вообще есть?"
 //Check to make sure the spawn point doesn't have a vehicle on it, if it does then delete it.
 _spCheck = nearestObjects[_pos,["landVehicle","Air","Ship"],12];
 
-if(!isNil "_spCheck") then { 
-	{ deleteVehicle _x; sleep 0.2; } forEach _spCheck;	
+if(!isNil "_spCheck") then {
+	{ deleteVehicle _x; sleep 0.2; } forEach _spCheck;
 };
 
 _cfgInfo = [_className] call VVS_fnc_cfgInfo;
@@ -47,6 +47,10 @@ if(VVS_Checkbox) then
 	clearWeaponCargoGlobal _vehicle;
 	clearMagazineCargoGlobal _vehicle;
 	clearItemCargoGlobal _vehicle;
+};
+
+if not (isNil 'VVS_onSpawn' and {typeName VVS_onSpawn == typeName {}}) then {
+	[VVS_spawnMode, _vehicle] spawn VVS_onSpawn;
 };
 
 hint format["Вы заспавнили %1",_displayName];
