@@ -8,12 +8,11 @@ VVS_Premade_List = false;
 
 ZONT_fnc_filterVVS = {
   switch(_this) do {
-  	case "HQ": { VVS_HQ };
-  	case "TB": { VVS_TB };
-  	case "Arty": { VVS_Arty };
-  	case "AA": { VVS_AA };
+  	case "HQ": { VVS_HQ + VVS_Wheeled };
+  	case "TB": { VVS_TB + VVS_Arty };
   	case "USMC": { VVS_USMC + VVS_Wheeled };
-  	case "Wheeled": { VVS_Wheeled };
+  	case "75": { VVS_75 + VVS_Wheeled };
+    case "Air": { VVS_AA };
 
   	default {[]};
   };
@@ -46,7 +45,7 @@ VVS_TB = [
 
 VVS_Arty = [
   "CUP_B_M270_HE_BAF_WOOD",
-  "RHS_M119_WD",
+  /* "RHS_M119_WD", */
   "rhsusf_m109_usarmy"
 ];
 
@@ -59,12 +58,6 @@ VVS_USMC = [
   "rhsusf_m113_usarmy_MK19",
   "rhsusf_m113_usarmy",
   "rhsusf_m113_usarmy_M240",
-  "rhsusf_m998_w_2dr_fulltop",
-  "rhsusf_m998_w_2dr_halftop",
-  "rhsusf_m998_w_2dr",
-  "rhsusf_m998_w_4dr_fulltop",
-  "rhsusf_m998_w_4dr_halftop",
-  "rhsusf_m998_w_4dr",
   "CUP_B_MTVR_BAF_WOOD",
   "CUP_B_MTVR_Ammo_BAF_WOOD",
   "CUP_B_MTVR_Refuel_BAF_WOOD",
@@ -77,7 +70,32 @@ VVS_Wheeled = [
   "rhsusf_m1043_w_mk19",
   "rhsusf_m1043_w_m2",
   "rhsusf_m1043_w",
+  "rhsusf_m998_w_2dr_fulltop",
+  "rhsusf_m998_w_2dr_halftop",
+  "rhsusf_m998_w_2dr",
+  "rhsusf_m998_w_4dr_fulltop",
+  "rhsusf_m998_w_4dr_halftop",
+  "rhsusf_m998_w_4dr"
 ];
+
+VVS_75 = [
+  "CUP_B_LR_Special_M2_GB_W"
+];
+
+
+VVS_Car = [];
+VVS_Air = [];
+VVS_Ship = [];
+VVS_Armored = [];
+VVS_Autonomous = [];
+VVS_Support = [];
+
+VVS_R_Car = [];
+VVS_R_Air = [];
+VVS_R_Ship = [];
+VVS_R_Armored = [];
+VVS_R_Autonomous = [];
+VVS_R_Support = [];
 
 
 /*

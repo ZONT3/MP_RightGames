@@ -1,3 +1,6 @@
+#define ACTID(CONTENT) format ["%1_%2", CONTENT, _actionId]
+#define STATID(CONTENT) format ["%1_%2", CONTENT, _staticID]
+
 params [
   "_unit",
   "_box",
@@ -7,14 +10,19 @@ params [
 ];
 
 _phrases params ["_openPhrases", "_closePhrases"];
+if (count _whitelist > 0) then {_whitelist = _whitelist + ["HQ"]};
+
+if (isNIl 'ZARS_staticID') then {ZARS_staticID = 0};
+private _staticID = ZARS_staticID;
+ZARS_staticID = ZARS_staticID + 1;
 
 
 _unit disableAI 'ANIM';
 private _logic = group _unit createUnit ['Logic', getPosATL _unit, [], 0, 'NONE'];                    [_unit, _logic] call BIS_fnc_attachToRelative;
-_unit setVariable ['ZARS_ambientAnimations_anims', ["hubstandingub_idle1","hubstandingub_idle2","hubstandingub_idle3","hubstandingub_move1"]];
+_unit setVariable [STATID('ZARS_ambientAnimations_anims'), ["hubstandingub_idle1","hubstandingub_idle2","hubstandingub_idle3","hubstandingub_move1"]];
 ZONT_fnc_ambientAnimations_play = {
  params ['_unit'];
- private _anim = selectRandom (_unit getVariable ['ZARS_ambientAnimations_anims', []]);
+ private _anim = selectRandom (_unit getVariable [STATID('ZARS_ambientAnimations_anims'), []]);
  [_unit, _anim] remoteExec ['switchMove', 0];
 };
 
@@ -31,13 +39,10 @@ _unit call ZONT_fnc_ambientAnimations_play;
 _unit disableAI "move"; _unit disableAI "autocombat"; _unit disableAI "weaponaim";
 _unit enableAI "radioprotocol";
 
-_unit setVariable ["ZARS_openPhrases",  if (count _openPhrases  > 0) then {_openPhrases}  else {nil}];
-_unit setVariable ["ZARS_closePhrases", if (count _closePhrases > 0) then {_closePhrases} else {nil}];
-
-_unit addAction [_title, {
+private _actionId = _unit addAction [_title, {
   params ["_target", "_caller", "_actionId", "_unit"];
 
-  private _box = _unit getVariable ["ZARS_box", objNull];
+  private _box = _unit getVariable [ACTID("ZARS_box"), objNull];
   if (isNull _box) exitWith {};
   [_box, player] call ace_arsenal_fnc_openBox;
   //[_unit, player] call ace_arsenal_fnc_openBox;
@@ -52,10 +57,10 @@ _unit addAction [_title, {
     {[player, 'Acts_standingSpeakingUnarmed'] remoteExec ['switchMove'];}
   ];
 
-  [_unit] spawn {
-    params ["_unit"];
+  [_unit, _actionId] spawn {
+    params ["_unit", "_actionId"];
     sleep 1;
-    _lines = _unit getVariable ["ZARS_openPhrases", [
+    _lines = _unit getVariable [ACTID("ZARS_openPhrases"), [
       "С чем мы поможем тебе сегодня?",
       "Что я для тебя могу достать?",
       "Давай приведем тебя в порядок.",
@@ -72,7 +77,7 @@ _unit addAction [_title, {
     player switchMove '';
     [player, ''] remoteExec ['switchMove'];
     player action ["WeaponOnBack", player];
-    _lines = _unit getVariable ["ZARS_closePhrases", [
+    _lines = _unit getVariable [ACTID("ZARS_closePhrases"), [
       "Наслаждайся новой снарягой.",
       "Не потеряй, а то будешь служить 510 лет.",
       "Отлично на тебе выглядет!",
@@ -81,10 +86,13 @@ _unit addAction [_title, {
     ]];
     _unit sideChat selectRandom _lines;
   };
-},_unit,16,true,true,"","_target getVariable ['ZARS_inited', false]",5];
+},_unit,16,true,true,"",format ["_target getVariable ['ZARS_inited_%1', false]", _staticID],5];
 
-[_unit, _box, _whitelist] spawn {
-  params ["_unit", "_box", "_whitelist"];
+_unit setVariable [ACTID("ZARS_openPhrases"),  if (count _openPhrases  > 0) then {_openPhrases}  else {nil}];
+_unit setVariable [ACTID("ZARS_closePhrases"), if (count _closePhrases > 0) then {_closePhrases} else {nil}];
+
+[_unit, _box, _whitelist, _staticID, _actionId] spawn {
+  params ["_unit", "_box", "_whitelist", "_staticID", "_actionId"];
   /* private _until = time + 5;
   waitUntil {sleep 0.5; time >= _until or {not isNIl format ["ZARS_L_%1", _box]}};
   private _var = format ["ZARS_L_%1", _box]; */
@@ -95,8 +103,8 @@ _unit addAction [_title, {
   //[_unit, _list, false] call ace_arsenal_fnc_initBox;
   _box enableSimulation false;
   _box setPos [-100, -100];
-  _unit setVariable ["ZARS_box", _box];
-  _unit setVariable ["ZARS_inited", true];
+  _unit setVariable [ACTID("ZARS_box"), _box];
+  _unit setVariable [STATID("ZARS_inited"), true];
 
   if ((typeName _whitelist != typeName []) or {count _whitelist <= 0}) exitWith {};
   _until = time + 5;
@@ -104,6 +112,6 @@ _unit addAction [_title, {
   if (isNil 'ZPR_roles') exitWith {};
 
   if not ([_whitelist] call ZONT_fnc_checkRole) then {
-    _unit setVariable ["ZARS_inited", false];
+    _unit setVariable [format ["ZARS_inited_%1", _staticID], false];
   };
 };

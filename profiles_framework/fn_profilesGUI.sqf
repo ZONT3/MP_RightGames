@@ -4,7 +4,7 @@ params [
   ["_handlerEscape", nil],
   ["_headerOverride", nil],
   ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
-  ["_roles", ([[0, "ДРУГОЙ"]] + call ZONT_fnc_getRoles), [[]]]
+  ["_roles", (/*[[0, "ДРУГОЙ"]] + */call ZONT_fnc_getRoles), [[]]]
 ];
 
 private _newUser = count _profiles == 0;
@@ -18,8 +18,8 @@ if (isNil "_headerOverride") then {
     "<a size='2.9' href='https://discord.gg/HHdQZFE'><img image='pic\dis.paa'/></a><br/>" +
     "<a size='1.8' href='https://docs.google.com/document/d/13KvnvSIP2fGQsu39qdsHtUesWyb4LCEdPNQrOIkXULo'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
-    "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>" +
-    "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",
+    "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>",/* +
+    "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",*/
     0.49, 0.04 ]
   } else {
     [
