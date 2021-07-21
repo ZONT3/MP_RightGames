@@ -43,6 +43,8 @@ private _fn_toID = {
 
 private _b = true;
 
+if (-100 in ZPR_roles) exitWith { true };
+
 {
   if not (_x in ZPR_roles) exitWith {_b = false};
 } foreach _rl;

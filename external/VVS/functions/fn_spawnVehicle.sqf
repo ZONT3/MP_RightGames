@@ -49,8 +49,13 @@ if(VVS_Checkbox) then
 	clearItemCargoGlobal _vehicle;
 };
 
-if not (isNil 'VVS_onSpawn' and {typeName VVS_onSpawn == typeName {}}) then {
-	[VVS_spawnMode, _vehicle] spawn VVS_onSpawn;
+if (not isNil 'VVS_onSpawn' and {typeName VVS_onSpawn == typeName {}}) then {
+	[[VVS_onSpawn, VVS_spawnMode, _vehicle], {
+		_thisCode = _this select 0;
+		_mode = _this select 1;
+		_vehicle = _this select 2;
+		call _thisCode;
+	}] remoteExec ["bis_fnc_call", 2];
 };
 
 hint format["Вы заспавнили %1",_displayName];

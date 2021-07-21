@@ -19,11 +19,11 @@ ZONT_fnc_filterVVS = {
 };
 
 ZONT_fnc_onSpawnVVS = {
-  params ["_mode", "_vehicle"];
-  switch(_mode) do {
+  // params ["_mode", "_vehicle"];
+  switch(_this) do {
   	case "TB": { {
       _vehicle setVehicleAmmo 0;
-      _vehicle setFuel 0;
+      _vehicle setFuel 0
     } };
 
   	default {nil};
