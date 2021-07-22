@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=635;
+		nextID=658;
 	};
 	class Camera
 	{
-		pos[]={1014.2532,194.68341,2950.679};
-		dir[]={-0.49652198,-0.80592608,-0.32265869};
-		up[]={-0.67578799,0.59199041,-0.43915603};
-		aside[]={-0.54493731,-2.2736494e-006,0.83856183};
+		pos[]={958.49988,65.441467,2944.1113};
+		dir[]={-0.60734093,-0.77254832,0.18569098};
+		up[]={-0.73882216,0.63491839,0.22588785};
+		aside[]={0.29239866,-1.9965228e-006,0.95637709};
 	};
 };
 binarizationWanted=0;
@@ -822,7 +822,7 @@ dlcs[]=
 randomSeed=5100385;
 class ScenarioData
 {
-	author="Bum";
+	author="RG Team";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -1109,8 +1109,8 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
+			property="EnableTargetDebug";
+			expression="true";
 			class Value
 			{
 				class data
@@ -1119,7 +1119,7 @@ class CustomAttributes
 					{
 						type[]=
 						{
-							"BOOL"
+							"SCALAR"
 						};
 					};
 					value=1;
@@ -1145,14 +1145,33 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute2
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=3;
 	};
 };
 class Mission
 {
 	class Intel
 	{
-		briefingName="US Army | Right Games ";
+		briefingName="U.S. Armed Forces | Right Games ";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
