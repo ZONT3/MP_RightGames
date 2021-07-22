@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=520;
+		nextID=543;
 	};
 	class Camera
 	{
-		pos[]={1022.6598,58.863815,2913.0288};
-		dir[]={-0.66434002,-0.65437108,-0.3613236};
-		up[]={-0.57486224,0.75615656,-0.31265795};
-		aside[]={-0.47781157,4.6449713e-007,0.87851411};
+		pos[]={981.85712,34.812866,2899.2739};
+		dir[]={-0.70158559,-0.5909152,-0.39841753};
+		up[]={-0.51386565,0.80670798,-0.29181412};
+		aside[]={-0.49384311,6.6467328e-007,0.86962134};
 	};
 };
 binarizationWanted=0;
@@ -14897,6 +14897,7 @@ class Mission
 					class Attributes
 					{
 						init="this disableAI ""move""; this disableAI ""radioprotocol""; this disableAI ""autocombat""; this disableAI ""weaponaim""; " \n "this addAction [ " \n """Запрос Тяжелой Техники"", " \n "VVS_fnc_openVVS, " \n "[VVS_pos_TB,""TB""], " \n "6, " \n "true, " \n "true, " \n """"", " \n """[['CD1']] call ZONT_fnc_checkRole"", " \n "5 " \n "];" \n "" \n "this addAction [ " \n """Запрос техники USAF"", " \n "VVS_fnc_openVVS, " \n "[VVS_pos_TB,""Air""], " \n "6, " \n "true, " \n "true, " \n """"", " \n """[['USAF']] call ZONT_fnc_checkRole"", " \n "5 " \n "];";
+						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -15250,6 +15251,7 @@ class Mission
 					class Attributes
 					{
 						init="this disableAI ""move""; this disableAI ""radioprotocol""; this disableAI ""autocombat""; this disableAI ""weaponaim""; " \n "" \n "this addAction [ " \n """Запрос Техники 75th Ranger Regiment"", " \n "VVS_fnc_openVVS, " \n "[VVS_pos_mc, ""75""], " \n "6, " \n "true, " \n "true, " \n """"", " \n """[['RR75']] call ZONT_fnc_checkRole"", " \n "5 " \n "];" \n "" \n "" \n "this addAction [ " \n """Запрос Техники USMC"", " \n "VVS_fnc_openVVS, " \n "[VVS_pos_mc, ""USMC""], " \n "6, " \n "true, " \n "true, " \n """"", " \n """[['ME2']] call ZONT_fnc_checkRole"", " \n "5 " \n "];" \n "" \n "this addAction [ " \n """Запрос Техники HQ"", " \n "VVS_fnc_openVVS, " \n "[VVS_pos_mc, ""HQ""], " \n "6, " \n "true, " \n "true, " \n """"", " \n """[['HQ']] call ZONT_fnc_checkRole"", " \n "5 " \n "]";
+						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -16138,7 +16140,8 @@ class Mission
 					flags=3;
 					class Attributes
 					{
-						init="[ this, ars_usmc, " \n "[""ME2""], " \n """Запросить арсенал USMC""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_tb, " \n "[""CD1""], " \n """Запросить арсенал Tank Brigade""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_usaf, " \n "[""USAF""], " \n """Запросить арсенал USAF""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_75, " \n "[""RR75""], " \n """Запросить арсенал 75 RR""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_med, " \n "[""Med""], " \n """Запросить арсенал Medical Support Squad""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "";
+						init="this disableAI ""move""; this disableAI ""radioprotocol""; this disableAI ""autocombat""; this disableAI ""weaponaim""; " \n "" \n "[ this, ars_usmc, " \n "[""ME2""], " \n """Запросить арсенал USMC""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_tb, " \n "[""CD1""], " \n """Запросить арсенал Tank Brigade""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_usaf, " \n "[""USAF""], " \n """Запросить арсенал USAF""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_75, " \n "[""RR75""], " \n """Запросить арсенал 75 RR""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_med, " \n "[""Med""], " \n """Запросить арсенал Medical Support Squad""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "";
+						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -23818,7 +23821,6 @@ class Mission
 				angles[]={0,4.1394234,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				createAsSimpleObject=1;
@@ -23826,6 +23828,7 @@ class Mission
 			};
 			id=2145;
 			type="Land_Bandage_F";
+			atlOffset=0.84268665;
 		};
 		class Item123
 		{
