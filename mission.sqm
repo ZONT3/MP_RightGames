@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=3298;
+		nextID=3301;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=382;
+		nextID=405;
 	};
 	class Camera
 	{
-		pos[]={964.89105,27.655071,2895.8093};
-		dir[]={-0.2967914,-0.75770038,-0.58121496};
-		up[]={-0.34458575,0.65260088,-0.6748113};
-		aside[]={-0.89060569,3.7951395e-008,0.45477954};
+		pos[]={1036.7394,60.228699,2931.0874};
+		dir[]={-0.10931,-0.48983437,-0.86501014};
+		up[]={-0.061416883,0.87178612,-0.48601198};
+		aside[]={-0.99216628,-2.3967732e-007,0.12538216};
 	};
 };
 binarizationWanted=0;
@@ -184,13 +184,14 @@ addons[]=
 	"A3_Missions_F_Oldman",
 	"A3_Ui_F_Globe",
 	"ace_map",
-	"CUP_WaterVehicles_LHD"
+	"CUP_WaterVehicles_LHD",
+	"kat_circulation"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=95;
+		items=96;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -791,6 +792,13 @@ class AddonsMetaData
 			className="CUP_WaterVehicles_LHD";
 			name="CUP_WaterVehicles_LHD";
 		};
+		class Item95
+		{
+			className="kat_circulation";
+			name="KAT - KAT - Circulation";
+			author="Katalam";
+			url="https://github.com/Tomcat-SG/KAM";
+		};
 	};
 };
 dlcs[]=
@@ -832,7 +840,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1096,7 +1104,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1166,7 +1174,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=279;
+		items=278;
 		class Item0
 		{
 			dataType="Layer";
@@ -1174,7 +1182,7 @@ class Mission
 			state=2;
 			class Entities
 			{
-				items=3;
+				items=5;
 				class Item0
 				{
 					dataType="Logic";
@@ -1344,9 +1352,395 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={887.78711,13.16,2983.0898};
+					};
+					areaSize[]={1,-1,1};
+					id=3297;
+					type="ModuleEditTerrainObject_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="#name";
+							expression="_this setVariable [""#name"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="#filter";
+							expression="_this setVariable [""#filter"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=7;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="#initServer";
+							expression="_this setVariable [""#initServer"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="#state";
+							expression="_this setVariable [""#state"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="#allowDamage";
+							expression="_this setVariable [""#allowDamage"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="#doorStates";
+							expression="_this setVariable [""#doorStates"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="#init";
+							expression="_this setVariable [""#init"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=7;
+					};
+				};
+				class Item4
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={857.64685,13.16,3022.8145};
+					};
+					areaSize[]={1,-1,1};
+					id=3296;
+					type="ModuleEditTerrainObject_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="#name";
+							expression="_this setVariable [""#name"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="#filter";
+							expression="_this setVariable [""#filter"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=7;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="#initServer";
+							expression="_this setVariable [""#initServer"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="#state";
+							expression="_this setVariable [""#state"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=5;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="#allowDamage";
+							expression="_this setVariable [""#allowDamage"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="#doorStates";
+							expression="_this setVariable [""#doorStates"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="#init";
+							expression="_this setVariable [""#init"",_value]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=7;
+					};
+				};
 			};
 			id=1;
-			atlOffset=0.42743111;
+			atlOffset=0.1068573;
 		};
 		class Item1
 		{
@@ -15754,15 +16148,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={947.41498,13.412439,2878.189};
+						position[]={947.31818,13.412709,2878.0608};
 						angles[]={0,0.97956604,0};
 					};
 					side="West";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="[ this, ars_usmc, " \n "[""ME2""], " \n """Запросить арсенал USMC""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_tb, " \n "[""CD1""], " \n """Запросить арсенал Tank Brigade""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_usaf, " \n "[""USAF""], " \n """Запросить арсенал USAF""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_75, " \n "[""RR75""], " \n """Запросить арсенал 75 RR""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "" \n "[ this, ars_med, " \n "[""Med""], " \n """Запросить арсенал Medical Support Squad""," \n "[" \n "[""Здарова"", ""Hello""], " \n "[""Бб"", ""Бывай""]]" \n "] call ZONT_fnc_attachArsenal;" \n "";
-						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
@@ -15800,7 +16193,6 @@ class Mission
 					};
 					id=1210;
 					type="CUP_B_USMC_Engineer";
-					atlOffset=0.2510004;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16054,7 +16446,6 @@ class Mission
 				behaviour="CARELESS";
 			};
 			id=1209;
-			atlOffset=0.2510004;
 		};
 		class Item86
 		{
@@ -16697,24 +17088,24 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={873.43793,14.121473,2986.5679};
+				position[]={873.53693,14.502254,2986.9961};
 				angles[]={0,0.41045809,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=1216;
 			type="RHS_A10";
+			atlOffset=0.38078022;
 		};
 		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={887.17139,14.121473,3003.6226};
-				angles[]={0,1.3280048,0};
+				position[]={887.74231,14.121473,3003.1411};
+				angles[]={-0,1.3280048,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16729,8 +17120,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={855.68164,15.304142,3010.8257};
-				angles[]={0,5.5901785,0};
+				position[]={860.867,15.304142,3013.7605};
+				angles[]={-0,5.5901785,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16876,8 +17267,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={873.29388,15.525971,3022.6428};
-				angles[]={0,5.6087384,0};
+				position[]={876.05267,15.525971,3025.7827};
+				angles[]={-0,5.6087384,0};
 			};
 			side="Empty";
 			flags=4;
@@ -37950,7 +38341,7 @@ class Mission
 										};
 										class value
 										{
-											items=155;
+											items=156;
 											class Item0
 											{
 												class data
@@ -40121,6 +40512,20 @@ class Mission
 													value="rhsusf_acc_compm4";
 												};
 											};
+											class Item155
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_Flashlight_XL50";
+												};
+											};
 										};
 									};
 								};
@@ -41202,7 +41607,7 @@ class Mission
 										};
 										class value
 										{
-											items=101;
+											items=103;
 											class Item0
 											{
 												class data
@@ -42615,6 +43020,34 @@ class Mission
 														};
 													};
 													value="rhsusf_eject_Parachute_backpack";
+												};
+											};
+											class Item101
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="CUP_U_B_USMC_PilotOverall";
+												};
+											};
+											class Item102
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="CUP_U_B_USArmy_PilotOverall";
 												};
 											};
 										};
@@ -44338,115 +44771,26 @@ class Mission
 		};
 		class Item277
 		{
-			dataType="Logic";
+			dataType="Object";
 			class PositionInfo
 			{
-				position[]={857.64685,13.16,3022.8145};
+				position[]={971.85699,14.025,2866.7051};
+				angles[]={0,0.91404635,0};
 			};
-			areaSize[]={1,-1,1};
-			id=3296;
-			type="ModuleEditTerrainObject_F";
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3300;
+			type="ACE_medicalSupplyCrate_advanced";
+			atlOffset=0.00040817261;
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="#name";
-					expression="_this setVariable [""#name"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="#filter";
-					expression="_this setVariable [""#filter"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=7;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="#initServer";
-					expression="_this setVariable [""#initServer"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="#state";
-					expression="_this setVariable [""#state"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=5;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="#allowDamage";
-					expression="_this setVariable [""#allowDamage"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="#doorStates";
-					expression="_this setVariable [""#doorStates"",_value]";
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
 					class Value
 					{
 						class data
@@ -44460,7 +44804,7 @@ class Mission
 							};
 							class value
 							{
-								items=3;
+								items=2;
 								class Item0
 								{
 									class data
@@ -44469,10 +44813,125 @@ class Mission
 										{
 											type[]=
 											{
-												"SCALAR"
+												"ARRAY"
 											};
 										};
-										value=0;
+										class value
+										{
+											items=8;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_epinephrine";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_EarPlugs";
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_tourniquet";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_morphine";
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_fieldDressing";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_elasticBandage";
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_packingBandage";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_splint";
+												};
+											};
+										};
 									};
 								};
 								class Item1
@@ -44489,100 +44948,14 @@ class Mission
 										value=0;
 									};
 								};
-								class Item2
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0;
-									};
-								};
 							};
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="#init";
-					expression="_this setVariable [""#init"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=7;
-			};
-		};
-		class Item278
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={887.78711,13.16,2983.0898};
-			};
-			areaSize[]={1,-1,1};
-			id=3297;
-			type="ModuleEditTerrainObject_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="#name";
-					expression="_this setVariable [""#name"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
 						};
 					};
 				};
 				class Attribute1
 				{
-					property="#filter";
-					expression="_this setVariable [""#filter"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=7;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="#initServer";
-					expression="_this setVariable [""#initServer"",_value]";
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
 					class Value
 					{
 						class data
@@ -44594,132 +44967,11 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
-				class Attribute3
-				{
-					property="#state";
-					expression="_this setVariable [""#state"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=5;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="#allowDamage";
-					expression="_this setVariable [""#allowDamage"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="#doorStates";
-					expression="_this setVariable [""#doorStates"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"ARRAY"
-								};
-							};
-							class value
-							{
-								items=3;
-								class Item0
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0;
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0;
-									};
-								};
-								class Item2
-								{
-									class data
-									{
-										class type
-										{
-											type[]=
-											{
-												"SCALAR"
-											};
-										};
-										value=0;
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="#init";
-					expression="_this setVariable [""#init"",_value]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				nAttributes=7;
+				nAttributes=2;
 			};
 		};
 	};
