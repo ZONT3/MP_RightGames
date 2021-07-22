@@ -6,7 +6,6 @@ params [
   ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
   ["_roles", (/*[[0, "ДРУГОЙ"]] + */call ZONT_fnc_getRoles), [[]]]
 ];
-diag_log ["ZPR GUI DIAG", _profiles, _roles];
 
 private _newUser = count _profiles == 0;
 

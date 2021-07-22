@@ -95,7 +95,7 @@ private _fn_getRange = {
 
             {
               if ((_x select 5) and (_x select 0) != _pid) then {
-                ZPR_roles deleteAt find (_x select 0);
+                ZPR_roles deleteAt (ZPR_roles find (_x select 0));
               };
             } forEach call ZONT_fnc_getRoles;
 
