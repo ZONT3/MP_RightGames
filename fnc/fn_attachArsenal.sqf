@@ -19,21 +19,23 @@ ZARS_staticID = ZARS_staticID + 1;
 
 _unit disableAI 'ANIM';
 private _logic = group _unit createUnit ['Logic', getPosATL _unit, [], 0, 'NONE'];                    [_unit, _logic] call BIS_fnc_attachToRelative;
-_unit setVariable [STATID('ZARS_ambientAnimations_anims'), ["hubstandingub_idle1","hubstandingub_idle2","hubstandingub_idle3","hubstandingub_move1"]];
-ZONT_fnc_ambientAnimations_play = {
- params ['_unit'];
- private _anim = selectRandom (_unit getVariable [STATID('ZARS_ambientAnimations_anims'), []]);
- [_unit, _anim] remoteExec ['switchMove', 0];
-};
+if (isnil {_unit getVariable ["ZARS_ambientAnimations_anims", nil]}) then {
+  _unit setVariable ['ZARS_ambientAnimations_anims', ["hubstandingub_idle1","hubstandingub_idle2","hubstandingub_idle3","hubstandingub_move1"]];
+  ZONT_fnc_ambientAnimations_play = {
+   params ['_unit'];
+   private _anim = selectRandom (_unit getVariable ['ZARS_ambientAnimations_anims', []]);
+   [_unit, _anim] remoteExec ['switchMove', 0];
+  };
 
-EHAnimDone = _unit addEventHandler ['AnimDone',{
- params ['_unit'];
- if (alive _unit) then {
+  EHAnimDone = _unit addEventHandler ['AnimDone',{
+   params ['_unit'];
+   if (alive _unit) then {
+    _unit call ZONT_fnc_ambientAnimations_play;
+   };
+  }];
+
   _unit call ZONT_fnc_ambientAnimations_play;
- };
-}];
-
-_unit call ZONT_fnc_ambientAnimations_play;
+};
 
 
 _unit disableAI "move"; _unit disableAI "autocombat"; _unit disableAI "weaponaim";
