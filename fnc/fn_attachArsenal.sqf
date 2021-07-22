@@ -109,8 +109,10 @@ if (hasInterface) then {
   if (isServer) then {
     _box enableSimulation false;
     _box setPos [-100, -100];
-    _unit setVariable [STATID("ZARS_inited"), true];
   };
+  if (not hasInterface) exitWith { };
+
+  _unit setVariable [STATID("ZARS_inited"), true];
   _unit setVariable [ACTID("ZARS_box"), _box];
 
   if ((typeName _whitelist != typeName []) or {count _whitelist <= 0}) exitWith {};
