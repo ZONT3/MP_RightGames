@@ -6,6 +6,7 @@ params [
   ["_str_role", "НОВЫЙ ПРОФИЛЬ [ %1 ]", [""]],
   ["_roles", (/*[[0, "ДРУГОЙ"]] + */call ZONT_fnc_getRoles), [[]]]
 ];
+diag_log ["DIAG 1", _profiles, _roles];
 
 private _newUser = count _profiles == 0;
 
@@ -18,8 +19,8 @@ if (isNil "_headerOverride") then {
     "<a size='2.9' href='https://discord.gg/HHdQZFE'><img image='pic\dis.paa'/></a><br/>" +
     "<a size='1.8' href='https://docs.google.com/document/d/13KvnvSIP2fGQsu39qdsHtUesWyb4LCEdPNQrOIkXULo'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
-    "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>",/* +
-    "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",*/
+    "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>",
+    // "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",
     0.49, 0.04 ]
   } else {
     [
@@ -32,6 +33,7 @@ if (isNil "_headerOverride") then {
 } else {
    _headerOverride
 } params ["_synopsis", "_headerH", "_pHeight"];
+diag_log "DIAG 2";
 
 _headerH = _headerH max 0.1 min 0.65;
 _pHeight = _pHeight max 0.4 min 0.7;
