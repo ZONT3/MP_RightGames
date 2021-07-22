@@ -117,8 +117,7 @@ if (hasInterface) then {
 
   if ((typeName _whitelist != typeName []) or {count _whitelist <= 0}) exitWith {};
   _until = time + 5;
-  waituntil { sleep 0.1; time >= _until or !isNil 'ZPR_roles' };
-  if (isNil 'ZPR_roles') exitWith {};
+  waituntil { sleep 0.1; !isNil 'ZPR_roles' };
 
   if not ([_whitelist] call ZONT_fnc_checkRole) then {
     _unit setVariable [format ["ZARS_inited_%1", _staticID], false];

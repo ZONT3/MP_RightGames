@@ -35,5 +35,5 @@ waitUntil {sleep 0.1; !dialog};
   if (not isNil "ZPR_ID") exitWith { diag_log format ["ZPR ID: %1", ZPR_ID]; };
 
   diag_log format ["ZPR Char not found (%1 %2) in %3", name player, str side player, str _chars];
-  [_chars] spawn ZONT_fnc_profilesGUI;
+  [_chars] call ZONT_fnc_profilesGUI;
 }, _uid] call ZONT_fnc_remoteExecCallback;
