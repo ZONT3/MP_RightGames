@@ -88,7 +88,7 @@ force ace_frag_reflectionsEnabled = false;
 force ace_frag_spallEnabled = false;
 
 // ACE G-Forces
-force ace_gforces_coef = 0.450528;
+force ace_gforces_coef = 0.50792;
 force ace_gforces_enabledFor = 1;
 
 // ACE Goggles
@@ -689,12 +689,12 @@ Achilles_var_moduleTreeSearchPatch = false;
 // Aircraft Turbulence
 HELICOPTER_TURBULENCE_ENABLE_MASTER = true;
 HELICOPTER_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 16.7;
-force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 3.71614;
+force HELICOPTER_TURBULENCE_MAX_TURBULENCE = 9;
+force HELICOPTER_TURBULENCE_MIN_TURBULENCE = 2;
 PLANE_TURBULENCE_ENABLE_MASTER = true;
 PLANE_TURBULENCE_ENABLE_WEATHEREFFECT = true;
-force PLANE_TURBULENCE_MAX_TURBULENCE = 16.7442;
-force PLANE_TURBULENCE_MIN_TURBULENCE = 3.71614;
+force PLANE_TURBULENCE_MAX_TURBULENCE = 9;
+force PLANE_TURBULENCE_MIN_TURBULENCE = 2;
 
 // Anti-Bounce System
 force ABS_AssistUnflip = true;
@@ -1053,3 +1053,4 @@ zen_faction_filter_3_CUP_C_SAHRANI = true;
 zen_faction_filter_3_CUP_C_TK = true;
 zen_faction_filter_3_EdCat_Things = true;
 zen_faction_filter_3_IND_L_F = true;
+
