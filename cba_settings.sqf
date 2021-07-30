@@ -894,6 +894,26 @@ L_Suppress_intensity = 1;
 L_Suppress_playerSwabEnabled = true;
 L_Suppress_recovery = 1;
 
+// Standing Static Line
+SSL_DefaultParachute = "NonSteerable_Parachute_F";
+force SSL_RequireParachute = true;
+force SSL_ShowRopes = 2;
+
+// TFAR - Animations
+radioAnims_cba_ads = true;
+radioAnims_cba_Earpieces = "[""G_WirelessEarpiece_F""]";
+radioAnims_cba_main = true;
+radioAnims_cba_preference_fadak = "Vest";
+radioAnims_cba_preference_Others = "Hand";
+radioAnims_cba_preference_pnr1000 = "Vest";
+radioAnims_cba_preference_PRC148 = "Hand";
+radioAnims_cba_preference_PRC152 = "Vest";
+radioAnims_cba_preference_PRC154 = "Hand";
+radioAnims_cba_preference_rf7800 = "Vest";
+radioAnims_cba_vehicles = true;
+radioAnims_cba_vestarmor = true;
+radioAnims_cba_vests = "[]";
+
 // UH-60M
 vtx_uh60_anvishud_defaultMode = -1;
 vtx_uh60m_enabled_waypts = true;
@@ -1053,4 +1073,5 @@ zen_faction_filter_3_CUP_C_SAHRANI = true;
 zen_faction_filter_3_CUP_C_TK = true;
 zen_faction_filter_3_EdCat_Things = true;
 zen_faction_filter_3_IND_L_F = true;
+
 
