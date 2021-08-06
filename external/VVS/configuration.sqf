@@ -9,10 +9,11 @@ VVS_Premade_List = false;
 ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
-  	case "TB": { VVS_TB + VVS_Arty };
-  	case "USMC": { VVS_USMC + VVS_Wheeled };
-  	case "75": { VVS_75 + VVS_Wheeled };
-    case "Air": { VVS_AA };
+  	case "BMO": { VVS_BMO };
+  	case "542": { VVS_542 };
+  	case "Wheeled": { VVS_Wheeled };
+  	case "SWheeled": { VVS_Wheeled_Spec };
+  	case "TV": { VVS_TV };
 
   	default {[]};
   };
@@ -21,7 +22,7 @@ ZONT_fnc_filterVVS = {
 ZONT_fnc_onSpawnVVS = {
   // params ["_mode", "_vehicle"];
   switch(_this) do {
-  	case "TB": { {
+  	case "TV": { {
       _vehicle setVehicleAmmo 0;
       _vehicle setFuel 0
     } };
@@ -32,54 +33,38 @@ ZONT_fnc_onSpawnVVS = {
 
 
 VVS_HQ = [
-  "rhsusf_M1117_W"
-];
 
-VVS_TB = [
-  "RHS_M2A2_wd",
-  "RHS_M2A3_wd",
-  "rhsusf_m1a2sep1wd_usarmy",
-  "rhsusf_m1a1aimwd_usarmy",
-  "rhsusf_m1a1aim_tuski_wd"
-];
-
-VVS_Arty = [
-  "CUP_B_M270_HE_BAF_WOOD",
-  /* "RHS_M119_WD", */
-  "rhsusf_m109_usarmy"
-];
-
-VVS_AA = [
-  "CUP_B_M163_USA",
-  "CUP_B_M6LineBacker_USA_W"
-];
-
-VVS_USMC = [
-  "rhsusf_m113_usarmy_MK19",
-  "rhsusf_m113_usarmy",
-  "rhsusf_m113_usarmy_M240",
-  "CUP_B_MTVR_BAF_WOOD",
-  "CUP_B_MTVR_Ammo_BAF_WOOD",
-  "CUP_B_MTVR_Refuel_BAF_WOOD",
-  "CUP_B_MTVR_Repair_BAF_WOOD",
-  "CUP_B_AAV_USMC"
 ];
 
 VVS_Wheeled = [
-  "rhsusf_m1045_w",
-  "rhsusf_m1043_w_mk19",
-  "rhsusf_m1043_w_m2",
-  "rhsusf_m1043_w",
-  "rhsusf_m998_w_2dr_fulltop",
-  "rhsusf_m998_w_2dr_halftop",
-  "rhsusf_m998_w_2dr",
-  "rhsusf_m998_w_4dr_fulltop",
-  "rhsusf_m998_w_4dr_halftop",
-  "rhsusf_m998_w_4dr"
 ];
 
-VVS_75 = [
-  "CUP_B_LR_Special_M2_GB_W"
+VVS_TV = [
+  "rhs_t90sab_tv",
+  "rhs_2s3_tv"
+];
+
+VVS_542 = [
+  "rhs_bmp3_msv",
+  "rhs_bmp3mera_msv",
+  "rhs_btr80a_vmf"
+];
+
+VVS_Wheeled_Spec = [
+  "B_LSV_01_unarmed_F",
+  "B_Quadbike_01_F",
+  "LOP_AFR_OPF_Offroad"
+];
+
+VVS_BMO = [
+  "RHS_Ural_Fuel_MSV_01",
+  "RHS_Ural_Repair_MSV_01",
+  "rhs_gaz66_ammo_msv",
+  "rhs_kamaz5350_msv",
+  "rhs_kamaz5350_open_msv",
+  "rhs_tigr_sts_3camo_msv",
+  "rhs_tigr_m_3camo_msv",
+  "rhs_tigr_3camo_msv"
 ];
 
 
@@ -110,5 +95,5 @@ true,
 "",
 "true",
 5
-]
+];
 */

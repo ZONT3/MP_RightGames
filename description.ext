@@ -25,7 +25,6 @@ class CfgFunctions {
       class forceExit { };
       class addReverse { };
       class initArsenals { };
-      class attachArsenal { };
       class log { };
     };
     class Database {
@@ -49,6 +48,7 @@ class CfgFunctions {
       class saveProfile { };
       class loadProfile { };
       class autoSaveInit { };
+      class attachArsenal { };
     };
     #include "dev\include.ext"
   };
@@ -59,7 +59,15 @@ class CfgSounds {
   sounds[] = {};
 };
 
+author			  = "RG Team";
+onLoadName		= "Syria RP | Right Games";
+onLoadMission	= "";
 loadScreen = "pic\loading.paa";
+class Header {
+	gameType   = RPG;
+	minPlayers =   0;
+	maxPlayers = 128;
+};
 
 class CfgDebriefing {
   class force {
