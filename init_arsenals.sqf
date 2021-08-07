@@ -43,7 +43,7 @@
 [ _this,
 	ars_sso,
 	["SSO"],
-	"Запросить арсенал Medical Support Squad",
+	"Запросить арсенал ССО",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
