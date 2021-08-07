@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=23803;
+		nextID=23821;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=992;
+		nextID=1005;
 	};
 	class Camera
 	{
-		pos[]={8330.2559,139.31381,7035.6191};
-		dir[]={-0.71134984,-0.69560969,-0.10127664};
-		up[]={-0.6887207,0.71836352,-0.098056935};
-		aside[]={-0.14096165,1.0903459e-006,0.99008685};
+		pos[]={8518.0791,235.19058,6904.1294};
+		dir[]={-0.60042959,-0.73162091,-0.322889};
+		up[]={-0.64436591,0.68170416,-0.34651691};
+		aside[]={-0.47363377,5.7200668e-007,0.88074517};
 	};
 };
 binarizationWanted=0;
@@ -145,13 +145,16 @@ addons[]=
 	"ace_logistics_wirecutter",
 	"ace_concertina_wire",
 	"A3_Ui_F_Enoch",
-	"task_force_radio_items"
+	"task_force_radio_items",
+	"A3_Structures_F_Items_Electronics",
+	"rhsgref_c_a2port_armor",
+	"rhs_c_a2port_armor"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=85;
+		items=87;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -690,6 +693,20 @@ class AddonsMetaData
 			author="[TF]Nkey";
 			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
+		class Item85
+		{
+			className="rhsgref_c_a2port_armor";
+			name="BRDM-2";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item86
+		{
+			className="rhs_c_a2port_armor";
+			name="A2 ported armor";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 	};
 };
 dlcs[]=
@@ -703,7 +720,8 @@ dlcs[]=
 	"RHS_USAF",
 	"Heli",
 	"Oldman",
-	"rus"
+	"rus",
+	"RHS_GREF"
 };
 randomSeed=12561758;
 class ScenarioData
@@ -1111,7 +1129,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=412;
+		items=417;
 		class Item0
 		{
 			dataType="Layer";
@@ -4662,7 +4680,7 @@ class Mission
 												};
 												class value
 												{
-													items=113;
+													items=115;
 													class Item0
 													{
 														class data
@@ -6243,6 +6261,34 @@ class Mission
 																};
 															};
 															value="rhs_6b45_holster";
+														};
+													};
+													class Item113
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_acc_1p78";
+														};
+													};
+													class Item114
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_acc_1p63";
 														};
 													};
 												};
@@ -15295,7 +15341,7 @@ class Mission
 												};
 												class value
 												{
-													items=59;
+													items=62;
 													class Item0
 													{
 														class data
@@ -16120,6 +16166,48 @@ class Mission
 																};
 															};
 															value="B_Kitbag_rgr";
+														};
+													};
+													class Item59
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_60Rnd_545X39_7N10_AK";
+														};
+													};
+													class Item60
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_60Rnd_545X39_7N22_AK";
+														};
+													};
+													class Item61
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"STRING"
+																};
+															};
+															value="rhs_weap_ak74m";
 														};
 													};
 												};
@@ -66137,7 +66225,7 @@ class Mission
 			};
 			id=20710;
 			type="Land_Bandage_F";
-			atlOffset=0.78078461;
+			atlOffset=0.8026886;
 		};
 		class Item297
 		{
@@ -82958,6 +83046,91 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item412
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8370.8047,121.49608,7004.3491};
+				angles[]={0,3.1859415,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[monitor] call orbis_atc_fnc_addATCConsole;" \n "[monitor] call orbis_atc_fnc_addRadarScreen;";
+				name="monitor";
+			};
+			id=23803;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.69000244;
+		};
+		class Item413
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8370.7695,120.65,7004.3232};
+				angles[]={-0,4.7042532,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=23804;
+			type="CUP_office_table_a";
+		};
+		class Item414
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8370.3154,120.65,7003.5576};
+				angles[]={-0,4.1713505,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=23815;
+			type="CUP_ch_office_B";
+		};
+		class Item415
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8394.7246,113.87615,6974.0884};
+				angles[]={-0,0.02016245,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=23816;
+			type="rhsgref_BRDM2_vdv";
+		};
+		class Item416
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8390.002,113.86111,6974.4189};
+				angles[]={-0,0.0052631092,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				receiveRemoteTargets=1;
+			};
+			id=23818;
+			type="rhs_zsu234_aa";
 		};
 	};
 };
