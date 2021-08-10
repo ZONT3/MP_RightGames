@@ -60,3 +60,10 @@
 	"Запросить арсенал 1-й роты СпН",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_rhbz,
+	["RHBZ"],
+	"Запросить арсенал РХБЗ",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
