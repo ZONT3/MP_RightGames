@@ -93,8 +93,8 @@ force ace_gforces_enabledFor = 1;
 
 // ACE Goggles
 ace_goggles_effects = 2;
-ace_goggles_showClearGlasses = false;
-ace_goggles_showInThirdPerson = false;
+ace_goggles_showClearGlasses = true;
+ace_goggles_showInThirdPerson = true;
 
 // ACE Grenades
 force ace_grenades_convertExplosives = true;
@@ -219,7 +219,7 @@ force ace_medical_limping = 1;
 force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
 force ace_medical_playerDamageThreshold = 5;
-force ace_medical_spontaneousWakeUpChance = 0.3;
+force ace_medical_spontaneousWakeUpChance = 0.5;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
 force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
@@ -412,7 +412,7 @@ force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE Vehicles
 ace_vehicles_hideEjectAction = false;
-force ace_vehicles_keepEngineRunning = false;
+force ace_vehicles_keepEngineRunning = true;
 ace_vehicles_speedLimiterStep = 5;
 
 // ACE View Distance Limiter
@@ -493,6 +493,9 @@ acex_volume_remindIfLowered = false;
 acex_volume_showNotification = true;
 
 // Achilles - Available Factions
+Achilles_var_av_civ = true;
+Achilles_var_av_civ_tk = true;
+Achilles_var_av_ter = true;
 Achilles_var_BLU_CTRG_F = true;
 Achilles_var_BLU_F = true;
 Achilles_var_BLU_G_F = true;
@@ -533,6 +536,38 @@ Achilles_var_IND_G_F = true;
 Achilles_var_IND_L_F = true;
 Achilles_var_IND_P_F = true;
 Achilles_var_Interactive_F = true;
+Achilles_var_LOP_AA = true;
+Achilles_var_LOP_AFR = true;
+Achilles_var_LOP_AFR_Civ = true;
+Achilles_var_LOP_AFR_OPF = true;
+Achilles_var_LOP_AM = true;
+Achilles_var_LOP_AM_OPF = true;
+Achilles_var_LOP_BH = true;
+Achilles_var_LOP_CDF = true;
+Achilles_var_LOP_ChDKZ = true;
+Achilles_var_LOP_CHR_Civ = true;
+Achilles_var_LOP_GRE = true;
+Achilles_var_LOP_IA = true;
+Achilles_var_LOP_IRA = true;
+Achilles_var_LOP_IRAN = true;
+Achilles_var_LOP_ISTS = true;
+Achilles_var_LOP_ISTS_OPF = true;
+Achilles_var_LOP_NAPA = true;
+Achilles_var_LOP_NK = true;
+Achilles_var_LOP_PESH = true;
+Achilles_var_LOP_PESH_IND = true;
+Achilles_var_LOP_PMC = true;
+Achilles_var_LOP_RACS = true;
+Achilles_var_LOP_SLA = true;
+Achilles_var_LOP_SYR = true;
+Achilles_var_LOP_TAK_Civ = true;
+Achilles_var_LOP_TKA = true;
+Achilles_var_LOP_TRK = true;
+Achilles_var_LOP_UA = true;
+Achilles_var_LOP_UKR = true;
+Achilles_var_LOP_UN = true;
+Achilles_var_LOP_US = true;
+Achilles_var_LOP_UVF = true;
 Achilles_var_OPF_F = true;
 Achilles_var_OPF_G_F = true;
 Achilles_var_OPF_GEN_F = true;
@@ -577,8 +612,8 @@ Achilles_var_rhssaf_faction_airforce_opfor = true;
 Achilles_var_rhssaf_faction_army = true;
 Achilles_var_rhssaf_faction_army_opfor = true;
 Achilles_var_rhssaf_faction_un = true;
-Achilles_var_USAF = true;
 Achilles_var_Virtual_F = true;
+Achilles_var_VSM_GP = true;
 
 // Achilles - Available Modules
 Achilles_var_Achilles_ACE_Heal_Module = true;
@@ -686,6 +721,18 @@ Achilles_var_moduleTreeDLC = true;
 Achilles_var_moduleTreeHelmet = false;
 Achilles_var_moduleTreeSearchPatch = false;
 
+// ADV - ACE CPR
+force adv_aceCPR_addTime = 20;
+force adv_aceCPR_AED_stationType = """Land_Defibrillator_F""";
+force adv_aceCPR_chance_0 = 5;
+force adv_aceCPR_chance_1 = 15;
+force adv_aceCPR_chance_2 = 40;
+force adv_aceCPR_chance_aed = 85;
+force adv_aceCPR_enable = true;
+force adv_aceCPR_maxTime = 1200;
+force adv_aceCPR_onlyDoctors = 0;
+force adv_aceCPR_useLocation_AED = 0;
+
 // Aircraft Turbulence
 HELICOPTER_TURBULENCE_ENABLE_MASTER = true;
 HELICOPTER_TURBULENCE_ENABLE_WEATHEREFFECT = true;
@@ -718,6 +765,8 @@ orbis_atc_personalCallsign = "";
 orbis_atc_radarTrailLength = 5;
 orbis_atc_radarUpdateInterval = 0.5;
 orbis_atc_unitSettingAlt = false;
+orbis_atc_unitSettingHozGCI = false;
+orbis_atc_unitSettingLatGCI = false;
 orbis_atc_unitSettingSpd = false;
 orbis_atc_updateIntervalATIS = 15;
 
@@ -744,7 +793,6 @@ cba_ui_StorePasswords = 1;
 
 // CUP
 CUP_CheckCfgPatches = false;
-CUP_Vehicles_PreventBarrelClip = true;
 
 // CUP Static Weapons
 CUP_staticWeapons_allowMovement = false;
@@ -764,31 +812,47 @@ force dzn_Flares_M_Intensity = 10;
 force dzn_Flares_M_ListSetting = "StaticMortar, Mortar_01_base_F, CUP_B_M1129_MC_MK19_Desert, CUP_B_M1129_MC_MK19_Woodland";
 force dzn_Flares_M_Range = 400;
 
+// dzn Weapon Holders Carryable
+force dzn_WHC_AllowedNumberOfItemsSetting = "2";
+force dzn_WHC_CheckRadiusSetting = "50";
+force dzn_WHC_CheckTimeoutSetting = "5";
+force dzn_WHC_ClasslistSetting = "GroundWeaponHolder, WeaponHolderSimulated";
+force dzn_WHC_Enabled = true;
+
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
 force grad_trenches_functions_allowCamouflage = true;
 force grad_trenches_functions_allowDigging = true;
+force grad_trenches_functions_allowDiggingInVehicle = true;
 force grad_trenches_functions_allowGiantEnvelope = true;
+force grad_trenches_functions_allowHitDecay = true;
 force grad_trenches_functions_allowLongEnvelope = true;
 force grad_trenches_functions_allowShortEnvelope = true;
 force grad_trenches_functions_allowSmallEnvelope = true;
 force grad_trenches_functions_allowTrenchDecay = false;
 force grad_trenches_functions_allowVehicleEnvelope = true;
+force grad_trenches_functions_bigEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_bigEnvelopeDigTime = 40;
 force grad_trenches_functions_bigEnvelopeRemovalTime = -1;
 force grad_trenches_functions_buildFatigueFactor = 1;
 force grad_trenches_functions_camouflageRequireEntrenchmentTool = true;
+force grad_trenches_functions_createTrenchMarker = false;
 force grad_trenches_functions_decayTime = 1800;
+force grad_trenches_functions_giantEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_giantEnvelopeDigTime = 90;
 force grad_trenches_functions_giantEnvelopeRemovalTime = -1;
+force grad_trenches_functions_hitDecayMultiplier = 1;
 force grad_trenches_functions_LongEnvelopeDigTime = 100;
 force grad_trenches_functions_LongEnvelopeRemovalTime = -1;
+force grad_trenches_functions_shortEnvelopeDamageMultiplier = 2;
 force grad_trenches_functions_shortEnvelopeDigTime = 15;
 force grad_trenches_functions_shortEnvelopeRemovalTime = -1;
+force grad_trenches_functions_smallEnvelopeDamageMultiplier = 3;
 force grad_trenches_functions_smallEnvelopeDigTime = 30;
 force grad_trenches_functions_smallEnvelopeRemovalTime = -1;
 force grad_trenches_functions_stopBuildingAtFatigueMax = true;
 force grad_trenches_functions_timeoutToDecay = 7200;
+force grad_trenches_functions_vehicleEnvelopeDamageMultiplier = 1;
 force grad_trenches_functions_vehicleEnvelopeDigTime = 120;
 force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 
@@ -797,15 +861,15 @@ force kat_airway_Accuvac_time = 8;
 force kat_airway_CheckAirway_time = 2;
 force kat_airway_checkbox_puking_sound = true;
 force kat_airway_Colored_logs = true;
-force kat_airway_deathTimer = 300;
+force kat_airway_deathTimer = 436.467;
 force kat_airway_enable = true;
 force kat_airway_Guedeltubus_time = 6;
 force kat_airway_Larynxtubus_time = 3;
-force kat_airway_medLvl_Accuvac = 0;
+force kat_airway_medLvl_Accuvac = 1;
 force kat_airway_medLvl_Guedeltubus = 0;
-force kat_airway_medLvl_Larynxtubus = 0;
+force kat_airway_medLvl_Larynxtubus = 1;
 force kat_airway_Overstretch_time = 3;
-force kat_airway_probability_headturning = 50;
+force kat_airway_probability_headturning = 59.8067;
 force kat_airway_probability_obstruction = 15;
 force kat_airway_probability_occluded = 10;
 force kat_airway_string_exit = "";
@@ -858,7 +922,7 @@ force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
 force lambs_eventhandlers_ExplosionReactionTime = 9;
 
 // LAMBS Danger WP
-force lambs_wp_autoAddArtillery = false;
+force lambs_wp_autoAddArtillery = true;
 
 // LAMBS Main
 force lambs_main_combatShareRange = 200;
@@ -892,12 +956,44 @@ L_Suppress_flyByIntensity = 1;
 L_Suppress_halting = true;
 L_Suppress_intensity = 1;
 L_Suppress_playerSwabEnabled = true;
-L_Suppress_recovery = 1;
+L_Suppress_recovery = 1.3114;
 
-// Standing Static Line
-SSL_DefaultParachute = "NonSteerable_Parachute_F";
-force SSL_RequireParachute = true;
-force SSL_ShowRopes = 2;
+// Madin AI
+force MAI_AiEnable = true;
+force MAI_AiForceFormation = false;
+force MAI_AiSightCoefFactor = 0.02;
+force MAI_allowFlee = false;
+force MAI_camoCoefFactor = 0.05;
+force MAI_camoObjDistance = 20;
+force MAI_moveDistance = 300;
+force MAI_objSightDistance = 30;
+force MAI_PTSDfactor = 0.03;
+force MAI_PTSDflee = 1.5;
+force MAI_PTSDfleeDistance = 150;
+force MAI_PTSDhit = 0;
+force MAI_PTSDkilled = 0.1;
+force MAI_PTSDstopMove = 0.5;
+force MAI_PTSDsuppress = 0.1;
+force MAI_suppressFactor = 0;
+
+// Madin AI - AI skill
+force MAI_AiBonusMags = 4.05;
+force MAI_aimingAccuracy = 0.35;
+force MAI_aimingShake = 0.35;
+force MAI_aimingSpeed = 0.7;
+force MAI_aimPenaltyMax = 30;
+force MAI_aimPenaltyStrength = 1;
+force MAI_aimPenaltyTime = 30;
+force MAI_AiSkillAdjust = true;
+force MAI_Commanding = 1;
+force MAI_courage = 0;
+force MAI_enableAimPenalty = false;
+force MAI_endurance = 1;
+force MAI_general = 1;
+force MAI_randomSkill = 0.15;
+force MAI_reloadSpeed = 0.8;
+force MAI_spotDistance = 0.8;
+force MAI_spotTime = 0.8;
 
 // TFAR - Animations
 radioAnims_cba_ads = true;
@@ -913,36 +1009,6 @@ radioAnims_cba_preference_rf7800 = "Vest";
 radioAnims_cba_vehicles = true;
 radioAnims_cba_vestarmor = true;
 radioAnims_cba_vests = "[]";
-
-// UH-60M
-vtx_uh60_anvishud_defaultMode = -1;
-vtx_uh60m_enabled_waypts = true;
-vtx_uh60m_simpleCollective = false;
-vtx_uh60m_simpleStartup = false;
-vtx_uh60m_trackIR_interaction_cursor = false;
-vtx_uh60m_trackIR_interaction_cursorSensitivity = 2.5;
-
-// USAF
-usaf_afterburner_setting_allow_ai = true;
-USAF_allowNuke = true;
-usaf_debug_setting_enabled_clients = false;
-usaf_debug_setting_enabled_server = false;
-usaf_serviceMenu_setting_allowHangarRearm = true;
-usaf_serviceMenu_setting_allowHangarRefuel = true;
-usaf_serviceMenu_setting_allowHangarRepair = true;
-usaf_serviceMenu_setting_allowLoadoutModification = true;
-usaf_serviceMenu_setting_enabled = true;
-usaf_serviceMenu_setting_refuelTime = "100";
-usaf_serviceMenu_setting_reloadTime = "2";
-usaf_serviceMenu_setting_repairTime = "100";
-force usaf_serviceMenu_setting_replaceSources = true;
-usaf_serviceMenu_setting_selectorSearchRadius = "15";
-usaf_setting_allow_aiFormlights = true;
-usaf_utility_core_allow_move_in_cargo = false;
-
-// VXF Interaction
-vtx_ace_viv_loadDistance = 15;
-vtx_ace_viv_timeFactor = 1;
 
 // Zeus Enhanced
 zen_camera_adaptiveSpeed = true;
@@ -980,12 +1046,23 @@ zen_vision_enableWhiteHot = true;
 zen_vision_enableWhiteHotRedCold = false;
 
 // Zeus Enhanced - Faction Filter
+zen_faction_filter_0_av_EAST = true;
 zen_faction_filter_0_CUP_O_ChDKZ = true;
 zen_faction_filter_0_CUP_O_RU = true;
 zen_faction_filter_0_CUP_O_SLA = true;
 zen_faction_filter_0_CUP_O_TK = true;
 zen_faction_filter_0_CUP_O_TK_MILITIA = true;
-zen_faction_filter_0_CUP_Static_Ships = true;
+zen_faction_filter_0_LOP_AFR_OPF = true;
+zen_faction_filter_0_LOP_AM_OPF = true;
+zen_faction_filter_0_LOP_BH = true;
+zen_faction_filter_0_LOP_ChDKZ = true;
+zen_faction_filter_0_LOP_IRA = true;
+zen_faction_filter_0_LOP_ISTS_OPF = true;
+zen_faction_filter_0_LOP_NK = true;
+zen_faction_filter_0_LOP_SLA = true;
+zen_faction_filter_0_LOP_SYR = true;
+zen_faction_filter_0_LOP_TKA = true;
+zen_faction_filter_0_LOP_US = true;
 zen_faction_filter_0_OPF_F = true;
 zen_faction_filter_0_OPF_G_F = true;
 zen_faction_filter_0_OPF_GEN_F = true;
@@ -1005,6 +1082,7 @@ zen_faction_filter_0_rhsgref_faction_chdkz_groups = true;
 zen_faction_filter_0_rhsgref_faction_tla = true;
 zen_faction_filter_0_rhssaf_faction_airforce_opfor = true;
 zen_faction_filter_0_rhssaf_faction_army_opfor = true;
+zen_faction_filter_1_ = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
 zen_faction_filter_1_BLU_F = true;
 zen_faction_filter_1_BLU_G_F = true;
@@ -1016,11 +1094,13 @@ zen_faction_filter_1_CUP_B_CZ = true;
 zen_faction_filter_1_CUP_B_GB = true;
 zen_faction_filter_1_CUP_B_GER = true;
 zen_faction_filter_1_CUP_B_HIL = true;
-zen_faction_filter_1_CUP_B_RNZN = true;
 zen_faction_filter_1_CUP_B_US_Army = true;
 zen_faction_filter_1_CUP_B_USMC = true;
-zen_faction_filter_1_CUP_Static_Ships = true;
-zen_faction_filter_1_EODS_BOT = true;
+zen_faction_filter_1_LOP_AA = true;
+zen_faction_filter_1_LOP_CDF = true;
+zen_faction_filter_1_LOP_GRE = true;
+zen_faction_filter_1_LOP_IA = true;
+zen_faction_filter_1_LOP_PESH = true;
 zen_faction_filter_1_rhs_faction_socom = true;
 zen_faction_filter_1_rhs_faction_usaf = true;
 zen_faction_filter_1_rhs_faction_usarmy_d = true;
@@ -1033,24 +1113,31 @@ zen_faction_filter_1_rhsgref_faction_cdf_ground_b = true;
 zen_faction_filter_1_rhsgref_faction_cdf_ground_b_groups = true;
 zen_faction_filter_1_rhsgref_faction_cdf_ng_b = true;
 zen_faction_filter_1_rhsgref_faction_hidf = true;
-zen_faction_filter_1_USAF = true;
-zen_faction_filter_1_usm_usairforce = true;
-zen_faction_filter_1_usm_usarmy = true;
-zen_faction_filter_1_usm_usarmy_groups = true;
-zen_faction_filter_1_usm_usmarinecorps = true;
-zen_faction_filter_1_usm_usmarinecorps_groups = true;
-zen_faction_filter_1_usm_usnavy = true;
+zen_faction_filter_1_VSM_GP = true;
+zen_faction_filter_2_av_ter = true;
 zen_faction_filter_2_CUP_I_NAPA = true;
 zen_faction_filter_2_CUP_I_PMC_ION = true;
 zen_faction_filter_2_CUP_I_RACS = true;
 zen_faction_filter_2_CUP_I_TK_GUE = true;
 zen_faction_filter_2_CUP_I_UN = true;
-zen_faction_filter_2_CUP_Static_Ships = true;
 zen_faction_filter_2_IND_C_F = true;
 zen_faction_filter_2_IND_E_F = true;
 zen_faction_filter_2_IND_F = true;
 zen_faction_filter_2_IND_G_F = true;
 zen_faction_filter_2_IND_L_F = true;
+zen_faction_filter_2_LOP_AFR = true;
+zen_faction_filter_2_LOP_AM = true;
+zen_faction_filter_2_LOP_IRAN = true;
+zen_faction_filter_2_LOP_ISTS = true;
+zen_faction_filter_2_LOP_NAPA = true;
+zen_faction_filter_2_LOP_PESH_IND = true;
+zen_faction_filter_2_LOP_PMC = true;
+zen_faction_filter_2_LOP_RACS = true;
+zen_faction_filter_2_LOP_TRK = true;
+zen_faction_filter_2_LOP_UA = true;
+zen_faction_filter_2_LOP_UKR = true;
+zen_faction_filter_2_LOP_UN = true;
+zen_faction_filter_2_LOP_UVF = true;
 zen_faction_filter_2_rhsgref_faction_cdf_air = true;
 zen_faction_filter_2_rhsgref_faction_cdf_ground = true;
 zen_faction_filter_2_rhsgref_faction_cdf_ground_groups = true;
@@ -1065,13 +1152,16 @@ zen_faction_filter_2_rhsgref_faction_un = true;
 zen_faction_filter_2_rhssaf_faction_airforce = true;
 zen_faction_filter_2_rhssaf_faction_army = true;
 zen_faction_filter_2_rhssaf_faction_un = true;
+zen_faction_filter_3_av_civ = true;
 zen_faction_filter_3_CIV_F = true;
 zen_faction_filter_3_CIV_IDAP_F = true;
 zen_faction_filter_3_CUP_C_CHERNARUS = true;
 zen_faction_filter_3_CUP_C_RU = true;
-zen_faction_filter_3_CUP_C_SAHRANI = true;
 zen_faction_filter_3_CUP_C_TK = true;
-zen_faction_filter_3_EdCat_Things = true;
 zen_faction_filter_3_IND_L_F = true;
+zen_faction_filter_3_LOP_AFR_Civ = true;
+zen_faction_filter_3_LOP_CHR_Civ = true;
+zen_faction_filter_3_LOP_TAK_Civ = true;
+
 
 
