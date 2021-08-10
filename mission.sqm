@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=23834;
+		nextID=23840;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8343.5459,144.51018,7029.708};
-		dir[]={-0.47190207,-0.87913394,0.067824952};
-		up[]={-0.87018228,0.47659609,0.12506884};
-		aside[]={0.14227469,-1.4884863e-006,0.98991168};
+		pos[]={37.8428,180.90533,10225.022};
+		dir[]={-0.3603287,-0.82917976,0.42735776};
+		up[]={-0.53449416,0.55898124,0.63392144};
+		aside[]={0.76451939,5.2765245e-008,0.64460719};
 	};
 };
 binarizationWanted=0;
@@ -82595,161 +82595,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={31.4083,165.35632,10233.915};
-								angles[]={0,4.6155581,0};
-							};
-							side="East";
-							flags=5;
-							class Attributes
-							{
-								description="Контрактник";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="rhs_uniform_vkpo";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									radio="ItemRadio";
-									headgear="rhs_vkpo_cap";
-								};
-							};
-							id=23051;
-							type="rhs_vmf_emr_driver";
-						};
-						class Item58
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={31.370924,165.47484,10232.543};
-								angles[]={0,4.6155581,0};
-							};
-							side="East";
-							flags=5;
-							class Attributes
-							{
-								description="Контрактник";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="rhs_uniform_vkpo";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									radio="ItemRadio";
-									headgear="rhs_vkpo_cap";
-								};
-							};
-							id=23053;
-							type="rhs_vmf_emr_driver";
-							atlOffset=0.00054931641;
-						};
-						class Item59
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={31.337,165.56419,10231.498};
-								angles[]={0,4.6155581,0};
-							};
-							side="East";
-							flags=5;
-							class Attributes
-							{
-								description="Контрактник";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="rhs_uniform_vkpo";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									radio="ItemRadio";
-									headgear="rhs_vkpo_cap";
-								};
-							};
-							id=23055;
-							type="rhs_vmf_emr_driver";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male03RUS";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0.99000001;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="face";
-									expression="_this setface _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item60
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={33.188,165.58688,10232.518};
 								angles[]={0,4.6155581,0};
 							};
@@ -82857,7 +82702,7 @@ class Mission
 								nAttributes=4;
 							};
 						};
-						class Item61
+						class Item58
 						{
 							dataType="Object";
 							class PositionInfo
@@ -82969,7 +82814,7 @@ class Mission
 								nAttributes=4;
 							};
 						};
-						class Item62
+						class Item59
 						{
 							dataType="Object";
 							class PositionInfo
@@ -83081,7 +82926,7 @@ class Mission
 								nAttributes=4;
 							};
 						};
-						class Item63
+						class Item60
 						{
 							dataType="Object";
 							class PositionInfo
@@ -83111,6 +82956,342 @@ class Mission
 							};
 							id=23079;
 							type="rhs_vmf_emr_medic";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male03RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item61
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={31.294687,165.37122,10233.662};
+								angles[]={0.087774232,4.6155581,0.059929453};
+							};
+							side="East";
+							flags=4;
+							class Attributes
+							{
+								description="Медик";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="rhs_uniform_vkpo";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									headgear="rhs_vkpo_cap";
+								};
+							};
+							id=23839;
+							type="rhs_vmf_emr_medic";
+							atlOffset=1.5258789e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male03RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item62
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={31.262529,165.47699,10232.438};
+								angles[]={0.087774232,4.6155581,0.059929453};
+							};
+							side="East";
+							flags=4;
+							class Attributes
+							{
+								description="Медик";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="rhs_uniform_vkpo";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									headgear="rhs_vkpo_cap";
+								};
+							};
+							id=23837;
+							type="rhs_vmf_emr_medic";
+							atlOffset=1.5258789e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male03RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item63
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={31.337738,165.55679,10231.583};
+								angles[]={0.087774232,4.6155581,0.059929453};
+							};
+							side="East";
+							flags=4;
+							class Attributes
+							{
+								description="Медик";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="rhs_uniform_vkpo";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									headgear="rhs_vkpo_cap";
+								};
+							};
+							id=23835;
+							type="rhs_vmf_emr_medic";
+							atlOffset=1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -83223,6 +83404,7 @@ class Mission
 				};
 			};
 			id=23781;
+			atlOffset=-0.0082550049;
 		};
 		class Item405
 		{
