@@ -40,12 +40,14 @@ VVS_Wheeled = [
 ];
 
 VVS_TV = [
-  "rhs_t90sab_tv",
+  "rhs_t72be_tv",
   "rhs_2s3_tv"
 ];
 
 VVS_542 = [
   "rhs_bmp3_msv",
+  "rhs_bmp3mera_msv",
+  "rhs_bmp3m_msv",
   "rhs_bmp3mera_msv",
   "rhs_btr80a_vmf"
 ];
