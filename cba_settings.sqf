@@ -33,12 +33,12 @@ ace_arsenal_EnableRPTLog = false;
 ace_arsenal_fontHeight = 4.5;
 
 // ACE Artillery
-force ace_artillerytables_advancedCorrections = false;
+force ace_artillerytables_advancedCorrections = true;
 force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
-force ace_mk6mortar_useAmmoHandling = false;
+force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Captives
 force ace_captives_allowHandcuffOwnSide = true;
@@ -140,7 +140,7 @@ force ace_cargo_enable = true;
 force ace_cargo_loadTimeCoefficient = 5;
 force ace_cargo_paradropTimeCoefficent = 2.5;
 force ace_rearm_distance = 14.534;
-force ace_rearm_level = 0;
+force ace_rearm_level = 2;
 force ace_rearm_supply = 0;
 force ace_refuel_hoseLength = 15.7111;
 force ace_refuel_rate = 0.5;
@@ -357,7 +357,7 @@ force ace_trenches_smallEnvelopeDigDuration = 20;
 force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
-force ace_fastroping_requireRopeItems = false;
+force ace_fastroping_requireRopeItems = true;
 force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.1;
 ace_inventory_inventoryDisplaySize = 0;
