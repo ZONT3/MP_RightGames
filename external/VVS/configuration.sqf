@@ -55,6 +55,7 @@ VVS_542 = [
 VVS_Wheeled_Spec = [
   "B_LSV_01_unarmed_F",
   "B_Quadbike_01_F",
+  "rhsusf_mrzr4_d",
   "LOP_AFR_OPF_Offroad"
 ];
 
