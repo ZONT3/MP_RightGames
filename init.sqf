@@ -19,3 +19,6 @@ this addAction [""Получение мед. помощи"",""call ace_medical_t
 enableRadio false;
 enableSentences false;
 enableSaving [false, false];
+
+west setFriend [east, 1];
+east setFriend [west, 1];
