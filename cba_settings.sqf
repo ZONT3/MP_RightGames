@@ -44,7 +44,7 @@ force ace_mk6mortar_useAmmoHandling = true;
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
 force ace_captives_requireSurrender = 0;
-force ace_captives_requireSurrenderAi = false;
+force ace_captives_requireSurrenderAi = true;
 
 // ACE Common
 force ace_common_allowFadeMusic = true;
@@ -229,7 +229,7 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 1;
 force ace_medical_treatment_advancedBandages = 1;
 force ace_medical_treatment_advancedDiagnose = true;
 force ace_medical_treatment_advancedMedication = true;
-force ace_medical_treatment_allowBodyBagUnconscious = false;
+force ace_medical_treatment_allowBodyBagUnconscious = true;
 force ace_medical_treatment_allowLitterCreation = true;
 force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 1;
@@ -259,7 +259,7 @@ force ace_medical_treatment_treatmentTimeCPR = 15;
 force ace_medical_treatment_treatmentTimeIV = 12;
 force ace_medical_treatment_treatmentTimeSplint = 7;
 force ace_medical_treatment_treatmentTimeTourniquet = 7;
-force ace_medical_treatment_woundReopenChance = 1.75046;
+force ace_medical_treatment_woundReopenChance = 2.75046;
 force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Name Tags
@@ -362,7 +362,7 @@ force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 0.1;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 2;
-force ace_microdagr_mapDataAvailable = 2;
+force ace_microdagr_mapDataAvailable = 1;
 force ace_microdagr_waypointPrecision = 3;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
@@ -1162,6 +1162,3 @@ zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LOP_AFR_Civ = true;
 zen_faction_filter_3_LOP_CHR_Civ = true;
 zen_faction_filter_3_LOP_TAK_Civ = true;
-
-
-
