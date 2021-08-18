@@ -14,6 +14,7 @@ ZONT_fnc_filterVVS = {
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
   	case "TV": { VVS_TV };
+  	case "ISIS": { VVS_ISIS };
 
   	default {[]};
   };
@@ -67,6 +68,14 @@ VVS_BMO = [
   "rhs_tigr_sts_3camo_msv",
   "rhs_tigr_m_3camo_msv",
   "rhs_tigr_3camo_msv"
+];
+
+VVS_ISIS = [
+  "LOP_ISTS_Landrover_SPG9",
+  "LOP_ISTS_Landrover",
+  "LOP_ISTS_Nissan_PKM",
+  "LOP_AM_UAZ_AGS",
+  "LOP_ISTS_Offroad_M2"
 ];
 
 
