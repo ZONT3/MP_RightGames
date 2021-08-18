@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=25617;
+		nextID=25697;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5319.8462,187.65681,2664.6821};
-		dir[]={0.089835137,-0.37329784,0.92335564};
-		up[]={0.036148515,0.92770904,0.37154564};
-		aside[]={0.99530381,1.9072468e-007,-0.096835002};
+		pos[]={5155.9507,247.7009,2600.5583};
+		dir[]={0.82867283,-0.55411255,0.079166874};
+		up[]={0.55160308,0.8324402,0.052697338};
+		aside[]={0.09510278,8.4764906e-009,-0.99547285};
 	};
 };
 binarizationWanted=0;
@@ -756,7 +756,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1020,7 +1020,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1149,7 +1149,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=418;
+		items=422;
 		class Item0
 		{
 			dataType="Layer";
@@ -102940,6 +102940,868 @@ class Mission
 			name="mp_spawn_isis";
 			id=25616;
 			type="VirtualAISquad";
+		};
+		class Item418
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5273.645,182.08914,2624.9819};
+						angles[]={0,3.508321,0};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAI ""move""; this disableAI ""radioprotocol""; this disableAI ""autocombat""; this disableAI ""weaponaim""; " \n "this addAction [ " \n "  ""Запрос Техники ИГ"", " \n "  VVS_fnc_openVVS, " \n "  [VVS_isis_Land,""ISIS""], " \n "  6, " \n "  true, " \n "  true, " \n "  """", " \n "  ""[['ISIS']] call ZONT_fnc_checkRole"", " \n "  5 " \n "];";
+						disableSimulation=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_ISTS_Fatigue_03";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_rdg2_white";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="rhs_mag_rgd5";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							headgear="LOP_H_Shemag_BLK";
+						};
+					};
+					id=25662;
+					type="LOP_ISTS_Infantry_B_AT";
+					atlOffset=-1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=25661;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item419
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5254.1538,180.85899,2618.26};
+			};
+			title="ISIS";
+			id=25663;
+			atlOffset=-0.00036621094;
+		};
+		class Item420
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5217.2031,181.2332,2618.4641};
+			};
+			name="vvs_isis_land";
+			id=25664;
+			type="VirtualAISquad";
+		};
+		class Item421
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=10;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={24.998444,165.89122,10216.302};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25686;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={24.942675,165.8448,10217.574};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25668;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25.115244,165.82825,10218.563};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25670;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25.011158,165.78812,10219.557};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25672;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25.027473,165.74782,10220.586};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25674;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26.364922,166.00096,10216.289};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25676;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26.307373,165.95332,10217.635};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25678;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26.279451,165.92282,10218.518};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25680;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26.185055,165.87566,10219.703};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25682;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item9
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={26.179771,165.83876,10220.564};
+						angles[]={0,4.7025037,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""ZPR_rr"", ""ISIS""];";
+						description="ISIS";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_05";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+						};
+					};
+					id=25684;
+					type="LOP_AM_Infantry_Engineer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=25685;
 		};
 	};
 };
