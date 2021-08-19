@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=25866;
+		nextID=25869;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1883;
+		nextID=1908;
 	};
 	class Camera
 	{
-		pos[]={8315.0879,167.93576,7057.4736};
-		dir[]={-0.43100524,-0.73944098,0.5173676};
-		up[]={-0.47329748,0.67319775,0.56813389};
-		aside[]={0.76838559,-1.0153453e-006,0.640127};
+		pos[]={21.529995,171.80231,10243.795};
+		dir[]={0.29132617,-0.89475495,-0.3384946};
+		up[]={0.58366752,0.44655424,-0.67816913};
+		aside[]={-0.75795156,6.1723404e-007,-0.65232933};
 	};
 };
 binarizationWanted=0;
@@ -163,13 +163,14 @@ addons[]=
 	"ace_logistics_wirecutter",
 	"A3_Structures_F_Heli_Ind_Airport",
 	"AchillesEffects",
-	"achilles_modules_f_achilles"
+	"achilles_modules_f_achilles",
+	"kss"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=93;
+		items=94;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -763,6 +764,12 @@ class AddonsMetaData
 			name="achilles_modules_f_achilles";
 			author="ArmA 3 Achilles Mod Inc.";
 		};
+		class Item93
+		{
+			className="KSS";
+			name="Kurt's Survival System";
+			author="Kurt";
+		};
 	};
 };
 dlcs[]=
@@ -797,7 +804,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1061,7 +1068,7 @@ class CustomAttributes
 		};
 		nAttributes=3;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1190,7 +1197,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=472;
+		items=473;
 		class Item0
 		{
 			dataType="Layer";
@@ -7630,7 +7637,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8312.8047,114.12729,7022.4482};
-						angles[]={-0,4.7192307,0};
+						angles[]={0,4.7192307,0};
 					};
 					side="Empty";
 					flags=4;
@@ -84789,7 +84796,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={25.275454,165.06026,10236.512};
+								position[]={25.141706,165.06026,10236.855};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
@@ -84814,7 +84821,7 @@ class Mission
 							};
 							id=22949;
 							type="rhs_vmf_emr_driver";
-							atlOffset=0.26678467;
+							atlOffset=0.27748108;
 						};
 						class Item7
 						{
@@ -85167,7 +85174,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={25.826902,164.8376,10236.684};
+								position[]={25.972651,164.843,10237.017};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
@@ -85192,7 +85199,7 @@ class Mission
 							};
 							id=22973;
 							type="rhs_vmf_emr_driver";
-							atlOffset=1.5258789e-005;
+							atlOffset=-0.0062408447;
 						};
 						class Item19
 						{
@@ -105003,6 +105010,96 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item472
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8391.6602,111.54,7018.0161};
+			};
+			id=25868;
+			type="KSS_Module";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="KSS_Module_drawHUD";
+					expression="_this setVariable ['drawHUD',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="KSS_Module_enableHints";
+					expression="_this setVariable ['enableHints',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="KSS_Module_thirstDelay";
+					expression="_this setVariable ['thirstDelay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10000;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="KSS_Module_hungerDelay";
+					expression="_this setVariable ['hungerDelay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10000;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 	};
