@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=25863;
+		nextID=25864;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8416.8564,200.26395,6932.3848};
-		dir[]={-0.26257583,-0.6424337,0.72007942};
-		up[]={-0.2200969,0.76630408,0.60358632};
-		aside[]={0.93956143,-5.2968971e-007,0.34261248};
+		pos[]={8436.1943,207.16132,6908.1377};
+		dir[]={-0.32114556,-0.6367895,0.70110488};
+		up[]={-0.26520211,0.7709989,0.57897234};
+		aside[]={0.90923154,-4.5378692e-007,0.41648313};
 	};
 };
 binarizationWanted=0;
@@ -161,14 +161,15 @@ addons[]=
 	"av_bandages",
 	"CUP_Creatures_Military_Russia",
 	"ace_logistics_wirecutter",
-	"A3_Structures_F_Civ_Lamps",
-	"A3_Structures_F_Heli_Ind_Airport"
+	"A3_Structures_F_Heli_Ind_Airport",
+	"AchillesEffects",
+	"achilles_modules_f_achilles"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=91;
+		items=93;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -749,6 +750,18 @@ class AddonsMetaData
 			name="ACE3 - Logistics Wire Cutter";
 			author="Команда ACE";
 			url="http://ace3mod.com/";
+		};
+		class Item91
+		{
+			className="AchillesEffects";
+			name="AchillesEffects";
+			author="ArmA 3 Achilles Mod Inc.";
+		};
+		class Item92
+		{
+			className="achilles_modules_f_achilles";
+			name="achilles_modules_f_achilles";
+			author="ArmA 3 Achilles Mod Inc.";
 		};
 	};
 };
@@ -104855,23 +104868,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8355.0225,117.52218,7065.4077};
-				angles[]={0,5.0789042,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				dynamicSimulation=1;
-			};
-			id=25858;
-			type="Land_LampHalogen_F";
-		};
-		class Item470
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={8375.5293,128.4593,7005.7056};
 			};
 			side="Empty";
@@ -104883,7 +104879,7 @@ class Mission
 			id=25861;
 			type="FlagCarrierRU";
 		};
-		class Item471
+		class Item470
 		{
 			dataType="Object";
 			class PositionInfo
@@ -104898,6 +104894,40 @@ class Mission
 			};
 			id=25862;
 			type="Windsock_01_F";
+		};
+		class Item471
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8345.5518,121.34115,7052.1758};
+			};
+			id=25863;
+			type="ModuleLightSource_F";
+			atlOffset=9.8011475;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleLightSource_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="white";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
