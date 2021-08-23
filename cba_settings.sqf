@@ -878,7 +878,7 @@ force kat_airway_TurnAround_time = 2;
 // KAT - ADV Medical: Breathing
 force kat_breathing_death_timer_enable = false;
 force kat_breathing_enable = true;
-force kat_breathing_hemopneumothoraxChance = 15;
+force kat_breathing_hemopneumothoraxChance = 14;
 force kat_breathing_medLvl_Chestseal = 0;
 force kat_breathing_medLvl_hemopneumothoraxTreatment = 0;
 force kat_breathing_medLvl_Pulseoximeter = 0;
