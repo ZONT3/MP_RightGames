@@ -14,6 +14,7 @@ ZONT_fnc_filterVVS = {
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
   	case "TV": { VVS_TV };
+	case "RHBZ": { VVS_RHBZ };
   	case "ISIS": { VVS_ISIS };
 
   	default {[]};
@@ -46,6 +47,13 @@ VVS_TV = [
 
 VVS_542 = [
   
+];
+
+VVS_RHBZ = [
+ "B_MBT_01_mlrs_F",
+ "rhsgref_BRDM2_msv",
+ "rhs_brm1k_msv",
+ "rhs_prp3_msv",
 ];
 
 VVS_Wheeled_Spec = [
