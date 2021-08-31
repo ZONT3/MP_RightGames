@@ -47,3 +47,15 @@ _this addAction [
   "[['C542']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос Техники РХБЗ",
+  VVS_fnc_openVVS,
+  [VVS_east_Land,"RHBZ"],
+  6,
+  true,
+  true,
+  "",
+  "[['RHBZ']] call ZONT_fnc_checkRole",
+  5
+];
