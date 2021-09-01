@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=52187;
+		nextID=52597;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2744;
+		nextID=2751;
 	};
 	class Camera
 	{
-		pos[]={8374.2998,196.65659,7016.4351};
-		dir[]={-0.73008627,-0.68226665,-0.03865508};
-		up[]={-0.68131447,0.7311033,-0.0360731};
-		aside[]={-0.052872222,2.2029235e-007,0.99860752};
+		pos[]={8424.1582,305.98917,6195.2646};
+		dir[]={-0.42279524,-0.41835195,-0.80388516};
+		up[]={-0.19473758,0.90828389,-0.37026635};
+		aside[]={-0.8850584,-3.2305252e-009,0.46548736};
 	};
 };
 binarizationWanted=0;
@@ -1385,7 +1385,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=583;
+		items=584;
 		class Item0
 		{
 			dataType="Layer";
@@ -89584,7 +89584,6 @@ class Mission
 					class Attributes
 					{
 						createAsSimpleObject=1;
-						disableSimulation=1;
 					};
 					id=24391;
 					type="DeconShower_02_F";
@@ -89865,7 +89864,6 @@ class Mission
 					class Attributes
 					{
 						createAsSimpleObject=1;
-						disableSimulation=1;
 					};
 					id=24405;
 					type="DeconShower_02_F";
@@ -96136,17 +96134,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8364.9355,112.8653,6906.6523};
-								angles[]={0,1.606883,0};
+								position[]={8364.9355,112.86551,6906.6519};
+								angles[]={0,1.6068897,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								disableSimulation=1;
+								name="deconShower_1";
+								createAsSimpleObject=1;
 							};
 							id=24923;
 							type="DeconShower_01_F";
+							atlOffset=0.00020599365;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96214,18 +96214,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8361.9189,112.8465,6906.7612};
-								angles[]={0,4.748476,0};
+								position[]={8361.9189,112.84651,6906.7612};
+								angles[]={0,4.7484822,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								disableSimulation=1;
+								name="deconShower_2";
+								createAsSimpleObject=1;
 							};
 							id=24924;
 							type="DeconShower_01_F";
-							atlOffset=0.056404114;
+							atlOffset=0.056419373;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96293,18 +96294,19 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={8359.168,112.8465,6906.8604};
-								angles[]={0,4.748476,0};
+								position[]={8359.168,112.84651,6906.8599};
+								angles[]={0,4.7484822,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								disableSimulation=1;
+								name="deconShower_3";
+								createAsSimpleObject=1;
 							};
 							id=24925;
 							type="DeconShower_01_F";
-							atlOffset=0.056404114;
+							atlOffset=0.056419373;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -155568,6 +155570,77 @@ class Mission
 			};
 			id=36314;
 			atlOffset=2.0344543;
+		};
+		class Item583
+		{
+			dataType="Layer";
+			name="FOB Firestone";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Trigger";
+					position[]={8364.7871,111.639,6906.6592};
+					angle=4.7769666;
+					class Attributes
+					{
+						condition="call {player inArea thistrigger}" \n "";
+						onActivation="[deconShower_1, 1.5, 9] call BIN_fnc_deconShowerAnim;";
+						onDeactivation="[deconShower_1] call BIN_fnc_deconShowerAnimStop;";
+						sizeA=1.075;
+						sizeB=1.339;
+						sizeC=2.244;
+						repeatable=1;
+						isRectangle=1;
+					};
+					id=52390;
+					type="EmptyDetectorArea10x10";
+					atlOffset=0.00020599365;
+				};
+				class Item1
+				{
+					dataType="Trigger";
+					position[]={8361.875,111.639,6906.814};
+					angle=4.7769666;
+					class Attributes
+					{
+						condition="call {player inArea thistrigger}" \n "";
+						onActivation="[deconShower_2, 1.5, 9] call BIN_fnc_deconShowerAnim;";
+						onDeactivation="[deconShower_2] call BIN_fnc_deconShowerAnimStop;";
+						sizeA=1.075;
+						sizeB=1.339;
+						sizeC=2.244;
+						repeatable=1;
+						isRectangle=1;
+					};
+					id=52593;
+					type="EmptyDetectorArea10x10";
+					atlOffset=0.00020599365;
+				};
+				class Item2
+				{
+					dataType="Trigger";
+					position[]={8359.0439,111.639,6906.9102};
+					angle=4.7395978;
+					class Attributes
+					{
+						condition="call {player inArea thistrigger}" \n "";
+						onActivation="[deconShower_3, 1.5, 9] call BIN_fnc_deconShowerAnim;";
+						onDeactivation="[deconShower_3] call BIN_fnc_deconShowerAnimStop;";
+						sizeA=1.075;
+						sizeB=1.339;
+						sizeC=2.244;
+						repeatable=1;
+						isRectangle=1;
+					};
+					id=52594;
+					type="EmptyDetectorArea10x10";
+					atlOffset=0.00020599365;
+				};
+			};
+			id=52389;
+			atlOffset=0.00020599365;
 		};
 	};
 	class Connections
