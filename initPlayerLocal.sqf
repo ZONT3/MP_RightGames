@@ -58,7 +58,7 @@ private _fn_moveToCustomSpawn = {
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
 
 private _rhbz = [["RHBZ"]] call ZONT_fnc_checkRole;
-  if _train exitWith { [_player, true, 'MP_spawn_rhbz'] call _fn_moveToSpawn };
+  if _rhbz exitWith { [_player, true, 'MP_spawn_rhbz'] call _fn_moveToSpawn };
   private _train = [["Training"]] call ZONT_fnc_checkRole;
   if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
   private _isis = [["ISIS"]] call ZONT_fnc_checkRole;
