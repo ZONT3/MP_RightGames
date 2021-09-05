@@ -74,3 +74,10 @@
 	"Запросить арсенал РР",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_vagner,
+	["Vagner"],
+	"Запросить арсенал ЧВК",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;

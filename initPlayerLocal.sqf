@@ -55,6 +55,8 @@ private _fn_moveToCustomSpawn = {
 
   private _rhbz = [["RHBZ"]] call ZONT_fnc_checkRole;
   if _rhbz exitWith { [_player, true, 'MP_spawn_rhbz'] call _fn_moveToSpawn };
+  private _vagner = [["Vagner"]] call ZONT_fnc_checkRole;
+  if _vagner exitWith { [_player, true, 'MP_spawn_vagner'] call _fn_moveToSpawn };
   private _rr = [["RR"]] call ZONT_fnc_checkRole;
   if _rr exitWith { [_player, true, 'MP_spawn_rr'] call _fn_moveToSpawn };
   private _train = [["Training"]] call ZONT_fnc_checkRole;
