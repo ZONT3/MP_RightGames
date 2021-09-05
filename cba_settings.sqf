@@ -959,7 +959,7 @@ L_Suppress_playerSwabEnabled = true;
 L_Suppress_recovery = 1.3114;
 
 // Madin AI
-force MAI_AiEnable = true;
+force MAI_AiEnable = false;
 force MAI_AiForceFormation = false;
 force MAI_AiSightCoefFactor = 0.02;
 force MAI_allowFlee = false;
