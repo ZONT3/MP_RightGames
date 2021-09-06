@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8451.5225,146.11121,7184.4453};
-		dir[]={-0.69611406,-0.30097577,-0.65194589};
-		up[]={-0.21976353,0.95359558,-0.20582263};
-		aside[]={-0.68364143,1.4515826e-006,0.72995484};
+		pos[]={114.88829,285.56793,10169.192};
+		dir[]={0.77572972,-0.31534839,-0.54664439};
+		up[]={0.2577942,0.94896847,-0.18166399};
+		aside[]={-0.5760358,5.842885e-007,-0.8174389};
 	};
 };
 binarizationWanted=0;
@@ -8031,8 +8031,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8312.8047,114.12729,7022.4482};
-						angles[]={0,4.7192307,0};
+						position[]={8312.8047,114.13506,7022.4482};
+						angles[]={-0,4.7192307,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8040,10 +8040,10 @@ class Mission
 					{
 						lock="LOCKEDPLAYER";
 						createAsSimpleObject=1;
+						disableSimulation=1;
 					};
 					id=19641;
 					type="rhs_kamaz5350_open_msv";
-					atlOffset=-0.007774353;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99767,14 +99767,14 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={30.627258,165.22873,10237.112};
+								position[]={30.627001,165.22832,10237.113};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
-								description="Контрактник";
+								description="Химик";
 								isPlayable=1;
 								class Inventory
 								{
@@ -99792,21 +99792,82 @@ class Mission
 							};
 							id=23043;
 							type="rhs_vmf_emr_driver";
-							atlOffset=0.0184021;
+							atlOffset=0.018005371;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male02RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.01;
+										};
+									};
+								};
+								nAttributes=3;
+							};
 						};
 						class Item54
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={31.536022,165.29193,10237.094};
+								position[]={31.535999,165.29166,10237.094};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
-								description="Контрактник";
+								description="Химик";
 								isPlayable=1;
 								class Inventory
 								{
@@ -99824,21 +99885,101 @@ class Mission
 							};
 							id=23045;
 							type="rhs_vmf_emr_driver";
-							atlOffset=0.025268555;
+							atlOffset=0.024993896;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male02RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.97000003;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
 						};
 						class Item55
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={31.379974,165.28227,10235.977};
+								position[]={31.379999,165.28198,10235.977};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
-								description="Контрактник";
+								description="Химик";
 								isPlayable=1;
 								class Inventory
 								{
@@ -99856,21 +99997,101 @@ class Mission
 							};
 							id=23047;
 							type="rhs_vmf_emr_driver";
-							atlOffset=0.025283813;
+							atlOffset=0.024993896;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male03RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
 						};
 						class Item56
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={31.423742,165.2897,10234.694};
+								position[]={31.424,165.29028,10234.694};
 								angles[]={0,4.6155581,0};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
-								description="Контрактник";
+								description="Химик";
 								isPlayable=1;
 								class Inventory
 								{
@@ -99888,7 +100109,87 @@ class Mission
 							};
 							id=23049;
 							type="rhs_vmf_emr_driver";
-							atlOffset=-0.00054931641;
+							atlOffset=1.5258789e-005;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male02RUS";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1.05;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="face";
+									expression="_this setface _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=4;
+							};
 						};
 						class Item57
 						{
