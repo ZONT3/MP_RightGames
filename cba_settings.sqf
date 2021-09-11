@@ -219,13 +219,13 @@ force ace_medical_limping = 2;
 force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
 force ace_medical_playerDamageThreshold = 5;
-force ace_medical_spontaneousWakeUpChance = 0.7;
+force ace_medical_spontaneousWakeUpChance = 0.9;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
 force ace_medical_statemachine_AIUnconsciousness = false;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
-force ace_medical_statemachine_cardiacArrestTime = 600;
+force ace_medical_statemachine_cardiacArrestTime = 1200;
 force ace_medical_statemachine_fatalInjuriesAI = 1;
-force ace_medical_statemachine_fatalInjuriesPlayer = 1;
+force ace_medical_statemachine_fatalInjuriesPlayer = 0;
 force ace_medical_treatment_advancedBandages = 1;
 force ace_medical_treatment_advancedDiagnose = true;
 force ace_medical_treatment_advancedMedication = true;
@@ -878,7 +878,7 @@ force kat_airway_TurnAround_time = 2;
 // KAT - ADV Medical: Breathing
 force kat_breathing_death_timer_enable = false;
 force kat_breathing_enable = true;
-force kat_breathing_hemopneumothoraxChance = 25;
+force kat_breathing_hemopneumothoraxChance = 30;
 force kat_breathing_medLvl_Chestseal = 0;
 force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force kat_breathing_medLvl_Pulseoximeter = 0;
@@ -890,9 +890,9 @@ force kat_breathing_Stable_spo2 = 85;
 
 // KAT - ADV Medical: Circulation
 kat_circulation_bloodgroup = "B";
-force kat_circulation_CPR_Chance_Default = 50;
-force kat_circulation_CPR_Chance_Doctor = 80;
-force kat_circulation_CPR_Chance_RegularMedic = 65;
+force kat_circulation_CPR_Chance_Default = 80;
+force kat_circulation_CPR_Chance_Doctor = 100;
+force kat_circulation_CPR_Chance_RegularMedic = 100;
 force kat_circulation_DeactMon_whileAED_X = true;
 force kat_circulation_distanceLimit_AEDX = 30;
 force kat_circulation_enable = true;
@@ -956,7 +956,7 @@ L_Suppress_flyByIntensity = 1;
 L_Suppress_halting = true;
 L_Suppress_intensity = 1;
 L_Suppress_playerSwabEnabled = true;
-L_Suppress_recovery = 1.3114;
+L_Suppress_recovery = 2;
 
 // Madin AI
 force MAI_AiEnable = false;
@@ -977,7 +977,7 @@ force MAI_PTSDsuppress = 0.1;
 force MAI_suppressFactor = 1;
 
 // Madin AI - AI skill
-force MAI_AiBonusMags = 4.05;
+force MAI_AiBonusMags = -1;
 force MAI_aimingAccuracy = 0.35;
 force MAI_aimingShake = 0.35;
 force MAI_aimingSpeed = 0.7;
