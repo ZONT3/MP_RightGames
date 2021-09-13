@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=74768;
+		nextID=74771;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3952;
+		nextID=4019;
 	};
 	class Camera
 	{
-		pos[]={8061.2891,281.45764,6963.9204};
-		dir[]={0.37673172,-0.35683617,0.85483849};
-		up[]={0.14390585,0.93416625,0.32653511};
-		aside[]={0.91508079,2.0721927e-008,-0.40328136};
+		pos[]={8091.5811,227.57147,7093.8452};
+		dir[]={0.77545351,-0.55954736,0.29269165};
+		up[]={0.52351266,0.82878965,0.19759789};
+		aside[]={0.35314658,-5.8260048e-007,-0.93561965};
 	};
 };
 binarizationWanted=0;
@@ -1457,8 +1457,8 @@ class Mission
 		year=2018;
 		month=7;
 		day=2;
-		hour=8;
-		minute=0;
+		hour=5;
+		minute=-18;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 		class CustomAttributes
@@ -1507,7 +1507,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=529;
+		items=532;
 		class Item0
 		{
 			dataType="Layer";
@@ -174135,8 +174135,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7877.9561,111.5011,6791.8696};
-				angles[]={0.037981652,4.2912855,0.067896426};
+				position[]={7877.9561,111.50112,6791.8691};
+				angles[]={0.037978366,4.2912931,0.067893311};
 			};
 			side="Empty";
 			flags=4;
@@ -174149,6 +174149,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -174256,7 +174275,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item473
@@ -179267,7 +179286,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9625.168,83.545731,8460.2637};
+						position[]={9625.168,84.410057,8460.2637};
 						angles[]={6.2731848,1.2878966,6.2731905};
 					};
 					side="Empty";
@@ -179279,7 +179298,6 @@ class Mission
 					};
 					id=70871;
 					type="Land_LiquidDispenser_01_F";
-					atlOffset=-3.8146973e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -179309,7 +179327,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9625.3018,83.536743,8459.6895};
+						position[]={9625.3018,84.402679,8459.6895};
 						angles[]={6.2631893,1.3000607,6.2771854};
 					};
 					side="Empty";
@@ -179321,7 +179339,6 @@ class Mission
 					};
 					id=70873;
 					type="Land_LiquidDispenser_01_F";
-					atlOffset=-8.392334e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -180964,7 +180981,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9628.4424,83.261734,8460.748};
+						position[]={9628.4424,84.23336,8460.748};
 						angles[]={6.2731848,0.36895561,6.2731905};
 					};
 					side="Empty";
@@ -188754,6 +188771,54 @@ class Mission
 			id=71818;
 			type="Land_Water_pipe_EP1";
 			atlOffset=0.50707245;
+		};
+		class Item529
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7887.4312,113.39229,6839.3921};
+				angles[]={0,5.9318738,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=74768;
+			type="Land_TentLamp_01_suspended_F";
+			atlOffset=2.3494644;
+		};
+		class Item530
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7900.7651,112.27055,6841.8276};
+				angles[]={0,1.0972449,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=74769;
+			type="Land_TentLamp_01_standing_F";
+		};
+		class Item531
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7892.563,111.56665,6838.8452};
+				angles[]={0,2.2316561,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=74770;
+			type="Land_TentLamp_01_standing_F";
 		};
 	};
 };

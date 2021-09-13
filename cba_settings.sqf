@@ -219,7 +219,7 @@ force ace_medical_limping = 2;
 force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
 force ace_medical_playerDamageThreshold = 5;
-force ace_medical_spontaneousWakeUpChance = 0.9;
+force ace_medical_spontaneousWakeUpChance = 0.5;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
 force ace_medical_statemachine_AIUnconsciousness = false;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
@@ -890,8 +890,8 @@ force kat_breathing_Stable_spo2 = 85;
 
 // KAT - ADV Medical: Circulation
 kat_circulation_bloodgroup = "B";
-force kat_circulation_CPR_Chance_Default = 80;
-force kat_circulation_CPR_Chance_Doctor = 100;
+force kat_circulation_CPR_Chance_Default = 60;
+force kat_circulation_CPR_Chance_Doctor = 90;
 force kat_circulation_CPR_Chance_RegularMedic = 100;
 force kat_circulation_DeactMon_whileAED_X = true;
 force kat_circulation_distanceLimit_AEDX = 30;
