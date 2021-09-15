@@ -724,9 +724,9 @@ Achilles_var_moduleTreeSearchPatch = false;
 // ADV - ACE CPR
 force adv_aceCPR_addTime = 20;
 force adv_aceCPR_AED_stationType = """Land_Defibrillator_F""";
-force adv_aceCPR_chance_0 = 35;
-force adv_aceCPR_chance_1 = 40;
-force adv_aceCPR_chance_2 = 70;
+force adv_aceCPR_chance_0 = 5;
+force adv_aceCPR_chance_1 = 15;
+force adv_aceCPR_chance_2 = 40;
 force adv_aceCPR_chance_aed = 85;
 force adv_aceCPR_enable = true;
 force adv_aceCPR_maxTime = 1200;
