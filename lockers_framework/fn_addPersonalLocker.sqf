@@ -15,13 +15,36 @@ _this spawn {
   _target addAction [
     "Открыть личное хранилище",	// title
   	{
+      if not hasInterface exitWith { diag_log "PL: no interface" };
   		params ["_target", "_caller", "_actionId", "_arguments"]; // script
       private _hol = MPV_locker_holders getOrDefault [getPlayerUID _caller, objNull];
       if (isNull _hol) exitWith {
         hint parseText "<t color='#a00000'>Произошла ошибка</t><br/>Попробуйте перезайти на сервер";
       };
-      _hol setPosATL ((getPosATL _caller) vectorAdd [0,0,-2]);
+      private _holPos = getPosATL _hol;
+      private _pos = getPosATL _caller;
+      _hol hideObject true;
+      _hol setPosATL (_pos vectorAdd [0,0,-2]);
       _caller action ["Gear", _hol];
+
+      private _loop = _hol spawn {
+        sleep 5;
+        _this remoteExec ["ZONT_fnc_updPersonalLocker", -2];
+      };
+
+      private _tr = createTrigger ["EmptyDetector", _pos, false];
+      _tr setVariable ["myHolder", _hol];
+      _tr setVariable ["myHolderPos", _holPos];
+      _tr setVariable ["myLoop", _loop];
+      _tr setTriggerArea [2, 2, 0, false];
+      _tr setTriggerActivation ["ANYPLAYER", "PRESENT", false];
+      _tr setTriggerStatements ["not (player in thisList)", "
+        _hol = (thisTrigger getVariable ['myHolder', objNull]);
+        _hol remoteExec ['ZONT_fnc_updPersonalLocker', -2];
+        _hol setPosATL (thisTrigger getVariable ['myHolderPos', [-100, -100, 0]]);
+        terminate (thisTrigger getVariable ['myLoop', nil]);
+        deleteVehicle thisTrigger;
+      ", ""];
   	},
   	nil,		// arguments
   	1.5,		// priority
