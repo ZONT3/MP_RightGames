@@ -1264,3 +1264,7 @@ zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LOP_AFR_Civ = true;
 zen_faction_filter_3_LOP_CHR_Civ = true;
 zen_faction_filter_3_LOP_TAK_Civ = true;
+
+// TFAR - Global settings
+force TFAR_Teamspeak_Channel_Name = "RGMilitary";
+force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";

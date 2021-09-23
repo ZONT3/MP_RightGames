@@ -18,7 +18,7 @@ if _clear then {
   clearBackpackCargoGlobal _target;
 };
 
-{ _target addWeaponCargoGlobal   [_x # 0, _x # 1] } foreach _weap;
-{ _target addItemCargoGlobal     [_x # 0, _x # 1] } foreach _item;
-{ _target addMagazineCargoGlobal [_x # 0, _x # 1] } foreach _mag;
-{ _target addBackpackCargoGlobal [_x # 0, _x # 1] } foreach _back;
+{ _target addWeaponCargoGlobal   [_x, _weap # 1 # _forEachIndex] } foreach (_weap # 0);
+{ _target addItemCargoGlobal     [_x, _item # 1 # _forEachIndex] } foreach (_item # 0);
+{ _target addMagazineCargoGlobal [_x, _mag  # 1 # _forEachIndex] } foreach (_mag  # 0);
+{ _target addBackpackCargoGlobal [_x, _back # 1 # _forEachIndex] } foreach (_back # 0);

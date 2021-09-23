@@ -23,36 +23,26 @@ _this spawn {
       };
       private _holPos = getPosATL _hol;
       private _pos = getPosATL _caller;
-      _hol hideObject true;
-      _hol setPosATL (_pos vectorAdd [0,0,-2]);
+      _hol setPosATL (_pos vectorAdd [0,0,1]);
       _caller action ["Gear", _hol];
 
-      private _loop = _hol spawn {
-        sleep 5;
-        _this remoteExec ["ZONT_fnc_updPersonalLocker", -2];
-      };
-
-      private _tr = createTrigger ["EmptyDetector", _pos, false];
-      _tr setVariable ["myHolder", _hol];
-      _tr setVariable ["myHolderPos", _holPos];
-      _tr setVariable ["myLoop", _loop];
-      _tr setTriggerArea [2, 2, 0, false];
-      _tr setTriggerActivation ["ANYPLAYER", "PRESENT", false];
-      _tr setTriggerStatements ["not (player in thisList)", "
-        _hol = (thisTrigger getVariable ['myHolder', objNull]);
-        _hol remoteExec ['ZONT_fnc_updPersonalLocker', -2];
-        _hol setPosATL (thisTrigger getVariable ['myHolderPos', [-100, -100, 0]]);
-        terminate (thisTrigger getVariable ['myLoop', nil]);
-        deleteVehicle thisTrigger;
-      ", ""];
+      [[_hol, _holPos, _pos, player], {
+        params ["_hol", "_holPos", "_pos", "_player"];
+        private _until = time + 120;
+        while {_until > time and { _player distance _hol < 2 }} do {
+          sleep 5;
+          _hol spawn ZONT_fnc_updPersonalLocker;
+        };
+        _hol setPos _holPos;
+      }] remoteExec ["bis_fnc_call", 2];
   	},
   	nil,		// arguments
-  	1.5,		// priority
+  	15,		// priority
   	true,		// showWindow
   	true,		// hideOnUse
   	"",			// shortcut
   	_cond, 	// condition
-  	3,			// radius
+  	3 			// radius
   ];
 
   if (isNil "MPV_locker_list") then { MPV_locker_list = [] };
