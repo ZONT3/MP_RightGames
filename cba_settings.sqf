@@ -1110,24 +1110,6 @@ radioAnims_cba_vehicles = true;
 radioAnims_cba_vestarmor = true;
 radioAnims_cba_vests = "[]";
 
-// TFAR - Clientside settings
-TFAR_curatorCamEars = true;
-TFAR_default_radioVolume = 6;
-TFAR_intercomDucking = 0.2;
-TFAR_intercomVolume = 0.1;
-TFAR_moveWhileTabbedOut = false;
-TFAR_noAutomoveSpectator = false;
-TFAR_oldVolumeHint = false;
-TFAR_pluginTimeout = 4;
-TFAR_PosUpdateMode = 0.1;
-TFAR_showChannelChangedHint = true;
-TFAR_ShowDiaryRecord = true;
-TFAR_showTransmittingHint = true;
-TFAR_ShowVolumeHUD = false;
-TFAR_tangentReleaseDelay = 0;
-TFAR_VolumeHudTransparency = 0;
-TFAR_volumeModifier_forceSpeech = false;
-
 // TFAR - Global settings
 TFAR_AICanHearPlayer = true;
 TFAR_AICanHearSpeaker = true;
