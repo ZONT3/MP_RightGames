@@ -1141,7 +1141,7 @@ TFAR_fullDuplex = true;
 TFAR_giveLongRangeRadioToGroupLeaders = false;
 TFAR_giveMicroDagrToSoldier = true;
 TFAR_givePersonalRadioToRegularSoldier = false;
-TFAR_globalRadioRangeCoef = 1;
+TFAR_globalRadioRangeCoef = 0.5;
 TFAR_instantiate_instantiateAtBriefing = false;
 TFAR_objectInterceptionEnabled = true;
 TFAR_objectInterceptionStrength = 400;
@@ -1174,7 +1174,7 @@ TFAR_spectatorCanHearFriendlies = true;
 TFAR_takingRadio = 2;
 force TFAR_Teamspeak_Channel_Name = "RGMilitary";
 force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";
-tfar_terrain_interception_coefficient = 7;
+tfar_terrain_interception_coefficient = 12;
 TFAR_voiceCone = true;
 
 // Zeus Enhanced
