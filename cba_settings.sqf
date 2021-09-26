@@ -800,7 +800,6 @@ CBRN_factionMask_BLU_G_F = "";
 CBRN_factionMask_BLU_GEN_F = "";
 CBRN_factionMask_BLU_T_F = "";
 CBRN_factionMask_BLU_W_F = "";
-CBRN_factionMask_BWA3_Faction = "";
 CBRN_factionMask_CIV_F = "";
 CBRN_factionMask_CIV_IDAP_F = "";
 CBRN_factionMask_CUP_B_CDF = "";
@@ -935,7 +934,6 @@ CUP_staticWeapons_allowRotation = false;
 force digi_medical_avail_gasmask = """G_AirPurifyingRespirator_01_F"",""G_AirPurifyingRespirator_02_olive_F"",""G_RegulatorMask_F"",""G_AirPurifyingRespirator_02_sand_F"",""G_AirPurifyingRespirator_02_black_F"",""G_AirPurifyingRespirator_01_F"",""G_CBRN_M04"",""G_CBRN_M04_Hood"",""G_CBRN_M50"",""G_CBRN_M50_Hood"",""G_CBRN_S10""";
 force digi_medical_gasmask_durability = 3600;
 force digi_medical_infectTime = 30;
-
 
 // dzn Artillery Illumination
 force dzn_Flares_H_Color = [1,1,0.5];
@@ -1112,6 +1110,73 @@ radioAnims_cba_vehicles = true;
 radioAnims_cba_vestarmor = true;
 radioAnims_cba_vests = "[]";
 
+// TFAR - Clientside settings
+TFAR_curatorCamEars = true;
+TFAR_default_radioVolume = 6;
+TFAR_intercomDucking = 0.2;
+TFAR_intercomVolume = 0.1;
+TFAR_moveWhileTabbedOut = false;
+TFAR_noAutomoveSpectator = false;
+TFAR_oldVolumeHint = false;
+TFAR_pluginTimeout = 4;
+TFAR_PosUpdateMode = 0.1;
+TFAR_showChannelChangedHint = true;
+TFAR_ShowDiaryRecord = true;
+TFAR_showTransmittingHint = true;
+TFAR_ShowVolumeHUD = false;
+TFAR_tangentReleaseDelay = 0;
+TFAR_VolumeHudTransparency = 0;
+TFAR_volumeModifier_forceSpeech = false;
+
+// TFAR - Global settings
+TFAR_AICanHearPlayer = true;
+TFAR_AICanHearSpeaker = true;
+TFAR_allowDebugging = true;
+tfar_core_noTSNotConnectedHint = false;
+TFAR_defaultIntercomSlot = 0;
+TFAR_disableAutoMute = false;
+TFAR_enableIntercom = true;
+TFAR_experimentalVehicleIsolation = true;
+TFAR_fullDuplex = true;
+TFAR_giveLongRangeRadioToGroupLeaders = false;
+TFAR_giveMicroDagrToSoldier = true;
+TFAR_givePersonalRadioToRegularSoldier = false;
+TFAR_globalRadioRangeCoef = 1;
+TFAR_instantiate_instantiateAtBriefing = false;
+TFAR_objectInterceptionEnabled = true;
+TFAR_objectInterceptionStrength = 400;
+tfar_radiocode_east = "_opfor";
+tfar_radiocode_independent = "_independent";
+tfar_radiocode_west = "_bluefor";
+tfar_radioCodesDisabled = false;
+TFAR_SameLRFrequenciesForSide = false;
+TFAR_SameSRFrequenciesForSide = false;
+TFAR_setting_defaultFrequencies_lr_east = "";
+TFAR_setting_defaultFrequencies_lr_independent = "";
+TFAR_setting_defaultFrequencies_lr_west = "";
+TFAR_setting_defaultFrequencies_sr_east = "";
+TFAR_setting_defaultFrequencies_sr_independent = "";
+TFAR_setting_defaultFrequencies_sr_west = "";
+TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
+TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";
+TFAR_setting_DefaultRadio_Airborne_West = "TFAR_anarc210";
+TFAR_setting_DefaultRadio_Backpack_east = "TFAR_mr3000";
+TFAR_setting_DefaultRadio_Backpack_Independent = "TFAR_anprc155";
+TFAR_setting_DefaultRadio_Backpack_west = "TFAR_rt1523g";
+TFAR_setting_DefaultRadio_Personal_east = "TFAR_fadak";
+TFAR_setting_DefaultRadio_Personal_Independent = "TFAR_anprc148jem";
+TFAR_setting_DefaultRadio_Personal_West = "TFAR_anprc152";
+TFAR_setting_DefaultRadio_Rifleman_East = "TFAR_pnr1000a";
+TFAR_setting_DefaultRadio_Rifleman_Independent = "TFAR_anprc154";
+TFAR_setting_DefaultRadio_Rifleman_West = "TFAR_rf7800str";
+TFAR_spectatorCanHearEnemyUnits = true;
+TFAR_spectatorCanHearFriendlies = true;
+TFAR_takingRadio = 2;
+force TFAR_Teamspeak_Channel_Name = "RGMilitary";
+force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";
+tfar_terrain_interception_coefficient = 7;
+TFAR_voiceCone = true;
+
 // Zeus Enhanced
 zen_camera_adaptiveSpeed = true;
 zen_camera_defaultSpeedCoef = 1;
@@ -1136,6 +1201,7 @@ zen_editor_randomizeCopyPaste = false;
 zen_editor_removeWatermark = true;
 zen_editor_unitRadioMessages = 0;
 zen_placement_enabled = false;
+zen_remote_control_cameraExitPosition = 2;
 zen_visibility_enabled = false;
 zen_vision_enableBlackHot = false;
 zen_vision_enableBlackHotGreenCold = false;
@@ -1264,7 +1330,3 @@ zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LOP_AFR_Civ = true;
 zen_faction_filter_3_LOP_CHR_Civ = true;
 zen_faction_filter_3_LOP_TAK_Civ = true;
-
-// TFAR - Global settings
-force TFAR_Teamspeak_Channel_Name = "RGMilitary";
-force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";
