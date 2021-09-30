@@ -219,8 +219,8 @@ force ace_medical_limping = 2;
 force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
 force ace_medical_playerDamageThreshold = 5;
-force ace_medical_spontaneousWakeUpChance = 0.5;
-force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
+force ace_medical_spontaneousWakeUpChance = 0.2;
+force ace_medical_spontaneousWakeUpEpinephrineBoost = 20;
 force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force ace_medical_statemachine_cardiacArrestTime = 1200;
@@ -724,9 +724,9 @@ Achilles_var_moduleTreeSearchPatch = false;
 // ADV - ACE CPR
 force adv_aceCPR_addTime = 20;
 force adv_aceCPR_AED_stationType = """Land_Defibrillator_F""";
-force adv_aceCPR_chance_0 = 35;
+force adv_aceCPR_chance_0 = 15;
 force adv_aceCPR_chance_1 = 40;
-force adv_aceCPR_chance_2 = 80;
+force adv_aceCPR_chance_2 = 40;
 force adv_aceCPR_chance_aed = 85;
 force adv_aceCPR_enable = true;
 force adv_aceCPR_maxTime = 1200;
@@ -1027,9 +1027,9 @@ force kat_breathing_Stable_spo2 = 85;
 
 // KAT - ADV Medical: Circulation
 kat_circulation_bloodgroup = "B";
-force kat_circulation_CPR_Chance_Default = 60;
-force kat_circulation_CPR_Chance_Doctor = 90;
-force kat_circulation_CPR_Chance_RegularMedic = 100;
+force kat_circulation_CPR_Chance_Default = 15;
+force kat_circulation_CPR_Chance_Doctor = 40;
+force kat_circulation_CPR_Chance_RegularMedic = 40;
 force kat_circulation_DeactMon_whileAED_X = true;
 force kat_circulation_distanceLimit_AEDX = 30;
 force kat_circulation_enable = true;
