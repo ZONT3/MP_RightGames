@@ -1011,7 +1011,6 @@ force kat_airway_probability_occluded = 10;
 force kat_airway_string_exit = "";
 force kat_airway_TurnAround_time = 2;
 
-
 // KAT - ADV Medical: Breathing
 force kat_breathing_enable = true;
 force kat_breathing_hemopneumothoraxChance = 30;
@@ -1027,7 +1026,6 @@ kat_breathing_SpO2_dieValue = 65;
 force kat_breathing_spo2_small_value = 30;
 force kat_breathing_Stable_spo2 = 85;
 kat_breathing_tensionhemothorax_hardcore = true;
-
 
 // KAT - ADV Medical: Circulation
 kat_circulation_AED_BeepsAndCharge = true;
@@ -1048,7 +1046,6 @@ force kat_circulation_SuccesCh_AED = 80;
 force kat_circulation_SuccesCh_AED_X = 85;
 force kat_circulation_timeLimit_AEDX = 1800;
 force kat_circulation_useLocation_AED = 0;
-
 
 // KAT - ADV Medical: Misc
 force kat_misc_enable = true;
