@@ -998,7 +998,6 @@ force kat_airway_Accuvac_time = 8;
 force kat_airway_CheckAirway_time = 2;
 force kat_airway_checkbox_puking_sound = true;
 force kat_airway_Colored_logs = true;
-force kat_airway_deathTimer = 436.467;
 force kat_airway_enable = true;
 force kat_airway_Guedeltubus_time = 6;
 force kat_airway_Larynxtubus_time = 3;
@@ -1012,20 +1011,28 @@ force kat_airway_probability_occluded = 10;
 force kat_airway_string_exit = "";
 force kat_airway_TurnAround_time = 2;
 
+
 // KAT - ADV Medical: Breathing
-force kat_breathing_death_timer_enable = false;
 force kat_breathing_enable = true;
 force kat_breathing_hemopneumothoraxChance = 30;
 force kat_breathing_medLvl_Chestseal = 0;
 force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force kat_breathing_medLvl_Pulseoximeter = 0;
 force kat_breathing_pneumothorax = 35;
+kat_breathing_pneumothorax_hardcore = true;
 force kat_breathing_pneumothoraxDamageThreshold = 1;
 force kat_breathing_spo2_big_value = 66;
+kat_breathing_SpO2_dieActive = true;
+kat_breathing_SpO2_dieValue = 65;
 force kat_breathing_spo2_small_value = 30;
 force kat_breathing_Stable_spo2 = 85;
+kat_breathing_tensionhemothorax_hardcore = true;
+
 
 // KAT - ADV Medical: Circulation
+kat_circulation_AED_BeepsAndCharge = true;
+kat_circulation_blood_drawTime_250ml = 25;
+kat_circulation_blood_drawTime_500ml = 50;
 kat_circulation_bloodgroup = "B";
 force kat_circulation_CPR_Chance_Default = 15;
 force kat_circulation_CPR_Chance_Doctor = 40;
@@ -1034,11 +1041,14 @@ force kat_circulation_DeactMon_whileAED_X = true;
 force kat_circulation_distanceLimit_AEDX = 30;
 force kat_circulation_enable = true;
 force kat_circulation_enable_CPR_Chances = true;
+kat_circulation_enable_selfBloodDraw = 1;
+kat_circulation_medLvl_AED = 0;
 force kat_circulation_medLvl_AED_X = 0;
 force kat_circulation_SuccesCh_AED = 80;
 force kat_circulation_SuccesCh_AED_X = 85;
 force kat_circulation_timeLimit_AEDX = 1800;
 force kat_circulation_useLocation_AED = 0;
+
 
 // KAT - ADV Medical: Misc
 force kat_misc_enable = true;
