@@ -1163,7 +1163,7 @@ TFAR_spectatorCanHearFriendlies = true;
 TFAR_takingRadio = 2;
 force TFAR_Teamspeak_Channel_Name = "RGMilitary";
 force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";
-tfar_terrain_interception_coefficient = 12;
+tfar_terrain_interception_coefficient = 13;
 TFAR_voiceCone = true;
 
 // Zeus Enhanced
