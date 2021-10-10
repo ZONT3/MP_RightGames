@@ -1051,7 +1051,7 @@ force kat_circulation_useLocation_AED = 0;
 force kat_misc_enable = true;
 
 // LAMBS Danger
-force lambs_danger_cqbRange = 60;
+force lambs_danger_cqbRange = 80;
 lambs_danger_disableAIAutonomousManoeuvres = false;
 lambs_danger_disableAIDeployStaticWeapons = false;
 lambs_danger_disableAIFindStaticWeapons = false;
@@ -1059,7 +1059,7 @@ lambs_danger_disableAIHideFromTanksAndAircraft = false;
 lambs_danger_disableAIPlayerGroup = false;
 lambs_danger_disableAIPlayerGroupReaction = false;
 lambs_danger_disableAutonomousFlares = false;
-force lambs_danger_panicChance = 0.1;
+force lambs_danger_panicChance = 0.3;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
@@ -1081,10 +1081,10 @@ lambs_main_disableAIDodge = false;
 lambs_main_disableAIFleeing = false;
 lambs_main_disableAIGestures = false;
 lambs_main_disablePlayerGroupSuppression = false;
-force lambs_main_indoorMove = 0.1;
+force lambs_main_indoorMove = 0.3;
 force lambs_main_maxRevealValue = 1;
 force lambs_main_minFriendlySuppressionDistance = 5;
-force lambs_main_minSuppressionRange = 50;
+force lambs_main_minSuppressionRange = 200;
 force lambs_main_radioBackpack = 2000;
 lambs_main_radioDisabled = false;
 force lambs_main_radioEast = 500;
