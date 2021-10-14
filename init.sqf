@@ -29,3 +29,14 @@ arid, mediterranean, continental, tropical, polar
 */
 OPEX_mapClimate = "arid";
 execVM "external\OPEX_real_weather.sqf";
+
+/* Sandstorm
+MISSION_ROOT = call { 
+    private "_arr"; 
+    _arr = toArray __FILE__; 
+    _arr resize (count _arr - 8); 
+    toString _arr 
+};
+SStormRunning = false;
+publicVariable "SStormRunning";
+[0, 4, 0] execvm "ROS\scripts\ROS_Sandstorm_Scheduler.sqf"
