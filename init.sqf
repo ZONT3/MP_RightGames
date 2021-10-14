@@ -28,4 +28,4 @@ Climates:
 arid, mediterranean, continental, tropical, polar
 */
 OPEX_mapClimate = "arid";
-execVM "external/OPEX_real_weather.sqf";
+execVM "external\OPEX_real_weather.sqf";
