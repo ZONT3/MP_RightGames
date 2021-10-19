@@ -6,85 +6,71 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_542,
-	["C542"],
-	"Запросить арсенал 542 ОДШБ МП",
+	ars_82,
+	["A82"],
+	"Запросить арсенал 82nd AD",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_tv,
-	["TV"],
-	"Запросить арсенал Танковой Роты",
+	ars_cd,
+	["CD"],
+	"Запросить арсенал 1st CD",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_vks,
-	["VKS"],
-	"Запросить арсенал ВКС",
+	ars_usaf,
+	["USAF"],
+	"Запросить арсенал USAF",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_mp,
 	["MP"],
-	"Запросить арсенал ВП",
+	"Запросить арсенал 89th",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_fsb,
-	["FSB"],
-	"Запросить арсенал ЦСН ФСБ",
+	ars_navy,
+	["Navy"],
+	"Запросить арсенал DEVGRU",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_sso,
-	["SSO"],
-	"Запросить арсенал ССО",
+	ars_75,
+	["R75"],
+	"Запросить арсенал 75th",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_45,
-	["C45"],
-	"Запросить арсенал 45 ОБСН ВДВ",
+	ars_160,
+	["SOAR"],
+	"Запросить арсенал 160th",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_spn,
 	["SpN"],
-	"Запросить арсенал Разведки",
+	"Запросить арсенал NSF",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_rhbz,
-	["RHBZ"],
-	"Запросить арсенал РХБЗ",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_rr,
-	["RR"],
-	"Запросить арсенал РР",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_vagner,
-	["Vagner"],
-	"Запросить арсенал ЧВК",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_hq,
+	ars_train,
 	["Training"],
-	"Запросить арсенал УР",
+	"Запросить арсенал US Army AAS",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_med,
+	["Med"],
+	"Запросить арсенал Medical Corps",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;

@@ -10,11 +10,10 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-  	case "542": { VVS_542 };
+  	case "A82": { VVS_82 };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "TV": { VVS_TV };
-  	case "ISIS": { VVS_ISIS };
+  	case "CD": { VVS_CD };
 
   	default {[]};
   };
@@ -23,7 +22,7 @@ ZONT_fnc_filterVVS = {
 ZONT_fnc_onSpawnVVS = {
   // params ["_mode", "_vehicle"];
   switch(_this) do {
-  	case "TV": { {
+  	case "CD": { {
       _vehicle setVehicleAmmo 0;
       _vehicle setFuel 0
     } };
@@ -34,44 +33,47 @@ ZONT_fnc_onSpawnVVS = {
 
 
 VVS_HQ = [
-
+  "rhsusf_M1117_D",
+  "rhsusf_M1230_M2_usarmy_d",
+  "rhsusf_M1230_MK19_usarmy_d",
+  "rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy"
 ];
 
 VVS_Wheeled = [
 ];
 
-VVS_TV = [
+VVS_CD = [
 
 ];
 
-VVS_542 = [
-
+VVS_A82 = [
+  "rhsusf_m998_d_2dr_halftop",
+  "rhsusf_m1240a1_usarmy_d",
+  "rhsusf_m1240a1_m2_usarmy_d",
+  "rhsusf_m1240a1_m240_usarmy_d",
+  "rhsusf_m1240a1_mk19_usarmy_d",
+  "rhsusf_m1045_d"
 ];
 
 VVS_Wheeled_Spec = [
-  "B_LSV_01_unarmed_F",
-  "B_Quadbike_01_F",
+  "UK3CB_ARD_I_Hilux_Open",
   "rhsusf_mrzr4_d",
-  "LOP_AFR_OPF_Offroad"
+  "rhsusf_m1240a1_usarmy_d",
+  "B_Quadbike_01_F"
 ];
 
 VVS_BMO = [
-  "RHS_Ural_Fuel_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "rhs_gaz66_ammo_msv",
-  "rhs_kamaz5350_msv",
-  "rhs_kamaz5350_open_msv",
-  "rhs_tigr_sts_3camo_msv",
-  "rhs_tigr_m_3camo_msv",
-  "rhs_tigr_3camo_msv"
-];
-
-VVS_ISIS = [
-  "LOP_ISTS_Landrover_SPG9",
-  "LOP_ISTS_Landrover",
-  "LOP_ISTS_Nissan_PKM",
-  "LOP_AM_UAZ_AGS",
-  "LOP_ISTS_Offroad_M2"
+  "rhsusf_M1078A1P2_D_fmtv_usarmy",
+  "rhsusf_M1083A1P2_B_M2_D_fmtv_usarmy",
+  "rhsusf_m998_d_4dr_fulltop",
+  "rhsusf_m998_d_4dr",
+  "rhsusf_m1151_usarmy_d",
+  "rhsusf_M977A4_AMMO_BKIT_usarmy_d",
+  "rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d",
+  "rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d",
+  "rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
+  "rhsusf_M978A4_BKIT_usarmy_d",
+  "rhsusf_m1043_d_m2"
 ];
 
 
