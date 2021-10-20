@@ -20,8 +20,10 @@ enableRadio false;
 enableSentences false;
 enableSaving [false, false];
 
-west setFriend [east, 1];
-east setFriend [west, 1];
+west setFriend [east, 0];
+east setFriend [west, 0];
+resistance setFriend [west, 0];
+resistance setFriend [east, 1];
 
 /* Real Weather
 Climates:
