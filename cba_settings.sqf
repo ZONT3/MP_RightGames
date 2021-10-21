@@ -283,8 +283,8 @@ ace_nametags_tagSize = 2;
 force ace_nightvision_aimDownSightsBlur = 0.542791;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.1;
-force ace_nightvision_fogScaling = 0.398876;
-force ace_nightvision_noiseScaling = 0.326698;
+force ace_nightvision_fogScaling = 0.298876;
+force ace_nightvision_noiseScaling = 0.126698;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
