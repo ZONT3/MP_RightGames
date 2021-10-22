@@ -47,3 +47,15 @@ _this addAction [
   "[['A82']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос Техники Штаба",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"HQ"],
+  6,
+  true,
+  true,
+  "",
+  "[['A82']] call ZONT_fnc_checkRole",
+  5
+];
