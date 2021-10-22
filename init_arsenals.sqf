@@ -74,3 +74,10 @@
 	"Запросить арсенал Medical Corps",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_afa,
+	["AFA"],
+	"Запросить арсенал National AirForce of Afghanistan",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
