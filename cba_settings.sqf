@@ -289,6 +289,7 @@ force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
 ace_overheating_displayTextOnJam = true;
+ace_overheating_heatCoef = 2;
 force ace_overheating_enabled = true;
 force ace_overheating_overheatingDispersion = true;
 ace_overheating_showParticleEffects = true;
