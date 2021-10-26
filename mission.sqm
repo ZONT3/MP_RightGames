@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=12184;
+		nextID=12187;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1969;
+		nextID=2037;
 	};
 	class Camera
 	{
-		pos[]={11982.782,41.411636,2088.3826};
-		dir[]={0.76753795,-0.58699185,0.25763729};
-		up[]={0.55649191,0.80958563,0.18679543};
-		aside[]={0.31822434,-7.1377144e-008,-0.94804394};
+		pos[]={11968.49,87.317863,2108.8909};
+		dir[]={0.63450283,-0.76394391,-0.11773836};
+		up[]={0.751131,0.64527798,-0.13938107};
+		aside[]={-0.18245402,6.4662891e-007,-0.98324901};
 	};
 };
 binarizationWanted=0;
@@ -242,13 +242,14 @@ addons[]=
 	"ace_map",
 	"BlinkTroll",
 	"A3_Structures_F_Enoch_Wrecks",
-	"rhsusf_c_HEMTT_A4"
+	"rhsusf_c_HEMTT_A4",
+	"rhsusf_c_m113"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=128;
+		items=129;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -1074,6 +1075,13 @@ class AddonsMetaData
 		{
 			className="rhsusf_c_HEMTT_A4";
 			name="HEMMTT A4 Trucks";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item128
+		{
+			className="rhsusf_c_m113";
+			name="M113A3 APC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -1975,7 +1983,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=299;
+		items=302;
 		class Item0
 		{
 			dataType="Layer";
@@ -87641,7 +87649,7 @@ class Mission
 										};
 										class value
 										{
-											items=140;
+											items=141;
 											class Item0
 											{
 												class data
@@ -89600,6 +89608,20 @@ class Mission
 														};
 													};
 													value="ACE_SpareBarrel";
+												};
+											};
+											class Item140
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_DefusalKit";
 												};
 											};
 										};
@@ -93630,7 +93652,7 @@ class Mission
 										};
 										class value
 										{
-											items=72;
+											items=76;
 											class Item0
 											{
 												class data
@@ -94637,6 +94659,62 @@ class Mission
 														};
 													};
 													value="Ucp_Iotv_Rflm";
+												};
+											};
+											class Item72
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="ACE_DefusalKit";
+												};
+											};
+											class Item73
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="murshun_cigs_cigpack";
+												};
+											};
+											class Item74
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="murshun_cigs_lighter";
+												};
+											};
+											class Item75
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="murshun_cigs_matches";
 												};
 											};
 										};
@@ -158443,6 +158521,162 @@ class Mission
 			};
 			id=12183;
 			type="rhsusf_M977A4_REPAIR_usarmy_d";
+			atlOffset=-1.9073486e-006;
+		};
+		class Item299
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11912.354,27.026072,2272.9812};
+				angles[]={0.00083775807,1.5707614,0.01038471};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=12184;
+			type="rhsusf_m1025_d";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalMask";
+					expression="if(_value != 'NoChange')then{ [_this,'unitdecals_1',_value] call rhs_fnc_hmmwv_setDecal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalDoors";
+					expression="if(_value != 'NoChange')then{ [_this,'unitdecals_2',_value] call rhs_fnc_hmmwv_setDecal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item300
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11911.985,27.865519,2281.3162};
+				angles[]={0.0079935296,1.570769,0.00069053395};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=12185;
+			type="rhsusf_m113d_usarmy_M240";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item301
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11911.561,27.802986,2289.1309};
+				angles[]={0.0080084298,1.570769,0.00069053395};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=12186;
+			type="rhsusf_m113d_usarmy_M240";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
