@@ -52,7 +52,10 @@ VVS_A82 = [
   "rhsusf_m1240a1_m2_usarmy_d",
   "rhsusf_m1240a1_m240_usarmy_d",
   "rhsusf_m1240a1_mk19_usarmy_d",
-  "rhsusf_m1045_d"
+  "rhsusf_m1045_d",
+  "rhsusf_m1240a1_mk19_uik_usarmy_d",
+  "rhsusf_m1240a1_m2_uik_usarmy_d",
+  "rhsusf_m1240a1_m240_uik_usarmy_d"
 ];
 
 VVS_Wheeled_Spec = [
@@ -74,6 +77,11 @@ VVS_BMO = [
   "rhsusf_M977A4_REPAIR_BKIT_usarmy_d",
   "rhsusf_M978A4_BKIT_usarmy_d",
   "rhsusf_m1043_d_m2"
+];
+
+VVS_MP = [
+  "rhsusf_M1117_D",
+  "UK3CB_B_MaxxPro_M2_US"
 ];
 
 

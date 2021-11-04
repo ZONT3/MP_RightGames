@@ -59,3 +59,15 @@ _this addAction [
   "[['HQ']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос Техники Military Police",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"MP"],
+  6,
+  true,
+  true,
+  "",
+  "[['MP']] call ZONT_fnc_checkRole",
+  5
+];
