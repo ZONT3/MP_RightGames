@@ -367,11 +367,11 @@ force ace_nightvision_noiseScaling = 0.126698;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-force ace_overheating_cookoffCoef = 2.00155;
+force ace_overheating_cookoffCoef = 0.5;
 ace_overheating_displayTextOnJam = true;
 force ace_overheating_enabled = true;
-ace_overheating_heatCoef = 2;
-force ace_overheating_jamChanceCoef = 2.00155;
+ace_overheating_heatCoef = 0.5;
+force ace_overheating_jamChanceCoef = 0.5;
 force ace_overheating_overheatingDispersion = true;
 ace_overheating_overheatingRateOfFire = true;
 ace_overheating_particleEffectsAndDispersionDistance = 3000;

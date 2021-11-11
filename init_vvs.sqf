@@ -37,7 +37,7 @@ _this addAction [
 ];
 
 _this addAction [
-  "Запрос Техники 82nd AD",
+  "Запрос Техники 10th SGEU",
   VVS_fnc_openVVS,
   [VVS_west_Land,"A82"],
   6,

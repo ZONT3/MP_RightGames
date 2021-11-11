@@ -6,78 +6,64 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_82,
+	ars_10,
 	["A82"],
-	"Запросить арсенал 82nd AD",
+	"Запросить арсенал 10th Scion Guard Expeditionary Unit",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_cd,
+	ars_af,
 	["CD"],
-	"Запросить арсенал 1st CD",
+	"Запросить арсенал Armored Fist",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_usaf,
+	ars_gf,
 	["USAF"],
-	"Запросить арсенал USAF",
+	"Запросить арсенал Scion Imperial AirForce",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_mp,
 	["MP"],
-	"Запросить арсенал 89th",
+	"Запросить арсенал Military Police",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_navy,
 	["Navy"],
-	"Запросить арсенал DEVGRU",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_75,
-	["R75"],
-	"Запросить арсенал 75th",
+	"Запросить арсенал Scion Imperial Marines",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_160,
 	["SOAR"],
-	"Запросить арсенал 160th",
+	"Запросить арсенал Scion Imperial Rangers",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_spn,
 	["SpN"],
-	"Запросить арсенал NSF",
+	"Запросить арсенал Atlas Corporation",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_train,
 	["Training"],
-	"Запросить арсенал US Army AAS",
+	"Запросить арсенал Training Squad",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_med,
 	["Med"],
-	"Запросить арсенал Medical Corps",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_afa,
-	["AFA"],
-	"Запросить арсенал National AirForce of Afghanistan",
+	"Запросить арсенал medical department",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
