@@ -369,7 +369,7 @@ force ace_nightvision_shutterEffects = true;
 // ACE Overheating
 force ace_overheating_cookoffCoef = 0.5;
 ace_overheating_displayTextOnJam = true;
-force ace_overheating_enabled = true;
+force ace_overheating_enabled = false;
 ace_overheating_heatCoef = 0.5;
 force ace_overheating_jamChanceCoef = 0.5;
 force ace_overheating_overheatingDispersion = true;

@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=2684;
+		nextID=2718;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=67;
+		nextID=74;
 	};
 	class Camera
 	{
-		pos[]={763.03943,221.85205,1361.5773};
-		dir[]={-0.7945711,-0.54095143,0.27615896};
-		up[]={-0.51102573,0.84099221,0.17761309};
-		aside[]={0.32833755,-1.510838e-006,0.9447037};
+		pos[]={543.77686,221.1597,1413.5645};
+		dir[]={0.78296304,-0.39836815,0.47803563};
+		up[]={0.34008548,0.91716176,0.2076353};
+		aside[]={0.52117282,-9.6080475e-007,-0.85361409};
 	};
 };
 binarizationWanted=0;
@@ -105,13 +105,15 @@ addons[]=
 	"CUP_CAStructures_Mil",
 	"OPTRE_Vehicles_Pelican",
 	"OPTRE_Vehicles_Hornet",
-	"Arma"
+	"Arma",
+	"TG_Soldiers",
+	"TG_Defense"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=59;
+		items=61;
 		class Item0
 		{
 			className="OPTRE_UNSC_Structure_Military";
@@ -496,6 +498,18 @@ class AddonsMetaData
 			className="Arma";
 			name="Arma";
 			author="Phantom hawk";
+		};
+		class Item59
+		{
+			className="TG_Soldiers";
+			name="TG_Soldiers";
+			author="Tiberian Genesis";
+		};
+		class Item60
+		{
+			className="TG_Defense";
+			name="TG_Defense";
+			author="Tiberian Genesis";
 		};
 	};
 };
@@ -1151,28 +1165,71 @@ class Mission
 {
 	class Intel
 	{
-		timeOfChanges=1800.0002;
-		startWeather=0.50999999;
-		startFog=0.015;
+		startWeather=1;
+		startFog=0.70826375;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.50999999;
-		forecastFog=0.02;
+		forecastWeather=0.046763863;
+		forecastFog=0.68327194;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		wavesForced=1;
 		windForced=1;
-		year=2018;
+		year=2050;
 		day=28;
-		hour=9;
-		minute=0;
+		hour=23;
+		minute=28;
+		forecastFogBase=-8.3308105;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
+		class CustomAttributes
+		{
+			name="Intel";
+			class Attribute0
+			{
+				property="ENH_timeMultiplier";
+				expression="if (!is3DEN && isServer && _value != 1) then {setTimeMultiplier _value}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=7.5999999;
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ENH_terrainDetail";
+				expression="if (!is3DEN && _value > 0 && hasInterface) then {setTerrainGrid _value}";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"SCALAR"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
 	};
 	class Entities
 	{
-		items=120;
+		items=124;
 		class Item0
 		{
 			dataType="Object";
@@ -31429,7 +31486,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={727.8974,200.92798,1341.0311};
-				angles[]={-0,2.8932118,0};
+				angles[]={0,2.8932118,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31442,7 +31499,7 @@ class Mission
 			};
 			id=2678;
 			type="OPTRE_Pelican_armed";
-			atlOffset=0.18754578;
+			atlOffset=0.18440247;
 		};
 		class Item117
 		{
@@ -31452,7 +31509,6 @@ class Mission
 				position[]={727.54773,195.68651,1411.6714};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				textures="colorwhite";
@@ -31462,6 +31518,7 @@ class Mission
 			};
 			id=2679;
 			type="OPTRE_UNSC_hornet";
+			atlOffset=1.2459564;
 		};
 		class Item118
 		{
@@ -31494,6 +31551,7 @@ class Mission
 			};
 			id=2683;
 			type="Arma_OPFOR_medical_A";
+			atlOffset=-0.0059661865;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -31517,6 +31575,120 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item120
+		{
+			dataType="Group";
+			side="West";
+			class Attributes
+			{
+			};
+			id=2688;
+			atlOffset=-196.98334;
+		};
+		class Item121
+		{
+			dataType="Group";
+			side="East";
+			class Attributes
+			{
+			};
+			id=2696;
+			atlOffset=-196.98334;
+		};
+		class Item122
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={555.0697,192.33144,1427.0275};
+						angles[]={0.039977662,0.095822871,0.1029669};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=2702;
+					type="TG_UAV_AI_NOD_01";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={555.0697,194.37868,1427.0275};
+						angles[]={0.039977662,0.095822871,0.1029669};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2703;
+					type="TG_UAV_AI_NOD_01";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=2702;
+						item1=2701;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=2703;
+						item1=2701;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2700;
+		};
+		class Item123
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={529.15833,201.80708,1534.9965};
+				angles[]={0.039977662,0.095822871,0.1029669};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				aiRadarUsage=1;
+			};
+			id=2701;
+			type="TG_LaserTurret_NOD_01";
 		};
 	};
 };
