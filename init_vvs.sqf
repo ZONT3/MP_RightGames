@@ -71,3 +71,15 @@ _this addAction [
   "[['MP']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос Техники SI AirForce",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"USAF"],
+  6,
+  true,
+  true,
+  "",
+  "[['USAF']] call ZONT_fnc_checkRole",
+  5
+];

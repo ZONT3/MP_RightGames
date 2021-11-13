@@ -14,6 +14,7 @@ ZONT_fnc_filterVVS = {
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
   	case "CD": { VVS_CD };
+    case "USAF": { VVS_USAF };
 
   	default {[]};
   };
@@ -61,12 +62,21 @@ VVS_BMO = [
   "OPTRE_M12G1_LRV",
   "OPTRE_M12R_AA",
   "OPTRE_M813_TT",
-  "OPTRE_M914_RV"
+  "OPTRE_M914_RV",
+  "B_Truck_01_Repair_F",
+  "B_Truck_01_ammo_F",
+  "B_Truck_01_fuel_F"
 ];
 
 VVS_MP = [
   "SC_SaurusAPC_Unarmed_SE"
 ];
+
+VVS_USAF = [
+  "HMCS_VW1URB",
+  "JGPT"
+];
+
 
 
 VVS_Car = [];
