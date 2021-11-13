@@ -1240,14 +1240,14 @@ force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
 
 // LAxemann's Suppress
-L_Suppress_buildup = 0.5;
+L_Suppress_buildup = 0.1;
 L_Suppress_enabled = true;
-L_Suppress_flyByEffects = false;
-L_Suppress_flyByIntensity = 0.5;
+L_Suppress_flyByEffects = true;
+L_Suppress_flyByIntensity = 0.1;
 L_Suppress_halting = true;
-L_Suppress_intensity = 0.5;
+L_Suppress_intensity = 0.1;
 L_Suppress_playerSwabEnabled = true;
-L_Suppress_recovery = 2;
+L_Suppress_recovery = 3;
 
 // Standing Static Line
 SSL_DefaultParachute = "NonSteerable_Parachute_F";
