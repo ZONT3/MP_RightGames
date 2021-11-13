@@ -1084,7 +1084,7 @@ CUP_staticWeapons_allowRotation = false;
 // DIGI ACE SYSTEM
 digi_medical_affectAI = true;
 force digi_medical_avail_gasmask = """G_AirPurifyingRespirator_01_F"",""G_AirPurifyingRespirator_02_olive_F"",""G_RegulatorMask_F"",""G_AirPurifyingRespirator_02_sand_F"",""G_AirPurifyingRespirator_02_black_F"",""G_AirPurifyingRespirator_01_F"",""G_CBRN_M04"",""G_CBRN_M04_Hood"",""G_CBRN_M50"",""G_CBRN_M50_Hood"",""G_CBRN_S10""";
-force digi_medical_gasmask_durability = 3600;
+force digi_medical_gasmask_durability = 1200;
 force digi_medical_infectTime = 30;
 
 // dzn Artillery Illumination
@@ -1242,7 +1242,7 @@ force lambs_main_radioWest = 500;
 // LAxemann's Suppress
 L_Suppress_buildup = 0.5;
 L_Suppress_enabled = true;
-L_Suppress_flyByEffects = true;
+L_Suppress_flyByEffects = false;
 L_Suppress_flyByIntensity = 0.5;
 L_Suppress_halting = true;
 L_Suppress_intensity = 0.5;
@@ -1335,32 +1335,6 @@ force TFAR_Teamspeak_Channel_Name = "RGMilitary";
 force TFAR_Teamspeak_Channel_Password = "d6ths6g5fdw8a6ds2";
 tfar_terrain_interception_coefficient = 13;
 TFAR_voiceCone = true;
-
-// UH-60M
-vtx_uh60_anvishud_defaultMode = -1;
-vtx_uh60m_enabled_waypts = true;
-vtx_uh60m_simpleCollective = false;
-vtx_uh60m_simpleStartup = false;
-vtx_uh60m_trackIR_interaction_cursor = false;
-vtx_uh60m_trackIR_interaction_cursorSensitivity = 2.5;
-
-// USAF
-usaf_afterburner_setting_allow_ai = true;
-USAF_allowNuke = true;
-usaf_debug_setting_enabled_clients = false;
-usaf_debug_setting_enabled_server = false;
-usaf_serviceMenu_setting_allowHangarRearm = true;
-usaf_serviceMenu_setting_allowHangarRefuel = true;
-usaf_serviceMenu_setting_allowHangarRepair = true;
-usaf_serviceMenu_setting_allowLoadoutModification = true;
-usaf_serviceMenu_setting_enabled = true;
-usaf_serviceMenu_setting_refuelTime = "100";
-usaf_serviceMenu_setting_reloadTime = "2";
-usaf_serviceMenu_setting_repairTime = "100";
-usaf_serviceMenu_setting_replaceSources = false;
-usaf_serviceMenu_setting_selectorSearchRadius = "15";
-usaf_setting_allow_aiFormlights = true;
-usaf_utility_core_allow_move_in_cargo = false;
 
 // VXF Interaction
 vtx_ace_viv_loadDistance = 15;
@@ -1579,3 +1553,43 @@ zen_faction_filter_3_plpCat_BeachObjects = true;
 zen_faction_filter_3_UK3CB_ADC_C = true;
 zen_faction_filter_3_UK3CB_CHC_C = true;
 zen_faction_filter_3_UK3CB_TKC_C = true;
+
+// VCOM SETTINGS
+VCM_ActivateAI = true;
+VCM_ADVANCEDMOVEMENT = true;
+VCM_AIDISTANCEVEHPATH = 100;
+VCM_AIMagLimit = 5;
+VCM_AISkills_General_EM = true;
+VCM_AISkills_General_EM_CHN = 10;
+VCM_AISkills_General_EM_CLDWN = 10;
+Vcm_AISkills_SideSpecific = false;
+VCM_AISNIPERS = true;
+VCM_AISUPPRESS = true;
+VCM_ARTYDELAY = 30;
+VCM_ARTYENABLE = true;
+VCM_ARTYSIDES = [WEST,EAST,GUER];
+VCM_CARGOCHNG = true;
+VCM_ClassSteal = true;
+VCM_Debug = false;
+VCM_DISEMBARKRANGE = 200;
+Vcm_DrivingActivated = true;
+VCM_ForceSpeed = true;
+VCM_FRMCHANGE = true;
+Vcm_GrenadeChance = 10;
+VCM_HEARINGDISTANCE = 1200;
+VCM_MEDICALACTIVE = true;
+VCM_MINECHANCE = 75;
+VCM_MINEENABLED = true;
+Vcm_PlayerAISkills = true;
+VCM_RAGDOLL = true;
+VCM_RAGDOLLCHC = 100;
+VCM_SIDEENABLED = [WEST,EAST,GUER];
+VCM_SKILLCHANGE = true;
+Vcm_SmokeGrenadeChance = 10;
+VCM_STATICARMT = 300;
+VCM_StealVeh = true;
+VCM_SUPDIST = 200;
+VCM_TURRETUNLOAD = true;
+VCM_USECBASETTINGS = true;
+VCM_WARNDELAY = 30;
+VCM_WARNDIST = 1000;
