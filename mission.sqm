@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2913;
+		nextID=2938;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={486.04855,234.51524,1219.2019};
-		dir[]={0.84955245,-0.34866697,-0.39590546};
-		up[]={0.3160544,0.9372353,-0.14728811};
-		aside[]={-0.42241445,-7.0151873e-007,-0.90643144};
+		pos[]={547.48999,238.19753,1369.3466};
+		dir[]={0.73183054,-0.59044546,0.34062582};
+		up[]={0.53534418,0.80705339,0.24917181};
+		aside[]={0.42202044,2.0535663e-006,-0.90671641};
 	};
 };
 binarizationWanted=0;
@@ -112,13 +112,16 @@ addons[]=
 	"OPTRE_Vehicles_HEV",
 	"OPTRE_BW_DoorConsole",
 	"CUP_CAMisc",
-	"CUP_ibr_plants"
+	"CUP_ibr_plants",
+	"OPTRE_UNSC_Structure_Walls",
+	"A3_Structures_F_Enoch_Military_Camps",
+	"A3_Supplies_F_Exp_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=64;
+		items=66;
 		class Item0
 		{
 			className="OPTRE_UNSC_Structure_Military";
@@ -530,6 +533,18 @@ class AddonsMetaData
 		{
 			className="CUP_ibr_plants";
 			name="CUP_ibr_plants";
+		};
+		class Item64
+		{
+			className="OPTRE_UNSC_Structure_Walls";
+			name="OPTRE_UNSC_Structure_Walls";
+		};
+		class Item65
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1249,7 +1264,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=194;
+		items=204;
 		class Item0
 		{
 			dataType="Object";
@@ -35362,6 +35377,177 @@ class Mission
 			};
 			id=2912;
 			type="Land_optre_milwall_gate";
+		};
+		class Item194
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={601.37622,192.33,1432.1211};
+				angles[]={0,0.04591608,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_teleporter setVariable [""sc_props_teleporter_enabled"", false, true];";
+			};
+			id=2913;
+			type="SC_Teleporter";
+		};
+		class Item195
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={455.4957,177.8631,580.68646};
+				angles[]={0,1.2437333,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_teleporter setVariable [""sc_props_teleporter_enabled"", false, true];";
+			};
+			id=2914;
+			type="SC_Teleporter";
+		};
+		class Item196
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={462.65091,171.03026,584.16077};
+				angles[]={0,3.6256855,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2923;
+			type="Land_DistrictWall_45r";
+			atlOffset=-11.090714;
+		};
+		class Item197
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={450.28812,171.03844,616.7868};
+				angles[]={0,3.6256855,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2928;
+			type="Land_DistrictWall_45r";
+			atlOffset=-11.082535;
+		};
+		class Item198
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={601.39063,193.70456,1430.4969};
+				angles[]={0,3.1441944,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2929;
+			type="Land_MedicalTent_01_CSAT_greenhex_generic_outer_F";
+		};
+		class Item199
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={603.95703,193.0386,1430.0918};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2931;
+			type="Land_OPTRE_corrugated_crate01";
+		};
+		class Item200
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={598.86371,192.8092,1430.5996};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2932;
+			type="Land_optre_milcrate_h3green";
+		};
+		class Item201
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={598.30017,192.54004,1428.9613};
+				angles[]={0,3.544162,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+				disableSimulation=1;
+			};
+			id=2933;
+			type="Box_Syndicate_Ammo_F";
+		};
+		class Item202
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={603.55145,193.25101,1428.5081};
+				angles[]={0,1.8875606,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2935;
+			type="OPTRE_RS_ConsoleCorvette_SysYellow";
+		};
+		class Item203
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={598.4057,193.25101,1427.766};
+				angles[]={0,0.43752193,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2937;
+			type="OPTRE_RS_ConsoleDoor";
 		};
 	};
 };
