@@ -67,3 +67,10 @@
 	"Запросить арсенал medical department",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_iron,
+	["Iron"],
+	"Запросить арсенал Iron Enclave",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
