@@ -38,23 +38,23 @@ diag_log "//________________ 2_Eliminate_Suspects.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "2_Eliminate_Suspects  Initializing"; 
-	};	
-	
+	systemchat "2_Eliminate_Suspects  Initializing";
+	};
+
 //________________ Spawn the Unit	________________
 
 _Overwatch_Pos = [(GF_Missions_pos)] call BIS_fnc_findOverwatch;
 
 //________________	Overwatch	________________
-_Group_Overwatch = [ _Overwatch_Pos, EAST, [
+_Group_Overwatch = [ _Overwatch_Pos, WEST, [
 "O_spotter_F","O_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Overwatch setBehaviour "COMBAT";		//	AWARE
 _Group_Overwatch setCombatMode "RED";		//	YELLOW
 
-//________________	Patrol	________________	
-_Group_Patrol = [ _Overwatch_Pos, EAST, [
+//________________	Patrol	________________
+_Group_Patrol = [ _Overwatch_Pos, WEST, [
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
 
@@ -154,32 +154,32 @@ _x setskill 0.8;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["2_Eliminate_Suspects","GF_Missions_Pack"],["Eliminate the Suspects","Eliminate the Suspects",""], _Overwatch_Pos,true,1,true,"kill",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["2_Eliminate_Suspects","GF_Missions_Pack"],["Убейте Подозреваемых","Убейте Подозреваемых",""], _Overwatch_Pos,true,1,true,"kill",true] call BIS_fnc_taskCreate;
 	["2_Eliminate_Suspects","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
-	
+
 	waitUntil {sleep 3;({alive _x} count units _Group_Overwatch) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Patrol) isEqualTo 0;};
 
-	
+
 	["2_Eliminate_Suspects", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";

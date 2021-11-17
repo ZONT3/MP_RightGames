@@ -38,8 +38,8 @@ diag_log "//________________ 18_Move_to.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "18_Move_to  Initializing"; 
-	};	
+	systemchat "18_Move_to  Initializing";
+	};
 
 //________________	Spawn Objects	________________
 
@@ -54,7 +54,7 @@ _weapons_Loot = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -82,7 +82,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -114,7 +114,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -146,14 +146,14 @@ _weapons_Loot = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
 			"srifle_DMR_07_ghex_F",
-			
+
 			// Launchers
 			"launch_NLAW_F",
 			"launch_RPG32_F",
@@ -171,9 +171,9 @@ _weapons_Loot = selectRandom [
 			"launch_O_Titan_short_ghex_F",
 			"launch_I_Titan_short_F",
 			"launch_B_Titan_short_F",
-			"launch_B_Titan_short_tna_F"			
+			"launch_B_Titan_short_tna_F"
 			];
-			
+
 
 _sideweapons_loot = selectRandom [
 			//Pistols
@@ -191,7 +191,7 @@ _sideweapons_loot = selectRandom [
 			"hgun_PDW2000_F",
 			"SMG_01_F",
 			"SMG_02_F",
-			"SMG_05_F"		
+			"SMG_05_F"
 			];
 
 
@@ -199,21 +199,21 @@ _items_loot1 = selectRandom [
 			//for RyanZombies
 			//"RyanZombiesAntiVirusTemporary_Item",
 			//"RyanZombiesAntiVirusCure_Item",
-			
-			//Vanilla			
+
+			//Vanilla
 			"ToolKit",
 			"MediKit",
 			"FirstAidKit",
-			"FirstAidKit", 			
+			"FirstAidKit",
 			//Tools
 			"Binocular",
-			"Rangefinder",			
+			"Rangefinder",
 			"Laserdesignator",
 			"Laserdesignator_02",
 			"Laserdesignator_03"
 			];
-	
-	
+
+
 _items_loot2 = selectRandom [
 			//Here ONLY :items , PointerAttachments , BipodAttachments , MuzzleAttachments , OpticAttachments , NVG
 			"ItemCompass",
@@ -308,7 +308,7 @@ _items_loot2 = selectRandom [
 			"optic_Holosight_blk_F",
 			"optic_Holosight_khk_F",
 			"optic_Holosight_smg_blk_F",
-			
+
 			//NVG
 			"NVGoggles",
 			"NVGoggles_INDEP",
@@ -320,7 +320,7 @@ _items_loot2 = selectRandom [
 			"NVGoggles_tna_F"
 			];
 
-	
+
 _items_loot3 = selectRandom [
 			//Flares
 			"Chemlight_blue",
@@ -368,68 +368,68 @@ _items_loot3 = selectRandom [
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag"
 			];
-			
 
-			_Ravage_item = selectRandom [		
+
+			_Ravage_item = selectRandom [
 			// Ravage_items
 			//x1
 			"rvg_plasticBottleEmpty",
 			"rvg_canteenEmpty",
 			"rvg_hose",
-			"rvg_sleepingBag_Blue", 
+			"rvg_sleepingBag_Blue",
 			"rvg_foldedTent",
 			"rvg_rustyCan",
 			"rvg_Geiger",
 			"rvg_canisterFuel_Empty",
 			"rvg_toolkit",
 			"rvg_tire",
-			//x2 Vital			
-			"rvg_money", 
-			"rvg_notepad", 
-			"rvg_docFolder",
-			"rvg_canOpener",
-			"rvg_guttingKnife", 
-			"rvg_matches",
-			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
-			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
-			"rvg_rice",
-			"rvg_antiRad",
-			"rvg_purificationTablets",						
 			//x2 Vital
-			"rvg_money", 
-			"rvg_notepad", 
+			"rvg_money",
+			"rvg_notepad",
 			"rvg_docFolder",
 			"rvg_canOpener",
-			"rvg_guttingKnife", 
+			"rvg_guttingKnife",
 			"rvg_matches",
 			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
 			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
 			"rvg_rice",
 			"rvg_antiRad",
 			"rvg_purificationTablets",
-			
+			//x2 Vital
+			"rvg_money",
+			"rvg_notepad",
+			"rvg_docFolder",
+			"rvg_canOpener",
+			"rvg_guttingKnife",
+			"rvg_matches",
+			"rvg_plasticBottle",
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
+			"rvg_franta",
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
+			"rvg_rice",
+			"rvg_antiRad",
+			"rvg_purificationTablets",
+
 			//addon Ravage
 			"Mask_M40_OD",
 			"Mask_M40",
 			"Mask_M50"
 			];
-			
-			
-			
+
+
+
 //addweaponcargo	addItemCargo	addMagazineCargo
 
 //	weapons
-_Move_to addweaponcargo [_weapons_Loot, 5];	//	5 is the amount 
+_Move_to addweaponcargo [_weapons_Loot, 5];	//	5 is the amount
 
 //	sideweapons
 _Move_to addweaponcargo [_sideweapons_loot, 5];
@@ -448,46 +448,46 @@ _Move_to addItemCargo [_Ravage_item, 5];
 
 //	weapon's cargo mags
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
 _Move_to addMagazineCargoGlobal [_magazineClass_weapon, 10];		//	10 mags
 
 
 //	sideweapon's cargo mag
 _magazines_sideweapon = getArray (configFile / "CfgWeapons" / _sideweapons_loot / "magazines");
-_magazineClass_sideweapon = _magazines_sideweapon call bis_fnc_selectRandom; 
+_magazineClass_sideweapon = _magazines_sideweapon call bis_fnc_selectRandom;
 
 _Move_to addMagazineCargoGlobal [_magazineClass_sideweapon, 10];	//	10 mags
 
 
 //	Extra type of magazines
 _magazines_Extra = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_Extra = _magazines_Extra call bis_fnc_selectRandom; 
-_Move_to addMagazineCargoGlobal [_magazineClass_Extra, 10];	//	10 mags	
+_magazineClass_Extra = _magazines_Extra call bis_fnc_selectRandom;
+_Move_to addMagazineCargoGlobal [_magazineClass_Extra, 10];	//	10 mags
 
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
 	[GF_Missions_allPlayers,["18_Move_to","GF_Missions_Pack"],["Move to Location , Follow directions","Move to Location",""], _Move_to,true,1,true,"move",true] call BIS_fnc_taskCreate;
 	["18_Move_to","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	waitUntil { { _x distance _Move_to < 20 } count GF_Missions_allPlayers > 0 };
-	
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
-	
+
+
 	sleep 5;
-	
+
 	["18_Move_to", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 5;
 
 
@@ -527,7 +527,7 @@ _Object_3_array = selectRandom [
 "C_Hatchback_01_sport_F",
 "C_Van_01_transport_F",
 "C_Quadbike_01_F"
-]; 
+];
 
 _Object_3 = createVehicle [_Object_3_array, _Object_3_Pos, [], 0, "CAN_COLLIDE"];
 _Object_3 setDir (random 360);
@@ -545,7 +545,7 @@ _Flag setDir (random 360);
 //________________ Spawn Groups	________________
 
 //________________	Defend	________________
-_Group_Defend = [ _Group_Pos, EAST, [
+_Group_Defend = [ _Group_Pos, WEST, [
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
@@ -566,7 +566,7 @@ _weapons = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -594,7 +594,7 @@ _weapons = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -626,7 +626,7 @@ _weapons = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -658,26 +658,26 @@ _weapons = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"		
+			"srifle_DMR_07_ghex_F"
 			];
 
 //________________	weapon's mags	________________
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
-	
+
 
 _Vests_array = selectRandom [
 			"V_Rangemaster_belt",
 			"V_TacVest_blk_POLICE",
 			""
-			]; 
+			];
 
 removeAllWeapons _x;
 removeAllItems _x;
@@ -705,52 +705,52 @@ _x setskill 0.9;
 }forEach units _Group_Defend;
 
 
-	
+
 	//________________	Set Task 2	________________
 
-	[GF_Missions_allPlayers,["18_Move_to_2","GF_Missions_Pack"],["Prisoners have Escaped , Find the Prisoners","Find Prisoners location",""], _Group_Pos,true,1,true,"navigate",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["18_Move_to_2","GF_Missions_Pack"],["Заложники убежали, найдите их","Найдите местоположение заложников",""], _Group_Pos,true,1,true,"navigate",true] call BIS_fnc_taskCreate;
 	["18_Move_to_2","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	waitUntil { { _x distance _Building < 400 } count GF_Missions_allPlayers > 0 };
-	
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
-	
+
+
 	sleep 5;
-	
+
 	["18_Move_to_2", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 5;
-	
-	
+
+
 	//________________	Set Task 2	________________
 
-	[GF_Missions_allPlayers,["18_Move_to_3","GF_Missions_Pack"],["The Prisoners are 400 meters away , they are armed , Eliminate all Threats","Eliminate all Threats",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["18_Move_to_3","GF_Missions_Pack"],["Заложники находятся в 400 метрах, они вооружены, Устраните все угрозы","Устраните все угрозы",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
 	["18_Move_to_3","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	waitUntil {sleep 3;({alive _x} count units _Group_Defend) isEqualTo 0;};
-	
+
 	["18_Move_to_3", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";

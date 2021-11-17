@@ -38,8 +38,8 @@ diag_log "//________________ 3_Trader_Camp.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "3_Trader_Camp  Initializing"; 
-	};	
+	systemchat "3_Trader_Camp  Initializing";
+	};
 
 //________________	Spawn Objects	________________
 
@@ -52,7 +52,7 @@ _Building_array = [
 "Land_ClothShelter_02_F",
 "Land_CanvasCover_01_F",
 "Land_CanvasCover_02_F"
-]; 
+];
 
 _Building_Spawn = selectRandom _Building_array;
 _Building = _Building_Spawn createVehicle GF_Missions_pos;
@@ -75,7 +75,7 @@ _Object_1_array = selectRandom [
 "Land_CampingChair_V1_F",
 "Land_CampingChair_V2_F",
 "Land_CampingChair_V1_folded_F"
-]; 
+];
 _Object_1 = createVehicle [_Object_1_array, _Object_1_Pos, [], 0, "CAN_COLLIDE"];
 _Object_1 setDir (random 360);
 
@@ -86,7 +86,7 @@ _Object_2_array = selectRandom [
 "Land_WoodPile_F",
 "Land_CampingTable_small_F",
 "Land_CampingTable_F"
-]; 
+];
 _Object_2 = createVehicle [_Object_2_array, _Object_2_Pos, [], 0, "CAN_COLLIDE"];
 _Object_2 setDir (random 360);
 
@@ -99,20 +99,13 @@ _Object_3_array = selectRandom [
 "Land_Ground_sheet_blue_F",
 "Land_Sleeping_bag_brown_F",
 "Land_Sleeping_bag_blue_F"
-]; 
+];
 _Object_3 = createVehicle [_Object_3_array, _Object_3_Pos, [], 0, "CAN_COLLIDE"];
 _Object_3 setDir (random 360);
 
 
-//________________ Create a Flag with your pic 256x256 ________________
-_Flag = "FlagPole_F" createVehicle _Flag_Pos;
-_Flag setFlagTexture "GF_Missions\images\GF_Spartan_Flag.jpg";	//	Set your image for the flag
-_Flag setDir (random 360);
-
-
-//________________	Disable damage	________________ 
+//________________	Disable damage	________________
 _Building allowDamage false;
-_Flag allowDamage false;
 
 
 //________________ Spawn Groups	________________
@@ -120,27 +113,25 @@ _Flag allowDamage false;
 _Overwatch_Pos = [(_Group_Pos)] call BIS_fnc_findOverwatch;
 
 //________________	Overwatch	________________
-_Group_Overwatch = [ _Overwatch_Pos, EAST, [
-"O_G_Sharpshooter_F","O_G_Sharpshooter_F","O_G_Soldier_M_F"
+_Group_Overwatch = [ _Overwatch_Pos, WEST, [
+"WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Heavy"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Overwatch setBehaviour "COMBAT";		//	AWARE
 _Group_Overwatch setCombatMode "RED";	//	YELLOW
 
 
-//________________	Patrol	________________	
-_Group_Patrol = [ _Group_Pos, EAST, [
-"O_G_officer_F","O_G_Soldier_SL_F","O_G_Soldier_TL_F","O_G_Soldier_AR_F","O_G_Soldier_F",
-"O_G_Soldier_LAT_F","O_G_medic_F","O_G_Soldier_LAT2_F","O_G_Soldier_lite_F"
+//________________	Patrol	________________
+_Group_Patrol = [ _Group_Pos, WEST, [
+"SC_AR_Woodland_Officer","WD_A2Camo_Rifleman_Light","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Marksman","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy"
 ]] call BIS_fnc_spawnGroup;
 
 [_Group_Patrol, _Overwatch_Pos,(random(150)+150)] call BIS_fnc_taskPatrol;
 
 
 //________________	Defend	________________
-_Group_Defend = [ _Group_Pos, EAST, [
-"O_G_officer_F","O_G_Soldier_F","O_G_engineer_F","O_G_medic_F","O_G_Soldier_exp_F",
-"O_G_Soldier_AR_F","O_G_Soldier_GL_F","O_G_Soldier_A_F","O_G_Soldier_LAT_F"
+_Group_Defend = [ _Group_Pos, WEST, [
+"SC_AR_Woodland_Officer","WD_A2Camo_Rifleman_Light","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Marksman","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy"
 ]] call BIS_fnc_spawnGroup;
 
 [_Group_Defend, _Group_Pos] call BIS_fnc_taskDefend;
@@ -148,38 +139,38 @@ _Group_Defend = [ _Group_Pos, EAST, [
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
-	
-	[GF_Missions_allPlayers,["3_Trader_Camp","GF_Missions_Pack"],["Eliminate the Trader Camp Group","Eliminate the Trader Camp Group",""], _Group_Pos,true,1,true,"kill",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["3_Trader_Camp","GF_Missions_Pack"],["Устраните лагерь противника","Устраните лагерь противника",""], _Group_Pos,true,1,true,"kill",true] call BIS_fnc_taskCreate;
 	["3_Trader_Camp","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
-	
+
 	waitUntil {sleep 3;({alive _x} count units _Group_Overwatch) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Patrol) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Defend) isEqualTo 0;};
-	
+
 	["3_Trader_Camp", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";

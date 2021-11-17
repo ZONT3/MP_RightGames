@@ -38,8 +38,8 @@ diag_log "//________________ 16_Find_the_Prisoners.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "16_Find_the_Prisoners  Initializing"; 
-	};	
+	systemchat "16_Find_the_Prisoners  Initializing";
+	};
 
 //________________	Spawn Objects	________________
 
@@ -75,7 +75,7 @@ _Object_3 setDamage 0.9;
 _Overwatch_Pos = [(_Group_Pos)] call BIS_fnc_findOverwatch;
 
 //________________	Overwatch	________________
-_Group_Overwatch = [ _Overwatch_Pos, EAST, [
+_Group_Overwatch = [ _Overwatch_Pos, WEST, [
 "O_spotter_F","O_sniper_F","O_G_Sharpshooter_F","O_G_Sharpshooter_F","O_G_Soldier_M_F"
 ]] call BIS_fnc_spawnGroup;
 
@@ -84,7 +84,7 @@ _Group_Overwatch setCombatMode "RED";		//	YELLOW
 
 
 //________________	Defend	________________
-_Group_Defend = [ _Group_Pos, EAST, [
+_Group_Defend = [ _Group_Pos, WEST, [
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
@@ -103,7 +103,7 @@ _weapons = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -131,7 +131,7 @@ _weapons = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -163,7 +163,7 @@ _weapons = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -195,26 +195,26 @@ _weapons = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"		
+			"srifle_DMR_07_ghex_F"
 			];
 
 //________________	weapon's mags	________________
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
-	
+
 
 _Vests_array = selectRandom [
 			"V_Rangemaster_belt",
 			"V_TacVest_blk_POLICE",
 			""
-			]; 
+			];
 
 removeAllWeapons _x;
 removeAllItems _x;
@@ -245,48 +245,48 @@ _x setskill 0.8;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["16_Find_the_Prisoners","GF_Missions_Pack"],["Find the Prisoners","Find the Prisoners",""], _Group_Pos,true,1,true,"scout ",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["16_Find_the_Prisoners","GF_Missions_Pack"],["Найдите заложников","Найдите заложников",""], _Group_Pos,true,1,true,"scout ",true] call BIS_fnc_taskCreate;
 	["16_Find_the_Prisoners","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	waitUntil { { _x distance _Building < 400 } count GF_Missions_allPlayers > 0 };
-	
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
-	
+
+
 	sleep 5;
-	
+
 	["16_Find_the_Prisoners", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 5;
-	
+
 	//________________	Set Task 2	________________
 
-	[GF_Missions_allPlayers,["16_Find_the_Prisoners_2","GF_Missions_Pack"],["The Prisoners are 400 meters away , they are armed , Eliminate all Threats","Eliminate all Threats ",""], _Group_Pos,true,1,true,"attack ",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["16_Find_the_Prisoners_2","GF_Missions_Pack"],["Заложники находятся в 400 метрах, они вооружены, Устраните все угрозы","Устраните все угрозы",""], _Group_Pos,true,1,true,"attack ",true] call BIS_fnc_taskCreate;
 	["16_Find_the_Prisoners_2","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-	
+
 	waitUntil {sleep 3;({alive _x} count units _Group_Overwatch) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Defend) isEqualTo 0;};
-	
+
 	["16_Find_the_Prisoners_2", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";

@@ -38,8 +38,8 @@ diag_log "//________________ 1_Eliminate_Spy.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "1_Eliminate_Spy  Initializing"; 
-	};	
+	systemchat "1_Eliminate_Spy  Initializing";
+	};
 
 //________________ Spawn the Unit	________________
 
@@ -48,19 +48,19 @@ _Overwatch_Pos = [(GF_Missions_pos)] call BIS_fnc_findOverwatch;
 _Spawn_Unit = createGroup civilian;
 _taskPatrol = [_Spawn_Unit, _Overwatch_Pos,(random(150)+150)] call BIS_fnc_taskPatrol;
 _Unit = _Spawn_Unit createUnit ["O_G_Survivor_F", _Overwatch_Pos, [], 0, "CAN_COLLIDE"];
-units _Unit joinSilent _Spawn_Unit; 
+units _Unit joinSilent _Spawn_Unit;
 
 _Unit setskill 1;
 
 
-//________________ Spawn the civilians	________________	
+//________________ Spawn the civilians	________________
 
 for "_x" from 0 to (random(15)+15) do {
 
 _Spawn_civilian = createGroup civilian;
 _taskPatrol = [_Spawn_civilian, _Overwatch_Pos,(random(150)+150)] call BIS_fnc_taskPatrol;
 _civilian = _Spawn_civilian createUnit ["O_G_Survivor_F", _Overwatch_Pos, [], 0, "CAN_COLLIDE"];
-units _civilian joinSilent _Spawn_civilian; 
+units _civilian joinSilent _Spawn_civilian;
 
 
 _Uniform = selectRandom [
@@ -197,7 +197,7 @@ _weapons = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -225,7 +225,7 @@ _weapons = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -257,7 +257,7 @@ _weapons = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -289,20 +289,20 @@ _weapons = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"		
+			"srifle_DMR_07_ghex_F"
 			];
 
 //________________	weapon's mags	________________
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
-	
+
 
 _Vests_array = selectRandom [
 			"V_Press_F",
@@ -371,8 +371,8 @@ _Vests_array = selectRandom [
 			"V_EOD_blue_F",
 			"V_EOD_IDAP_blue_F",
 			"V_EOD_coyote_F",
-			"V_EOD_olive_F"			
-			]; 
+			"V_EOD_olive_F"
+			];
 
 
 _Backpacks_array = selectRandom [
@@ -427,7 +427,7 @@ _Backpacks_array = selectRandom [
 			"B_ViperLightHarness_hex_F",
 			"B_ViperLightHarness_khk_F",
 			"B_ViperLightHarness_oli_F",
-			
+
 			"O_HMG_01_high_weapon_F",
 			"O_HMG_01_weapon_F",
 			"O_GMG_01_high_weapon_F",
@@ -440,7 +440,7 @@ _Backpacks_array = selectRandom [
 			"O_AT_01_weapon_F",
 			"O_Static_Designator_02_weapon_F",
 			"B_Static_Designator_01_weapon_F",
-			
+
 			"B_LegStrapBag_black_F",
 			"B_LegStrapBag_coyote_F",
 			"B_LegStrapBag_olive_F",
@@ -450,9 +450,9 @@ _Backpacks_array = selectRandom [
 			"I_UAV_06_backpack_F",
 			"O_UAV_06_backpack_F",
 			"B_UAV_06_backpack_F"
-			];  
+			];
 
-			
+
 removeAllWeapons _civilian;
 removeAllItems _civilian;
 removeAllAssignedItems _civilian;
@@ -466,7 +466,7 @@ _civilian forceAddUniform _Uniform;
 _civilian addHeadgear _Headgear;
 _civilian addGoggles _Goggles;
 
-//	add rarity 
+//	add rarity
 if (floor (random 10) < 2) then {_civilian addVest _Vests_array;};
 if (floor (random 10) < 2) then {_civilian addBackpack _Backpacks_array;};
 _civilian setskill 0.8;
@@ -489,31 +489,31 @@ _Unit addGoggles GF_Missions_Goggles;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
-	
-	[GF_Missions_allPlayers,["1_Eliminate_Spy","GF_Missions_Pack"],["Eliminate the Spy","Eliminate the Spy",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["1_Eliminate_Spy","GF_Missions_Pack"],["Устраните Шпиона","Устраните Шпиона",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
 	["1_Eliminate_Spy","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
-	
+
+
 	//________________	Distance from the Players	________________
-	
+
 	waitUntil { { _x distance _Unit < 15 } count GF_Missions_allPlayers > 0 };
-   
+
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "distance _Unit < 15";
 	};
-	
+
 
 	//________________	Change Behaviour	________________
 	_Unit setBehaviour "STEALTH";	//	AWARE	STEALTH	COMBAT
 	_Unit setCombatMode "YELLOW";		//	YELLOW	RED
-	
-	//________________	Change Side	________________	
-	_Join_East = creategroup east; 	
-	units _Unit joinSilent _Join_East; 
- 
+
+	//________________	Change Side	________________
+	_Join_West = creategroup west;
+	units _Unit joinSilent _Join_West;
+
  	//________________	Arm	________________
 	for "_i" from 1 to 6 do {_Unit addItemToUniform "30Rnd_45ACP_Mag_SMG_01";};
 	_Unit addItemToUniform "MiniGrenade";
@@ -525,31 +525,31 @@ _Unit addGoggles GF_Missions_Goggles;
 	_Unit addPrimaryWeaponItem "muzzle_snds_acp";
 	_Unit addPrimaryWeaponItem "optic_MRCO";
 
-  
+
 	sleep 2;
-	
+
 	waitUntil {sleep 0.5;!alive _Unit};
-	
+
 	["1_Eliminate_Spy", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
 
 	sleep 3;
-	
+
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
-	};	
-	
+	};
+
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-		
-	[GF_Missions_allPlayers,["1_1_Eliminate_Spy","GF_Missions_Pack"],["The Spy has set a Trap! , Eliminate all threats! ","It is a Trap! Eliminate all threats!",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["1_1_Eliminate_Spy","GF_Missions_Pack"],["Шпион установил ловушку! , Устраните все угрозы! ","Шпион установил ловушку! Устраните все угрозы!",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
 	["1_1_Eliminate_Spy","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 
 	call{
 	_changing = allUnits select {(side _x isEqualTo civilian) &&  (!isPlayer _x)};
-	_changing apply { 
-	units _x joinSilent _Join_East;
+	_changing apply {
+	units _x joinSilent _Join_West;
 
 //________________	Type of _weapons	________________
 _weapons = selectRandom [
@@ -558,7 +558,7 @@ _weapons = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -586,7 +586,7 @@ _weapons = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -618,7 +618,7 @@ _weapons = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -650,20 +650,20 @@ _weapons = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"		
+			"srifle_DMR_07_ghex_F"
 			];
 
 //________________	weapon's mags	________________
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
-	
+
 comment "Add weapons";
 _x addWeapon _weapons;
 for "_i" from 1 to 6 do {_x addItemToUniform _magazineClass_weapon;};
@@ -672,25 +672,25 @@ comment "Add items";
 _x linkItem "ItemMap";
 _x linkItem "ItemCompass";
 _x linkItem "ItemWatch";
-	
+
 };};
 
-	
-	waitUntil {sleep 3;({alive _x} count units _Join_East) isEqualTo 0;};
-	
+
+	waitUntil {sleep 3;({alive _x} count units _Join_West) isEqualTo 0;};
+
 	["1_1_Eliminate_Spy", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 5;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";

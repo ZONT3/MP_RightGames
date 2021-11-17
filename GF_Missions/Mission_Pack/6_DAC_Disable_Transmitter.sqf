@@ -40,14 +40,14 @@ sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "6_DAC_Disable_Transmitter Initializing";
 	};
-	
+
 //________________	Spawn Objects	________________
 
 _Building_array = [
 "Land_TBox_F",
 "Land_dp_transformer_F",
 "Land_PowerGenerator_F"
-]; 
+];
 
 _Building_Spawn = selectRandom _Building_array;
 _Building = _Building_Spawn createVehicle GF_Missions_pos;
@@ -64,7 +64,7 @@ _Object_1_Pos = _Building getRelPos [3, 6];
 _Object_1_array = selectRandom [
 "Land_TTowerSmall_1_F",
 "Land_TTowerSmall_2_F"
-]; 
+];
 _Object_1 = createVehicle [_Object_1_array, _Object_1_Pos, [], 0, "CAN_COLLIDE"];
 _Object_1 setDir (random 360);
 
@@ -115,13 +115,13 @@ _DAC_Values = [
 [(random(0)+1),4,5],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[1,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+1,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -133,47 +133,47 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
-	
-	[GF_Missions_allPlayers,["6_DAC_Disable_Transmitter","GF_Missions_Pack"],["Disable the Transmitter","Disable the Transmitter",""], _Group_Pos,true,1,true,"destroy",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["6_DAC_Disable_Transmitter","GF_Missions_Pack"],["Отключить передатчик","Отключить передатчик",""], _Group_Pos,true,1,true,"destroy",true] call BIS_fnc_taskCreate;
 	["6_DAC_Disable_Transmitter","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-	
-	waitUntil {sleep 3; !alive _Building};	
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
-	
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+	waitUntil {sleep 3; !alive _Building};
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	["6_DAC_Disable_Transmitter", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";

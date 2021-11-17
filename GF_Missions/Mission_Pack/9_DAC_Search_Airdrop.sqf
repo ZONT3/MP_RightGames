@@ -54,7 +54,7 @@ _Height_of_drop           	= 500;        	// Height of drop
 _2_Virtual_Arsenal          = false;       	// Add Virtual Arsenal to Cargo
 
 _3_Random_Loot				= true;         // Add random loot , you need to select this or the one below
-_4_Not_Random_Loot			= false;      	// Selected loot 
+_4_Not_Random_Loot			= false;      	// Selected loot
 
 
 
@@ -107,13 +107,13 @@ _DAC_Values = [
 [(random(0)+1),4,5],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[1,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+1,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -125,28 +125,28 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["9_DAC_Search_Airdrop","GF_Missions_Pack"],["Search for the Airdrop","Search for the Airdrop",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["9_DAC_Search_Airdrop","GF_Missions_Pack"],["Найдите Груз","Найдите Груз",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
 	["9_DAC_Search_Airdrop","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
-	sleep 2;
-	
-	waitUntil { { _x distance _Building < _Distance_to_drop } count GF_Missions_allPlayers > 0 };
-	
-	
 
-	
+	sleep 2;
+
+	waitUntil { { _x distance _Building < _Distance_to_drop } count GF_Missions_allPlayers > 0 };
+
+
+
+
 	//________________ Type of parachute ________________
 //    B_Parachute_02_F
 _parachute = createVehicle ["B_Parachute_02_F",_Building, [], 0, "FLY"];
@@ -163,8 +163,8 @@ _Type_of_Cargo_array =[
             ];
 
 _Cargo_array = selectRandom _Type_of_Cargo_array;
-        
-_Cargo = createVehicle [_Cargo_array, position _parachute, [], 0, 'NONE'];    
+
+_Cargo = createVehicle [_Cargo_array, position _parachute, [], 0, 'NONE'];
 _Cargo attachTo [_parachute,[0,0,0]];
 _Cargo enableSimulation false;
 
@@ -191,13 +191,6 @@ clearWeaponCargoGlobal _Cargo;
 clearMagazineCargoGlobal _Cargo;
 
 
-//________________ add Virtual Arsenal to Cargo ________________
-if (_2_Virtual_Arsenal) then {
-//    systemchat "_2_Virtual_Arsenal";
-_Cargo addAction ["Open Virtual Arsenal", {["Open",true] spawn BIS_fnc_arsenal}];
-};
-
-
 //________________ Add random loot , you need to select this or the one below ________________
 if (_3_Random_Loot) then {
 
@@ -209,7 +202,7 @@ _weapons_Loot = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -237,7 +230,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -269,7 +262,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -301,14 +294,14 @@ _weapons_Loot = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
 			"srifle_DMR_07_ghex_F",
-			
+
 			// Launchers
 			"launch_NLAW_F",
 			"launch_RPG32_F",
@@ -326,9 +319,9 @@ _weapons_Loot = selectRandom [
 			"launch_O_Titan_short_ghex_F",
 			"launch_I_Titan_short_F",
 			"launch_B_Titan_short_F",
-			"launch_B_Titan_short_tna_F"			
+			"launch_B_Titan_short_tna_F"
 			];
-			
+
 
 _sideweapons_loot = selectRandom [
 			//Pistols
@@ -346,7 +339,7 @@ _sideweapons_loot = selectRandom [
 			"hgun_PDW2000_F",
 			"SMG_01_F",
 			"SMG_02_F",
-			"SMG_05_F"		
+			"SMG_05_F"
 			];
 
 
@@ -354,21 +347,21 @@ _items_loot1 = selectRandom [
 			//for RyanZombies
 			//"RyanZombiesAntiVirusTemporary_Item",
 			//"RyanZombiesAntiVirusCure_Item",
-			
-			//Vanilla			
+
+			//Vanilla
 			"ToolKit",
 			"MediKit",
 			"FirstAidKit",
-			"FirstAidKit", 			
+			"FirstAidKit",
 			//Tools
 			"Binocular",
-			"Rangefinder",			
+			"Rangefinder",
 			"Laserdesignator",
 			"Laserdesignator_02",
 			"Laserdesignator_03"
 			];
-	
-	
+
+
 _items_loot2 = selectRandom [
 			//Here ONLY :items , PointerAttachments , BipodAttachments , MuzzleAttachments , OpticAttachments , NVG
 			"ItemCompass",
@@ -463,7 +456,7 @@ _items_loot2 = selectRandom [
 			"optic_Holosight_blk_F",
 			"optic_Holosight_khk_F",
 			"optic_Holosight_smg_blk_F",
-			
+
 			//NVG
 			"NVGoggles",
 			"NVGoggles_INDEP",
@@ -475,7 +468,7 @@ _items_loot2 = selectRandom [
 			"NVGoggles_tna_F"
 			];
 
-	
+
 _items_loot3 = selectRandom [
 			//Flares
 			"Chemlight_blue",
@@ -523,68 +516,68 @@ _items_loot3 = selectRandom [
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag"
 			];
-			
 
-			_Ravage_item = selectRandom [		
+
+			_Ravage_item = selectRandom [
 			// Ravage_items
 			//x1
 			"rvg_plasticBottleEmpty",
 			"rvg_canteenEmpty",
 			"rvg_hose",
-			"rvg_sleepingBag_Blue", 
+			"rvg_sleepingBag_Blue",
 			"rvg_foldedTent",
 			"rvg_rustyCan",
 			"rvg_Geiger",
 			"rvg_canisterFuel_Empty",
 			"rvg_toolkit",
 			"rvg_tire",
-			//x2 Vital			
-			"rvg_money", 
-			"rvg_notepad", 
-			"rvg_docFolder",
-			"rvg_canOpener",
-			"rvg_guttingKnife", 
-			"rvg_matches",
-			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
-			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
-			"rvg_rice",
-			"rvg_antiRad",
-			"rvg_purificationTablets",						
 			//x2 Vital
-			"rvg_money", 
-			"rvg_notepad", 
+			"rvg_money",
+			"rvg_notepad",
 			"rvg_docFolder",
 			"rvg_canOpener",
-			"rvg_guttingKnife", 
+			"rvg_guttingKnife",
 			"rvg_matches",
 			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
 			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
 			"rvg_rice",
 			"rvg_antiRad",
 			"rvg_purificationTablets",
-			
+			//x2 Vital
+			"rvg_money",
+			"rvg_notepad",
+			"rvg_docFolder",
+			"rvg_canOpener",
+			"rvg_guttingKnife",
+			"rvg_matches",
+			"rvg_plasticBottle",
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
+			"rvg_franta",
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
+			"rvg_rice",
+			"rvg_antiRad",
+			"rvg_purificationTablets",
+
 			//addon Ravage
 			"Mask_M40_OD",
 			"Mask_M40",
 			"Mask_M50"
 			];
-			
-			
-			
+
+
+
 //addweaponcargo	addItemCargo	addMagazineCargo
 
 //	weapons
-_Cargo addweaponcargo [_weapons_Loot, 5];	//	5 is the amount 
+_Cargo addweaponcargo [_weapons_Loot, 5];	//	5 is the amount
 
 //	sideweapons
 _Cargo addweaponcargo [_sideweapons_loot, 5];
@@ -603,22 +596,22 @@ _Cargo addItemCargo [_Ravage_item, 5];
 
 //	weapon's cargo mags
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
 _Cargo addMagazineCargoGlobal [_magazineClass_weapon, 10];		//	10 mags
 
 
 //	sideweapon's cargo mag
 _magazines_sideweapon = getArray (configFile / "CfgWeapons" / _sideweapons_loot / "magazines");
-_magazineClass_sideweapon = _magazines_sideweapon call bis_fnc_selectRandom; 
+_magazineClass_sideweapon = _magazines_sideweapon call bis_fnc_selectRandom;
 
 _Cargo addMagazineCargoGlobal [_magazineClass_sideweapon, 10];	//	10 mags
 
 
 //	Extra type of magazines
 _magazines_Extra = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_Extra = _magazines_Extra call bis_fnc_selectRandom; 
-_Cargo addMagazineCargoGlobal [_magazineClass_Extra, 10];	//	10 mags	
+_magazineClass_Extra = _magazines_Extra call bis_fnc_selectRandom;
+_Cargo addMagazineCargoGlobal [_magazineClass_Extra, 10];	//	10 mags
 };
 
 
@@ -638,7 +631,7 @@ if (_4_Not_Random_Loot) then {
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -666,7 +659,7 @@ if (_4_Not_Random_Loot) then {
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -698,7 +691,7 @@ if (_4_Not_Random_Loot) then {
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -730,14 +723,14 @@ if (_4_Not_Random_Loot) then {
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
 			"srifle_DMR_07_ghex_F",
-			
+
 			// Launchers
 			"launch_NLAW_F",
 			"launch_RPG32_F",
@@ -846,8 +839,8 @@ if (_4_Not_Random_Loot) then {
 ];
 
 };
- 
-	
+
+
 //________________ Type of Chemlight and Smoke ________________
 _Chemlight1 = "Chemlight_red" createVehicle (position _Cargo);
 _Chemlight1 attachTo [_Cargo, [0,0.5,-0.4]];
@@ -863,34 +856,34 @@ _Cargo setVelocity _vel;
 
 waitUntil {getPos _Cargo select 2 < 0};
 playSound3D ["a3\sounds_f\weapons\Flare_Gun\flaregun_1_shoot.wss",_Cargo];
-           
+
 detach _Cargo;
-_parachute disableCollisionWith _Cargo;   
+_parachute disableCollisionWith _Cargo;
 
 _time = time + 6;
-waitUntil {time > _time};       
+waitUntil {time > _time};
 if (!isNull _parachute) then {deleteVehicle _parachute};
 _Cargo enableSimulation true;
 
-	
-	
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
-	
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	["9_DAC_Search_Airdrop", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";

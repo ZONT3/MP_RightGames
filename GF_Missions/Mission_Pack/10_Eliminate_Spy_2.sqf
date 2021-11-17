@@ -38,8 +38,8 @@ diag_log "//________________ 10_Eliminate_Spy_2.sqf _____________";
 sleep 2;
 
 	if (GF_Missions_Systemchat_info) then {
-	systemchat "10_Eliminate_Spy_2  Initializing"; 
-	};	
+	systemchat "10_Eliminate_Spy_2  Initializing";
+	};
 
 //________________ Spawn the Unit	________________
 
@@ -48,7 +48,7 @@ _Overwatch_Pos = [(GF_Missions_pos)] call BIS_fnc_findOverwatch;
 _Spawn_Unit = createGroup civilian;
 _taskPatrol = [_Spawn_Unit, _Overwatch_Pos,(random(150)+150)] call BIS_fnc_taskPatrol;
 _Unit = _Spawn_Unit createUnit ["O_G_Survivor_F", _Overwatch_Pos, [], 0, "CAN_COLLIDE"];
-units _Unit joinSilent _Spawn_Unit; 
+units _Unit joinSilent _Spawn_Unit;
 
 _Unit setskill 1;
 
@@ -69,29 +69,29 @@ _Unit addGoggles GF_Missions_Goggles;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["10_Eliminate_Spy_2","GF_Missions_Pack"],["Eliminate the Spy","Eliminate the Spy",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["10_Eliminate_Spy_2","GF_Missions_Pack"],["Устраните шпиона","УСтраните шпиона",""], getPos _Unit,true,1,true,"kill",true] call BIS_fnc_taskCreate;
 	["10_Eliminate_Spy_2","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	//________________	Distance from the Players	________________
 	waitUntil { { _x distance _Unit < 15 } count GF_Missions_allPlayers > 0 };
-   
+
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "distance _Unit < 15";
 	};
-	
+
 
 	//________________	Change Behaviour	________________
 	_Unit setBehaviour "STEALTH";	//	AWARE	STEALTH	COMBAT
 	_Unit setCombatMode "YELLOW";		//	YELLOW	RED
-	
-	//________________	Change Side	________________	
-	_Join_East = creategroup east; 	
-	units _Unit joinSilent _Join_East; 
- 
+
+	//________________	Change Side	________________
+	_Join_West = creategroup west;
+	units _Unit joinSilent _Join_West;
+
  	//________________	Arm	________________
 	for "_i" from 1 to 6 do {_Unit addItemToUniform "30Rnd_45ACP_Mag_SMG_01";};
 	_Unit addItemToUniform "MiniGrenade";
@@ -103,25 +103,25 @@ _Unit addGoggles GF_Missions_Goggles;
 	_Unit addPrimaryWeaponItem "muzzle_snds_acp";
 	_Unit addPrimaryWeaponItem "optic_MRCO";
 
-   
+
 	sleep 2;
-	
+
 	waitUntil {sleep 3;!alive _Unit};
-	
+
 	["10_Eliminate_Spy_2", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
 
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";

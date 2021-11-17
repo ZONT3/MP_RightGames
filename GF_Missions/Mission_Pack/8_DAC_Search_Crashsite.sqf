@@ -31,7 +31,7 @@ https://forums.bohemia.net/forums/topic/215850-compilation-list-of-my-gf-scripts
 
 
 sleep GF_Missions_Wait_Time;
-	
+
 
 diag_log "//________________ 8_DAC_Search_crashsite.sqf _____________";
 diag_log "//________________ This is part of GF Crashsites Script _____________";
@@ -42,17 +42,17 @@ sleep 2;
 	systemchat "8_DAC_Search_crashsite Initializing";
 	};
 
-	
+
 //________________ GF Crashsites Script _____________
 
 //________________ Settings ________________
 //________________ Set true or false  ________________
 
-_1_Create_Box_container		= false;		//	Create a Box container at the Crashsites with random loot	
-_2_Create_Loot				= true;		//	Create Create Loot at the Crashsites	
-_3_Grass_Cutter				= true;		//	Cut the grass around the Crashsites 
+_1_Create_Box_container		= false;		//	Create a Box container at the Crashsites with random loot
+_2_Create_Loot				= true;		//	Create Create Loot at the Crashsites
+_3_Grass_Cutter				= true;		//	Cut the grass around the Crashsites
 
-	
+
 //________________ Wrecks at the crashsites ________________
 
 //Wrecks at the crashsites
@@ -78,7 +78,7 @@ _weapons_Loot = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -106,7 +106,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -138,7 +138,7 @@ _weapons_Loot = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -170,14 +170,14 @@ _weapons_Loot = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
 			"srifle_DMR_07_ghex_F",
-			
+
 			// Launchers
 			"launch_NLAW_F",
 			"launch_RPG32_F",
@@ -195,9 +195,9 @@ _weapons_Loot = selectRandom [
 			"launch_O_Titan_short_ghex_F",
 			"launch_I_Titan_short_F",
 			"launch_B_Titan_short_F",
-			"launch_B_Titan_short_tna_F"			
+			"launch_B_Titan_short_tna_F"
 			];
-			
+
 
 _sideweapons_loot = selectRandom [
 			//Pistols
@@ -215,7 +215,7 @@ _sideweapons_loot = selectRandom [
 			"hgun_PDW2000_F",
 			"SMG_01_F",
 			"SMG_02_F",
-			"SMG_05_F"		
+			"SMG_05_F"
 			];
 
 
@@ -223,21 +223,21 @@ _items_loot1 = selectRandom [
 			//for RyanZombies
 			//"RyanZombiesAntiVirusTemporary_Item",
 			//"RyanZombiesAntiVirusCure_Item",
-			
-			//Vanilla			
+
+			//Vanilla
 			"ToolKit",
 			"MediKit",
 			"FirstAidKit",
-			"FirstAidKit", 			
+			"FirstAidKit",
 			//Tools
 			"Binocular",
-			"Rangefinder",			
+			"Rangefinder",
 			"Laserdesignator",
 			"Laserdesignator_02",
 			"Laserdesignator_03"
 			];
-	
-	
+
+
 _items_loot2 = selectRandom [
 			//Here ONLY :items , PointerAttachments , BipodAttachments , MuzzleAttachments , OpticAttachments , NVG
 			"ItemCompass",
@@ -332,7 +332,7 @@ _items_loot2 = selectRandom [
 			"optic_Holosight_blk_F",
 			"optic_Holosight_khk_F",
 			"optic_Holosight_smg_blk_F",
-			
+
 			//NVG
 			"NVGoggles",
 			"NVGoggles_INDEP",
@@ -344,7 +344,7 @@ _items_loot2 = selectRandom [
 			"NVGoggles_tna_F"
 			];
 
-	
+
 _items_loot3 = selectRandom [
 			//Flares
 			"Chemlight_blue",
@@ -392,7 +392,7 @@ _items_loot3 = selectRandom [
 			"SatchelCharge_Remote_Mag",
 			"SLAMDirectionalMine_Wire_Mag"
 			];
-			
+
 
 _Clothes_array = selectRandom [
 			"U_C_Journalist",
@@ -444,7 +444,7 @@ _Clothes_array = selectRandom [
 			"U_BG_leader",
 			"U_IG_leader",
 			"U_I_G_resistanceLeader_F",
-			
+
 			"U_B_FullGhillie_ard",
 			"U_B_FullGhillie_lsh",
 			"U_B_FullGhillie_sard",
@@ -457,7 +457,7 @@ _Clothes_array = selectRandom [
 			"U_O_FullGhillie_lsh",
 			"U_O_FullGhillie_sard",
 			"U_O_GhillieSuit",
-			
+
 			"U_I_Wetsuit",
 			"U_O_Wetsuit",
 			"U_B_Wetsuit",
@@ -471,10 +471,10 @@ _Clothes_array = selectRandom [
 			"U_B_T_Soldier_F",
 			"U_B_T_Soldier_AR_F",
 			"U_B_T_Soldier_SL_F",
-			
+
 			"U_B_T_Sniper_F",
 			"U_B_T_FullGhillie_tna_F",
-			
+
 			"U_B_CTRG_Soldier_F",
 			"U_B_CTRG_Soldier_2_F",
 			"U_B_CTRG_Soldier_3_F",
@@ -482,10 +482,10 @@ _Clothes_array = selectRandom [
 			"U_B_GEN_Commander_F",
 			"U_O_T_Soldier_F",
 			"U_O_T_Officer_F",
-			
+
 			"U_O_T_Sniper_F",
 			"U_O_T_FullGhillie_tna_F",
-			
+
 			"U_O_V_Soldier_Viper_F",
 			"U_O_V_Soldier_Viper_hex_F",
 			"U_I_C_Soldier_Para_1_F",
@@ -615,22 +615,22 @@ _Clothes_array = selectRandom [
 			"H_PilotHelmetHeli_I",
 			"H_PilotHelmetHeli_O",
 
-			"H_RacingHelmet_2_F", 
-			"H_RacingHelmet_3_F", 
-			"H_RacingHelmet_4_F",  
-			"H_RacingHelmet_1_blue_F", 
-			"H_RacingHelmet_1_green_F", 
-			"H_RacingHelmet_1_red_F", 
-			"H_RacingHelmet_1_white_F", 
+			"H_RacingHelmet_2_F",
+			"H_RacingHelmet_3_F",
+			"H_RacingHelmet_4_F",
+			"H_RacingHelmet_1_blue_F",
+			"H_RacingHelmet_1_green_F",
+			"H_RacingHelmet_1_red_F",
+			"H_RacingHelmet_1_white_F",
 			"H_RacingHelmet_1_yellow_F",
 			"H_RacingHelmet_1_orange_F",
 
 			"H_Helmet_Skate",
 			"H_HelmetB_TI_tna_F",
-			
+
 			"H_HelmetO_ViperSP_hex_F",
 			"H_HelmetO_ViperSP_ghex_F",
-			
+
 			"H_HelmetB_tna_F",
 			"H_HelmetB_Enh_tna_F",
 			"H_HelmetB_Light_tna_F",
@@ -693,7 +693,7 @@ _Clothes_array = selectRandom [
 			"G_Balaclava_TI_G_blk_F",
 			"G_Balaclava_TI_G_tna_F",
 			"G_Combat_Goggles_tna_F",
-			
+
 			"H_Cap_Black_IDAP_F",
 			"H_Cap_Orange_IDAP_F",
 			"H_Cap_White_IDAP_F",
@@ -724,8 +724,8 @@ _Clothes_array = selectRandom [
 			"U_C_IDAP_Man_teeshorts_F",
 			"U_C_ConstructionCoverall_Black_F",
 			"U_C_ConstructionCoverall_Blue_F"
-			];  
-			
+			];
+
 
 _Vests_array = selectRandom [
 			"V_Press_F",
@@ -794,8 +794,8 @@ _Vests_array = selectRandom [
 			"V_EOD_blue_F",
 			"V_EOD_IDAP_blue_F",
 			"V_EOD_coyote_F",
-			"V_EOD_olive_F"			
-			]; 
+			"V_EOD_olive_F"
+			];
 
 
 _Backpacks_array = selectRandom [
@@ -850,7 +850,7 @@ _Backpacks_array = selectRandom [
 			"B_ViperLightHarness_hex_F",
 			"B_ViperLightHarness_khk_F",
 			"B_ViperLightHarness_oli_F",
-			
+
 			"O_HMG_01_high_weapon_F",
 			"O_HMG_01_weapon_F",
 			"O_GMG_01_high_weapon_F",
@@ -863,7 +863,7 @@ _Backpacks_array = selectRandom [
 			"O_AT_01_weapon_F",
 			"O_Static_Designator_02_weapon_F",
 			"B_Static_Designator_01_weapon_F",
-			
+
 			"B_LegStrapBag_black_F",
 			"B_LegStrapBag_coyote_F",
 			"B_LegStrapBag_olive_F",
@@ -873,65 +873,65 @@ _Backpacks_array = selectRandom [
 			"I_UAV_06_backpack_F",
 			"O_UAV_06_backpack_F",
 			"B_UAV_06_backpack_F"
-			];  
+			];
 
-			
-_Ravage_items = selectRandom [		
+
+_Ravage_items = selectRandom [
 			// Ravage_items
 			//x1
 			"rvg_plasticBottleEmpty",
 			"rvg_canteenEmpty",
 			"rvg_hose",
-			"rvg_sleepingBag_Blue", 
+			"rvg_sleepingBag_Blue",
 			"rvg_foldedTent",
 			"rvg_rustyCan",
 			"rvg_Geiger",
 			"rvg_canisterFuel_Empty",
 			"rvg_toolkit",
 			"rvg_tire",
-			//x2 Vital			
-			"rvg_money", 
-			"rvg_notepad", 
-			"rvg_docFolder",
-			"rvg_canOpener",
-			"rvg_guttingKnife", 
-			"rvg_matches",
-			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
-			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
-			"rvg_rice",
-			"rvg_antiRad",
-			"rvg_purificationTablets",						
 			//x2 Vital
-			"rvg_money", 
-			"rvg_notepad", 
+			"rvg_money",
+			"rvg_notepad",
 			"rvg_docFolder",
 			"rvg_canOpener",
-			"rvg_guttingKnife", 
+			"rvg_guttingKnife",
 			"rvg_matches",
 			"rvg_plasticBottle",
-			"rvg_plasticBottlePurified", 
-			"rvg_spirit", 
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
 			"rvg_franta",
-			"rvg_beans", 
-			"rvg_bacon", 
-			"rvg_milk", 
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
 			"rvg_rice",
 			"rvg_antiRad",
 			"rvg_purificationTablets",
-			
+			//x2 Vital
+			"rvg_money",
+			"rvg_notepad",
+			"rvg_docFolder",
+			"rvg_canOpener",
+			"rvg_guttingKnife",
+			"rvg_matches",
+			"rvg_plasticBottle",
+			"rvg_plasticBottlePurified",
+			"rvg_spirit",
+			"rvg_franta",
+			"rvg_beans",
+			"rvg_bacon",
+			"rvg_milk",
+			"rvg_rice",
+			"rvg_antiRad",
+			"rvg_purificationTablets",
+
 			//addon Ravage
 			"Mask_M40_OD",
 			"Mask_M40",
 			"Mask_M50"
 			];
 
-			
-//________________	Position of the loot at the crashsite	________________			
+
+//________________	Position of the loot at the crashsite	________________
 _lootPos1  = _Building getRelPos [8, 1];
 _lootPos2  = _Building getRelPos [8, 2];
 _lootPos3  = _Building getRelPos [8, 3];
@@ -973,7 +973,7 @@ _Object1 = selectRandom _Object_array1;
 _Create_Object1 = _Object1 createVehicle _Object1_Pos;
 
 
-//________________	Create a Box container at the Crashsites with random loot	 ________________ 
+//________________	Create a Box container at the Crashsites with random loot	 ________________
 if (_1_Create_Box_container) then {
 
 //	systemchat "_1_Create_Box_container";
@@ -1004,7 +1004,7 @@ sleep 1;
 //addweaponcargo	addItemCargo	addMagazineCargo
 
 //	spawn weapons
-_Box_container_Item addweaponcargo [_weapons_Loot, 2];	//	2 is the amount 
+_Box_container_Item addweaponcargo [_weapons_Loot, 2];	//	2 is the amount
 
 //	spawn sideweapons
 _Box_container_Item addweaponcargo [_sideweapons_loot, 2];
@@ -1025,12 +1025,12 @@ _Box_container_Item addMagazineCargo [_items_loot3, 5];
 _Box_container_Item addItemCargoGlobal [_Clothes_array,1];
 
 //	spawn Vests
-_Box_container_Item addItemCargoGlobal [_Vests_array,1]; 
+_Box_container_Item addItemCargoGlobal [_Vests_array,1];
 
 //	spawn Backpacks
-_Box_container_Item addBackpackCargoGlobal [_Backpacks_array,1]; 
+_Box_container_Item addBackpackCargoGlobal [_Backpacks_array,1];
 
-//	spawn Ravage items  
+//	spawn Ravage items
 _Box_container_Item addItemCargo [_Ravage_items, 2];
 
 
@@ -1039,17 +1039,17 @@ _Box_container_Item addItemCargo [_Ravage_items, 2];
 
 // Spawn weapon's mag
 _magazines_Box_container = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom; 
+_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom;
 _Box_container_Item addMagazineCargoGlobal [_magazineClass_Box_container, 2];	//2 mags
 
 // Spawn sideweapon's mag
 _magazines_Box_container = getArray (configFile / "CfgWeapons" / _sideweapons_loot / "magazines");
-_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom; 
+_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom;
 _Box_container_Item addMagazineCargoGlobal [_magazineClass_Box_container, 2];	//2 mags
-	
+
 // Spawn only magazines
 _magazines_Box_container = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom; 
+_magazineClass_Box_container = _magazines_Box_container call bis_fnc_selectRandom;
 _Box_container_Item addMagazineCargoGlobal [_magazineClass_Box_container, 3];	//3 mags
 
 sleep 1;
@@ -1058,7 +1058,7 @@ sleep 1;
 
 
 
-//________________	Create Create Loot at the Crashsites	________________ 
+//________________	Create Create Loot at the Crashsites	________________
 if (_2_Create_Loot) then {
 
 //	systemchat "_2_Create_Loot";
@@ -1089,28 +1089,28 @@ _lootitems6 = "groundweaponHolder" createVehicle _lootPos6; _lootitems6 addMagaz
 _lootitems7 = "groundweaponHolder" createVehicle _lootPos7; _lootitems7 addItemCargoGlobal [_Clothes_array,1];
 
 //	spawn Vests
-_lootitems8 = "groundweaponHolder" createVehicle _lootPos8; _lootitems8 addItemCargoGlobal [_Vests_array,1]; 
+_lootitems8 = "groundweaponHolder" createVehicle _lootPos8; _lootitems8 addItemCargoGlobal [_Vests_array,1];
 
 //	spawn Backpacks
-_lootitems9 = "groundweaponHolder" createVehicle _lootPos9; _lootitems9 addBackpackCargoGlobal [_Backpacks_array,1]; 
+_lootitems9 = "groundweaponHolder" createVehicle _lootPos9; _lootitems9 addBackpackCargoGlobal [_Backpacks_array,1];
 
-//	spawn Ravage items  
+//	spawn Ravage items
 _lootitems10 = "groundweaponHolder" createVehicle _lootPos10; _lootitems10 addItemCargo [_Ravage_items, 2];
 
 
 // Spawn weapon's mag
 _magazines = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass = _magazines call bis_fnc_selectRandom; 
+_magazineClass = _magazines call bis_fnc_selectRandom;
 _lootitems1 addMagazineCargoGlobal [_magazineClass, 2];	//2 mags
 
 // Spawn sideweapon's mag
 _magazines = getArray (configFile / "CfgWeapons" / _sideweapons_loot / "magazines");
-_magazineClass = _magazines call bis_fnc_selectRandom; 
+_magazineClass = _magazines call bis_fnc_selectRandom;
 _lootitems2 addMagazineCargoGlobal [_magazineClass, 2];	//2 mags
-	
+
 // Spawn only magazines
 _magazines = getArray (configFile / "CfgWeapons" / _weapons_Loot / "magazines");
-_magazineClass = _magazines call bis_fnc_selectRandom; 
+_magazineClass = _magazines call bis_fnc_selectRandom;
 _lootitems3 addMagazineCargoGlobal [_magazineClass, 3];	//3 mags
 
 sleep 1;
@@ -1125,7 +1125,7 @@ _particle1 attachTo [_Building,[0,0,0]];
 
 
 //https://community.bistudio.com/wiki/setParticleFire
-//source setParticleFire [coreIntensity, coreDistance, damageTime] 
+//source setParticleFire [coreIntensity, coreDistance, damageTime]
 _particle2 = "#particlesource" createVehicleLocal (getPos _Building);
 _particle2 setParticleClass "BigDestructionSmoke";
 _particle2 setParticleFire [0.3,1.0,0.1];
@@ -1139,14 +1139,14 @@ sleep 1;
 _Create_Crater = createVehicle ["CraterLong", getPos _Building, [], 0, "CAN_COLLIDE"];
 
 
-//________________ Cut the grass around the Crashsites ________________ 
+//________________ Cut the grass around the Crashsites ________________
 if (_3_Grass_Cutter) then {
 
 //	systemchat "_3_Grass_Cutter";
 
 _Grass_Cutter_pos = _Building getRelPos [12, 6];
-createVehicle ["Land_ClutterCutter_large_F", _Grass_Cutter_pos, [], 0, "CAN_COLLIDE"]; 
-createVehicle ["Land_ClutterCutter_large_F", _Building, [], 0, "CAN_COLLIDE"]; 
+createVehicle ["Land_ClutterCutter_large_F", _Grass_Cutter_pos, [], 0, "CAN_COLLIDE"];
+createVehicle ["Land_ClutterCutter_large_F", _Building, [], 0, "CAN_COLLIDE"];
 };
 
 
@@ -1199,13 +1199,13 @@ _DAC_Values = [
 [(random(0)+1),4,5],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[1,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+1,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -1217,47 +1217,47 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["8_DAC_Search_Crashsite","GF_Missions_Pack"],["Search for the Crashsite","Search for the Crashsite",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["8_DAC_Search_Crashsite","GF_Missions_Pack"],["Найдите место крушения","Найдите место крушения",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
 	["8_DAC_Search_Crashsite","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-	
-	waitUntil { { _x distance _Building < 20 } count GF_Missions_allPlayers > 0 };	
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
-	
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+	waitUntil { { _x distance _Building < 20 } count GF_Missions_allPlayers > 0 };
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	["8_DAC_Search_Crashsite", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";

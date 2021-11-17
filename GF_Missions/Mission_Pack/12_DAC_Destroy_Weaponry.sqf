@@ -50,7 +50,7 @@ _Building_array = [
 "CamoNet_INDP_big_F",
 "CamoNet_BLUFOR_big_F",
 "CamoNet_OPFOR_big_F"
-]; 
+];
 
 _Building_Spawn = selectRandom _Building_array;
 _Building = _Building_Spawn createVehicle GF_Missions_pos;
@@ -61,7 +61,7 @@ _Building setDir (random 360);
 _Object_1_array = selectRandom [
 "O_UAV_02_dynamicLoadout_F",
 "O_UGV_01_rcws_F"
-]; 
+];
 _Object_1 = createVehicle [_Object_1_array, getpos _Building, [], 0, "CAN_COLLIDE"];
 _Object_1 setDir (random 360);
 
@@ -72,7 +72,7 @@ _Overwatch_Pos = [(_Group_Pos)] call BIS_fnc_findOverwatch;
 
 
 //________________	Overwatch	________________
-_Group_Overwatch = [ _Overwatch_Pos, EAST, [
+_Group_Overwatch = [ _Overwatch_Pos, WEST, [
 "O_spotter_F","O_sniper_F","O_sniper_F"
 ]] call BIS_fnc_spawnGroup;
 
@@ -82,7 +82,7 @@ _Group_Overwatch setCombatMode "RED";	//	YELLOW
 sleep 1;
 
 //________________	_Group_Defend	________________
-_Group_Defend = [ _Group_Pos, EAST, [
+_Group_Defend = [ _Group_Pos, WEST, [
 "O_spotter_F","O_sniper_F","O_sniper_F","O_spotter_F","O_sniper_F","O_sniper_F"
 ]] call BIS_fnc_spawnGroup;
 
@@ -133,13 +133,13 @@ _DAC_Values = [
 [(random(0)+1),4,5],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[1,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+1,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -151,47 +151,47 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
-		
-	[GF_Missions_allPlayers,["12_DAC_Destroy_Weaponry","GF_Missions_Pack"],["Destroy Secret Weaponry","Destroy Secret Weaponry",""], _Group_Pos,true,1,true,"destroy",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["12_DAC_Destroy_Weaponry","GF_Missions_Pack"],["Уничтожить секретное оружие","Уничтожить секретное оружие",""], _Group_Pos,true,1,true,"destroy",true] call BIS_fnc_taskCreate;
 	["12_DAC_Destroy_Weaponry","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-	
+
 	waitUntil {sleep 3; !alive _Object_1};
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
 	waitUntil {sleep 3;({alive _x} count units _Group_Overwatch) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Defend) isEqualTo 0;};
-	
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	["12_DAC_Destroy_Weaponry", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 5;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";
 { deleteVehicle _x } forEach [
-_Building  
+_Building
 ];
 };

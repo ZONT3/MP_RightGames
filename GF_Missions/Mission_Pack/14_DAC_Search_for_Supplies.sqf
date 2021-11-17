@@ -50,7 +50,7 @@ _Building_array = [
 "CamoNet_INDP_open_F",
 "CamoNet_BLUFOR_open_F",
 "CamoNet_OPFOR_open_F"
-]; 
+];
 
 _Building_Spawn = selectRandom _Building_array;
 _Building = _Building_Spawn createVehicle GF_Missions_pos;
@@ -62,7 +62,7 @@ _Object_1_array = selectRandom [
 "Box_FIA_Wps_F",
 "Box_FIA_Support_F",
 "Box_FIA_Ammo_F"
-]; 
+];
 _Object_1 = createVehicle [_Object_1_array, getpos _Building, [], 0, "CAN_COLLIDE"];
 _Object_1 setDir (random 360);
 
@@ -73,7 +73,7 @@ _Overwatch_Pos = [(_Group_Pos)] call BIS_fnc_findOverwatch;
 
 
 //________________	Overwatch	________________
-_Group_Overwatch = [ _Overwatch_Pos, EAST, [
+_Group_Overwatch = [ _Overwatch_Pos, WEST, [
 "O_spotter_F","O_sniper_F","O_sniper_F"
 ]] call BIS_fnc_spawnGroup;
 
@@ -83,8 +83,8 @@ _Group_Overwatch setCombatMode "RED";	//	YELLOW
 sleep 1;
 
 //________________	Defend	________________
-_Group_Defend = [ _Group_Pos, EAST, [
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F", "O_G_Survivor_F", 
+_Group_Defend = [ _Group_Pos, WEST, [
+"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F", "O_G_Survivor_F",
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
 "O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F", "O_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
@@ -228,7 +228,7 @@ _weapons = selectRandom [
 			"arifle_MX_SW_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
-			"LMG_03_F",				
+			"LMG_03_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -256,7 +256,7 @@ _weapons = selectRandom [
 			"arifle_SDAR_F",
 			"arifle_TRG20_F",
 			"arifle_TRG21_F",
-			"arifle_TRG21_GL_F",			
+			"arifle_TRG21_GL_F",
 			//Apex AssaultRifles
 			"arifle_AK12_F",
 			"arifle_AK12_GL_F",
@@ -288,7 +288,7 @@ _weapons = selectRandom [
 			"arifle_SPAR_01_GL_snd_F",
 			"arifle_SPAR_02_blk_F",
 			"arifle_SPAR_02_khk_F",
-			"arifle_SPAR_02_snd_F",			
+			"arifle_SPAR_02_snd_F",
 			"arifle_SPAR_03_blk_F",
 			"arifle_SPAR_03_khk_F",
 			"arifle_SPAR_03_snd_F",
@@ -320,20 +320,20 @@ _weapons = selectRandom [
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",
 			"srifle_LRR_camo_F",
-			"srifle_LRR_F",			
+			"srifle_LRR_F",
 			//Apex SniperRifles
 			"srifle_LRR_tna_F",
 			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
-			"srifle_DMR_07_ghex_F"		
+			"srifle_DMR_07_ghex_F"
 			];
 
 //________________	weapon's mags	________________
 _magazines_weapon = getArray (configFile / "CfgWeapons" / _weapons / "magazines");
-_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom; 
+_magazineClass_weapon = _magazines_weapon call bis_fnc_selectRandom;
 
-	
+
 
 _Vests_array = selectRandom [
 			"V_Press_F",
@@ -402,8 +402,8 @@ _Vests_array = selectRandom [
 			"V_EOD_blue_F",
 			"V_EOD_IDAP_blue_F",
 			"V_EOD_coyote_F",
-			"V_EOD_olive_F"			
-			]; 
+			"V_EOD_olive_F"
+			];
 
 
 _Backpacks_array = selectRandom [
@@ -458,7 +458,7 @@ _Backpacks_array = selectRandom [
 			"B_ViperLightHarness_hex_F",
 			"B_ViperLightHarness_khk_F",
 			"B_ViperLightHarness_oli_F",
-			
+
 			"O_HMG_01_high_weapon_F",
 			"O_HMG_01_weapon_F",
 			"O_GMG_01_high_weapon_F",
@@ -471,7 +471,7 @@ _Backpacks_array = selectRandom [
 			"O_AT_01_weapon_F",
 			"O_Static_Designator_02_weapon_F",
 			"B_Static_Designator_01_weapon_F",
-			
+
 			"B_LegStrapBag_black_F",
 			"B_LegStrapBag_coyote_F",
 			"B_LegStrapBag_olive_F",
@@ -481,7 +481,7 @@ _Backpacks_array = selectRandom [
 			"I_UAV_06_backpack_F",
 			"O_UAV_06_backpack_F",
 			"B_UAV_06_backpack_F"
-			];  
+			];
 
 
 removeAllWeapons _x;
@@ -498,7 +498,7 @@ _x addHeadgear _Headgear;
 _x addGoggles _Goggles;
 _x addVest _Vests_array;
 
-//	add rarity 
+//	add rarity
 if (floor (random 10) < 2) then {_x addBackpack _Backpacks_array;};
 
 
@@ -552,13 +552,13 @@ _DAC_Values = [
 [],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[1,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+1,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -570,47 +570,47 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 	//________________	Set Task	________________
-		
-	[GF_Missions_allPlayers,["14_DAC_Search_for_Supplies","GF_Missions_Pack"],["Search for Supplies","Search for Supplies",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
+
+	[GF_Missions_allPlayers,["14_DAC_Search_for_Supplies","GF_Missions_Pack"],["Найдите припасы","Найдите припасы",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
 	["14_DAC_Search_for_Supplies","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-	
+
 	waitUntil { { _x distance _Building < 20 } count GF_Missions_allPlayers > 0 };
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
 	waitUntil {sleep 3;({alive _x} count units _Group_Overwatch) isEqualTo 0;};
 	waitUntil {sleep 3;({alive _x} count units _Group_Defend) isEqualTo 0;};
-	
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	["14_DAC_Search_for_Supplies", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 5;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
 
 
-//________________	Delete mission's objects	________________	
+//________________	Delete mission's objects	________________
 if (GF_Missions_Delete_Objects) then {
 waitUntil { { _x distance _Building > GF_Missions_Delete_Objects_Distance } count GF_Missions_allPlayers > 0 };
 systemchat "Delete mission's objects";
 { deleteVehicle _x } forEach [
-_Building  
+_Building
 ];
 };

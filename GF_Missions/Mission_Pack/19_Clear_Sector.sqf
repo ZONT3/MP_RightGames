@@ -93,13 +93,13 @@ _DAC_Values = [
 [(random(0)+1),4,5],
 
 //	I Zone belongs to Site > 0 = East, 1 = West, 2 = RACS, 3 = civilian (for more see readme page 7)
-[0,	
+[0,
 
 //	J Unit configuration of the zone (DAC_Config_Units) > default units = 0 for East, 1 for West, 2 for RACS, 3 for civilians
 5,	//	Custom editable Units in DAC\DAC_Units_GEORGE.sqf
 
 //	K Behaviour configuration of the zone (DAC_Config_Behaviour) > default behaviour = 0 for East, 1 for West, 2 for RACS, 3 for civilian
-0,	
+0,
 
 //	L Camp configuration of the zone (DAC_Config_Camps) > needed only if 1 camp minimum will be generated in the respective zone.
 0
@@ -111,46 +111,46 @@ _DAC_Values = [
 [_Group_Pos,GF_Missions_DAC_Area_Spawn_Meters,GF_Missions_DAC_Area_Spawn_Meters,0,0,_DAC_Values] call DAC_fNewZone;
 waituntil{DAC_NewZone == 0};
 
-_Trigger_EAST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
-_Trigger_EAST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
-_Trigger_EAST_PRESENT setTriggerActivation ["EAST", "PRESENT", false];
-_Trigger_EAST_PRESENT setTriggerStatements ["this","",""];
+_Trigger_WEST_PRESENT = createTrigger ["EmptyDetector", _Group_Pos];
+_Trigger_WEST_PRESENT setTriggerArea [GF_Missions_DAC_Area_Spawn_Meters, GF_Missions_DAC_Area_Spawn_Meters, 0, false];
+_Trigger_WEST_PRESENT setTriggerActivation ["WEST", "PRESENT", false];
+_Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "Mission is Generated";
-	};	
+	};
 
 
-	[GF_Missions_allPlayers,["19_Clear_Sector","GF_Missions_Pack"],["Clear the Sector","Clear the Sector",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["19_Clear_Sector","GF_Missions_Pack"],["Зачистите сектор","Зачистите сектор",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
 	["19_Clear_Sector","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-		
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
-		
+
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
+
 	["19_Clear_Sector", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-	
-	
-	sleep 5;	
-	
-	
-	[GF_Missions_allPlayers,["19_Clear_Sector_2","GF_Missions_Pack"],["Defend the Sector","Defend the Sector",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
+
+
+	sleep 5;
+
+
+	[GF_Missions_allPlayers,["19_Clear_Sector_2","GF_Missions_Pack"],["Защитите сектор","Защитите сектор",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
 	["19_Clear_Sector_2","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-		
+
 	sleep 2;
-	
+
 	//________________	Spawn Units	________________
-	
-for "_x" from 0 to (random(2)+2) do {	
-_Vehicle_Patrol = createGroup EAST;
-_random_Land_Vehicle = GF_Pool_Land_Vehicles call BIS_fnc_selectRandom; 
 
-_random_Driver = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Gunner = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Commander = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Cargo = GF_Pool_Units call BIS_fnc_selectRandom; 
+for "_x" from 0 to (random(2)+2) do {
+_Vehicle_Patrol = createGroup WEST;
+_random_Land_Vehicle = GF_Pool_Land_Vehicles call BIS_fnc_selectRandom;
 
-	 
+_random_Driver = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Gunner = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Commander = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Cargo = GF_Pool_Units call BIS_fnc_selectRandom;
+
+
 _randomPos = [[[_Group_Pos, (1500)],[]],["water","out"]] call BIS_fnc_randomPos;
 
 _create_Land_Vehicle = _random_Land_Vehicle createVehicle _randomPos;
@@ -160,7 +160,7 @@ _random_Driver 		createUnit [_randomPos, _Vehicle_Patrol];
 _random_Gunner 		createUnit [_randomPos, _Vehicle_Patrol];
 _random_Commander 	createUnit [_randomPos, _Vehicle_Patrol];
 _random_Cargo		createUnit [_randomPos, _Vehicle_Patrol];
-		
+
 ((units _Vehicle_Patrol) select 0) assignAsCargo _create_Land_Vehicle;
 ((units _Vehicle_Patrol) select 0) moveInCargo _create_Land_Vehicle;
 ((units _Vehicle_Patrol) select 1) assignAsCargo  _create_Land_Vehicle;
@@ -173,18 +173,18 @@ _random_Cargo		createUnit [_randomPos, _Vehicle_Patrol];
 [_Vehicle_Patrol, _Group_Pos] call BIS_fnc_taskAttack;
 
 };
-	
 
-for "_x" from 0 to (random(1)+2) do {	
-_Vehicle_Patrol = createGroup EAST;
-_random_Land_Vehicle = GF_Pool_Armoured_Vehicles call BIS_fnc_selectRandom; 
 
-_random_Driver = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Gunner = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Commander = GF_Pool_Units call BIS_fnc_selectRandom; 
-_random_Cargo = GF_Pool_Units call BIS_fnc_selectRandom; 
+for "_x" from 0 to (random(1)+2) do {
+_Vehicle_Patrol = createGroup WEST;
+_random_Land_Vehicle = GF_Pool_Armoured_Vehicles call BIS_fnc_selectRandom;
 
-	 
+_random_Driver = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Gunner = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Commander = GF_Pool_Units call BIS_fnc_selectRandom;
+_random_Cargo = GF_Pool_Units call BIS_fnc_selectRandom;
+
+
 _randomPos = [[[_Group_Pos, (1500)],[]],["water","out"]] call BIS_fnc_randomPos;
 
 _create_Land_Vehicle = _random_Land_Vehicle createVehicle _randomPos;
@@ -194,7 +194,7 @@ _random_Driver 		createUnit [_randomPos, _Vehicle_Patrol];
 _random_Gunner 		createUnit [_randomPos, _Vehicle_Patrol];
 _random_Commander 	createUnit [_randomPos, _Vehicle_Patrol];
 _random_Cargo		createUnit [_randomPos, _Vehicle_Patrol];
-		
+
 ((units _Vehicle_Patrol) select 0) assignAsCargo _create_Land_Vehicle;
 ((units _Vehicle_Patrol) select 0) moveInCargo _create_Land_Vehicle;
 ((units _Vehicle_Patrol) select 1) assignAsCargo  _create_Land_Vehicle;
@@ -206,12 +206,12 @@ _random_Cargo		createUnit [_randomPos, _Vehicle_Patrol];
 
 [_Vehicle_Patrol, _Group_Pos] call BIS_fnc_taskAttack;
 
-};	
+};
 
 
-for "_x" from 0 to (random(3)+2) do {	
+for "_x" from 0 to (random(3)+2) do {
 _randomPos = [[[_Group_Pos, (1500)],[]],["water","out"]] call BIS_fnc_randomPos;
-_Group_Attack = [ _randomPos, EAST, [
+_Group_Attack = [ _randomPos, WEST, [
 "O_G_officer_F","O_G_Soldier_F","O_G_engineer_F","O_G_medic_F","O_G_Soldier_exp_F",
 "O_G_Soldier_AR_F","O_G_Soldier_GL_F","O_G_Soldier_A_F","O_G_Soldier_LAT_F"
 ]] call BIS_fnc_spawnGroup;
@@ -222,24 +222,24 @@ _Group_Attack setCombatMode "RED";	//	YELLOW
 [_Group_Attack, _Group_Pos] call BIS_fnc_taskAttack;
 };
 
-		
-	waitUntil {sleep 3; count list _Trigger_EAST_PRESENT < 1};
-		
-	["19_Clear_Sector_2", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;	
-		
-	deleteVehicle _Trigger_EAST_PRESENT;
-	
+
+	waitUntil {sleep 3; count list _Trigger_WEST_PRESENT < 1};
+
+	["19_Clear_Sector_2", "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
+
+	deleteVehicle _Trigger_WEST_PRESENT;
+
 	sleep 2;
 	if (GF_Missions_Systemchat_info) then {
 	systemchat "saving Game Wait";
 	systemchat "Next mission";
-	};	
-	
+	};
+
 	sleep 2;
 	if (GF_Missions_saveGame) then {
 	saveGame;
 	};
-	
+
 	sleep 8;
-	
+
 null = []execVM "GF_Missions\Missions_init.sqf";
