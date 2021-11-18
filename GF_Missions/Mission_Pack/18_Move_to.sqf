@@ -546,10 +546,10 @@ _Flag setDir (random 360);
 
 //________________	Defend	________________
 _Group_Defend = [ _Group_Pos, WEST, [
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F"
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F",
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F",
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F",
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Defend setBehaviour "COMBAT";	//	AWARE

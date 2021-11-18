@@ -76,7 +76,7 @@ _Overwatch_Pos = [(_Group_Pos)] call BIS_fnc_findOverwatch;
 
 //________________	Overwatch	________________
 _Group_Overwatch = [ _Overwatch_Pos, WEST, [
-"O_spotter_F","O_sniper_F","O_G_Sharpshooter_F","O_G_Sharpshooter_F","O_G_Soldier_M_F"
+"WD_ACamo_Rifleman_Medium","WD_ACamo_Marksman","WD_ACamo_Rifleman_Medium","WD_ACamo_Rifleman_Medium","WD_ACamo_Rifleman_Medium"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Overwatch setBehaviour "COMBAT";		//	AWARE
@@ -85,8 +85,8 @@ _Group_Overwatch setCombatMode "RED";		//	YELLOW
 
 //________________	Defend	________________
 _Group_Defend = [ _Group_Pos, WEST, [
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F",
-"O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F","O_G_Survivor_F"
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F",
+"B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F","B_G_Survivor_F"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Defend setBehaviour "COMBAT";	//	AWARE

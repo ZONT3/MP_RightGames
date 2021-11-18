@@ -134,11 +134,6 @@ _Trigger_WEST_PRESENT setTriggerStatements ["this","",""];
 	sleep 5;
 
 
-	[GF_Missions_allPlayers,["19_Clear_Sector_2","GF_Missions_Pack"],["Защитите сектор","Защитите сектор",""], _Group_Pos,true,1,true,"attack",true] call BIS_fnc_taskCreate;
-	["19_Clear_Sector_2","ASSIGNED",true] spawn BIS_fnc_taskSetState;
-
-	sleep 2;
-
 	//________________	Spawn Units	________________
 
 for "_x" from 0 to (random(2)+2) do {
