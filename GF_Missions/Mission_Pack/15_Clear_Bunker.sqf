@@ -81,11 +81,6 @@ _Object_3 = createVehicle [_Object_3_array, _Object_3_Pos, [], 0, "CAN_COLLIDE"]
 _Object_3 setDir (random 360);
 
 
-//________________ Create a Flag with your pic 256x256 ________________
-_Flag = "FlagPole_F" createVehicle getpos _Building;
-_Flag setFlagTexture "GF_Missions\images\GF_Spartan_Flag.jpg";	//	Set your image for the flag
-_Flag setDir (random 360);
-
 
 //________________ Spawn Groups	________________
 
@@ -94,7 +89,7 @@ _random_Pos = [[[_Group_Pos, ((random(15)+15))],[]],["water","out"]] call BIS_fn
 
 //________________	Overwatch	________________
 _Group_Overwatch = [ _Overwatch_Pos, WEST, [
-"O_spotter_F","O_sniper_F","O_G_Sharpshooter_F","O_G_Sharpshooter_F","O_G_Soldier_M_F"
+"WD_A2Camo_Marksman","OPTRE_UNSC_Army_Soldier_Sniper_SNO","WD_A2Camo_Rifleman_Light","WD_A2Camo_Rifleman_Light","WD_A2Camo_Rifleman_Medium"
 ]] call BIS_fnc_spawnGroup;
 
 _Group_Overwatch setBehaviour "COMBAT";		//	AWARE
@@ -103,8 +98,8 @@ _Group_Overwatch setCombatMode "RED";	//	YELLOW
 
 //________________	Patrol	________________
 _Group_Patrol = [ _Patrol_Pos, WEST, [
-"O_G_officer_F","O_G_Soldier_SL_F","O_G_Soldier_TL_F","O_G_Soldier_A_F","O_G_Soldier_AR_F","O_G_medic_F","O_G_engineer_F",
-"O_G_Soldier_exp_F","O_G_Soldier_GL_F","O_G_Soldier_M_F","O_G_Soldier_F","O_G_Soldier_LAT_F"
+"SC_AR_Woodland_Officer","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Medium","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy",
+"WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy"
 ]] call BIS_fnc_spawnGroup;
 
 [_Group_Patrol, _Overwatch_Pos,(random(150)+150)] call BIS_fnc_taskPatrol;
@@ -113,8 +108,7 @@ sleep 1;
 
 //________________	Defend	________________
 _Group_Defend = [ _Defend_Pos, WEST, [
-"O_G_officer_F","O_G_Soldier_SL_F","O_G_Soldier_TL_F","O_G_Soldier_A_F","O_G_Soldier_AR_F","O_G_medic_F","O_G_engineer_F",
-"O_G_Soldier_exp_F","O_G_Soldier_GL_F","O_G_Soldier_M_F","O_G_Soldier_F","O_G_Soldier_LAT_F"
+"SC_AR_Woodland_Officer","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Heavy",
 ]] call BIS_fnc_spawnGroup;
 
 [_Group_Defend, _Group_Pos] call BIS_fnc_taskDefend;

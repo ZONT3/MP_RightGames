@@ -473,7 +473,7 @@ _Move_to addMagazineCargoGlobal [_magazineClass_Extra, 10];	//	10 mags
 
 	//________________	Set Task	________________
 
-	[GF_Missions_allPlayers,["18_Move_to","GF_Missions_Pack"],["Move to Location , Follow directions","Move to Location",""], _Move_to,true,1,true,"move",true] call BIS_fnc_taskCreate;
+	[GF_Missions_allPlayers,["18_Move_to","GF_Missions_Pack"],["Двигайтесь к месту, следуйте инструкциям","Двигайтесь к указанному месту",""], _Move_to,true,1,true,"move",true] call BIS_fnc_taskCreate;
 	["18_Move_to","ASSIGNED",true] spawn BIS_fnc_taskSetState;
 
 	waitUntil { { _x distance _Move_to < 20 } count GF_Missions_allPlayers > 0 };

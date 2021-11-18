@@ -103,12 +103,6 @@ _Group_Defend = [ _Group_Pos, WEST, [
 
 
 //	add rarity
-if (floor (random 10) < 2) then {_x addBackpack _Backpacks_array;};
-
-
-_x addWeapon _weapons;
-for "_i" from 1 to 6 do {_x addItemToUniform _magazineClass_weapon;};
-
 _x setskill 0.8;
 } forEach units _Group_Defend;
 
@@ -117,6 +111,7 @@ _x setskill 0.8;
 	systemchat "Mission is Generated";
 	};
 
+	//________________	Set Task	________________
 
 	[GF_Missions_allPlayers,["11_DAC_Search_Stolen","GF_Missions_Pack"],["Найдите угнанную технику","Найдите угнанную технику",""], _Group_Pos,true,1,true,"search",true] call BIS_fnc_taskCreate;
 	["11_DAC_Search_Stolen","ASSIGNED",true] spawn BIS_fnc_taskSetState;

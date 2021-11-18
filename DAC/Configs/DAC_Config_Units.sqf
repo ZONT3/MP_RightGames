@@ -36,10 +36,15 @@ switch (_TypNumber) do
 // BLUFOR (A3)
   case 1:
   {
-    _Unit_Pool_S = ["B_crew_F","B_Helipilot_F","B_Soldier_SL_F","B_soldier_AR_F","B_soldier_AR_F","B_soldier_exp_F","B_soldier_GL_F","B_soldier_GL_F","B_soldier_AA_F","B_soldier_M_F","B_medic_F","B_soldier_repair_F","B_Soldier_F","B_Soldier_F","B_soldier_LAT_F","B_soldier_LAT_F","B_soldier_lite_F","B_soldier_TL_F","B_soldier_TL_F"];
-    _Unit_Pool_V = ["B_MRAP_01_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F"];
-    _Unit_Pool_T = ["B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_AA_F","B_APC_Tracked_01_rcws_F","B_MBT_01_cannon_F","B_MBT_01_arty_F","B_MBT_01_mlrs_F"];
-    _Unit_Pool_A = ["B_Heli_Light_01_armed_F","B_Heli_Transport_01_camo_F","B_Heli_Light_01_F"];
+    _Unit_Pool_S = ["WD_ACamo_Rifleman_Heavy","WD_ACamo_Rifleman_Light","WD_ACamo_Rifleman_Medium","WD_A2Camo_Rifleman_Heavy","WD_A2Camo_Rifleman_Light","WD_A2Camo_Rifleman_Medium","SC_AR_Urban_Officer","WD_ACamo_Marksman"];
+    _Unit_Pool_V = ["SC_Ferret_AR","SC_Ferret_AA_AR","SC_Ferret_Autocannon_AR","OPTRE_M12_FAV_APC","OPTRE_M12_FAV","OPTRE_M12_LRV",
+  	"OPTRE_M12A1_LRV","OPTRE_M12G1_LRV","OPTRE_M12R_AA","OPTRE_M914_RV","OPTRE_M813_TT",
+  	"OPTRE_M274_ATV"];
+    _Unit_Pool_T = [
+    	"OPTRE_M413_MGS_UNSC","OPTRE_M412_IFV_UNSC","B_APC_Wheeled_01_cannon_F","B_AFV_Wheeled_01_cannon_F","B_MBT_01_arty_F",
+    	"OPTRE_M808B_UNSC","OPTRE_M808B2","OPTRE_M808S","OPTRE_M850_UNSC"];
+    _Unit_Pool_A = ["OPTRE_Pelican_armed","OPTRE_UNSC_hornet","OPTRE_AV22_Sparrowhawk","OPTRE_UNSC_falcon","SC_VTOL_X41A_AR",
+  	"SC_VTOL_X42S_AR"];
   };
 //-------------------------------------------------------------------------------------------------
 // Independent (A3)
