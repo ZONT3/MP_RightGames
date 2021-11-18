@@ -74,3 +74,10 @@
 	"Запросить арсенал Iron Enclave",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_inferno,
+	["IT"],
+	"Запросить арсенал Inferno Team",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
