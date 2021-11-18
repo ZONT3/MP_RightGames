@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2987;
+		nextID=3182;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=141;
+		nextID=246;
 	};
 	class Camera
 	{
-		pos[]={629.06885,235.23497,1418.8557};
-		dir[]={0.88222188,-0.40245464,0.24437083};
-		up[]={0.3878504,0.91543859,0.10743231};
-		aside[]={0.26694295,-5.6934368e-008,-0.96371192};
+		pos[]={593.18561,259.57352,1383.2538};
+		dir[]={0.55569339,-0.72933942,0.39909106};
+		up[]={0.59239441,0.68414956,0.42544901};
+		aside[]={0.58333498,1.8568244e-007,-0.81223446};
 	};
 };
 binarizationWanted=0;
@@ -1349,7 +1349,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=216;
+		items=217;
 		class Item0
 		{
 			dataType="Object";
@@ -1362,7 +1362,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				disableSimulation=1;
 			};
 			id=20;
 			type="Land_OPTRE_landingpad";
@@ -1402,7 +1402,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				disableSimulation=1;
 			};
 			id=21;
 			type="Land_OPTRE_landingpad";
@@ -23618,7 +23618,9 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						name="s_1";
 						description="Имперец";
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -23689,6 +23691,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_2";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -23760,6 +23763,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_3";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -23831,6 +23835,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_4";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -23902,6 +23907,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_5";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -23973,6 +23979,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_6";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -24044,6 +24051,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_7";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -24115,6 +24123,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						name="s_8";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -24180,12 +24189,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12140.488,207.02875,12020.651};
+						position[]={12140.488,207.02876,12020.651};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_9";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -24203,6 +24213,7 @@ class Mission
 					};
 					id=1584;
 					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24251,12 +24262,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12139.306,206.99094,12021};
+						position[]={12139.306,206.99095,12021};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_10";
 						description="Имперец";
 						isPlayable=1;
 						class Inventory
@@ -24274,6 +24286,7 @@ class Mission
 					};
 					id=1586;
 					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24322,3281 +24335,13 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12138.021,206.9445,12021.427};
+						position[]={12139.731,207.15424,12011.399};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1588;
-					type="SC_SE_Guard_Officer";
-					atlOffset=-4.5776367e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12136.843,206.90376,12021.697};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1590;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.567,206.86061,12021.942};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1592;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item13
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.19,206.81442,12022.187};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1594;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item14
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12132.925,206.76303,12022.323};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1596;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.716,206.71202,12022.541};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1598;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.618,207.04425,12018.91};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1600;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12139.436,207.00644,12019.259};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1602;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item18
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12138.15,206.96506,12019.686};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1604;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item19
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12136.973,206.92792,12019.956};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1606;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item20
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.697,206.8875,12020.201};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1608;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item21
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.32,206.834,12020.445};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1610;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item22
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12133.055,206.77869,12020.582};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1612;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item23
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.846,206.73244,12020.8};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1614;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item24
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.563,207.05243,12017.638};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1616;
-					type="SC_SE_Guard_Officer";
-					atlOffset=-3.0517578e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item25
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12139.38,207.01346,12017.986};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1618;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item26
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12138.095,206.97186,12018.413};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1620;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item27
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12136.917,206.93324,12018.684};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1622;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item28
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.642,206.88989,12018.929};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1624;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item29
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.265,206.83583,12019.173};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1626;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item30
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12132.999,206.79781,12019.31};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1628;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item31
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.79,206.76434,12019.527};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1630;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item32
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.688,207.07253,12016.005};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1632;
-					type="SC_SE_Guard_Officer";
-					atlOffset=-1.5258789e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item33
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12139.505,207.03482,12016.354};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1634;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item34
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12138.22,206.99771,12016.78};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1636;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item35
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12137.042,206.95615,12017.051};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1638;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item36
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.767,206.90955,12017.296};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1640;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item37
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.39,206.87112,12017.54};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1642;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item38
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12133.124,206.84262,12017.677};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1644;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item39
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.915,206.81221,12017.895};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1646;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item40
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.455,207.10217,12013.877};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1648;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item41
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12139.272,207.06761,12014.226};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1650;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item42
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12137.987,207.03036,12014.652};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1652;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item43
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12136.81,206.99266,12014.923};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1654;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item44
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.534,206.95293,12015.168};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1656;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item45
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.157,206.91614,12015.412};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1658;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item46
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12132.892,206.88762,12015.549};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1660;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item47
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.683,206.85413,12015.767};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1662;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item48
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.41,207.13091,12012.424};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1664;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item49
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12139.228,207.09912,12012.772};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1666;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item50
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12137.942,207.06308,12013.199};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1668;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item51
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12136.765,207.02538,12013.47};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1670;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item52
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12135.489,206.99406,12013.715};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1672;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item53
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12134.112,206.96004,12013.959};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1674;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item54
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12132.847,206.93158,12014.096};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1676;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item55
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12131.638,206.90855,12014.313};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						description="Имперец";
-						isPlayable=1;
-						class Inventory
-						{
-							class uniform
-							{
-								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
-								isBackpack=0;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=1678;
-					type="SC_SE_Guard_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male07ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item56
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12140.324,207.2028,12010.553};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
+						name="s_57";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -27676,17 +24421,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item57
+				class Item11
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12139.142,207.16408,12010.901};
+						position[]={12138.549,207.11549,12011.748};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_58";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -27766,17 +24512,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item58
+				class Item12
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12137.856,207.12511,12011.328};
+						position[]={12137.264,207.07498,12012.175};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_59";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -27856,17 +24603,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item59
+				class Item13
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12136.679,207.09196,12011.599};
+						position[]={12136.086,207.0463,12012.446};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_60";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -27946,17 +24694,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item60
+				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12135.403,207.05844,12011.844};
+						position[]={12134.811,207.0163,12012.689};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_61";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -27974,6 +24723,7 @@ class Mission
 					};
 					id=1688;
 					type="SC_SE_Guard_Officer";
+					atlOffset=-1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28036,17 +24786,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item61
+				class Item15
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12134.026,207.03317,12012.088};
+						position[]={12133.434,206.9897,12012.935};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_62";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -28126,17 +24877,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item62
+				class Item16
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12132.761,207.01834,12012.225};
+						position[]={12132.168,206.97488,12013.071};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_63";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -28216,17 +24968,18 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item63
+				class Item17
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12131.552,206.99452,12012.442};
+						position[]={12130.96,206.94283,12013.289};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
+						name="s_64";
 						description="Медик";
 						isPlayable=1;
 						class Inventory
@@ -28244,6 +24997,7 @@ class Mission
 					};
 					id=1694;
 					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28304,6 +25058,3361 @@ class Mission
 							};
 						};
 						nAttributes=3;
+					};
+				};
+				class Item18
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12138.071,206.95143,12021.158};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_11";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3060;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item19
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12136.802,206.90613,12021.519};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_12";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3062;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item20
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12135.195,206.84883,12021.974};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_13";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3064;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item21
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12133.832,206.80266,12022.238};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_14";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3066;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item22
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12132.509,206.74438,12022.42};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_15";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3068;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item23
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.021,206.68761,12022.73};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_16";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3070;
+					type="SC_SE_Guard_Officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item24
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12140.37,207.03476,12019.219};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_17";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3072;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item25
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12139.276,207.00165,12019.265};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_18";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3074;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item26
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12137.838,206.95729,12019.445};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_19";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3076;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item27
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12136.46,206.91353,12019.81};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_20";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3078;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item28
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12134.684,206.8495,12020.518};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_21";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3080;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item29
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12133.302,206.78899,12020.714};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_22";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3082;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item30
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.931,206.73184,12020.94};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_23";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3084;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item31
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12130.269,206.66756,12021.169};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_24";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3086;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12140.255,207.04645,12017.315};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_25";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3088;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12139.093,207.00941,12017.531};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_26";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3090;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item34
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12137.695,206.96602,12017.766};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_27";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3092;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item35
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12136.242,206.91394,12017.984};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_28";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3094;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item36
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12134.301,206.85219,12018.247};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_29";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3096;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item37
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12132.626,206.79814,12019.019};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_30";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3098;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item38
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.326,206.74944,12019.448};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_31";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3100;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item39
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12129.508,206.67769,12019.739};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_32";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3102;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item40
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12140.231,207.05949,12015.94};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_33";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3104;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item41
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12139.299,207.03435,12016.095};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_34";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3106;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item42
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12137.755,206.99069,12016.406};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_35";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3108;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item43
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12135.926,206.92496,12016.814};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_36";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3110;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item44
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12134.019,206.86974,12017.282};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_37";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3112;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item45
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.879,206.81181,12017.861};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_38";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3114;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item46
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12130.758,206.76175,12018.326};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_39";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3116;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item47
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12128.885,206.6893,12018.698};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_40";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3118;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item48
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12140.328,207.08762,12014.458};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_41";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3120;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item49
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12139.331,207.05927,12014.713};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_42";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3122;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item50
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12137.728,207.01453,12015.035};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_43";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3124;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item51
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12135.69,206.94824,12015.548};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_44";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3126;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item52
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12133.714,206.89264,12016.039};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_45";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3128;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item53
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.632,206.83458,12016.533};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_46";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3130;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item54
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12129.669,206.76071,12017.071};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_47";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3132;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item55
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12128.279,206.72449,12017.497};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_48";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3134;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item56
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12140.406,207.11435,12013.213};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_49";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3136;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item57
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12139.535,207.08594,12013.616};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_50";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3138;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item58
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12137.846,207.04402,12013.906};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_51";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3140;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item59
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12135.697,206.97235,12014.522};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_52";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3142;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item60
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12133.426,206.9149,12014.901};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_53";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3144;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item61
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12131.468,206.86119,12015.312};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_54";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3146;
+					type="SC_SE_Guard_Officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item62
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12129.316,206.79375,12015.978};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_55";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3148;
+					type="SC_SE_Guard_Officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item63
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12127.724,206.7666,12016.197};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						name="s_56";
+						description="Имперец";
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="OPTRE_Ins_ER_rolled_surplus_crimson";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=3150;
+					type="SC_SE_Guard_Officer";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 			};
@@ -35738,8 +35847,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={601.39063,193.70456,1430.4969};
-				angles[]={0,3.1441944,0};
+				position[]={601.39099,193.70456,1430.4969};
+				angles[]={0,3.1441932,0};
 			};
 			side="Empty";
 			flags=4;
@@ -35749,6 +35858,29 @@ class Mission
 			};
 			id=2929;
 			type="Land_MedicalTent_01_CSAT_greenhex_generic_outer_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item187
 		{
@@ -38411,6 +38543,24 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item216
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={630.58398,193.91,1421.4449};
+				angles[]={0,1.6077274,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="this addAction [""<t color='#0099FF'>Заросить задание</t>"",""GF_Missions\Missions_call.sqf"",[],10,true,true,"""",""true"", 3];";
+			};
+			id=3181;
+			type="OPTRE_RS_ConsoleDoor";
+			atlOffset=0.0004119873;
 		};
 	};
 };
