@@ -1,8 +1,9 @@
 params ["_player"];
+diag_log "LOCKERS INIT: " + (name _player);
 
 private _fn_checkId = {
-  private _uid = getPlayerUID _player
-  [_uid find "7656", _uid];
+  private _uid = getPlayerUID _player;
+  [(_uid find "7656") >= 0, _uid];
 };
 
 private _until = (time max 0) + 10;
@@ -19,12 +20,12 @@ private _pos = call {
 };
 MPV_locker_nextPos = _pos vectorAdd [0, 5];
 
-private _hol = createVehicle ["Weapon_Empty", _pos, [], 0, "CAN_COLLIDE"];
+private _hol = createVehicle ["I_CargoNet_01_ammo_F", _pos, [], 0, "CAN_COLLIDE"];
 _hol allowDamage false;
-_hol enableSimulation false;
+_hol hideObjectGlobal true;
 [_hol, _uid call ZONT_fnc_fetchPersonalLocker] call ZONT_fnc_setContainerGear;
 
-if (isNil "MPV_locker_holders") then { MPV_locker_list = createHashMap };
+if (isNil "MPV_locker_holders") then { MPV_locker_holders = createHashMap };
 
 private _rm = MPV_locker_holders getOrDefault [_uid, objNull];
 if not (isNull _rm) then {
@@ -32,3 +33,4 @@ if not (isNull _rm) then {
 };
 
 MPV_locker_holders set [_uid, _hol];
+publicVariable "MPV_locker_holders";

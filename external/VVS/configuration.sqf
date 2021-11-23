@@ -10,11 +10,11 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-  	case "542": { VVS_542 };
+  	case "A82": { VVS_82 };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "TV": { VVS_TV };
-  	case "ISIS": { VVS_ISIS };
+  	case "CD": { VVS_CD };
+    case "USAF": { VVS_USAF };
 
   	default {[]};
   };
@@ -23,7 +23,7 @@ ZONT_fnc_filterVVS = {
 ZONT_fnc_onSpawnVVS = {
   // params ["_mode", "_vehicle"];
   switch(_this) do {
-  	case "TV": { {
+  	case "CD": { {
       _vehicle setVehicleAmmo 0;
       _vehicle setFuel 0
     } };
@@ -34,45 +34,49 @@ ZONT_fnc_onSpawnVVS = {
 
 
 VVS_HQ = [
-
 ];
 
 VVS_Wheeled = [
 ];
 
-VVS_TV = [
+VVS_CD = [
+  "OPTRE_M808B2",
+  "OPTRE_M808S"
 
 ];
 
-VVS_542 = [
-
+VVS_A82 = [
+  "SC_SaurusAPC_SE",
+  "SC_SaurusAPC_AA_SE"
 ];
 
 VVS_Wheeled_Spec = [
-  "B_LSV_01_unarmed_F",
-  "B_Quadbike_01_F",
-  "rhsusf_mrzr4_d",
-  "LOP_AFR_OPF_Offroad"
+  "OPTRE_M274_ATV"
 ];
 
 VVS_BMO = [
-  "RHS_Ural_Fuel_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "rhs_gaz66_ammo_msv",
-  "rhs_kamaz5350_msv",
-  "rhs_kamaz5350_open_msv",
-  "rhs_tigr_sts_3camo_msv",
-  "rhs_tigr_m_3camo_msv",
-  "rhs_tigr_3camo_msv"
+  "OPTRE_M12_FAV_APC",
+  "OPTRE_M12_LRV",
+  "OPTRE_M12_FAV",
+  "OPTRE_M12A1_LRV",
+  "OPTRE_M12G1_LRV",
+  "OPTRE_M12R_AA",
+  "OPTRE_M813_TT",
+  "OPTRE_M914_RV",
+  "B_Truck_01_Repair_F",
+  "B_Truck_01_ammo_F",
+  "B_Truck_01_fuel_F"
 ];
 
-VVS_ISIS = [
-  "LOP_ISTS_Landrover_SPG9",
-  "LOP_ISTS_Landrover",
-  "LOP_ISTS_Nissan_PKM",
-  "LOP_AM_UAZ_AGS",
-  "LOP_ISTS_Offroad_M2"
+VVS_MP = [
+  "SC_SaurusAPC_Unarmed_SE"
 ];
+
+VVS_USAF = [
+  "HMCS_VW1URB",
+  "JGPT"
+];
+
 
 
 VVS_Car = [];

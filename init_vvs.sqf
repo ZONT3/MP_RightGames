@@ -3,7 +3,7 @@ _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autoco
 _this addAction [
   "Запрос Техники БМО",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"BMO"],
+  [VVS_west_Land,"BMO"],
   6,
   true,
   true,
@@ -15,35 +15,71 @@ _this addAction [
 _this addAction [
   "Запрос специальной колесной техники",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"SWheeled"],
+  [VVS_west_Land,"SWheeled"],
   6,
   true,
   true,
   "",
-  "[['SSO', 'FSB']] call ZONT_fnc_checkRole",
+  "[['Navy', 'SOAR']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос Техники ТВ",
+  "Запрос Техники 1st CD",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"TV"],
+  [VVS_west_Land,"CD"],
   6,
   true,
   true,
   "",
-  "[['TV']] call ZONT_fnc_checkRole",
+  "[['CD']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос Техники 542 ОДШБ МП",
+  "Запрос Техники 10th SGEU",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"542"],
+  [VVS_west_Land,"A82"],
   6,
   true,
   true,
   "",
-  "[['C542']] call ZONT_fnc_checkRole",
+  "[['A82']] call ZONT_fnc_checkRole",
+  5
+];
+
+_this addAction [
+  "Запрос Техники Штаба",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"HQ"],
+  6,
+  true,
+  true,
+  "",
+  "[['HQ']] call ZONT_fnc_checkRole",
+  5
+];
+
+_this addAction [
+  "Запрос Техники Military Police",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"MP"],
+  6,
+  true,
+  true,
+  "",
+  "[['MP']] call ZONT_fnc_checkRole",
+  5
+];
+
+_this addAction [
+  "Запрос Техники SI AirForce",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"USAF"],
+  6,
+  true,
+  true,
+  "",
+  "[['USAF']] call ZONT_fnc_checkRole",
   5
 ];
