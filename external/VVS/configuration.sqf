@@ -10,10 +10,10 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-  	case "A82": { VVS_82 };
+  	case "BTR": { VVS_BTR };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "CD": { VVS_CD };
+  	case "TV": { VVS_TV };
     case "USAF": { VVS_USAF };
 
   	default {[]};
@@ -23,7 +23,7 @@ ZONT_fnc_filterVVS = {
 ZONT_fnc_onSpawnVVS = {
   // params ["_mode", "_vehicle"];
   switch(_this) do {
-  	case "CD": { {
+  	case "TV": { {
       _vehicle setVehicleAmmo 0;
       _vehicle setFuel 0
     } };
@@ -39,43 +39,43 @@ VVS_HQ = [
 VVS_Wheeled = [
 ];
 
-VVS_CD = [
-  "OPTRE_M808B2",
-  "OPTRE_M808S"
+VVS_TV = [
+  "rhs_t80",
+  "rhs_t80u",
+  "rhs_t80bv"
 
 ];
 
-VVS_A82 = [
-  "SC_SaurusAPC_SE",
-  "SC_SaurusAPC_AA_SE"
+VVS_BTR = [
+  "rhs_btr70_vdv",
+  "CUP_O_MTLB_pk_Green_RU",
+  "rhsgref_BRDM2_msv"
 ];
 
 VVS_Wheeled_Spec = [
-  "OPTRE_M274_ATV"
+
 ];
 
 VVS_BMO = [
-  "OPTRE_M12_FAV_APC",
-  "OPTRE_M12_LRV",
-  "OPTRE_M12_FAV",
-  "OPTRE_M12A1_LRV",
-  "OPTRE_M12G1_LRV",
-  "OPTRE_M12R_AA",
-  "OPTRE_M813_TT",
-  "OPTRE_M914_RV",
-  "B_Truck_01_Repair_F",
-  "B_Truck_01_ammo_F",
-  "B_Truck_01_fuel_F"
+  "rhs_gaz66_zu23_msv",
+  "rhs_gaz66_repair_msv",
+  "RHS_Ural_Fuel_MSV_01",
+  "CUP_O_UAZ_Open_RU",
+  "CUP_O_UAZ_Unarmed_RU",
+  "av_uaz451_b",
+  "av_UAZ451_2",
+  "CUP_O_UAZ_AMB_RU",
+  "av_uaz451_a",
+  "rhs_gaz66_ap2_msv",
+  "rhs_zil131_msv",
+  "RHS_Ural_MSV_01",
+  "RHS_Ural_Open_MSV_01",
+  "RHS_Ural_Repair_MSV_01",
+  "RHS_Ural_Zu23_MSV_01",
+  "RHS_Ural_Ammo_MSV_01",
+  "rhs_gaz66_ammo_msv"
 ];
 
-VVS_MP = [
-  "SC_SaurusAPC_Unarmed_SE"
-];
-
-VVS_USAF = [
-  "HMCS_VW1URB",
-  "JGPT"
-];
 
 
 

@@ -25,61 +25,25 @@ _this addAction [
 ];
 
 _this addAction [
-  "Запрос Техники 1st CD",
+  "Запрос Техники ТВ",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"CD"],
+  [VVS_west_Land,"TV"],
   6,
   true,
   true,
   "",
-  "[['CD']] call ZONT_fnc_checkRole",
+  "[['TV']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос Техники 10th SGEU",
+  "Запрос Техники Бронетехники",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"A82"],
+  [VVS_west_Land,"BTR"],
   6,
   true,
   true,
   "",
-  "[['A82']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос Техники Штаба",
-  VVS_fnc_openVVS,
-  [VVS_west_Land,"HQ"],
-  6,
-  true,
-  true,
-  "",
-  "[['HQ']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос Техники Military Police",
-  VVS_fnc_openVVS,
-  [VVS_west_Land,"MP"],
-  6,
-  true,
-  true,
-  "",
-  "[['MP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос Техники SI AirForce",
-  VVS_fnc_openVVS,
-  [VVS_west_Land,"USAF"],
-  6,
-  true,
-  true,
-  "",
-  "[['USAF']] call ZONT_fnc_checkRole",
+  "true",
   5
 ];

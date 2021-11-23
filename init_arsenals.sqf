@@ -6,78 +6,78 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_10,
-	["A82"],
-	"Запросить арсенал 10th Scion Guard Expeditionary Unit",
+	ars_129,
+	["A129", "TV", "MV", "MK", "train"],
+	"Запросить арсенал 129 Гвардейский Мотострелковый Полка",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_af,
-	["CD"],
-	"Запросить арсенал Armored Fist",
+	ars_aa,
+	["AA"],
+	"Запросить арсенал Армейской Авиации",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_gf,
-	["USAF"],
-	"Запросить арсенал Scion Imperial AirForce",
+	ars_gru,
+	["GRU"],
+	"Запросить арсенал ГРУ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_mp,
-	["MP"],
-	"Запросить арсенал Military Police",
+	ars_omon,
+	["OMON"],
+	"Запросить арсенал ОМОН",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_navy,
-	["Navy"],
-	"Запросить арсенал Scion Imperial Marines",
+	ars_som,
+	["SOM"],
+	"Запросить арсенал СОМ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_160,
-	["SOAR"],
-	"Запросить арсенал Scion Imperial Rangers",
+	ars_sobr,
+	["SOBR"],
+	"Запросить арсенал СОБР",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_spn,
-	["SpN"],
-	"Запросить арсенал Atlas Corporation",
+	ars_lohi,
+	["ODON"],
+	"Запросить арсенал ОДОН",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_train,
-	["Training"],
-	"Запросить арсенал Training Squad",
+	ars_45,
+	["O45"],
+	"Запросить арсенал 45 ОбрСпН",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_med,
-	["Med"],
-	"Запросить арсенал medical department",
+	ars_336,
+	["O336"],
+	"Запросить арсенал 336 ОГБ МП",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_iron,
-	["Iron"],
-	"Запросить арсенал Iron Enclave",
+	ars_104,
+	["VDV"],
+	"Запросить арсенал 104-й Гв.ВДД",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_inferno,
-	["IT"],
-	"Запросить арсенал Inferno Team",
+	ars_noname,
+	["FSK"],
+	"Запросить арсенал ФСК",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
