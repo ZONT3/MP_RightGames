@@ -7,7 +7,6 @@ waitUntil {vehicle player == player};
 //[] spawn ZONT_fnc_initArsenals;
 
 [] spawn ZONT_fnc_addReverse;
-[] spawn ZONT_fnc_ZZL_initPlayer;
 
 [] execVM "chatCommands.sqf";
 
