@@ -40,40 +40,49 @@ VVS_Wheeled = [
 ];
 
 VVS_TV = [
-  "rhs_t80",
-  "rhs_t80u",
-  "rhs_t80bv"
+  "rhs_t72ba_tv",
+  "rhs_t72bb_tv"
 
 ];
 
 VVS_BTR = [
-  "rhs_btr70_vdv",
-  "CUP_O_MTLB_pk_Green_RU",
-  "rhsgref_BRDM2_msv"
-];
-
-VVS_Wheeled_Spec = [
-
+  "rhs_bmp1_vv",
+  "rhs_brm1k_vv",
+  "rhs_bmp2_vv",
+  "rhsgref_BRDM2_vdv",
+  "rhs_btr70_vv",
+  "rhs_btr80_vv",
+  "UK3CB_CW_SOV_O_LATE_MTLB_PKT"
 ];
 
 VVS_BMO = [
-  "rhs_gaz66_zu23_msv",
-  "rhs_gaz66_repair_msv",
-  "RHS_Ural_Fuel_MSV_01",
-  "CUP_O_UAZ_Open_RU",
-  "CUP_O_UAZ_Unarmed_RU",
-  "av_uaz451_b",
-  "av_UAZ451_2",
-  "CUP_O_UAZ_AMB_RU",
   "av_uaz451_a",
-  "rhs_gaz66_ap2_msv",
-  "rhs_zil131_msv",
-  "RHS_Ural_MSV_01",
-  "RHS_Ural_Open_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "RHS_Ural_Zu23_MSV_01",
-  "RHS_Ural_Ammo_MSV_01",
-  "rhs_gaz66_ammo_msv"
+  "av_uaz451_b",
+  "av_UAZ451",
+  "av_UAZ451_vv",
+  "rhs_uaz_vv",
+  "rhs_uaz_open_vv",
+  "rhs_gaz66_vv",
+  "rhs_gaz66_flat_vv",
+  "rhs_gaz66_r142_vv",
+  "rhs_gaz66_zu23_vv",
+  "rhs_gaz66_ammo_vv",
+  "rhs_gaz66o_vv",
+  "rhs_gaz66_ap2_vv",
+  "rhs_gaz66_repair_vv",
+  "RHS_Ural_Fuel_VV_01",
+  "RHS_Ural_Repair_VV_01",
+  "RHS_Ural_Ammo_VV_01",
+  "RHS_ZU23_MSV",
+  "rhs_D30_vdv"
+];
+
+VVS_Wheeled_Spec = [
+  "av_btr80_spn",
+  "av_btr80_gru",
+  "av_btr80_omon",
+  "rhsgref_BRDM2UM_msv",
+  "rhsgref_BRDM2_HQ_msv"
 ];
 
 
