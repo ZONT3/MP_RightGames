@@ -20,7 +20,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['Navy', 'SOAR']] call ZONT_fnc_checkRole",
+  "[['MVD', 'FSB', 'FSK', 'O336', 'O45', 'ODON', 'SOBR', 'SOM', 'OMON', 'GRU']] call ZONT_fnc_checkRole",
   5
 ];
 
