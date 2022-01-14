@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1399;
+		nextID=1401;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13631.977,81.781197,19020.408};
-		dir[]={0.18026628,-0.6890403,0.70194989};
-		up[]={0.17138985,0.7247206,0.66738451};
-		aside[]={0.9685728,4.0105078e-008,-0.24873725};
+		pos[]={13667.343,62.53355,19127.574};
+		dir[]={-0.19742216,-0.67785001,-0.70819759};
+		up[]={-0.18202201,0.73520023,-0.6529538};
+		aside[]={-0.96327174,0,0.26852843};
 	};
 };
 binarizationWanted=0;
@@ -3071,7 +3071,6 @@ class Mission
 					class Attributes
 					{
 						description="Військовослужбовець ЗСУ";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -3089,6 +3088,48 @@ class Mission
 					};
 					id=117;
 					type="rhsgref_cdf_b_reg_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item1
 				{
