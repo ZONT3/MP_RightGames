@@ -49,11 +49,11 @@ ace_arsenal_EnableRPTLog = false;
 ace_arsenal_fontHeight = 4.5;
 
 // ACE Artillery
-force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
-force ace_mk6mortar_airResistanceEnabled = false;
-force ace_mk6mortar_allowCompass = true;
-force ace_mk6mortar_allowComputerRangefinder = true;
+force ace_artillerytables_advancedCorrections = true;
+force ace_artillerytables_disableArtilleryComputer = true;
+force ace_mk6mortar_airResistanceEnabled = true;
+force ace_mk6mortar_allowCompass = false;
+force ace_mk6mortar_allowComputerRangefinder = false;
 force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Captives
