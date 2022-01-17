@@ -47,7 +47,7 @@ VVS_Wheeled_Spec = [
   "UK3CB_ADG_O_Pickup",
   "UK3CB_CCM_O_YAVA",
   "UK3CB_CCM_O_Datsun_Pkm",
-  "UK3CB_CCM_O_Datsun_Open", 
+  "UK3CB_CCM_O_Datsun_Open",
   "UK3CB_O_G_UAZ_Dshkm"
 ];
 
@@ -122,7 +122,7 @@ VVS_Turel = [
   "rhs_D30_msv"
 ];
 
-VVVS_BTR1 = [
+VVS_BTR1 = [
   "b_afougf_yt_bmp1",
   "b_afougf_yt_bmp2",
   "b_afougf_yt_btr70",
