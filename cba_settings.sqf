@@ -123,9 +123,9 @@ force acex_fortify_settingHint = 2;
 
 // ACE Fragmentation Simulation
 force ace_frag_enabled = true;
-force ace_frag_maxTrack = 10;
-force ace_frag_maxTrackPerFrame = 10;
-force ace_frag_reflectionsEnabled = false;
+force ace_frag_maxTrack = 80;
+force ace_frag_maxTrackPerFrame = 80;
+force ace_frag_reflectionsEnabled = true;
 force ace_frag_spallEnabled = true;
 
 // ACE G-Forces
@@ -152,7 +152,7 @@ force ace_hearing_autoAddEarplugsToUnits = true;
 force ace_hearing_disableEarRinging = false;
 force ace_hearing_earplugsVolume = 0.407484;
 force ace_hearing_enableCombatDeafness = true;
-force ace_hearing_enabledForZeusUnits = false;
+force ace_hearing_enabledForZeusUnits = true;
 force ace_hearing_unconsciousnessVolume = 0.0774792;
 
 // ACE Interaction
@@ -515,11 +515,11 @@ ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
 
 // ACE View Restriction
-force acex_viewrestriction_mode = 0;
-force acex_viewrestriction_modeSelectiveAir = 0;
-force acex_viewrestriction_modeSelectiveFoot = 0;
-force acex_viewrestriction_modeSelectiveLand = 0;
-force acex_viewrestriction_modeSelectiveSea = 0;
+force acex_viewrestriction_mode = 1;
+force acex_viewrestriction_modeSelectiveAir = 1;
+force acex_viewrestriction_modeSelectiveFoot = 1;
+force acex_viewrestriction_modeSelectiveLand = 1;
+force acex_viewrestriction_modeSelectiveSea = 1;
 acex_viewrestriction_preserveView = false;
 
 // ACE Volume
