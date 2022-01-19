@@ -86,7 +86,10 @@ VVS_BMO = [
   "b_afougf_yt_UAZ_Base",
   "b_afougf_yt_UAZ_open_Base",
   "b_afougf_yt_UAZ_SPG9_Base",
-  "av_uaz451_a"
+  "av_uaz451_a",
+  "b_afougf_yt_gaz66_ammo", 
+  "b_afougf_yt_zil131", 
+  "b_afougf_yt_zil131_open"
 ];
 
 VVS_RMO = [
