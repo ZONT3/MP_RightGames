@@ -71,7 +71,10 @@ VVS_Tanks = [
 ];
 
 VVS_TV = [
-  "b_afougf_yt_t72bb"
+  "b_afougf_yt_t72bb",
+  "BG_T64BV",
+  "BG_T64BV_SCREEN",
+  "BG_T64BV_2017"
 ];
 
 VVS_BMO = [
@@ -87,9 +90,21 @@ VVS_BMO = [
   "b_afougf_yt_UAZ_open_Base",
   "b_afougf_yt_UAZ_SPG9_Base",
   "av_uaz451_a",
-  "b_afougf_yt_gaz66_ammo", 
-  "b_afougf_yt_zil131", 
-  "b_afougf_yt_zil131_open"
+  "b_afougf_yt_gaz66_ammo",
+  "b_afougf_yt_zil131",
+  "b_afougf_yt_zil131_open",
+  "BG_KOZAK_5_UA",
+  "BG_Kraz_Spartan_ZSU_01",
+  "BG_Kraz_Spartan_ZSU_02",
+  "BG_KRAZ_6322_TRANSPORT",
+  "BG_KRAZ_6322_AMMO_TENT",
+  "BG_KRAZ_PALN_UA",
+  "BG_KRAZ_6322_REPAIR",
+  "BG_KRAZ_6322_TRANSPORT_TENT",
+  "BG_UAZ_BUHINEC",
+  "BG_UAZ_BUHINEC_ARMOR",
+  "bg_kraz6322_Kolchuga",
+  "bg_Kraz_6322_Kolchuga_Comand"
 ];
 
 VVS_RMO = [
@@ -107,7 +122,11 @@ VVS_RMO = [
   "RHS_Ural_Ammo_MSV_01",
   "RHS_Ural_Flat_MSV_01",
   "RHS_Ural_Open_Flat_MSV_01",
-  "av_uaz451_a"
+  "av_uaz451_a",
+  "UK3CB_Ural_Fuel",
+  "UAZ_09_transport_F",
+  "av_UAZ_pat_green",
+  "UAZ_05_transport_F"
 ];
 
 VVS_BTR = [
@@ -116,7 +135,8 @@ VVS_BTR = [
   "LOP_US_BTR70",
   "rhsgref_BRDM2_msv",
   "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
-  "UK3CB_O_G_MTLB_Zu23"
+  "UK3CB_O_G_MTLB_Zu23",
+  "rhs_btr80_msv"
 ];
 
 VVS_Turel = [

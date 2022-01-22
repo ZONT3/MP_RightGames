@@ -32,3 +32,10 @@
 	"Запросить арсенал Офицеров",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_pmc,
+	["PMC"],
+	"Запросить арсенал АЗОВ",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
