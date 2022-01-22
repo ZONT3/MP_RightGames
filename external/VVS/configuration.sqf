@@ -66,7 +66,7 @@ VVS_Wheeled = [
 ];
 
 VVS_Tanks = [
-  "rhs_t72bb_tv",
+  "rhs_t72be_tv",
   "UK3CB_O_G_T34"
 ];
 
