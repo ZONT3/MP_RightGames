@@ -42,7 +42,7 @@
 
 [ _this,
 	ars_drg,
-	["PMC"],
+	["DRG"],
 	"Запросить арсенал ДРГ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
