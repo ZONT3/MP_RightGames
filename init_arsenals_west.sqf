@@ -39,3 +39,10 @@
 	"Запросить арсенал АЗОВ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_drg,
+	["PMC"],
+	"Запросить арсенал ДРГ",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;

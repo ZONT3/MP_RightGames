@@ -47,8 +47,7 @@ VVS_Wheeled_Spec = [
   "UK3CB_ADG_O_Pickup",
   "UK3CB_CCM_O_YAVA",
   "UK3CB_CCM_O_Datsun_Pkm",
-  "UK3CB_CCM_O_Datsun_Open",
-  "UK3CB_O_G_UAZ_Dshkm"
+  "UK3CB_CCM_O_Datsun_Open"
 ];
 
 VVS_Spec = [
