@@ -8,7 +8,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['A15', 'AA', 'TV', 'SHTAB']] call ZONT_fnc_checkRole",
+  "[['A15', 'AA', 'TV', 'SHTAB', 'DRG']] call ZONT_fnc_checkRole",
   5
 ];
 
