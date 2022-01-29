@@ -5,22 +5,22 @@ hitpercentage = 1;
 playerscanbehit = true;
 
 // ACE Advanced Ballistics
-force ace_advanced_ballistics_ammoTemperatureEnabled = false;
+force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
 force ace_advanced_ballistics_bulletTraceEnabled = true;
 force ace_advanced_ballistics_enabled = true;
-force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
+force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force ace_advanced_ballistics_simulationInterval = 0;
 
 // ACE Advanced Fatigue
 force ace_advanced_fatigue_enabled = true;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
-force ace_advanced_fatigue_loadFactor = 0.423267;
-force ace_advanced_fatigue_performanceFactor = 2.21677;
-force ace_advanced_fatigue_recoveryFactor = 4.47658;
-force ace_advanced_fatigue_swayFactor = 0.387396;
-force ace_advanced_fatigue_terrainGradientFactor = 0.638484;
+force ace_advanced_fatigue_loadFactor = 5;
+force ace_advanced_fatigue_performanceFactor = 2;
+force ace_advanced_fatigue_recoveryFactor = 4;
+force ace_advanced_fatigue_swayFactor = 1;
+force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
 ace_advanced_throwing_enabled = true;
@@ -75,7 +75,7 @@ force ace_cookoff_ammoCookoffDuration = 0.3;
 force ace_cookoff_enable = 2;
 force ace_cookoff_enableAmmobox = true;
 force ace_cookoff_enableAmmoCookoff = true;
-ace_cookoff_enableFire = true;
+ace_cookoff_enableFire = false;
 force ace_cookoff_probabilityCoef = 1.2;
 
 // ACE Crew Served Weapons
@@ -200,14 +200,14 @@ force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = true;
 force ace_repair_consumeItem_toolKit = 0;
 force ace_repair_displayTextOnRepair = true;
-force ace_repair_engineerSetting_fullRepair = 0;
+force ace_repair_engineerSetting_fullRepair = 2;
 force ace_repair_engineerSetting_repair = 0;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 ace_repair_locationsBoostTraining = false;
 ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force ace_repair_repairDamageThreshold = 0.464876;
+force ace_repair_repairDamageThreshold = 0.60;
 force ace_repair_repairDamageThreshold_engineer = 0.536616;
 force ace_repair_wheelRepairRequiredItems = [];
 
@@ -302,7 +302,7 @@ force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force ace_medical_statemachine_cardiacArrestTime = 1200;
 force ace_medical_statemachine_fatalInjuriesAI = 0;
-force ace_medical_statemachine_fatalInjuriesPlayer = 1;
+force ace_medical_statemachine_fatalInjuriesPlayer = 0;
 force ace_medical_treatment_advancedBandages = 2;
 ace_medical_treatment_advancedDiagnose = 2;
 force ace_medical_treatment_advancedMedication = true;
@@ -370,7 +370,7 @@ force ace_nightvision_shutterEffects = true;
 force ace_overheating_cookoffCoef = 0.5;
 ace_overheating_coolingCoef = 1;
 ace_overheating_displayTextOnJam = true;
-force ace_overheating_enabled = false;
+force ace_overheating_enabled = true;
 ace_overheating_heatCoef = 0.5;
 force ace_overheating_jamChanceCoef = 0.5;
 force ace_overheating_overheatingDispersion = true;
@@ -411,11 +411,11 @@ force ace_respawn_savePreDeathGear = false;
 
 // ACE Scopes
 force ace_scopes_correctZeroing = true;
-force ace_scopes_deduceBarometricPressureFromTerrainAltitude = false;
+force ace_scopes_deduceBarometricPressureFromTerrainAltitude = true;
 force ace_scopes_defaultZeroRange = 100;
 force ace_scopes_enabled = true;
 force ace_scopes_forceUseOfAdjustmentTurrets = true;
-force ace_scopes_overwriteZeroRange = false;
+force ace_scopes_overwriteZeroRange = true;
 force ace_scopes_simplifiedZeroing = false;
 ace_scopes_useLegacyUI = false;
 force ace_scopes_zeroReferenceBarometricPressure = 1013.25;
@@ -456,7 +456,7 @@ force ace_microdagr_mapDataAvailable = 1;
 force ace_microdagr_waypointPrecision = 3;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
-force ace_parachute_failureChance = 0.149219;
+force ace_parachute_failureChance = 100;
 ace_parachute_hideAltimeter = true;
 ace_tagging_quickTag = 1;
 
