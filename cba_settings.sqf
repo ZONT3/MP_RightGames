@@ -16,11 +16,11 @@ force ace_advanced_ballistics_simulationInterval = 0;
 force ace_advanced_fatigue_enabled = true;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
-force ace_advanced_fatigue_loadFactor = 3.5;
-force ace_advanced_fatigue_performanceFactor = 2;
+force ace_advanced_fatigue_loadFactor = 3;
+force ace_advanced_fatigue_performanceFactor = 3;
 force ace_advanced_fatigue_recoveryFactor = 4;
-force ace_advanced_fatigue_swayFactor = 1;
-force ace_advanced_fatigue_terrainGradientFactor = 1;
+force ace_advanced_fatigue_swayFactor = 2;
+force ace_advanced_fatigue_terrainGradientFactor = 2;
 
 // ACE Advanced Throwing
 ace_advanced_throwing_enabled = true;
