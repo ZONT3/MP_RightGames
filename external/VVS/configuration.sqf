@@ -65,15 +65,11 @@ VVS_Wheeled = [
 ];
 
 VVS_Tanks = [
-  "rhs_t72be_tv",
-  "UK3CB_O_G_T34"
+  "rhs_t72bb_tv"
 ];
 
 VVS_TV = [
-  "b_afougf_yt_t72bb",
-  "BG_T64BV",
-  "BG_T64BV_SCREEN",
-  "BG_T64BV_2017"
+  "b_afougf_yt_t72bb"
 ];
 
 VVS_BMO = [
@@ -81,7 +77,7 @@ VVS_BMO = [
   "b_afougf_yt_gaz66_flat",
   "b_afougf_yt_gaz66_zu23",
   "b_afougf_yt_gaz66_r142",
-  "b_afougf_yt_gaz66_ammo",
+  "b_afougf_yt_gaz66_ammo",*
   "b_afougf_yt_gaz66_open",
   "b_afougf_yt_gaz66_ap2",
   "b_afougf_yt_gaz66_repair",
@@ -92,18 +88,8 @@ VVS_BMO = [
   "b_afougf_yt_gaz66_ammo",
   "b_afougf_yt_zil131",
   "b_afougf_yt_zil131_open",
-  "BG_KOZAK_5_UA",
-  "BG_Kraz_Spartan_ZSU_01",
-  "BG_Kraz_Spartan_ZSU_02",
-  "BG_KRAZ_6322_TRANSPORT",
-  "BG_KRAZ_6322_AMMO_TENT",
-  "BG_KRAZ_PALN_UA",
-  "BG_KRAZ_6322_REPAIR",
-  "BG_KRAZ_6322_TRANSPORT_TENT",
-  "BG_UAZ_BUHINEC",
-  "BG_UAZ_BUHINEC_ARMOR",
-  "bg_kraz6322_Kolchuga",
-  "bg_Kraz_6322_Kolchuga_Comand"
+  "b_afougf_m998_w_s_4dr_fulltop",
+  "b_afougf_yt_m998_w_s_4dr_fulltop"
 ];
 
 VVS_RMO = [

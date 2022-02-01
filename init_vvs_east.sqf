@@ -8,7 +8,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR']] call ZONT_fnc_checkRole",
+  "[['DNR', 'OSH']] call ZONT_fnc_checkRole",
   5
 ];
 
