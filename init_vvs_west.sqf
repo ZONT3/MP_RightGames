@@ -56,6 +56,6 @@ _this addAction [
   true,
   true,
   "",
-  "[['HQ']] call ZONT_fnc_checkRole",
+  "[['HQ', 'DRG']] call ZONT_fnc_checkRole",
   5
 ];
