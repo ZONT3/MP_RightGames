@@ -77,7 +77,7 @@ VVS_BMO = [
   "b_afougf_yt_gaz66_flat",
   "b_afougf_yt_gaz66_zu23",
   "b_afougf_yt_gaz66_r142",
-  "b_afougf_yt_gaz66_ammo",*
+  "b_afougf_yt_gaz66_ammo",
   "b_afougf_yt_gaz66_open",
   "b_afougf_yt_gaz66_ap2",
   "b_afougf_yt_gaz66_repair",
