@@ -367,12 +367,12 @@ force ace_nightvision_noiseScaling = 0.126698;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-force ace_overheating_cookoffCoef = 0.5;
-ace_overheating_coolingCoef = 1;
+force ace_overheating_cookoffCoef = 0.3;
+ace_overheating_coolingCoef = 0.5;
 ace_overheating_displayTextOnJam = true;
 force ace_overheating_enabled = true;
-ace_overheating_heatCoef = 0.5;
-force ace_overheating_jamChanceCoef = 0.5;
+ace_overheating_heatCoef = 0.3;
+force ace_overheating_jamChanceCoef = 0.3;
 force ace_overheating_overheatingDispersion = true;
 ace_overheating_overheatingRateOfFire = true;
 ace_overheating_particleEffectsAndDispersionDistance = 3000;
@@ -381,7 +381,7 @@ force ace_overheating_showParticleEffectsForEveryone = true;
 ace_overheating_suppressorCoef = 1;
 force ace_overheating_unJamFailChance = 0.0416088;
 force ace_overheating_unJamOnreload = true;
-ace_overheating_unJamOnSwapBarrel = false;
+ace_overheating_unJamOnSwapBarrel = true;
 
 // ACE Pointing
 force ace_finger_enabled = true;
