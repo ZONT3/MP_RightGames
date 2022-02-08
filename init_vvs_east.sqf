@@ -8,7 +8,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR', 'OSH']] call ZONT_fnc_checkRole",
+  "[['DNR', 'OSH', 'OFI']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -20,7 +20,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR']] call ZONT_fnc_checkRole",
+  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -32,7 +32,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR']] call ZONT_fnc_checkRole",
+  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -44,7 +44,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR']] call ZONT_fnc_checkRole",
+  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
   5
 ];
 
