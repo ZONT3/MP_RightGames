@@ -20,6 +20,7 @@ ZONT_fnc_filterVVS = {
     case "BTR1": { VVS_BTR1 };
     case "Turel1": { VVS_Turel1 };
     case "Spec": { VVS_Spec };
+    case "SHTAB": { VVS_Shtab };
 
   	default {[]};
   };
@@ -87,9 +88,7 @@ VVS_BMO = [
   "av_uaz451_a",
   "b_afougf_yt_gaz66_ammo",
   "b_afougf_yt_zil131",
-  "b_afougf_yt_zil131_open",
-  "b_afougf_m998_w_s_4dr_fulltop",
-  "b_afougf_yt_m998_w_s_4dr_fulltop"
+  "b_afougf_yt_zil131_open"
 ];
 
 VVS_RMO = [
@@ -115,8 +114,8 @@ VVS_RMO = [
 ];
 
 VVS_BTR = [
-  "LOP_US_BMP1D",
-  "LOP_US_BMP2D",
+  "LOP_US_BMP1",
+  "LOP_US_BMP2",
   "LOP_US_BTR70",
   "rhsgref_BRDM2_msv",
   "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
@@ -135,7 +134,8 @@ VVS_BTR1 = [
   "b_afougf_yt_bmp2",
   "b_afougf_yt_btr70",
   "b_afougf_yt_BRDM2",
-  "UK3CB_B_G_MTLB_PKT"
+  "UK3CB_B_G_MTLB_PKT",
+  "b_afougf_yt_bmp1p"
 ];
 
 VVS_Turel1 = [
@@ -144,6 +144,12 @@ VVS_Turel1 = [
   "RHS_ZU23_MSV"
 ];
 
+VVS_Shtab = [
+  "BG_M998_4dr_fulltop_ZSU",
+  "BG_m998_4dr_ZSU",
+  "BG_M998_2dr_ZSU",
+  "BG_M998_2dr_fulltop_ZSU"
+];
 
 VVS_Car = [];
 VVS_Air = [];

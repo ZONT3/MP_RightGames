@@ -59,3 +59,15 @@ _this addAction [
   "[['HQ', 'DRG']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос Техники офицеров",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"SHTAB"],
+  6,
+  true,
+  true,
+  "",
+  "[['SHTAB']] call ZONT_fnc_checkRole",
+  5
+];
