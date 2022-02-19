@@ -50,28 +50,21 @@
 [ _this,
 	ars_kgbk,
 	["KGBK"],
-	"Запросить арсенал КГБ",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_kgb,
-	["KGB"],
-	"Запросить арсенал КГБ",
+	"Запросить арсенал КГБ К",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_kgba,
 	["KGBA"],
-	"Запросить арсенал КГБ",
+	"Запросить арсенал КГБ A",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
 	ars_kgbz,
 	["KGBZ"],
-	"Запросить арсенал КГБ",
+	"Запросить арсенал КГБ З",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
