@@ -44,111 +44,85 @@ VVS_HQ = [
 ];
 
 VVS_Wheeled_Spec = [
-  "UK3CB_ADG_O_Pickup_DSHKM",
-  "UK3CB_ADG_O_Pickup",
-  "UK3CB_CCM_O_YAVA",
-  "UK3CB_CCM_O_Datsun_Pkm",
-  "UK3CB_CCM_O_Datsun_Open"
+"rhsgref_BRDM2_msv",
+"rhsgref_BRDM2UM_vdv"
 ];
 
 VVS_Spec = [
-  "b_afougf_yt_quadbike_01",
-  "b_afougf_offroad_01",
-  "b_afougf_offroad_at",
-  "b_afougf_yt_BRDM2_UM",
-  "b_afougf_yt_BRDM2_HQ",
-  "UK3CB_ADG_O_Pickup_DSHKM",
-  "UK3CB_ADG_O_Pickup",
-  "UK3CB_CCM_O_YAVA"
+"UK3CB_TKM_I_YAVA",
+"UK3CB_TKM_I_LR_Closed",
+"UK3CB_TKM_I_LR_Open",
+"UK3CB_TKM_I_LR_M2",
+"UK3CB_TKM_I_LR_AGS30",
+"UK3CB_TKM_I_LR_SF_M2",
+"UK3CB_TKM_I_LR_SPG9"
 ];
 
 VVS_Wheeled = [
 ];
 
 VVS_Tanks = [
-  "rhs_t72bb_tv"
+  "UK3CB_CW_SOV_O_EARLY_T55"
 ];
 
-VVS_TV = [
-  "b_afougf_yt_t72bb"
-];
 
 VVS_BMO = [
-  "b_afougf_yt_gaz66_truck",
-  "b_afougf_yt_gaz66_flat",
-  "b_afougf_yt_gaz66_zu23",
-  "b_afougf_yt_gaz66_r142",
-  "b_afougf_yt_gaz66_ammo",
-  "b_afougf_yt_gaz66_open",
-  "b_afougf_yt_gaz66_ap2",
-  "b_afougf_yt_gaz66_repair",
-  "b_afougf_yt_UAZ_Base",
-  "b_afougf_yt_UAZ_open_Base",
-  "b_afougf_yt_UAZ_SPG9_Base",
-  "av_uaz451_a",
-  "b_afougf_yt_gaz66_ammo",
-  "b_afougf_yt_zil131",
-  "b_afougf_yt_zil131_open"
+"UK3CB_TKM_I_V3S_Zu23",
+"UK3CB_TKC_I_V3S_Open",
+"UK3CB_TKC_I_V3S_Closed",
+"UK3CB_TKC_I_V3S_Repair",
+"UK3CB_TKC_I_V3S_Recovery",
+"UK3CB_TKC_I_V3S_Refuel",
+"UK3CB_TKC_I_V3S_Reammo",
+"UK3CB_TKC_I_UAZ_Open",
+"UK3CB_TKC_I_UAZ_Closed",
+"UK3CB_TKM_I_UAZ_SPG9",
+"UK3CB_TKM_I_UAZ_Dshkm",
+"UK3CB_TKM_I_UAZ_AGS30",
+"UK3CB_TKM_I_Datsun_Open",
+"UK3CB_TKM_I_Datsun_Pkm",
+"UK3CB_TKM_I_Old_Bike",
+"UK3CB_TKC_I_Datsun_Civ_Closed",
+"UK3CB_TKC_C_S1203_Amb",
+"UK3CB_TKC_C_S1203"
 ];
 
 VVS_RMO = [
-  "LOP_US_UAZ",
-  "LOP_US_UAZ_Open",
-  "LOP_US_UAZ_SPG",
-  "rhs_kamaz5350_msv",
-  "rhs_kamaz5350_ammo_msv",
-  "rhs_kamaz5350_open_msv",
-  "rhs_kamaz5350_flatbed_msv",
-  "RHS_Ural_MSV_01",
-  "RHS_Ural_Zu23_MSV_01",
-  "RHS_Ural_Open_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "RHS_Ural_Ammo_MSV_01",
-  "RHS_Ural_Flat_MSV_01",
-  "RHS_Ural_Open_Flat_MSV_01",
-  "av_uaz451_a",
-  "UK3CB_Ural_Fuel",
-  "UAZ_09_transport_F",
-  "av_UAZ_pat_green",
-  "UAZ_05_transport_F"
+"rhs_gaz66_msv",
+"rhs_gaz66_zu23_msv",
+"rhs_gaz66_r142_msv",
+"rhs_gaz66o_msv",
+"rhs_gaz66_ap2_msv",
+"rhs_gaz66_repair_msv",
+"rhs_uaz_vdv",
+"rhs_uaz_open_vdv",
+"rhs_gaz66o_flat_vdv",
+"rhs_gaz66_flat_vdv",
+"rhs_gaz66_ammo_vdv"
 ];
 
 VVS_BTR = [
-  "LOP_US_BMP1",
-  "LOP_US_BMP2",
-  "LOP_US_BTR70",
-  "rhsgref_BRDM2_msv",
-  "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
-  "UK3CB_O_G_MTLB_Zu23",
-  "rhs_btr80_msv"
+"rhs_btr60_msv",
+"rhs_btr70_msv",
+"UK3CB_CW_SOV_O_EARLY_MTLB_PKT",
+"rhs_bmd1p",
+"rhs_bmp1p_vdv"
 ];
 
 VVS_Turel = [
-  "rhs_D30_at_msv",
-  "RHS_ZU23_MSV",
-  "rhs_D30_msv"
+"rhs_D30_vmf",
+"rhs_D30_at_vmf",
+"RHS_ZU23_MSV"
 ];
 
 VVS_BTR1 = [
-  "b_afougf_yt_bmp1",
-  "b_afougf_yt_bmp2",
-  "b_afougf_yt_btr70",
-  "b_afougf_yt_BRDM2",
-  "UK3CB_B_G_MTLB_PKT",
-  "b_afougf_yt_bmp1p"
+"UK3CB_ARD_I_BTR60"
 ];
 
 VVS_Turel1 = [
-  "b_afougf_yt_D30",
-  "b_afougf_yt_D30_AT",
-  "RHS_ZU23_MSV"
-];
-
-VVS_Shtab = [
-  "BG_M998_4dr_fulltop_ZSU",
-  "BG_m998_4dr_ZSU",
-  "BG_M998_2dr_ZSU",
-  "BG_M998_2dr_fulltop_ZSU"
+"RHS_ZU23_MSV",
+"rhs_D30_at_msv",
+"rhs_D30_msv"
 ];
 
 VVS_Car = [];

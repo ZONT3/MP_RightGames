@@ -8,7 +8,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR', 'OSH', 'OFI']] call ZONT_fnc_checkRole",
+  "[[ 'A15', 'TV', 'AA', 'MV', 'SHTAB', 'KGB', 'KGBA', 'KGBZ', 'KGBK', 'KAS', 'MVD']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -20,7 +20,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
+  "[['A15', 'SHTAB']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -32,7 +32,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
+  "[['A15', 'TV']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -44,7 +44,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['DNR', 'OFI']] call ZONT_fnc_checkRole",
+  "[['TV']] call ZONT_fnc_checkRole",
   5
 ];
 
@@ -56,6 +56,6 @@ _this addAction [
   true,
   true,
   "",
-  "[['HQ', 'PMC']] call ZONT_fnc_checkRole",
+  "[['KGB', 'KGBA', 'KGBZ', 'KGBK', 'KAS', 'MVD']] call ZONT_fnc_checkRole",
   5
 ];
