@@ -49,16 +49,42 @@ VVS_Wheeled_Spec = [
 ];
 
 VVS_Spec = [
+   "UK3CB_TKM_I_YAVA",
+   "UK3CB_TKM_I_LR_Closed",
+   "UK3CB_TKM_I_LR_Open",
+   "UK3CB_TKM_I_LR_M2",
+   "UK3CB_TKM_I_LR_AGS30",
+   "UK3CB_TKM_I_LR_SF_M2",
+   "UK3CB_TKM_I_LR_SPG9"
 ];
 
 VVS_Wheeled = [
 ];
 
 VVS_Tanks = [
+"UK3CB_CW_SOV_O_EARLY_T55"
 ];
 
 
 VVS_BMO = [
+"UK3CB_TKM_I_V3S_Zu23",
+"UK3CB_TKC_I_V3S_Open",
+"UK3CB_TKC_I_V3S_Closed",
+"UK3CB_TKC_I_V3S_Repair",
+"UK3CB_TKC_I_V3S_Recovery",
+"UK3CB_TKC_I_V3S_Refuel",
+"UK3CB_TKC_I_V3S_Reammo",
+"UK3CB_TKC_I_UAZ_Open",
+"UK3CB_TKC_I_UAZ_Closed",
+"UK3CB_TKM_I_UAZ_SPG9",
+"UK3CB_TKM_I_UAZ_Dshkm",
+"UK3CB_TKM_I_UAZ_AGS30",
+"UK3CB_TKM_I_Datsun_Open",
+"UK3CB_TKM_I_Datsun_Pkm",
+"UK3CB_TKM_I_Old_Bike",
+"UK3CB_TKC_I_Datsun_Civ_Closed",
+"UK3CB_TKC_C_S1203_Amb",
+"UK3CB_TKC_C_S1203"
 ];
 
 VVS_RMO = [
@@ -79,6 +105,7 @@ VVS_BTR = [
 	"rhs_btr60_msv",
 	"rhs_btr70_msv",
 	"rhs_bmd1p",
+  "UK3CB_CW_SOV_O_EARLY_MTLB_PKT",
 	"rhs_bmp1p_vdv"
 ];
 
@@ -89,6 +116,7 @@ VVS_Turel = [
 ];
 
 VVS_BTR1 = [
+"UK3CB_ARD_I_BTR60"
 ];
 
 VVS_Turel1 = [
