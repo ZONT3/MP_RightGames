@@ -511,11 +511,11 @@ ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
 
 // ACE View Restriction
-force acex_viewrestriction_mode = 1;
-force acex_viewrestriction_modeSelectiveAir = 1;
-force acex_viewrestriction_modeSelectiveFoot = 1;
-force acex_viewrestriction_modeSelectiveLand = 1;
-force acex_viewrestriction_modeSelectiveSea = 1;
+force acex_viewrestriction_mode = 0;
+force acex_viewrestriction_modeSelectiveAir = 0;
+force acex_viewrestriction_modeSelectiveFoot = 0;
+force acex_viewrestriction_modeSelectiveLand = 0;
+force acex_viewrestriction_modeSelectiveSea = 0;
 acex_viewrestriction_preserveView = false;
 
 // ACE Volume
