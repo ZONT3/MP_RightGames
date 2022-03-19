@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=11701;
+		nextID=11702;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=190;
+		nextID=202;
 	};
 	class Camera
 	{
-		pos[]={11750.771,170.83867,18095.518};
-		dir[]={-0.29981831,-0.58904415,0.75045693};
-		up[]={-0.21853931,0.80809301,0.54701281};
-		aside[]={0.92865664,-4.4377521e-007,0.37101057};
+		pos[]={12046.424,230.23766,17897.449};
+		dir[]={-0.89308035,-0.42535388,0.14679132};
+		up[]={-0.41974214,0.90501755,0.068991259};
+		aside[]={0.16219534,-7.4179843e-007,0.98679262};
 	};
 };
 binarizationWanted=0;
@@ -996,7 +996,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=160;
+		items=161;
 		class Item0
 		{
 			dataType="Object";
@@ -33131,7 +33131,7 @@ class Mission
 			fillName="SolidFull";
 			a=10.283632;
 			b=16.39613;
-			angle=289.93921;
+			angle=289.93918;
 			id=5564;
 			atlOffset=5.3078613;
 		};
@@ -33266,7 +33266,7 @@ class Mission
 			fillName="SolidFull";
 			a=3.3988261;
 			b=6.0583086;
-			angle=289.94342;
+			angle=289.94339;
 			id=5574;
 			atlOffset=0.22827148;
 		};
@@ -33281,7 +33281,7 @@ class Mission
 			fillName="SolidFull";
 			a=2.9991975;
 			b=6.3589792;
-			angle=272.64932;
+			angle=272.64929;
 			id=5575;
 			atlOffset=0.22827148;
 		};
@@ -33326,7 +33326,7 @@ class Mission
 			fillName="SolidFull";
 			a=2.9991975;
 			b=6.3589792;
-			angle=314.31924;
+			angle=314.31921;
 			id=5578;
 			atlOffset=0.22827148;
 		};
@@ -33401,7 +33401,7 @@ class Mission
 			fillName="SolidFull";
 			a=9.1829691;
 			b=9.7442541;
-			angle=288.14151;
+			angle=288.14148;
 			id=5583;
 		};
 		class Item35
@@ -33415,7 +33415,7 @@ class Mission
 			fillName="SolidFull";
 			a=4.2567878;
 			b=9.2737532;
-			angle=291.82831;
+			angle=291.82828;
 			id=5584;
 			atlOffset=0.22827148;
 		};
@@ -45071,7 +45071,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12040.212,160.15245,17769.035};
-				angles[]={0,3.4500694,0};
+				angles[]={0,3.450062,0};
 			};
 			side="Empty";
 			flags=4;
@@ -45080,6 +45080,29 @@ class Mission
 			};
 			id=6294;
 			type="B_Slingload_01_Fuel_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_refuel_fuelCargo";
+					expression="if (_value != (if (isNumber (configOf _this >> ""ace_refuel_fuelCargo"")) then {getNumber (configOf _this >> ""ace_refuel_fuelCargo"")} else {-1})) then {[_this, _value] call ace_refuel_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-10;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item88
 		{
@@ -62315,7 +62338,7 @@ class Mission
 			fillName="DiagGrid";
 			a=538.43164;
 			b=45.070522;
-			angle=91.397247;
+			angle=91.39724;
 			id=8396;
 			atlOffset=48.580795;
 		};
@@ -62330,7 +62353,7 @@ class Mission
 			fillName="DiagGrid";
 			a=801.22943;
 			b=45.070522;
-			angle=91.39724;
+			angle=91.397232;
 			id=8397;
 			atlOffset=24.347488;
 		};
@@ -68472,7 +68495,7 @@ class Mission
 			fillName="SolidFull";
 			a=10.562267;
 			b=10.64713;
-			angle=288.14148;
+			angle=288.14145;
 			id=11683;
 		};
 		class Item152
@@ -68501,7 +68524,7 @@ class Mission
 			fillName="SolidFull";
 			a=2.9548111;
 			b=4.8216081;
-			angle=288.14148;
+			angle=288.14145;
 			id=11685;
 			atlOffset=0.0033721924;
 		};
@@ -68516,7 +68539,7 @@ class Mission
 			fillName="SolidFull";
 			a=2.9548111;
 			b=4.8216081;
-			angle=288.14145;
+			angle=288.14142;
 			id=11686;
 			atlOffset=0.0033721924;
 		};
@@ -68588,6 +68611,7 @@ class Mission
 			};
 			id=11699;
 			type="rhs_gaz66_r142_msv";
+			atlOffset=-0.0028076172;
 		};
 		class Item159
 		{
@@ -68604,6 +68628,23 @@ class Mission
 			};
 			id=11700;
 			type="rhs_gaz66_r142_msv";
+			atlOffset=-0.0028076172;
+		};
+		class Item160
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12129.436,160.83427,17752.555};
+				angles[]={6.2771854,0.49794042,0.0019834081};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=11701;
+			type="RHS_Ural_Fuel_VDV_01";
 		};
 	};
 };

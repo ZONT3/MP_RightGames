@@ -3,7 +3,7 @@ _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autoco
 _this addAction [
   "Запрос Техники БМО",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"BMO"],
+  [VVS_east_Land,"BMO"],
   6,
   true,
   true,
