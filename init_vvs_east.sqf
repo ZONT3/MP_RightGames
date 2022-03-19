@@ -3,12 +3,12 @@ _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autoco
 _this addAction [
   "Запрос Техники БМО",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"RMO"],
+  [VVS_west_Land,"BMO"],
   6,
   true,
   true,
   "",
-  "[[ 'A15', 'TV', 'AA', 'MV', 'SHTAB', 'KAS', 'MVD', 'MMG']] call ZONT_fnc_checkRole",
+  "true",
   5
 ];
 
@@ -25,21 +25,9 @@ _this addAction [
 ];
 
 _this addAction [
-  "Запрос БТРов",
-  VVS_fnc_openVVS,
-  [VVS_east_Land,"BTR"],
-  6,
-  true,
-  true,
-  "",
-  "[['A15', 'TV']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
   "Запрос Тяжелой техники",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"Tanks"],
+  [VVS_east_Land,"TV"],
   6,
   true,
   true,
