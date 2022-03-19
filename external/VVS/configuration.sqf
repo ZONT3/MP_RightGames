@@ -49,7 +49,7 @@ VVS_Spec = [
 VVS_Wheeled = [
 ];
 
-VVS_Tanks = [
+VVS_TV = [
 "rhs_t72be_tv",
 "rhs_sprut_vdv",
 "rhs_t80um",
