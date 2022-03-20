@@ -16,6 +16,7 @@ ZONT_fnc_filterVVS = {
   	case "SWheeled": { VVS_Wheeled_Spec };
   	case "TV": { VVS_TV };
     case "Spec": { VVS_Spec };
+    case "Serb": { VVS_Serb };
 
   	default {[]};
   };
@@ -55,7 +56,8 @@ VVS_TV = [
 "rhs_t80um",
 "rhs_2s1_tv",
 "CUP_O_BM21_SLA",
-"rhs_zsu234_aa"
+"rhs_zsu234_aa",
+"CUP_O_2S6M_RU"
 ];
 
 
@@ -83,6 +85,19 @@ VVS_BMO = [
 
 VVS_Turel = [
 
+];
+
+VVS_Serb = [
+"rhssaf_m1025_olive_m2", 
+"rhssaf_m1025_olive", 
+"rhssaf_m998_olive_2dr_fulltop", 
+"rhssaf_m998_olive_2dr_halftop", 
+"rhssaf_m1151_olive", 
+"rhssaf_m1151_olive_pkm", 
+"rhssaf_m1152_olive", 
+"rhssaf_m1152_rsv_olive", 
+"rhssaf_m1152_TCV_olive", 
+"CUP_B_HMMWV_DSHKM_GPK_ACR"
 ];
 
 VVS_Car = [];

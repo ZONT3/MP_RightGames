@@ -47,3 +47,15 @@ _this addAction [
   "[['KGB', 'KGBA', 'KGBZ', 'KGBK', 'KAS', 'MVD']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос техники 72",
+  VVS_fnc_openVVS,
+  [VVS_east_Land,"Serb"],
+  6,
+  true,
+  true,
+  "",
+  "[['SERB']] call ZONT_fnc_checkRole",
+  5
+];
