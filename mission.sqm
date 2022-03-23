@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=545;
+	toggles=33;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=3196;
+		nextID=3216;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=146;
+		nextID=161;
 	};
 	class Camera
 	{
-		pos[]={15715.729,100.38556,16553.076};
-		dir[]={-0.70811617,-0.49763021,0.50095028};
-		up[]={-0.40625498,0.86738622,0.28740114};
-		aside[]={0.5775376,-1.4342368e-007,0.81637639};
+		pos[]={15592.799,70.286499,16722.654};
+		dir[]={-0.38914353,-0.56432307,-0.72811139};
+		up[]={-0.26600525,0.82554585,-0.49771112};
+		aside[]={-0.88196051,6.3679181e-008,0.47137064};
 	};
 };
 binarizationWanted=0;
@@ -98,13 +98,17 @@ addons[]=
 	"rhs_main",
 	"Devas_TAF_F4E_2020",
 	"DEVAS_TUAF",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"A3_Structures_F_Mil_TentHangar",
+	"A3_Characters_F_Common",
+	"A3_Drones_F_Air_F_Gamma_UAV_02",
+	"ace_realisticnames"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=54;
+		items=55;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -453,6 +457,13 @@ class AddonsMetaData
 		{
 			className="DEVAS_TUAF";
 			name="DEVAS_TUAF";
+		};
+		class Item54
+		{
+			className="A3_Drones_F";
+			name="Arma 3 Beta - Drones";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -940,7 +951,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=148;
+		items=157;
 		class Item0
 		{
 			dataType="Logic";
@@ -8747,6 +8758,7 @@ class Mission
 			};
 			id=90;
 			type="Box_IDAP_AmmoOrd_F";
+			atlOffset=-0.00017166138;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38918,7 +38930,7 @@ class Mission
 			fillName="DiagGrid";
 			a=57.521935;
 			b=1354.5013;
-			angle=358.88644;
+			angle=358.88641;
 			id=2974;
 			atlOffset=1.2182846;
 		};
@@ -39524,7 +39536,7 @@ class Mission
 			position[]={1581.5071,5.9196777,5659.7622};
 			name="marker_52";
 			type="rhs_flag_Russia";
-			angle=179.02036;
+			angle=179.02034;
 			id=3056;
 			atlOffset=-7.529006;
 		};
@@ -39534,7 +39546,7 @@ class Mission
 			position[]={13792.098,10.567771,6325.8608};
 			name="marker_53";
 			type="rhs_flag_Russia";
-			angle=179.02034;
+			angle=179.02032;
 			id=3058;
 		};
 		class Item126
@@ -39670,7 +39682,7 @@ class Mission
 			colorName="ColorWEST";
 			a=2.5179999;
 			b=2.6830001;
-			angle=1.0245281e-005;
+			angle=1.024528e-005;
 			id=3072;
 		};
 		class Item137
@@ -40461,6 +40473,403 @@ class Mission
 				};
 				nAttributes=7;
 			};
+		};
+		class Item148
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15462.227,12.679965,16757.695};
+				angles[]={0,4.1887903,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=3197;
+			type="Land_TentHangar_V1_F";
+		};
+		class Item149
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15490.835,8.5914392,16761.154};
+						angles[]={-0,1.012291,0};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=3202;
+					type="O_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15490.835,10.159779,16761.143};
+						angles[]={-0,1.012291,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3203;
+					type="O_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=3202;
+						item1=3201;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=3203;
+						item1=3201;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3200;
+		};
+		class Item150
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15461.694,10.15834,16751.813};
+				angles[]={-0,1.012291,0};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=3201;
+			type="O_UAV_02_dynamicLoadout_F";
+		};
+		class Item151
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15486.877,8.5914392,16769.564};
+						angles[]={-0,1.0995574,0};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=3205;
+					type="O_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15486.877,10.159779,16769.553};
+						angles[]={-0,1.0995574,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3206;
+					type="O_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=3205;
+						item1=3207;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=3206;
+						item1=3207;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3204;
+		};
+		class Item152
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15469.879,10.15834,16756.754};
+				angles[]={-0,1.0995574,0};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=3207;
+			type="O_UAV_02_dynamicLoadout_F";
+		};
+		class Item153
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15467.208,8.5914392,16764.008};
+						angles[]={-0,1.1519175,0};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=3210;
+					type="O_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15467.208,8.8778772,16764.008};
+						angles[]={-0,1.1519175,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3211;
+					type="O_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=3210;
+						item1=3209;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=3211;
+						item1=3209;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3208;
+		};
+		class Item154
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15455.658,8.8764381,16760.924};
+				angles[]={-0,1.1519175,0};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=3209;
+			type="rhs_pchela1t_vvsc";
+		};
+		class Item155
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15471.367,8.5914392,16766.322};
+						angles[]={-0,1.1519175,0};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=3213;
+					type="O_UAV_AI";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15471.367,8.8778772,16766.322};
+						angles[]={-0,1.1519175,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=3214;
+					type="O_UAV_AI";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=3213;
+						item1=3215;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=3214;
+						item1=3215;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=3212;
+		};
+		class Item156
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15460.198,8.8764381,16762.787};
+				angles[]={-0,1.1519175,0};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				reportRemoteTargets=1;
+				reportOwnPosition=1;
+			};
+			id=3215;
+			type="rhs_pchela1t_vvsc";
 		};
 	};
 };
