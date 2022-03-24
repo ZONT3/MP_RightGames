@@ -13,18 +13,6 @@ _this addAction [
 ];
 
 _this addAction [
-  "Запрос Установок",
-  VVS_fnc_openVVS,
-  [VVS_east_Land,"Turel"],
-  6,
-  true,
-  true,
-  "",
-  "[['A15', 'SHTAB']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
   "Запрос Тяжелой техники",
   VVS_fnc_openVVS,
   [VVS_east_Land,"TV"],
@@ -33,18 +21,6 @@ _this addAction [
   true,
   "",
   "[['TV']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос Специальной техники",
-  VVS_fnc_openVVS,
-  [VVS_east_Land,"SWheeled"],
-  6,
-  true,
-  true,
-  "",
-  "[['KGB', 'KGBA', 'KGBZ', 'KGBK', 'KAS', 'MVD']] call ZONT_fnc_checkRole",
   5
 ];
 
