@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=3218;
+		nextID=3220;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=176;
+		nextID=191;
 	};
 	class Camera
 	{
-		pos[]={15596.194,102.68501,16774.643};
-		dir[]={-0.57758105,-0.6162402,-0.5355323};
-		up[]={-0.45191976,0.787521,-0.41901657};
-		aside[]={-0.67995453,-1.0759686e-007,0.73335111};
+		pos[]={15597.486,98.4104,16562.572};
+		dir[]={-0.71533895,-0.65961558,-0.23098691};
+		up[]={-0.62774348,0.75156498,-0.20269898};
+		aside[]={-0.30730245,2.2217864e-007,0.95169497};
 	};
 };
 binarizationWanted=0;
@@ -104,13 +104,14 @@ addons[]=
 	"A3_Characters_F_Common",
 	"A3_Drones_F_Air_F_Gamma_UAV_02",
 	"ace_realisticnames",
-	"rhs_c_trucks"
+	"rhs_c_trucks",
+	"rhs_c_heavyweapons"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=57;
+		items=58;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -477,6 +478,13 @@ class AddonsMetaData
 		{
 			className="rhs_c_trucks";
 			name="GAZ-66";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item57
+		{
+			className="rhs_c_heavyweapons";
+			name="Heavy weapons pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -966,7 +974,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=159;
+		items=161;
 		class Item0
 		{
 			dataType="Logic";
@@ -10047,7 +10055,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15537.976,8.5914392,16417.441};
-						angles[]={0,3.1239908,0};
+						angles[]={0,3.1239822,0};
 					};
 					side="East";
 					flags=7;
@@ -10093,6 +10101,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -10110,7 +10137,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -10129,7 +10156,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -10148,7 +10175,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 			};
@@ -10192,8 +10219,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15555.921,8.5914392,16543.098};
-						angles[]={0,2.700943,0};
+						position[]={15555.92,8.5914392,16543.098};
+						angles[]={0,2.7009494,0};
 					};
 					side="East";
 					flags=7;
@@ -10239,6 +10266,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -10256,7 +10302,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -10275,7 +10321,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -10294,7 +10340,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 			};
@@ -27250,6 +27296,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Armory Tent";
+			state=1;
 			class Entities
 			{
 				items=38;
@@ -28145,7 +28192,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="фоба";
-			state=1;
 			class Entities
 			{
 				items=1;
@@ -28612,6 +28658,7 @@ class Mission
 								{
 									dataType="Layer";
 									name="стены";
+									state=1;
 									class Entities
 									{
 										items=76;
@@ -28631,6 +28678,29 @@ class Mission
 											id=2600;
 											type="US_WarfareBBarrier10xTall_EP1";
 											atlOffset=0.5269804;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item1
 										{
@@ -28648,6 +28718,29 @@ class Mission
 											};
 											id=2601;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item2
 										{
@@ -28665,6 +28758,29 @@ class Mission
 											};
 											id=2602;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item3
 										{
@@ -28682,6 +28798,29 @@ class Mission
 											};
 											id=2603;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item4
 										{
@@ -28699,6 +28838,29 @@ class Mission
 											};
 											id=2615;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item5
 										{
@@ -28716,6 +28878,29 @@ class Mission
 											};
 											id=2616;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item6
 										{
@@ -28733,6 +28918,29 @@ class Mission
 											};
 											id=2617;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item7
 										{
@@ -28750,6 +28958,29 @@ class Mission
 											};
 											id=2618;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item8
 										{
@@ -28767,6 +28998,29 @@ class Mission
 											};
 											id=2619;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item9
 										{
@@ -28784,6 +29038,29 @@ class Mission
 											};
 											id=2620;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item10
 										{
@@ -28801,6 +29078,29 @@ class Mission
 											};
 											id=2621;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item11
 										{
@@ -28818,6 +29118,29 @@ class Mission
 											};
 											id=2622;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item12
 										{
@@ -28835,6 +29158,29 @@ class Mission
 											};
 											id=2623;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item13
 										{
@@ -28852,6 +29198,29 @@ class Mission
 											};
 											id=2624;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item14
 										{
@@ -28869,6 +29238,29 @@ class Mission
 											};
 											id=2625;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item15
 										{
@@ -28886,6 +29278,29 @@ class Mission
 											};
 											id=2626;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item16
 										{
@@ -28903,6 +29318,29 @@ class Mission
 											};
 											id=2627;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item17
 										{
@@ -28920,6 +29358,29 @@ class Mission
 											};
 											id=2628;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item18
 										{
@@ -28937,6 +29398,29 @@ class Mission
 											};
 											id=2629;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item19
 										{
@@ -28954,6 +29438,29 @@ class Mission
 											};
 											id=2630;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item20
 										{
@@ -28971,6 +29478,29 @@ class Mission
 											};
 											id=2631;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item21
 										{
@@ -28988,6 +29518,29 @@ class Mission
 											};
 											id=2632;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item22
 										{
@@ -29005,6 +29558,29 @@ class Mission
 											};
 											id=2633;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item23
 										{
@@ -29022,6 +29598,29 @@ class Mission
 											};
 											id=2634;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item24
 										{
@@ -29039,6 +29638,29 @@ class Mission
 											};
 											id=2635;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item25
 										{
@@ -29056,6 +29678,29 @@ class Mission
 											};
 											id=2636;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item26
 										{
@@ -29073,6 +29718,29 @@ class Mission
 											};
 											id=2637;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item27
 										{
@@ -29090,6 +29758,29 @@ class Mission
 											};
 											id=2638;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item28
 										{
@@ -29107,6 +29798,29 @@ class Mission
 											};
 											id=2639;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item29
 										{
@@ -29124,6 +29838,29 @@ class Mission
 											};
 											id=2640;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item30
 										{
@@ -29141,6 +29878,29 @@ class Mission
 											};
 											id=2641;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item31
 										{
@@ -29158,6 +29918,29 @@ class Mission
 											};
 											id=2642;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item32
 										{
@@ -29176,6 +29959,29 @@ class Mission
 											id=2643;
 											type="US_WarfareBBarrier10xTall_EP1";
 											atlOffset=-0.97605753;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item33
 										{
@@ -29193,6 +29999,29 @@ class Mission
 											};
 											id=2644;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item34
 										{
@@ -29211,6 +30040,29 @@ class Mission
 											id=2645;
 											type="US_WarfareBBarrier10xTall_EP1";
 											atlOffset=-1.0568047;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item35
 										{
@@ -29228,6 +30080,29 @@ class Mission
 											};
 											id=2646;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item36
 										{
@@ -29245,6 +30120,29 @@ class Mission
 											};
 											id=2647;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item37
 										{
@@ -29262,6 +30160,29 @@ class Mission
 											};
 											id=2648;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item38
 										{
@@ -29279,6 +30200,29 @@ class Mission
 											};
 											id=2649;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item39
 										{
@@ -29296,6 +30240,29 @@ class Mission
 											};
 											id=2650;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item40
 										{
@@ -29313,6 +30280,29 @@ class Mission
 											};
 											id=2651;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item41
 										{
@@ -29330,6 +30320,29 @@ class Mission
 											};
 											id=2659;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item42
 										{
@@ -29347,6 +30360,29 @@ class Mission
 											};
 											id=2660;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item43
 										{
@@ -29364,6 +30400,29 @@ class Mission
 											};
 											id=2661;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item44
 										{
@@ -29381,6 +30440,29 @@ class Mission
 											};
 											id=2662;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item45
 										{
@@ -29398,6 +30480,29 @@ class Mission
 											};
 											id=2663;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item46
 										{
@@ -29415,6 +30520,29 @@ class Mission
 											};
 											id=2672;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item47
 										{
@@ -29432,6 +30560,29 @@ class Mission
 											};
 											id=2673;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item48
 										{
@@ -29449,6 +30600,29 @@ class Mission
 											};
 											id=2675;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item49
 										{
@@ -29466,6 +30640,29 @@ class Mission
 											};
 											id=2676;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item50
 										{
@@ -29483,6 +30680,29 @@ class Mission
 											};
 											id=2677;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item51
 										{
@@ -29500,6 +30720,29 @@ class Mission
 											};
 											id=2678;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item52
 										{
@@ -29517,6 +30760,29 @@ class Mission
 											};
 											id=2679;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item53
 										{
@@ -29534,6 +30800,29 @@ class Mission
 											};
 											id=2680;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item54
 										{
@@ -29551,6 +30840,29 @@ class Mission
 											};
 											id=2681;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item55
 										{
@@ -29568,6 +30880,29 @@ class Mission
 											};
 											id=2682;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item56
 										{
@@ -29585,6 +30920,29 @@ class Mission
 											};
 											id=2683;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item57
 										{
@@ -29602,6 +30960,29 @@ class Mission
 											};
 											id=2684;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item58
 										{
@@ -29619,6 +31000,29 @@ class Mission
 											};
 											id=2685;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item59
 										{
@@ -29636,6 +31040,29 @@ class Mission
 											};
 											id=2686;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item60
 										{
@@ -29653,6 +31080,29 @@ class Mission
 											};
 											id=2687;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item61
 										{
@@ -29670,6 +31120,29 @@ class Mission
 											};
 											id=2688;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item62
 										{
@@ -29687,6 +31160,29 @@ class Mission
 											};
 											id=2689;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item63
 										{
@@ -29704,6 +31200,29 @@ class Mission
 											};
 											id=2698;
 											type="US_WarfareBBarrier10x_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item64
 										{
@@ -29721,6 +31240,29 @@ class Mission
 											};
 											id=2699;
 											type="US_WarfareBBarrier10x_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item65
 										{
@@ -29738,6 +31280,29 @@ class Mission
 											};
 											id=2700;
 											type="US_WarfareBBarrier10x_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item66
 										{
@@ -29755,6 +31320,29 @@ class Mission
 											};
 											id=2701;
 											type="US_WarfareBBarrier10x_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item67
 										{
@@ -29772,6 +31360,29 @@ class Mission
 											};
 											id=2912;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item68
 										{
@@ -29789,6 +31400,29 @@ class Mission
 											};
 											id=2913;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item69
 										{
@@ -29806,6 +31440,29 @@ class Mission
 											};
 											id=2914;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item70
 										{
@@ -29823,6 +31480,29 @@ class Mission
 											};
 											id=2915;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item71
 										{
@@ -29840,6 +31520,29 @@ class Mission
 											};
 											id=2916;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item72
 										{
@@ -29857,6 +31560,29 @@ class Mission
 											};
 											id=2917;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item73
 										{
@@ -29874,6 +31600,29 @@ class Mission
 											};
 											id=2918;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item74
 										{
@@ -29891,6 +31640,29 @@ class Mission
 											};
 											id=2919;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item75
 										{
@@ -29908,6 +31680,29 @@ class Mission
 											};
 											id=2938;
 											type="US_WarfareBBarrier10xTall_EP1";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 									};
 									id=2598;
@@ -30535,6 +32330,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="динамик";
+							state=1;
 							class Entities
 							{
 								items=2;
@@ -30542,7 +32338,6 @@ class Mission
 								{
 									dataType="Layer";
 									name="структуры";
-									state=1;
 									class Entities
 									{
 										items=32;
@@ -30562,6 +32357,29 @@ class Mission
 											};
 											id=2839;
 											type="Land_SM_01_shed_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item1
 										{
@@ -30579,6 +32397,29 @@ class Mission
 											};
 											id=2842;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item2
 										{
@@ -30596,6 +32437,29 @@ class Mission
 											};
 											id=2846;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item3
 										{
@@ -30613,6 +32477,29 @@ class Mission
 											};
 											id=2857;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item4
 										{
@@ -30630,6 +32517,29 @@ class Mission
 											};
 											id=2858;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item5
 										{
@@ -30647,6 +32557,29 @@ class Mission
 											};
 											id=2859;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item6
 										{
@@ -30664,6 +32597,29 @@ class Mission
 											};
 											id=2860;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item7
 										{
@@ -30681,6 +32637,29 @@ class Mission
 											};
 											id=2861;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item8
 										{
@@ -30698,6 +32677,29 @@ class Mission
 											};
 											id=2862;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item9
 										{
@@ -30715,6 +32717,29 @@ class Mission
 											};
 											id=2863;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item10
 										{
@@ -30732,6 +32757,29 @@ class Mission
 											};
 											id=2864;
 											type="Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item11
 										{
@@ -30749,6 +32797,29 @@ class Mission
 											};
 											id=2899;
 											type="Land_HBarrier_01_tower_green_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item12
 										{
@@ -30766,6 +32837,29 @@ class Mission
 											};
 											id=2900;
 											type="Land_HBarrier_01_tower_green_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item13
 										{
@@ -30783,6 +32877,29 @@ class Mission
 											};
 											id=2901;
 											type="Land_HBarrier_01_tower_green_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item14
 										{
@@ -30800,6 +32917,29 @@ class Mission
 											};
 											id=2902;
 											type="Land_HBarrier_01_tower_green_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item15
 										{
@@ -30817,6 +32957,29 @@ class Mission
 											};
 											id=2904;
 											type="RU_WarfareBFieldhHospital";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item16
 										{
@@ -30834,6 +32997,29 @@ class Mission
 											};
 											id=2905;
 											type="USMC_WarfareBFieldhHospital";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item17
 										{
@@ -30851,6 +33037,29 @@ class Mission
 											};
 											id=2946;
 											type="Land_HBarrier_01_tower_green_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item18
 										{
@@ -30868,6 +33077,29 @@ class Mission
 											};
 											id=2947;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item19
 										{
@@ -30885,6 +33117,29 @@ class Mission
 											};
 											id=2948;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item20
 										{
@@ -30902,6 +33157,29 @@ class Mission
 											};
 											id=2949;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item21
 										{
@@ -30919,6 +33197,29 @@ class Mission
 											};
 											id=2950;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item22
 										{
@@ -30936,6 +33237,29 @@ class Mission
 											};
 											id=2951;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item23
 										{
@@ -30953,6 +33277,29 @@ class Mission
 											};
 											id=2952;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item24
 										{
@@ -30970,6 +33317,29 @@ class Mission
 											};
 											id=2953;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item25
 										{
@@ -30987,6 +33357,29 @@ class Mission
 											};
 											id=2954;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item26
 										{
@@ -31004,6 +33397,29 @@ class Mission
 											};
 											id=2955;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item27
 										{
@@ -31021,6 +33437,29 @@ class Mission
 											};
 											id=2956;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item28
 										{
@@ -31038,6 +33477,29 @@ class Mission
 											};
 											id=2957;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item29
 										{
@@ -31055,6 +33517,29 @@ class Mission
 											};
 											id=2958;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item30
 										{
@@ -31072,6 +33557,29 @@ class Mission
 											};
 											id=2959;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 										class Item31
 										{
@@ -31089,6 +33597,29 @@ class Mission
 											};
 											id=2960;
 											type="Land_Barrack2";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="allowDamage";
+													expression="_this allowdamage _value;";
+													class Value
+													{
+														class data
+														{
+															class type
+															{
+																type[]=
+																{
+																	"BOOL"
+																};
+															};
+															value=0;
+														};
+													};
+												};
+												nAttributes=1;
+											};
 										};
 									};
 									id=2831;
@@ -31098,7 +33629,6 @@ class Mission
 								{
 									dataType="Layer";
 									name="херня";
-									state=1;
 									class Entities
 									{
 										items=6;
@@ -31331,7 +33861,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item65
@@ -37563,7 +40112,7 @@ class Mission
 			position[]={1581.5071,5.9196777,5659.7622};
 			name="marker_52";
 			type="rhs_flag_Russia";
-			angle=179.02032;
+			angle=179.02031;
 			id=3056;
 			atlOffset=-7.529006;
 		};
@@ -37573,7 +40122,7 @@ class Mission
 			position[]={13792.098,10.567771,6325.8608};
 			name="marker_53";
 			type="rhs_flag_Russia";
-			angle=179.02031;
+			angle=179.02029;
 			id=3058;
 		};
 		class Item126
@@ -38908,7 +41457,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15552.98,8.952425,16490.287};
-				angles[]={-0,4.1887903,0};
+				angles[]={0,4.1887903,0};
 			};
 			side="Empty";
 			flags=4;
@@ -38924,7 +41473,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15550.785,8.952425,16494.146};
-				angles[]={-0,4.1887903,0};
+				angles[]={0,4.1887903,0};
 			};
 			side="Empty";
 			flags=4;
@@ -38933,6 +41482,36 @@ class Mission
 			};
 			id=3217;
 			type="rhs_gaz66_r142_msv";
+		};
+		class Item159
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15529.963,10.107751,16395.588};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3218;
+			type="rhs_D30_msv";
+		};
+		class Item160
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15536.258,10.107751,16397.686};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3219;
+			type="rhs_D30_msv";
 		};
 	};
 };
