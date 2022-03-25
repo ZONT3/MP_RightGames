@@ -31,5 +31,5 @@ resistance setFriend [east, 0];
 Climates:
 arid, mediterranean, continental, tropical, polar
 */
-OPEX_mapClimate = "continental";
+OPEX_mapClimate = "mediterranean";
 execVM "external\OPEX_real_weather.sqf";
