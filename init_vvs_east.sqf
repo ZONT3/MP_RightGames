@@ -20,7 +20,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['TV']] call ZONT_fnc_checkRole",
+  "[['TV', 'TV2']] call ZONT_fnc_checkRole",
   5
 ];
 

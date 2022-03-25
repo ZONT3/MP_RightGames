@@ -13,6 +13,13 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
+	ars_tv2,
+	["TV2"],
+	"Запросить арсенал 104 Арт",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
 	ars_mv,
 	["MV"],
 	"Запросить арсенал 32 ОМО",
