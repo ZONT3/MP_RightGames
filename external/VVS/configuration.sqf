@@ -74,6 +74,8 @@ VVS_BMO = [
 "rhs_kamaz5350_vdv",
 "rhs_kamaz5350_open_vdv",
 "O_T_Truck_03_medical_ghex_F",
+"CUP_O_UAZ_AMB_RU",
+"CUP_O_BMP2_AMB_RU",
 "rhs_btr80_vdv",
 "rhs_btr80a_vdv",
 "rhs_bmd4ma_vdv",

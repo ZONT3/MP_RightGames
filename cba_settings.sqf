@@ -185,7 +185,7 @@ ace_cargo_enableRename = true;
 force ace_cargo_loadTimeCoefficient = 5;
 ace_cargo_openAfterUnload = 0;
 force ace_cargo_paradropTimeCoefficent = 2.5;
-force ace_rearm_distance = 14.534;
+force ace_rearm_distance = 30;
 force ace_rearm_level = 1;
 force ace_rearm_supply = 0;
 force ace_refuel_hoseLength = 15.7111;
@@ -1388,3 +1388,6 @@ zen_faction_filter_3_CUP_C_RU = true;
 zen_faction_filter_3_CUP_C_SAHRANI = true;
 zen_faction_filter_3_CUP_C_TK = true;
 zen_faction_filter_3_IND_L_F = true;
+
+// Grenades in Tank Hatches
+Grenade_Drop_Types = "HandGrenade,MiniGrenade,rhs_mag_rgd5,CUP_HandGrenade_M67,rhs_mag_m67";
