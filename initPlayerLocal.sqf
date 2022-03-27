@@ -132,3 +132,5 @@ MPH_DisplyChecker = [{
   	sleep 0.01; false;
   };
 };*/
+
+[] spawn ZONT_fnc_ZZL_initPlayer
