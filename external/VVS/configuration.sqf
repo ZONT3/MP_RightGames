@@ -17,6 +17,7 @@ ZONT_fnc_filterVVS = {
   	case "TV": { VVS_TV };
     case "Spec": { VVS_Spec };
     case "Serb": { VVS_Serb };
+	case "RHBZ": { VVS_RHBZ };
 
   	default {[]};
   };
@@ -87,6 +88,12 @@ VVS_BMO = [
 
 VVS_Turel = [
 
+];
+
+VVS_RHBZ = [
+"rhs_tigr_m_msv", 
+"rhs_btr80_msv", 
+"rhsgref_BRDM2_msv"
 ];
 
 VVS_Serb = [
