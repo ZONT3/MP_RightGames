@@ -1155,12 +1155,12 @@ RECOIL_Smooth_on = true;
 SWAY_incrase_on = 1;
 
 // Simple Suppress
-simplesuppress_suppress_checkLOS = false;
-simplesuppress_suppress_overlayFadeoutTime = 10;
-simplesuppress_suppress_overlayOpacity = 0.85;
+simplesuppress_suppress_checkLOS = true;
+simplesuppress_suppress_overlayFadeoutTime = 6;
+simplesuppress_suppress_overlayOpacity = 0.8;
 simplesuppress_suppress_overlayTexture = 1;
 simplesuppress_suppress_projectileMaxDistance = 9;
-simplesuppress_suppress_shooterMinDistance = 2;
+simplesuppress_suppress_shooterMinDistance = 0;
 
 // TFAR - Animations
 radioAnims_cba_ads = true;
