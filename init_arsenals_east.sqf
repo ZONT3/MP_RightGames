@@ -67,3 +67,10 @@
 	"Запросить арсенал РХБЗ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_fsb1,
+	["FSB1"],
+	"Запросить арсенал Альфа",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
