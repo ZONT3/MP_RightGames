@@ -34,13 +34,6 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_sso,
-	["SSO"],
-	"Запросить арсенал CCO",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
 	ars_72,
 	["SERB"],
 	"Захтевајте Арсенал 72 извиђачко-диверзантски батаљон",
