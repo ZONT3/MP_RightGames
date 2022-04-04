@@ -1159,8 +1159,8 @@ simplesuppress_suppress_checkLOS = true;
 simplesuppress_suppress_overlayFadeoutTime = 6;
 simplesuppress_suppress_overlayOpacity = 0.8;
 simplesuppress_suppress_overlayTexture = 1;
-simplesuppress_suppress_projectileMaxDistance = 9;
-simplesuppress_suppress_shooterMinDistance = 0;
+simplesuppress_suppress_projectileMaxDistance = 7;
+simplesuppress_suppress_shooterMinDistance = 3;
 
 // TFAR - Animations
 radioAnims_cba_ads = true;
