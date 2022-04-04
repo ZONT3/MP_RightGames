@@ -39,7 +39,7 @@ _this addAction [
 _this addAction [
   "Запрос техники РХБЗ",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"RHBZ"],
+  [VVS_west_Land,"RHBZ"],
   6,
   true,
   true,
