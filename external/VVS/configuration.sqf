@@ -56,9 +56,8 @@ VVS_TV = [
 "rhs_sprut_vdv",
 "rhs_t80um",
 "rhs_2s1_tv",
-"CUP_O_BM21_SLA",
+"RHS_BM21_VDV_01",
 "rhs_zsu234_aa",
-"CUP_O_2S6M_RU",
 "rhs_t90sab_tv"
 ];
 
