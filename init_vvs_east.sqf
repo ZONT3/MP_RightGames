@@ -47,3 +47,15 @@ _this addAction [
   "[['RHBZ']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос техники ССО",
+  VVS_fnc_openVVS,
+  [VVS_east_Land,"Spec"],
+  6,
+  true,
+  true,
+  "",
+  "[['SSO']] call ZONT_fnc_checkRole",
+  5
+];

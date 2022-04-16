@@ -45,7 +45,10 @@ VVS_Wheeled_Spec = [
 ];
 
 VVS_Spec = [
-"rhsgref_BRDM2_vdv"
+"rhsusf_mrzr4_d", 
+"av_UAZ_pat2", 
+"av_Quadbike_F", 
+"B_T_LSV_01_unarmed_F"
 ];
 
 VVS_Wheeled = [
