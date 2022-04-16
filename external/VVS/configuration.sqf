@@ -92,10 +92,8 @@ VVS_Turel = [
 ];
 
 VVS_RHBZ = [
-"rhs_tigr_m_msv", 
-"rhs_btr80_msv", 
-"rhsgref_BRDM2UM_msv",
-"rhs_tigr_m_msv"
+"av_r007_mg", 
+"rhs_btr80_vv"
 ];
 
 VVS_Serb = [
