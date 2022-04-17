@@ -61,7 +61,8 @@ VVS_TV = [
 "rhs_2s1_tv",
 "RHS_BM21_VDV_01",
 "rhs_zsu234_aa",
-"rhs_t90sab_tv"
+"rhs_t90sab_tv",
+"rhs_2s3_tv"
 ];
 
 
