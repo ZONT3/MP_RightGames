@@ -9,15 +9,12 @@ VVS_Premade_List = false;
 ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled + VVS_BMO + VVS_RMO };
-  	case "BTR": { VVS_BTR };
-    case "Turel": { VVS_Turel };
-  	case "BMO": { VVS_BMO };
+  	case "OMON": { VVS_OMON };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "TV": { VVS_TV };
+  	case "GROM": { VVS_GROM };
     case "Spec": { VVS_Spec };
-    case "Serb": { VVS_Serb };
-	case "RHBZ": { VVS_RHBZ };
+    case "MVD": { VVS_MVD };
 
   	default {[]};
   };
@@ -45,69 +42,40 @@ VVS_Wheeled_Spec = [
 ];
 
 VVS_Spec = [
-"rhsusf_mrzr4_d", 
-"av_UAZ_pat2", 
-"av_Quadbike_F", 
-"B_T_LSV_01_unarmed_F"
 ];
 
 VVS_Wheeled = [
 ];
 
-VVS_TV = [
-"rhs_t72be_tv",
-"rhs_sprut_vdv",
-"rhs_t80um",
-"rhs_2s1_tv",
-"RHS_BM21_VDV_01",
-"rhs_zsu234_aa",
-"rhs_t90sab_tv",
-"rhs_2s3_tv"
+VVS_GROM = [
+"av_UAZ_pat2", 
+"av_Kamaz_fsb_F", 
+"av_GAZ2705_Ton", 
+"C_Van_02_vehicle_F"
 ];
 
 
-VVS_BMO = [
-"rhs_tigr_vdv",
-"rhs_tigr_m_vdv",
-"rhs_tigr_sts_vdv",
-"rhs_uaz_vdv",
-"rhs_uaz_open_vdv",
-"rhs_gaz66_ammo_vdv",
-"RHS_Ural_Fuel_VDV_01",
-"RHS_Ural_Repair_VDV_01",
-"rhs_kamaz5350_vdv",
-"rhs_kamaz5350_open_vdv",
-"O_T_Truck_03_medical_ghex_F",
-"rhs_gaz66_ap2_msv",
-"rhs_btr80_vdv",
-"rhs_btr80a_vdv",
-"rhs_bmd4ma_vdv",
-"rhs_bmd4m_vdv",
-"rhs_bmd2m",
-"rhs_bmd2",
-"rhs_bmp2_msv"
+VVS_OMON = [
+"av_zamak_omon_F", 
+"av_tigr_m_ros", 
+"av_tigr_omon_2", 
+"av_Kamaz_fsb_F", 
+"T_fsvng_Van_cargo", 
+"T_fsvng_Van", 
+"av_btr80_omon", 
+"rhs_btr80a_msv", 
+"rhs_btr80_msv"
 ];
 
-VVS_Turel = [
-
-];
-
-VVS_RHBZ = [
-"av_r007_mg", 
-"rhs_btr80_vv"
-];
-
-VVS_Serb = [
-"rhssaf_m1025_olive_m2", 
-"rhssaf_m1025_olive", 
-"rhssaf_m998_olive_2dr_fulltop", 
-"rhssaf_m998_olive_2dr_halftop", 
-"rhssaf_m1151_olive", 
-"rhssaf_m1151_olive_pkm", 
-"rhssaf_m1152_olive", 
-"rhssaf_m1152_rsv_olive", 
-"rhssaf_m1152_TCV_olive", 
-"CUP_B_HMMWV_DSHKM_GPK_ACR"
+VVS_MVD = [
+"xspaz_police", 
+"av_UAZ469", 
+"av_2107_pol", 
+"av_Lada_2110_pps", 
+"av_UAZ451_m", 
+"av_rus_tigr_omon", 
+"av_Lada_2110_dps", 
+"av_2107_dps"
 ];
 
 VVS_Car = [];

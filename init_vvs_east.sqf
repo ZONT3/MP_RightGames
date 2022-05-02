@@ -1,61 +1,37 @@
 _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autocombat"; _this disableAI "weaponaim";
 
 _this addAction [
-  "Запрос Техники БМО",
+  "Запрос техники ОМОН",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"BMO"],
+  [VVS_east_Land,"OMON"],
   6,
   true,
   true,
   "",
-  "true",
+  "[['OMON']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос Тяжелой техники",
+  "Запрос техники МВД",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"TV"],
+  [VVS_east_Land,"MVD"],
   6,
   true,
   true,
   "",
-  "[['TV', 'TV2']] call ZONT_fnc_checkRole",
+  "[['MVD']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос техники 72",
+  "Запрос техники Гром",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"Serb"],
+  [VVS_east_Land,"GROM"],
   6,
   true,
   true,
   "",
-  "[['SERB']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос техники ВП",
-  VVS_fnc_openVVS,
-  [VVS_east_Land1,"RHBZ"],
-  6,
-  true,
-  true,
-  "",
-  "[['RHBZ']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос техники ССО",
-  VVS_fnc_openVVS,
-  [VVS_east_Land,"Spec"],
-  6,
-  true,
-  true,
-  "",
-  "[['SSO']] call ZONT_fnc_checkRole",
+  "[['GROM']] call ZONT_fnc_checkRole",
   5
 ];
