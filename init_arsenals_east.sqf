@@ -18,3 +18,10 @@
 	"Запросить арсенал МВД",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_zas,
+	["Zaslon"],
+	"Запросить арсенал Заслон",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
