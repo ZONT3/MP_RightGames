@@ -15,7 +15,7 @@ _this addAction [
 _this addAction [
   "Запрос техники МВД",
   VVS_fnc_openVVS,
-  [VVS_east_Land_1,"MVD"],
+  [VVS_west_Land,"MVD"],
   6,
   true,
   true,
