@@ -75,7 +75,8 @@ VVS_MVD = [
 "av_UAZ451_m", 
 "av_rus_tigr_omon", 
 "av_Lada_2110_dps", 
-"av_2107_dps"
+"av_2107_dps",
+"av_UAZ_patp"
 ];
 
 VVS_Car = [];
