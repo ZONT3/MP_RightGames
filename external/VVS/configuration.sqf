@@ -15,6 +15,7 @@ ZONT_fnc_filterVVS = {
   	case "GROM": { VVS_GROM };
     case "Spec": { VVS_Spec };
     case "MVD": { VVS_MVD };
+	case "Zaslon": { VVS_Zas };
 
   	default {[]};
   };
@@ -65,6 +66,15 @@ VVS_OMON = [
 "av_btr80_omon", 
 "rhs_btr80a_msv", 
 "rhs_btr80_msv"
+];
+
+VVS_Zas = [
+"d3s_uaz_3165M",
+"d3s_uaz_469P",
+"d3s_e39_03_GRU",
+"rhsusf_mrzr4_d",
+"d3s_vesta_15_EX",
+"av_r001"
 ];
 
 VVS_MVD = [

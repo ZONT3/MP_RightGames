@@ -35,3 +35,15 @@ _this addAction [
   "[['GROM']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос техники Заслон",
+  VVS_fnc_openVVS,
+  [VVS_east_Land,"Zaslon"],
+  6,
+  true,
+  true,
+  "",
+  "[['Zaslon']] call ZONT_fnc_checkRole",
+  5
+];
