@@ -86,7 +86,12 @@ VVS_MVD = [
 "av_rus_tigr_omon", 
 "av_Lada_2110_dps", 
 "av_2107_dps",
-"av_UAZ_patp"
+"av_UAZ_patp",
+"vet_vaz_priora_2_lada_police",
+"vet_vaz_priora_2_lada_police_ppc",
+"vet_vaz_priora_2_lada_3_2police",
+"d3s_uaz_3162_COP",
+"d3s_crown_98_PD"
 ];
 
 VVS_Car = [];
