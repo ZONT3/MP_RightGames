@@ -69,11 +69,7 @@ VVS_OMON = [
 ];
 
 VVS_Zas = [
-"d3s_uaz_3165M",
-"d3s_uaz_469P",
-"d3s_e39_03_GRU",
 "rhsusf_mrzr4_d",
-"d3s_vesta_15_EX",
 "av_r001"
 ];
 
