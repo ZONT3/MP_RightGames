@@ -24,9 +24,9 @@ ace_advanced_throwing_showMouseControls = true;
 ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
-ace_vehicle_damage_enableCarDamage = false;
+ace_vehicle_damage_enableCarDamage = true;
 ace_vehicle_damage_enabled = false;
-ace_vehicle_damage_removeAmmoDuringCookoff = false;
+ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Arsenal
 force ace_arsenal_allowDefaultLoadouts = true;
@@ -120,8 +120,8 @@ force acex_fortify_settingHint = 2;
 force ace_frag_enabled = true;
 force ace_frag_maxTrack = 10;
 force ace_frag_maxTrackPerFrame = 10;
-force ace_frag_reflectionsEnabled = false;
-force ace_frag_spallEnabled = false;
+force ace_frag_reflectionsEnabled = true;
+force ace_frag_spallEnabled = true;
 
 // ACE G-Forces
 force ace_gforces_coef = 0.8;
@@ -162,7 +162,7 @@ ace_interaction_interactWithTerrainObjects = false;
 ace_gestures_showOnInteractionMenu = 2;
 ace_interact_menu_actionOnKeyRelease = true;
 ace_interact_menu_addBuildingActions = false;
-ace_interact_menu_alwaysUseCursorInteraction = false;
+ace_interact_menu_alwaysUseCursorInteraction = true;
 ace_interact_menu_alwaysUseCursorSelfInteraction = true;
 ace_interact_menu_colorShadowMax = [0,0,0,1];
 ace_interact_menu_colorShadowMin = [0,0,0,0.25];
@@ -185,7 +185,7 @@ force ace_cargo_enable = true;
 ace_cargo_enableRename = true;
 force ace_cargo_loadTimeCoefficient = 5;
 ace_cargo_openAfterUnload = 0;
-force ace_cargo_paradropTimeCoefficent = 2.5;
+force ace_cargo_paradropTimeCoefficent = 0;
 force ace_rearm_distance = 30;
 force ace_rearm_level = 1;
 force ace_rearm_supply = 0;
@@ -196,14 +196,14 @@ force ace_repair_autoShutOffEngineWhenStartingRepair = true;
 force ace_repair_consumeItem_toolKit = 0;
 force ace_repair_displayTextOnRepair = true;
 force ace_repair_engineerSetting_fullRepair = 2;
-force ace_repair_engineerSetting_repair = 0;
+force ace_repair_engineerSetting_repair = 1;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
 ace_repair_locationsBoostTraining = false;
 ace_repair_miscRepairRequiredItems = ["ace_repair_anyToolKit"];
-force ace_repair_repairDamageThreshold = 0.3;
-force ace_repair_repairDamageThreshold_engineer = 0.536616;
+force ace_repair_repairDamageThreshold = 0.05;
+force ace_repair_repairDamageThreshold_engineer = 0.15;
 force ace_repair_wheelRepairRequiredItems = [];
 
 // ACE Magazine Repack
@@ -303,11 +303,11 @@ ace_medical_treatment_advancedDiagnose = 2;
 force ace_medical_treatment_advancedMedication = true;
 force ace_medical_treatment_allowBodyBagUnconscious = true;
 force ace_medical_treatment_allowLitterCreation = true;
-force ace_medical_treatment_allowSelfIV = 1;
+force ace_medical_treatment_allowSelfIV = 0;
 force ace_medical_treatment_allowSelfPAK = 1;
 force ace_medical_treatment_allowSelfStitch = 1;
 force ace_medical_treatment_allowSharedEquipment = 0;
-force ace_medical_treatment_clearTrauma = 1;
+force ace_medical_treatment_clearTrauma = 0;
 force ace_medical_treatment_consumePAK = 0;
 force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
@@ -323,9 +323,9 @@ force ace_medical_treatment_locationSurgicalKit = 0;
 force ace_medical_treatment_maxLitterObjects = 50;
 force ace_medical_treatment_medicEpinephrine = 0;
 force ace_medical_treatment_medicIV = 0;
-force ace_medical_treatment_medicPAK = 1;
-force ace_medical_treatment_medicSurgicalKit = 0;
-force ace_medical_treatment_timeCoefficientPAK = 1;
+force ace_medical_treatment_medicPAK = 2;
+force ace_medical_treatment_medicSurgicalKit = 2;
+force ace_medical_treatment_timeCoefficientPAK = 0;
 force ace_medical_treatment_treatmentTimeAutoinjector = 5;
 force ace_medical_treatment_treatmentTimeBodyBag = 15;
 force ace_medical_treatment_treatmentTimeCPR = 15;
@@ -355,7 +355,7 @@ ace_nametags_tagSize = 2;
 
 // ACE Nightvision
 force ace_nightvision_aimDownSightsBlur = 0.542791;
-force ace_nightvision_disableNVGsWithSights = false;
+force ace_nightvision_disableNVGsWithSights = true;
 force ace_nightvision_effectScaling = 0.1;
 force ace_nightvision_fogScaling = 0.298876;
 force ace_nightvision_noiseScaling = 0.126698;
@@ -532,13 +532,13 @@ acex_volume_showNotification = true;
 ace_common_persistentLaserEnabled = true;
 force ace_laserpointer_enabled = true;
 ace_reload_displayText = true;
-ace_reload_showCheckAmmoSelf = false;
+ace_reload_showCheckAmmoSelf = true;
 ace_weaponselect_displayText = true;
 
 // ACE Weather
 force ace_weather_enabled = true;
 force ace_weather_showCheckAirTemperature = true;
-force ace_weather_updateInterval = 300;
+force ace_weather_updateInterval = 260;
 force ace_weather_windSimulation = true;
 
 // ACE Wind Deflection

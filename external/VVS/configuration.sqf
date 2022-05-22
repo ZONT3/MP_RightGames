@@ -8,87 +8,102 @@ VVS_Premade_List = false;
 
 ZONT_fnc_filterVVS = {
   switch(_this) do {
-  	case "HQ": { VVS_HQ + VVS_Wheeled + VVS_BMO + VVS_RMO };
-  	case "OMON": { VVS_OMON };
+  	case "HQ": { VVS_HQ + VVS_Wheeled };
+  	case "BMO": { VVS_BMO };
+  	case "A10": { VVS_A10 };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "GROM": { VVS_GROM };
-    case "Spec": { VVS_Spec };
-    case "MVD": { VVS_MVD };
-	case "Zaslon": { VVS_Zas };
+  	case "CD": { VVS_CD };
+    case "USAF": { VVS_USAF };
+    case "CBRN": { VVS_CBRN };
 
   	default {[]};
   };
 };
 
 ZONT_fnc_onSpawnVVS = {
-  // params ["_mode", "_vehicle"];
-  switch(_this) do {
-  	case "TV": { {
-      _vehicle setVehicleAmmo 0;
-      _vehicle setFuel 0
-    } };
+  params ["_vehicle", "_class", "_mode"];
 
-  	default {nil};
+
+  private _fnc_class = switch (_class) do {
+    case "OPTRE_M808S": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M808B2": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M808B_UNSC": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M813_TT": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12A1_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12R_AA": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12G1_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12_FAV_APC": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M412_IFV_UNSC": {
+      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M413_MGS_UNSC": {
+      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M494": {
+      [_vehicle, "colordes"] call BIS_fnc_initVehicle;
+    };
   };
 };
 
 
 VVS_HQ = [
-
-];
-
-VVS_Wheeled_Spec = [
-
-];
-
-VVS_Spec = [
 ];
 
 VVS_Wheeled = [
 ];
 
-VVS_GROM = [
-"av_UAZ_pat2", 
-"av_Kamaz_fsb_F", 
-"av_GAZ2705_Ton", 
-"C_Van_02_vehicle_F"
+VVS_CD = [
+  "uns_M113_M2",
+  "uns_M113A1_M2",
+  "uns_m551"
 ];
 
-
-VVS_OMON = [
-"av_zamak_omon_F", 
-"av_tigr_m_ros", 
-"av_tigr_omon_2", 
-"av_Kamaz_fsb_F", 
-"T_fsvng_Van_cargo", 
-"T_fsvng_Van", 
-"av_btr80_omon", 
-"rhs_btr80a_msv", 
-"rhs_btr80_msv"
+VVS_A124 = [
 ];
 
-VVS_Zas = [
-"rhsusf_mrzr4_d",
-"av_r001"
+VVS_Wheeled_Spec = [
 ];
 
-VVS_MVD = [
-"xspaz_police", 
-"av_UAZ469", 
-"av_2107_pol", 
-"av_Lada_2110_pps", 
-"av_UAZ451_m", 
-"av_rus_tigr_omon", 
-"av_Lada_2110_dps", 
-"av_2107_dps",
-"av_UAZ_patp",
-"vet_vaz_priora_2_lada_police",
-"vet_vaz_priora_2_lada_police_ppc",
-"vet_vaz_priora_2_lada_3_2police",
-"d3s_uaz_3162_COP",
-"d3s_crown_98_PD"
+VVS_BMO = [
+  "uns_willysmg50",
+  "uns_willys_2",
+  "uns_willys",
+  "uns_m37b1",
+  "uns_m37b1_m1919",
+  "uns_M35A2",
+  "uns_M35A2_Open",
+  "uns_M35A2_fueltanker",
+  "uns_M35A2_ammo",
+  "uns_M35A2_repair"
 ];
+
+VVS_USAF = [
+
+];
+
+VVS_CBRN = [
+];
+
 
 VVS_Car = [];
 VVS_Air = [];
