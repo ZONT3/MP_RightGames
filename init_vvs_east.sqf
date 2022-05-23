@@ -1,38 +1,38 @@
 _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autocombat"; _this disableAI "weaponaim";
 
 _this addAction [
-  "Запрос техники ОМОН",
+  "Запрос Техники БМО",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"OMON"],
+  [VVS_east_Land,"BMO"],
   6,
   true,
   true,
   "",
-  "[['OMON']] call ZONT_fnc_checkRole",
+  "true",
   5
 ];
 
 _this addAction [
-  "Запрос техники МВД",
+  "Запрос техники 542",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"MVD"],
+  [VVS_east_Land,"MP"],
   6,
   true,
   true,
   "",
-  "[['MVD']] call ZONT_fnc_checkRole",
+  "[['MP']] call ZONT_fnc_checkRole",
   5
 ];
 
 _this addAction [
-  "Запрос техники Гром",
+  "Запрос техники ОБРОН",
   VVS_fnc_openVVS,
-  [VVS_east_Land,"GROM"],
+  [VVS_east_Land,"OBRON"],
   6,
   true,
   true,
   "",
-  "[['GROM']] call ZONT_fnc_checkRole",
+  "[['RG']] call ZONT_fnc_checkRole",
   5
 ];
 

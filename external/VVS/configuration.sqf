@@ -10,12 +10,11 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-  	case "A10": { VVS_A10 };
+  	case "MP": { VVS_MP };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-  	case "CD": { VVS_CD };
-    case "USAF": { VVS_USAF };
-    case "CBRN": { VVS_CBRN };
+    case "Zaslon": { VVS_Zaslon };
+    case "OBRON": { VVS_OBRON };
 
   	default {[]};
   };
@@ -26,41 +25,26 @@ ZONT_fnc_onSpawnVVS = {
 
 
   private _fnc_class = switch (_class) do {
-    case "OPTRE_M808S": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_bmp2_vmf": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M808B2": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_btr80a_vmf": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M808B_UNSC": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_btr80_vmf": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M813_TT": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_2s1_vmf": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M12A1_LRV": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_t72be_tv": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M12R_AA": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "rhs_gaz66_ammo_vmf": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M12G1_LRV": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M12_FAV_APC": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M12_LRV": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M412_IFV_UNSC": {
-      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M413_MGS_UNSC": {
-      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M494": {
-      [_vehicle, "colordes"] call BIS_fnc_initVehicle;
+    case "RHS_Ural_Repair_VMF_01": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
   };
 };
@@ -72,36 +56,39 @@ VVS_HQ = [
 VVS_Wheeled = [
 ];
 
-VVS_CD = [
-  "uns_M113_M2",
-  "uns_M113A1_M2",
-  "uns_m551"
+VVS_BMO = [
+  "rhs_gaz66_ammo_vmf",
+  "RHS_Ural_Fuel_VMF_01",
+  "RHS_Ural_Repair_VMF_01",
+  "rhs_kamaz5350_open_vmf",
+  "rhs_kamaz5350_vmf",
+  "rhs_tigr_m_3camo_vmf",
+  "rhs_tigr_sts_3camo_vmf",
+  "rhs_tigr_3camo_vmf",
+  "RHS_UAZ_MSV_01",
+  "rhs_uaz_open_MSV_01"
 ];
 
-VVS_A124 = [
+VVS_MP = [
+  "rhs_btr80a_vmf",
+  "rhs_2s1_vmf",
+  "rhs_bmp2_vmf",
+  "rhs_t72be_tv",
+  "rhs_btr80_vmf"
 ];
+
+VVS_Zaslon = [
+  "O_G_Quadbike_01_F",
+  "rhsusf_mrzr4_d",
+  "UK3CB_ADR_I_Hilux_Open",
+  "UK3CB_ADR_I_Hilux_Pkm",
+  "UK3CB_ADR_I_Hilux_Closed",
+  "UK3CB_ADR_O_Hilux_Dshkm",
+  "UK3CB_TKC_C_TT650"
+];
+
 
 VVS_Wheeled_Spec = [
-];
-
-VVS_BMO = [
-  "uns_willysmg50",
-  "uns_willys_2",
-  "uns_willys",
-  "uns_m37b1",
-  "uns_m37b1_m1919",
-  "uns_M35A2",
-  "uns_M35A2_Open",
-  "uns_M35A2_fueltanker",
-  "uns_M35A2_ammo",
-  "uns_M35A2_repair"
-];
-
-VVS_USAF = [
-
-];
-
-VVS_CBRN = [
 ];
 
 

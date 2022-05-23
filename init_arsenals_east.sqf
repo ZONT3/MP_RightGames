@@ -1,21 +1,21 @@
 [ _this,
-	ars_omon,
-	["OMON"],
-	"Запросить арсенал ОМОН",
+	ars_mp,
+	["MP"],
+	"Запросить арсенал 542",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_grom,
-	["GROM"],
-	"Запросить арсенал ГРОМ",
+	ars_rg,
+	["RG"],
+	"Запросить арсенал ОБРОН",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_mvd,
-	["MVD"],
-	"Запросить арсенал МВД",
+	ars_vks,
+	["VKS"],
+	"Запросить арсенал ВКС",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
