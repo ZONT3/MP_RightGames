@@ -6,6 +6,21 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
+	ars_mp,
+	["ED"],
+	"Запросить арсенал 542",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_mp,
+	["MD"],
+	"Запросить арсенал 542",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+
+[ _this,
 	ars_rg,
 	["RG"],
 	"Запросить арсенал ОБРОН",
