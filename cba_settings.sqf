@@ -137,7 +137,7 @@ force ace_grenades_convertExplosives = true;
 
 // ACE Headless
 force acex_headless_delay = 15;
-force acex_headless_enabled = false;
+force acex_headless_enabled = true;
 force acex_headless_endMission = 0;
 force acex_headless_log = false;
 force acex_headless_transferLoadout = 0;
