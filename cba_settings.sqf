@@ -24,8 +24,8 @@ ace_advanced_throwing_showMouseControls = true;
 ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
-ace_vehicle_damage_enableCarDamage = true;
-ace_vehicle_damage_enabled = false;
+ace_vehicle_damage_enableCarDamage = false;
+ace_vehicle_damage_enabled = true;
 ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Arsenal
@@ -137,7 +137,7 @@ force ace_grenades_convertExplosives = true;
 
 // ACE Headless
 force acex_headless_delay = 15;
-force acex_headless_enabled = true;
+force acex_headless_enabled = false;
 force acex_headless_endMission = 0;
 force acex_headless_log = false;
 force acex_headless_transferLoadout = 0;
