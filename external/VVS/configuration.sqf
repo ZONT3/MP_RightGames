@@ -46,6 +46,9 @@ ZONT_fnc_onSpawnVVS = {
     case "RHS_Ural_Repair_VMF_01": {
       [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
+	case "rhs_gaz66_r142_msv": {
+      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
+    };
   };
 };
 
@@ -66,7 +69,8 @@ VVS_BMO = [
   "rhs_tigr_sts_3camo_vmf",
   "rhs_tigr_3camo_vmf",
   "RHS_UAZ_MSV_01",
-  "rhs_uaz_open_MSV_01"
+  "rhs_uaz_open_MSV_01",
+  "rhs_gaz66_r142_msv"
 ];
 
 VVS_MP = [
