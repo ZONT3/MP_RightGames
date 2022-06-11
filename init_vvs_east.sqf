@@ -13,7 +13,7 @@ _this addAction [
 ];
 
 _this addAction [
-  "Запрос техники 542",
+  "Запрос техники 131",
   VVS_fnc_openVVS,
   [VVS_east_Land,"MP"],
   6,

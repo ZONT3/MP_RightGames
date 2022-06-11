@@ -60,35 +60,31 @@ VVS_Wheeled = [
 ];
 
 VVS_BMO = [
-  "rhs_gaz66_ammo_vmf",
-  "RHS_Ural_Fuel_VMF_01",
-  "RHS_Ural_Repair_VMF_01",
-  "rhs_kamaz5350_open_vmf",
-  "rhs_kamaz5350_vmf",
-  "rhs_tigr_m_3camo_vmf",
-  "rhs_tigr_sts_3camo_vmf",
-  "rhs_tigr_3camo_vmf",
-  "RHS_UAZ_MSV_01",
-  "rhs_uaz_open_MSV_01",
-  "rhs_gaz66_r142_msv"
+"rhs_t80", 
+"rhs_t80bv", 
+"rhs_brm1k_tv", 
+"rhs_btr70_vdv", 
+"RHS_Ural_Fuel_MSV_01", 
+"av_uaz451_b", 
+"av_UAZ451_2", 
+"rhsgref_BRDM2_msv", 
+"av_uaz451_a", 
+"rhs_gaz66_ap2_msv", 
+"RHS_Ural_MSV_01", 
+"RHS_Ural_Open_MSV_01", 
+"RHS_Ural_Repair_MSV_01", 
+"RHS_Ural_Zu23_MSV_01", 
+"RHS_Ural_Ammo_MSV_01", 
+"rhs_t72bb_tv", 
+"RHS_UAZ_MSV_01", 
+"rhs_uaz_open_MSV_01", 
+"rhs_bmp1_msv"
 ];
 
 VVS_MP = [
-  "rhs_btr80a_vmf",
-  "rhs_2s1_vmf",
-  "rhs_bmp2_vmf",
-  "rhs_t72be_tv",
-  "rhs_btr80_vmf"
 ];
 
 VVS_Zaslon = [
-  "O_G_Quadbike_01_F",
-  "rhsusf_mrzr4_d",
-  "UK3CB_ADR_I_Hilux_Open",
-  "UK3CB_ADR_I_Hilux_Pkm",
-  "UK3CB_ADR_I_Hilux_Closed",
-  "UK3CB_ADR_O_Hilux_Dshkm",
-  "UK3CB_TKC_C_TT650"
 ];
 
 
