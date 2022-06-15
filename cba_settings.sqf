@@ -25,8 +25,8 @@ ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
 ace_vehicle_damage_enableCarDamage = true;
-ace_vehicle_damage_enabled = true;
-ace_vehicle_damage_removeAmmoDuringCookoff = true;
+ace_vehicle_damage_enabled = false;
+ace_vehicle_damage_removeAmmoDuringCookoff = false;
 
 // ACE Arsenal
 force ace_arsenal_allowDefaultLoadouts = true;
@@ -39,7 +39,7 @@ ace_arsenal_fontHeight = 4.5;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = true;
-force ace_artillerytables_disableArtilleryComputer = false;
+force ace_artillerytables_disableArtilleryComputer = true;
 force ace_mk6mortar_airResistanceEnabled = true;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = false;
@@ -195,8 +195,8 @@ force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = true;
 force ace_repair_consumeItem_toolKit = 0;
 force ace_repair_displayTextOnRepair = true;
-force ace_repair_engineerSetting_fullRepair = 2;
-force ace_repair_engineerSetting_repair = 1;
+force ace_repair_engineerSetting_fullRepair = 0;
+force ace_repair_engineerSetting_repair = 0;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 ace_repair_fullRepairRequiredItems = ["ace_repair_anyToolKit"];
@@ -254,7 +254,7 @@ force ace_medical_blood_enabledFor = 1;
 force ace_medical_blood_maxBloodObjects = 3000;
 ace_medical_deathChance = 1;
 ace_medical_enableVehicleCrashes = true;
-force ace_medical_fatalDamageSource = 1;
+force ace_medical_fatalDamageSource = 2;
 force ace_medical_feedback_bloodVolumeEffectType = 2;
 ace_medical_feedback_enableHUDIndicators = true;
 force ace_medical_feedback_painEffectType = 2;
@@ -313,7 +313,7 @@ force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
 ace_medical_treatment_cprSuccessChanceMax = 0.8;
 ace_medical_treatment_cprSuccessChanceMin = 0.4;
-force ace_medical_treatment_holsterRequired = 1;
+force ace_medical_treatment_holsterRequired = 0;
 force ace_medical_treatment_litterCleanupDelay = 240;
 force ace_medical_treatment_locationEpinephrine = 0;
 force ace_medical_treatment_locationIV = 0;
@@ -324,7 +324,7 @@ force ace_medical_treatment_maxLitterObjects = 50;
 force ace_medical_treatment_medicEpinephrine = 0;
 force ace_medical_treatment_medicIV = 0;
 force ace_medical_treatment_medicPAK = 2;
-force ace_medical_treatment_medicSurgicalKit = 2;
+force ace_medical_treatment_medicSurgicalKit = 0;
 force ace_medical_treatment_timeCoefficientPAK = 0;
 force ace_medical_treatment_treatmentTimeAutoinjector = 5;
 force ace_medical_treatment_treatmentTimeBodyBag = 15;
@@ -513,11 +513,11 @@ ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
 
 // ACE View Restriction
-force acex_viewrestriction_mode = 0;
-force acex_viewrestriction_modeSelectiveAir = 0;
-force acex_viewrestriction_modeSelectiveFoot = 0;
-force acex_viewrestriction_modeSelectiveLand = 0;
-force acex_viewrestriction_modeSelectiveSea = 0;
+force acex_viewrestriction_mode = 1;
+force acex_viewrestriction_modeSelectiveAir = 1;
+force acex_viewrestriction_modeSelectiveFoot = 1;
+force acex_viewrestriction_modeSelectiveLand = 1;
+force acex_viewrestriction_modeSelectiveSea = 1;
 acex_viewrestriction_preserveView = false;
 
 // ACE Volume
