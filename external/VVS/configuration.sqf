@@ -11,11 +11,8 @@ ZONT_fnc_filterVVS = {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
   	case "RMO": { VVS_RMO };
-  	case "MP": { VVS_MP };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
-    case "Zaslon": { VVS_Zaslon };
-    case "OBRON": { VVS_OBRON };
 
   	default {[]};
   };
@@ -26,9 +23,41 @@ ZONT_fnc_onSpawnVVS = {
 
 
   private _fnc_class = switch (_class) do {
-    case "rhs_btr80a_vmf": {
-      [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
+    case "OPTRE_M808S": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
     };
+    case "OPTRE_M808B2": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M808B_UNSC": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M813_TT": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12A1_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12R_AA": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12G1_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12_FAV_APC": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M12_LRV": {
+      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M412_IFV_UNSC": {
+      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M413_MGS_UNSC": {
+      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
+    };
+    case "OPTRE_M494": {
+      [_vehicle, "colordes"] call BIS_fnc_initVehicle;
     };
   };
 };
@@ -103,14 +132,6 @@ VVS_RMO = [
 "rhsgref_cdf_gaz66_repair",
 "rhsgref_cdf_ural_fuel"
 ];
-
-
-VVS_MP = [
-];
-
-VVS_Zaslon = [
-];
-
 
 VVS_Wheeled_Spec = [
 ];
