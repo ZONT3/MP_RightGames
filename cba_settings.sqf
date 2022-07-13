@@ -24,9 +24,9 @@ ace_advanced_throwing_showMouseControls = true;
 ace_advanced_throwing_showThrowArc = true;
 
 // ACE Advanced Vehicle Damage
-ace_vehicle_damage_enableCarDamage = true;
-ace_vehicle_damage_enabled = false;
-ace_vehicle_damage_removeAmmoDuringCookoff = false;
+ace_vehicle_damage_enableCarDamage = false;
+ace_vehicle_damage_enabled = true;
+ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Arsenal
 force ace_arsenal_allowDefaultLoadouts = true;
@@ -107,7 +107,7 @@ force acex_field_rations_waterSourceActions = 2;
 // ACE Fire
 force ace_fire_dropWeapon = 2;
 ace_fire_enabled = true;
-force ace_fire_enableFlare = false;
+force ace_fire_enableFlare = true;
 ace_fire_enableScreams = true;
 
 // ACE Fortify
@@ -252,7 +252,7 @@ force ace_medical_bleedingCoefficient = 0.3;
 force ace_medical_blood_bloodLifetime = 120;
 force ace_medical_blood_enabledFor = 1;
 force ace_medical_blood_maxBloodObjects = 3000;
-ace_medical_deathChance = 1;
+ace_medical_deathChance = 0.5;
 ace_medical_enableVehicleCrashes = true;
 force ace_medical_fatalDamageSource = 2;
 force ace_medical_feedback_bloodVolumeEffectType = 2;
@@ -288,10 +288,10 @@ force ace_medical_gui_maxDistance = 3;
 ace_medical_gui_openAfterTreatment = true;
 force ace_medical_ivFlowRate = 2;
 force ace_medical_limping = 2;
-force ace_medical_painCoefficient = 4;
+force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
 force ace_medical_playerDamageThreshold = 5;
-force ace_medical_spontaneousWakeUpChance = 0.7;
+force ace_medical_spontaneousWakeUpChance = 0.5;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
 force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
@@ -332,7 +332,7 @@ force ace_medical_treatment_treatmentTimeCPR = 15;
 force ace_medical_treatment_treatmentTimeIV = 12;
 force ace_medical_treatment_treatmentTimeSplint = 7;
 force ace_medical_treatment_treatmentTimeTourniquet = 7;
-force ace_medical_treatment_woundReopenChance = 0.2;
+force ace_medical_treatment_woundReopenChance = 0.1;
 force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Name Tags
@@ -513,11 +513,11 @@ ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
 
 // ACE View Restriction
-force acex_viewrestriction_mode = 1;
-force acex_viewrestriction_modeSelectiveAir = 1;
-force acex_viewrestriction_modeSelectiveFoot = 1;
-force acex_viewrestriction_modeSelectiveLand = 1;
-force acex_viewrestriction_modeSelectiveSea = 1;
+force acex_viewrestriction_mode = 0;
+force acex_viewrestriction_modeSelectiveAir = 0;
+force acex_viewrestriction_modeSelectiveFoot = 0;
+force acex_viewrestriction_modeSelectiveLand = 0;
+force acex_viewrestriction_modeSelectiveSea = 0;
 acex_viewrestriction_preserveView = false;
 
 // ACE Volume
