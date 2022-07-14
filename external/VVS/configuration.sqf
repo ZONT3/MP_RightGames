@@ -10,7 +10,9 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-  	case "RMO": { VVS_RMO };
+	case "VDV": { VVS_VDV };
+	case "ART": { VVS_ART };
+	case "ART": { VVS_TV }	
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
 
@@ -70,65 +72,29 @@ VVS_Wheeled = [
 ];
 
 VVS_BMO = [
-  "rhs_bmp1p_msv",
-  "rhs_bmp1_msv",
-  "rhs_bmp2e_msv",
-  "rhs_btr70_msv",
-  "rhs_btr80_msv",
-  "RHS_Ural_MSV_01",
-  "RHS_Ural_Fuel_MSV_01",
-  "RHS_Ural_Zu23_MSV_01",
-  "RHS_Ural_Open_MSV_01",
-  "RHS_Ural_Repair_MSV_01",
-  "UK3CB_CW_SOV_O_LATE_MTLB_PKT",
-  "UK3CB_CW_SOV_O_LATE_MTLB_ZU23",
-  "rhs_t72bb_tv",
-  "rhs_t80bv",
-  "rhs_t80",
-  "rhs_uaz_open_vdv",
-  "rhs_uaz_vdv",
-  "av_uaz451_a",
-  "av_uaz451_b",
-  "av_UAZ451",
-  "rhs_2s1_tv",
-  "rhs_t72ba_tv",
-  "rhs_gaz66_r142_msv",
-  "rhs_gaz66_ap2_msv",
-  "rhs_gaz66_ammo_msv"
+  "rhs_tigr_vdv", 
+  "rhs_tigr_sts_vdv", 
+  "rhs_tigr_m_3camo_vdv", 
+  "RHS_Ural_Fuel_VDV_01", 
+  "RHS_Ural_Repair_VDV_01", 
+  "rhs_gaz66_flat_vdv", 
+  "RHS_Ural_VDV_01"
 ];
 
-VVS_RMO = [
-  "UK3CB_MEI_I_Old_Bike",
-  "UK3CB_MEI_I_YAVA",
-  "UK3CB_CHD_I_UAZ_SPG9",
-  "UK3CB_CHD_I_UAZ_Open",
-  "UK3CB_CHD_I_UAZ_MG",
-  "UK3CB_CHD_I_UAZ_AGS30",
-  "UK3CB_ARD_I_Hilux_Zu23_Front",
-  "UK3CB_ARD_I_Hilux_Closed",
-  "UK3CB_ARD_I_Hilux_Zu23",
-  "UK3CB_ARD_I_Hilux_Pkm",
-  "UK3CB_ADR_I_Hilux_Open",
-  "av_UAZ451_2",
-  "av_niva_01",
-  "AV_Volha_Gray",
-  "AV_Volha_Black",
-  "rhsgref_cdf_gaz66_zu23",
-  "rhsgref_cdf_ural_Zu23",
-  "UK3CB_TKA_I_MTLB_ZU23",
-  "UK3CB_TKA_I_MTLB_PKT",
-  "av_UAZ451_3",
-  "UK3CB_TKC_C_Tractor_Old",
-  "UK3CB_ARD_I_Hilux_Mortar",
-  "rhsgref_cdf_gaz66",
-  "rhsgref_cdf_gaz66_r142",
-  "rhsgref_cdf_gaz66_ammo",
-  "rhsgref_cdf_gaz66_repair",
-  "rhsgref_cdf_ural_fuel",
-  "UK3CB_CHD_I_BMP1", 
-  "UK3CB_CHD_I_BTR70", 
-  "UK3CB_CHD_I_BTR60", 
-  "UK3CB_CHD_I_T72BA"
+VVS_TV = [
+  "rhs_t72be_tv", 
+  "rhs_t90sab_tv"
+];
+
+VVS_ART = [
+  "rhs_2s1_tv"
+];
+
+VVS_VDV = [
+  "rhs_bmd4ma_vdv", 
+  "rhs_bmd4m_vdv", 
+  "rhs_btr80a_vdv", 
+  "rhs_btr80_vdv"
 ];
 
 VVS_Wheeled_Spec = [
