@@ -802,7 +802,7 @@ wingspan_fn = true;
 // Anti-Bounce System
 force ABS_AssistUnflip = true;
 force ABS_enableManualUnflip = true;
-force ABS_enableMod = false;
+force ABS_enableMod = true;
 force ABS_minAngle = 60;
 force ABS_NoAutoUnflipPlayer = false;
 ABS_perFrameKey = true;
