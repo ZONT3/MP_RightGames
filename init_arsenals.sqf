@@ -46,3 +46,10 @@
 	"Запросить арсенал 8-й Отдельный Взвод ПВО",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_train,
+	["Train"],
+	"Запросить арсенал УЧебной роты",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
