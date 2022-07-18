@@ -10,9 +10,9 @@ ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
   	case "BMO": { VVS_BMO };
-	case "VDV": { VVS_VDV };
-	case "ART": { VVS_ART };
-	case "TV": { VVS_TV }	
+  	case "VDV": { VVS_VDV };
+	  case "ART": { VVS_ART };
+	  case "TV": { VVS_TV };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
 
@@ -72,17 +72,17 @@ VVS_Wheeled = [
 ];
 
 VVS_BMO = [
-  "rhs_tigr_vdv", 
-  "rhs_tigr_sts_vdv", 
-  "rhs_tigr_m_3camo_vdv", 
-  "RHS_Ural_Fuel_VDV_01", 
-  "RHS_Ural_Repair_VDV_01", 
-  "rhs_gaz66_flat_vdv", 
+  "rhs_tigr_vdv",
+  "rhs_tigr_sts_vdv",
+  "rhs_tigr_m_3camo_vdv",
+  "RHS_Ural_Fuel_VDV_01",
+  "RHS_Ural_Repair_VDV_01",
+  "rhs_gaz66_flat_vdv",
   "RHS_Ural_VDV_01"
 ];
 
 VVS_TV = [
-  "rhs_t72be_tv", 
+  "rhs_t72be_tv",
   "rhs_t90sab_tv"
 ];
 
@@ -91,9 +91,9 @@ VVS_ART = [
 ];
 
 VVS_VDV = [
-  "rhs_bmd4ma_vdv", 
-  "rhs_bmd4m_vdv", 
-  "rhs_btr80a_vdv", 
+  "rhs_bmd4ma_vdv",
+  "rhs_bmd4m_vdv",
+  "rhs_btr80a_vdv",
   "rhs_btr80_vdv"
 ];
 
