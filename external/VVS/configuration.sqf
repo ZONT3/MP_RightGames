@@ -12,7 +12,7 @@ ZONT_fnc_filterVVS = {
   	case "BMO": { VVS_BMO };
 	case "VDV": { VVS_VDV };
 	case "ART": { VVS_ART };
-	case "ART": { VVS_TV }	
+	case "TV": { VVS_TV }	
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
 
