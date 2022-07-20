@@ -67,10 +67,6 @@ private _fn_moveToCustomSpawn = {
   if _rr exitWith { [_player, true, 'MP_spawn_rr'] call _fn_moveToSpawn };
   private _train = [["Training"]] call ZONT_fnc_checkRole;
   if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
-  private _isis = [["ISIS"]] call ZONT_fnc_checkRole;
-  if _isis exitWith { [_player, true, 'MP_spawn_isis'] call _fn_moveToSpawn };
-  private _sso = [["SSO"]] call ZONT_fnc_checkRole;
-  if _sso exitWith { [_player, true, 'MP_spawn_sso'] call _fn_moveToSpawn };
 };
 
 private _fn_moveToSpawn = {
