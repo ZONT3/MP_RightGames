@@ -53,3 +53,10 @@
 	"Запросить арсенал УЧебной роты",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_sso,
+	["SSO"],
+	"Запросить арсенал ССО",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
