@@ -60,3 +60,10 @@
 	"Запросить арсенал ССО",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_boss,
+	["CG"],
+	"Запросить арсенал Береговой Охраны",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
