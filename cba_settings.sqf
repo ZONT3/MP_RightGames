@@ -1148,3 +1148,109 @@ zen_vision_enableRedGreenThermal = false;
 zen_vision_enableRedHotCold = false;
 zen_vision_enableWhiteHot = true;
 zen_vision_enableWhiteHotRedCold = false;
+
+// KAT - ADV Medical: Pharmacy
+kat_pharma_carbonateActive = true;
+kat_pharma_IOestablish = 7;
+kat_pharma_IVdrop = 600;
+kat_pharma_IVdropEnable = true;
+kat_pharma_IVestablish = 7;
+kat_pharma_IVmedic = 1;
+kat_pharma_IVreuse = false;
+kat_pharma_medLvl_Reorientation = 1;
+kat_pharma_naloxoneActive = true;
+kat_pharma_PushTime = 7;
+kat_pharma_Reorientation_Enable = true;
+kat_pharma_Reorientation_Slap = true;
+kat_pharma_RequireInsIV = true;
+kat_pharma_txaActive = true;
+
+// KAT - ADV Medical: Airway
+kat_airway_Accuvac_time = 8;
+kat_airway_CancelRecoveryPosition_Time = 6;
+kat_airway_CheckAirway_time = 2;
+kat_airway_checkbox_puking_sound = true;
+kat_airway_Colored_logs = true;
+kat_airway_enable = true;
+kat_airway_Guedeltubus_time = 6;
+kat_airway_Larynxtubus_time = 3;
+kat_airway_medLvl_Accuvac = 1;
+kat_airway_medLvl_Guedeltubus = 0;
+kat_airway_medLvl_Larynxtubus = 0;
+kat_airway_Overstretch_time = 3;
+kat_airway_probability_headturning = 50;
+kat_airway_probability_obstruction = 15;
+kat_airway_probability_occluded = 10;
+kat_airway_RecoveryPosition_Time = 6;
+kat_airway_string_exit = "";
+kat_airway_TurnAround_time = 2;
+
+// KAT - ADV Medical: Breathing
+kat_breathing_enable = true;
+kat_breathing_enable_selfChestseal = 1;
+kat_breathing_enableCyanosis = true;
+kat_breathing_hemopneumothoraxChance = 5;
+kat_breathing_medLvl_Chestseal = 0;
+kat_breathing_medLvl_Cyanosis = 1;
+kat_breathing_medLvl_hemopneumothoraxTreatment = 0;
+kat_breathing_medLvl_Pulseoximeter = 0;
+kat_breathing_mildValue = 75;
+kat_breathing_pneumothorax = 5;
+kat_breathing_pneumothorax_hardcore = true;
+kat_breathing_pneumothoraxDamageThreshold = 0.4;
+kat_breathing_severeValue = 66;
+kat_breathing_showPneumothorax_dupe = false;
+kat_breathing_slightValue = 90;
+kat_breathing_SpO2_dieActive = true;
+kat_breathing_SpO2_dieValue = 65;
+kat_breathing_SpO2_MultiplyNegative = 1;
+kat_breathing_SpO2_MultiplyPositive = 1;
+kat_breathing_SpO2_perfusion = true;
+kat_breathing_SpO2_unconscious = 75;
+kat_breathing_Stable_spo2 = 85;
+kat_breathing_tensionhemothorax_hardcore = true;
+
+// KAT - ADV Medical: Circulation
+kat_circulation_AdvRhythm = true;
+kat_circulation_AED_BeepsAndCharge = true;
+kat_circulation_blood_draw_limit = 3.6;
+kat_circulation_blood_drawTime_250ml = 25;
+kat_circulation_blood_drawTime_500ml = 50;
+kat_circulation_bloodgroup = "A-";
+kat_circulation_bloodGroups = true;
+kat_circulation_CPR_Chance_Default = 20;
+kat_circulation_CPR_Chance_Doctor = 40;
+kat_circulation_CPR_Chance_RegularMedic = 30;
+kat_circulation_DeactMon_whileAED_X = true;
+kat_circulation_distanceLimit_AEDX = 30;
+kat_circulation_enable = true;
+kat_circulation_enable_CPR_Chances = true;
+kat_circulation_enable_selfBloodDraw = 1;
+kat_circulation_medLvl_AED = 1;
+kat_circulation_medLvl_AED_X = 1;
+kat_circulation_SuccesCh_AED = 80;
+kat_circulation_SuccesCh_AED_X = 85;
+kat_circulation_timeLimit_AEDX = 1800;
+kat_circulation_useLocation_AED = 0;
+
+// KAT - ADV Medical: Misc
+kat_misc_enable = true;
+
+// Chemical Warfare
+CBRN_color_contamination0 = [0.9294,0.9843,1];
+CBRN_color_contamination1 = [0.8353,0.9294,0.4627];
+CBRN_color_contamination2 = [1,0.6666,0.6666];
+CBRN_exposureCoughThreshold = 3;
+CBRN_exposureDeathThreshold = 20;
+CBRN_exposureKnockoutThreshold = 10;
+CBRN_exposureLimpThreshold = 7;
+CBRN_factionMask_rhs_faction_socom = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_tv = "";
+CBRN_factionMask_rhs_faction_usaf = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usarmy = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usarmy_d = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usarmy_wd = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usmc = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usmc_d = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usmc_wd = "G_CBRN_M50";
+CBRN_factionMask_rhs_faction_usn = "G_CBRN_M50";
