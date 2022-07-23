@@ -24,7 +24,5 @@ west setFriend [east, 0];
 west setFriend [resistance, 1];
 east setFriend [west, 0];
 east setFriend [resistance, 0];
-east setFriend [civilian, 1];
 resistance setFriend [west, 1];
 resistance setFriend [east, 0];
-civilian setFriend [east, 1];
