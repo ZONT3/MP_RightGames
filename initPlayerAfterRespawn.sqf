@@ -11,5 +11,8 @@ player enableStamina !(_mechanicus || _inqusition);
 
 player setUnitTrait ['engineer', _mechanicus]; 
 */
-player setUnitTrait ['medic', _med];
 player setUnitTrait ['engineer', _tv];
+
+if (_med) then {
+  player setVariable ["ace_medical_medicclass", 2, true];
+};
