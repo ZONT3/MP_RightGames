@@ -67,3 +67,10 @@
 	"Запросить арсенал Береговой Охраны",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_svr,
+	["SVR"],
+	"Запросить арсенал СВР",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;

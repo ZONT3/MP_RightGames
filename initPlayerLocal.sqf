@@ -59,14 +59,20 @@ private _fn_moveToCustomSpawn = {
   params ['_player','_fn_moveToSpawn'];
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
 
-  private _sso = [["SSO"]] call ZONT_fnc_checkRole;
+    private _sso = [["SSO"]] call ZONT_fnc_checkRole;
   if _sso exitWith { [_player, true, 'MP_spawn_sso'] call _fn_moveToSpawn };
-  private _vdv = [["VDV"]] call ZONT_fnc_checkRole;
+    private _vdv = [["VDV"]] call ZONT_fnc_checkRole;
   if _vdv exitWith { [_player, true, 'MP_spawn_vdv'] call _fn_moveToSpawn };
-  private _svr = [["SVR"]] call ZONT_fnc_checkRole;
+    private _svr = [["SVR"]] call ZONT_fnc_checkRole;
   if _svr exitWith { [_player, true, 'MP_spawn_svr'] call _fn_moveToSpawn };
-  private _train = [["Train"]] call ZONT_fnc_checkRole;
+    private _train = [["Train"]] call ZONT_fnc_checkRole;
   if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
+    private _train = [["Train"]] call ZONT_fnc_checkRole;
+  if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
+    private _md = [["MD"]] call ZONT_fnc_checkRole;
+  if _md exitWith { [_player, true, 'MP_spawn_md'] call _fn_moveToSpawn };
+    private _vks = [["VKS"]] call ZONT_fnc_checkRole;
+  if _vks exitWith { [_player, true, 'MP_spawn_vks'] call _fn_moveToSpawn };
 };
 
 private _fn_moveToSpawn = {

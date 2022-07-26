@@ -83,7 +83,8 @@ VVS_BMO = [
 
 VVS_TV = [
   "rhs_t72be_tv",
-  "rhs_t90sab_tv"
+  "rhs_t90sab_tv",
+  "rhs_t80um"
 ];
 
 VVS_ART = [
