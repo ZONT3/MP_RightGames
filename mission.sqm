@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1994;
+		nextID=2027;
 	};
 	class MarkerIDProvider
 	{
-		nextID=22;
+		nextID=44;
 	};
 	class LayerIndexProvider
 	{
-		nextID=141;
+		nextID=149;
 	};
 	class Camera
 	{
-		pos[]={4804.1992,357.10791,21918.998};
-		dir[]={-0.70925325,-0.67140704,0.21498469};
-		up[]={-0.64253211,0.74108595,0.19476101};
-		aside[]={0.2900883,1.0740478e-006,0.957021};
+		pos[]={9017.7842,219.9929,21164.982};
+		dir[]={-0.94811314,-0.19804341,-0.24921297};
+		up[]={-0.19158217,0.98017257,-0.050359122};
+		aside[]={-0.25423744,1.1259108e-006,0.96725309};
 	};
 };
 binarizationWanted=0;
@@ -2787,7 +2787,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=172;
+		items=196;
 		class Item0
 		{
 			dataType="Object";
@@ -2904,8 +2904,8 @@ class Mission
 				};
 				class Attribute2
 				{
-					property="RandomNumber1";
-					expression="if(_value) then {([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart) execVM '\A3\Structures_F_Globe\Military\Boats\scripts\randomize.sqf'}";
+					property="brokeGlass11";
+					expression="if(_value) then {[([_this,'Land_Destroyer_01_hull_02_F'] call bis_fnc_destroyer01GetShipPart),'glass_11_hide','glass_11_unhide'] call expEden_fnc_Destroyer01HandleDamage3den};";
 					class Value
 					{
 						class data
@@ -3075,8 +3075,8 @@ class Mission
 				};
 				class Attribute11
 				{
-					property="brokeGlass11";
-					expression="if(_value) then {[([_this,'Land_Destroyer_01_hull_02_F'] call bis_fnc_destroyer01GetShipPart),'glass_11_hide','glass_11_unhide'] call expEden_fnc_Destroyer01HandleDamage3den};";
+					property="RandomNumber1";
+					expression="if(_value) then {([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart) execVM '\A3\Structures_F_Globe\Military\Boats\scripts\randomize.sqf'}";
 					class Value
 					{
 						class data
@@ -3834,7 +3834,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4752.6812,329.95084,21922.914};
-						angles[]={0,2.5866377,-0};
+						angles[]={0,2.5866377,0};
 					};
 					side="East";
 					flags=7;
@@ -60786,7 +60786,7 @@ class Mission
 		class Item158
 		{
 			dataType="Marker";
-			position[]={3668.3184,192.26213,20713.279};
+			position[]={3803.0007,32.569405,18001.717};
 			name="marker_10";
 			type="Faction_CUP_RU";
 			id=1967;
@@ -60794,44 +60794,34 @@ class Mission
 		class Item159
 		{
 			dataType="Marker";
-			position[]={5643.147,102.9073,22291.016};
+			position[]={8613.2295,-52.998291,23190.805};
 			name="marker_11";
 			type="Faction_CUP_RU";
 			id=1968;
+			atlOffset=-89.418182;
 		};
 		class Item160
 		{
 			dataType="Marker";
-			position[]={6252.4092,225.19531,21495.227};
+			position[]={9534.1582,64.758301,20726.15};
 			name="marker_14";
 			type="mil_arrow";
 			colorName="ColorRed";
-			angle=115.12546;
+			angle=91.692253;
 			id=1971;
-			atlOffset=-21.343887;
+			atlOffset=-68.035797;
 		};
 		class Item161
 		{
 			dataType="Marker";
-			position[]={6204.2544,182.66577,20141.639};
+			position[]={8608.0283,50.413513,20368.719};
 			name="marker_15";
 			type="mil_arrow";
 			colorName="ColorRed";
 			angle=130.69466;
 			id=1972;
-			atlOffset=-25.953705;
 		};
 		class Item162
-		{
-			dataType="Marker";
-			position[]={6254.0337,31.550652,22469.268};
-			name="marker_17";
-			type="mil_arrow";
-			colorName="ColorRed";
-			angle=118.16253;
-			id=1974;
-		};
-		class Item163
 		{
 			dataType="Marker";
 			position[]={4590.2549,299.573,21385.471};
@@ -60842,7 +60832,7 @@ class Mission
 			id=1975;
 			atlOffset=0.00039672852;
 		};
-		class Item164
+		class Item163
 		{
 			dataType="Object";
 			class PositionInfo
@@ -60859,7 +60849,7 @@ class Mission
 			id=1982;
 			type="Land_Net_Fence_8m_F";
 		};
-		class Item165
+		class Item164
 		{
 			dataType="Object";
 			class PositionInfo
@@ -60876,7 +60866,7 @@ class Mission
 			id=1983;
 			type="Land_Net_Fence_8m_F";
 		};
-		class Item166
+		class Item165
 		{
 			dataType="Object";
 			class PositionInfo
@@ -60893,61 +60883,316 @@ class Mission
 			type="CUP_O_GAZ_Vodnik_MedEvac_RU";
 			atlOffset=-0.0069885254;
 		};
-		class Item167
+		class Item166
 		{
 			dataType="Marker";
-			position[]={6088.7969,45.293457,21458.955};
-			name="marker_19";
-			markerType="RECTANGLE";
-			type="";
-			a=50;
-			b=1235.8486;
-			angle=180.00002;
-			id=1987;
-			atlOffset=-193.59567;
-		};
-		class Item168
-		{
-			dataType="Marker";
-			position[]={4404.0752,222.28564,20206.385};
-			name="marker_20";
-			markerType="RECTANGLE";
-			type="";
-			a=50;
-			b=1733.6775;
-			angle=271.00366;
-			id=1988;
-			atlOffset=-32.231934;
-		};
-		class Item169
-		{
-			dataType="Marker";
-			position[]={5646.106,159.77707,20700.895};
+			position[]={8508.0361,44.956379,21310.43};
 			name="marker_12";
 			type="Faction_CUP_RU";
 			id=1989;
 		};
-		class Item170
+		class Item167
 		{
 			dataType="Marker";
-			position[]={3277.0781,144.19604,20113.508};
+			position[]={5607.2388,0.69165039,17749.258};
 			name="marker_21";
 			type="mil_ambush";
 			colorName="ColorRed";
-			angle=79.287003;
+			angle=50.700344;
 			id=1990;
-			atlOffset=-2.4353638;
+			atlOffset=-146.54401;
+		};
+		class Item168
+		{
+			dataType="Marker";
+			position[]={4509.752,31.022047,16570.695};
+			name="marker_22";
+			type="mil_ambush";
+			colorName="ColorRed";
+			angle=90.377823;
+			id=1991;
+		};
+		class Item169
+		{
+			dataType="Marker";
+			position[]={8499.7813,143.46216,18618.34};
+			name="marker_24";
+			markerType="RECTANGLE";
+			type="";
+			a=500.3208;
+			b=50;
+			id=1995;
+			atlOffset=2.4494629;
+		};
+		class Item170
+		{
+			dataType="Marker";
+			position[]={8050.73,140.85205,18033.807};
+			name="marker_25";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=533.90137;
+			id=1996;
+			atlOffset=-48.422531;
 		};
 		class Item171
 		{
 			dataType="Marker";
-			position[]={4415.9058,279.29712,20061.74};
-			name="marker_22";
+			position[]={9050.0977,134.62,19284.613};
+			name="marker_26";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=716.48828;
+			id=1997;
+			atlOffset=-112.75128;
+		};
+		class Item172
+		{
+			dataType="Marker";
+			position[]={5100.1455,2.3602002,16349.832};
+			name="marker_27";
+			markerType="RECTANGLE";
+			type="";
+			a=899.96094;
+			b=50;
+			id=1998;
+			atlOffset=-21.470186;
+		};
+		class Item173
+		{
+			dataType="Marker";
+			position[]={5949.9556,54.509216,16950.066};
+			name="marker_28";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=549.92969;
+			id=1999;
+			atlOffset=-57.213066;
+		};
+		class Item174
+		{
+			dataType="Marker";
+			position[]={9500.1484,137.64479,20050.207};
+			name="marker_31";
+			markerType="RECTANGLE";
+			type="";
+			a=500.06982;
+			b=50;
+			id=2002;
+			atlOffset=18.162529;
+		};
+		class Item175
+		{
+			dataType="Marker";
+			position[]={9950.083,155.88391,21249.947};
+			name="marker_32";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=1149.9805;
+			id=2003;
+			atlOffset=89.26606;
+		};
+		class Item176
+		{
+			dataType="Marker";
+			position[]={6438.1406,150.33984,18572.682};
+			name="marker_13";
+			type="Faction_CUP_RU";
+			id=2004;
+		};
+		class Item177
+		{
+			dataType="Marker";
+			position[]={7776.8359,114.00757,18909.895};
+			name="marker_23";
 			type="mil_ambush";
 			colorName="ColorRed";
-			angle=112.25771;
-			id=1991;
-			atlOffset=-20.684998;
+			angle=48.324463;
+			id=2005;
+			atlOffset=-49.746948;
+		};
+		class Item178
+		{
+			dataType="Marker";
+			position[]={8713.2529,65.436768,18933.51};
+			name="marker_30";
+			type="mil_ambush";
+			colorName="ColorRed";
+			angle=46.214348;
+			id=2006;
+			atlOffset=-90.631134;
+		};
+		class Item179
+		{
+			dataType="Marker";
+			position[]={7723.2715,122.54321,17799.316};
+			name="marker_33";
+			type="mil_ambush";
+			colorName="ColorRed";
+			angle=57.917824;
+			id=2007;
+			atlOffset=-64.583984;
+		};
+		class Item180
+		{
+			dataType="Marker";
+			position[]={5652.3926,69.650215,16686.262};
+			name="marker_34";
+			type="mil_ambush";
+			colorName="ColorRed";
+			angle=57.917824;
+			id=2008;
+		};
+		class Item181
+		{
+			dataType="Marker";
+			position[]={9539.5791,14.043458,22002.689};
+			name="marker_19";
+			type="mil_arrow";
+			colorName="ColorRed";
+			angle=90.659622;
+			id=2011;
+		};
+		class Item182
+		{
+			dataType="Marker";
+			position[]={4507.4829,61.212696,16125.833};
+			name="marker_37";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			id=2013;
+		};
+		class Item183
+		{
+			dataType="Marker";
+			position[]={6290.0527,33.616825,16018.103};
+			name="marker_38";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			angle=312.42075;
+			id=2014;
+		};
+		class Item184
+		{
+			dataType="Marker";
+			position[]={6292.8833,140.06299,17152.645};
+			name="marker_39";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			angle=312.42075;
+			id=2015;
+			atlOffset=-0.88145447;
+		};
+		class Item185
+		{
+			dataType="Marker";
+			position[]={8467.6895,138.38745,17036.064};
+			name="marker_40";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			angle=312.42075;
+			id=2016;
+			atlOffset=-8.1315155;
+		};
+		class Item186
+		{
+			dataType="Marker";
+			position[]={8428.333,155.72897,18259.16};
+			name="marker_41";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			angle=312.42075;
+			id=2017;
+			atlOffset=-23.757935;
+		};
+		class Item187
+		{
+			dataType="Marker";
+			position[]={9397.2246,124.17078,18325.934};
+			name="marker_42";
+			type="mil_arrow";
+			colorName="ColorBlue";
+			angle=312.42075;
+			id=2018;
+		};
+		class Item188
+		{
+			dataType="Marker";
+			position[]={9444.9707,171.31532,19724.842};
+			name="marker_36";
+			type="mil_ambush";
+			colorName="ColorBlue";
+			angle=220.62364;
+			id=2019;
+		};
+		class Item189
+		{
+			dataType="Marker";
+			position[]={10313.174,86.565186,20754.285};
+			name="marker_44";
+			type="mil_ambush";
+			colorName="ColorBlue";
+			angle=180.66675;
+			id=2021;
+			atlOffset=-30.819107;
+		};
+		class Item190
+		{
+			dataType="Marker";
+			position[]={10311.724,36.127762,22034.826};
+			name="marker_45";
+			type="mil_ambush";
+			colorName="ColorBlue";
+			angle=178.44225;
+			id=2022;
+		};
+		class Item191
+		{
+			dataType="Marker";
+			position[]={7050.1245,211.18179,17449.912};
+			name="marker_29";
+			markerType="RECTANGLE";
+			type="";
+			a=1050.1152;
+			b=50;
+			id=2000;
+			atlOffset=36.531189;
+		};
+		class Item192
+		{
+			dataType="Marker";
+			position[]={4535.918,18.520561,14693.267};
+			name="marker_43";
+			type="Faction_CUP_NATO";
+			id=2023;
+		};
+		class Item193
+		{
+			dataType="Marker";
+			position[]={7784.2148,93.025024,15841.862};
+			name="marker_46";
+			type="Faction_CUP_NATO";
+			id=2024;
+		};
+		class Item194
+		{
+			dataType="Marker";
+			position[]={10456.102,79.880295,18621.885};
+			name="marker_47";
+			type="Faction_CUP_NATO";
+			id=2025;
+		};
+		class Item195
+		{
+			dataType="Marker";
+			position[]={11659.708,27.646849,22106.6};
+			name="marker_48";
+			type="Faction_CUP_NATO";
+			id=2026;
 		};
 	};
 };
