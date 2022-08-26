@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2725;
+		nextID=2726;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=205;
+		nextID=213;
 	};
 	class Camera
 	{
-		pos[]={9052.7734,95.108978,21699.377};
-		dir[]={0.67107636,-0.44744039,-0.59117031};
-		up[]={0.33574602,0.89431155,-0.29576901};
-		aside[]={-0.66103137,1.8213177e-007,-0.75037861};
+		pos[]={9197.1055,36.120743,21660.063};
+		dir[]={-0.83493745,-0.47184414,-0.28337365};
+		up[]={-0.44682968,0.88166904,-0.15165159};
+		aside[]={-0.32139838,-4.6828063e-008,0.94697672};
 	};
 };
 binarizationWanted=0;
@@ -117,13 +117,14 @@ addons[]=
 	"ace_optics",
 	"CUP_Creatures_Military_Russia",
 	"A3_Weapons_F_Items",
-	"ace_medical_engine"
+	"ace_medical_engine",
+	"CUP_WheeledVehicles_NewSOV"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=71;
+		items=72;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -574,6 +575,11 @@ class AddonsMetaData
 			name="ACE3 - Medical Engine";
 			author="Команда ACE";
 			url="https://ace3.acemod.org/";
+		};
+		class Item71
+		{
+			className="CUP_WheeledVehicles_NewSOV";
+			name="CUP_WheeledVehicles_NewSOV";
 		};
 	};
 };
@@ -1915,7 +1921,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=74;
+		items=75;
 		class Item0
 		{
 			dataType="Layer";
@@ -9638,7 +9644,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8409.7168,59.442284,20834.35};
-						angles[]={0,3.5549238,-0};
+						angles[]={0,3.5549238,0};
 					};
 					side="Empty";
 					flags=5;
@@ -9655,7 +9661,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8433.5166,61.85207,20767.266};
-						angles[]={0,5.8913217,-0};
+						angles[]={0,5.8913217,0};
 					};
 					side="Empty";
 					flags=5;
@@ -9673,7 +9679,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8382.8164,56.028088,20834.842};
-						angles[]={0,5.2701497,-0};
+						angles[]={0,5.2701497,0};
 					};
 					side="Empty";
 					flags=5;
@@ -21934,7 +21940,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Теxника";
-			state=1;
 			class Entities
 			{
 				items=48;
@@ -24583,7 +24588,7 @@ class Mission
 			colorName="ColorRed";
 			angle=57.917824;
 			id=2008;
-			atlOffset=-8.544281;
+			atlOffset=-8.5442734;
 		};
 		class Item38
 		{
@@ -48622,7 +48627,7 @@ class Mission
 			a=553.49469;
 			b=50;
 			id=2627;
-			atlOffset=0.095573425;
+			atlOffset=0.095565796;
 		};
 		class Item72
 		{
@@ -48645,6 +48650,482 @@ class Mission
 			colorName="ColorRed";
 			id=2704;
 			atlOffset=-0.00027084351;
+		};
+		class Item74
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9169.5791,16.7859,21668.676};
+				angles[]={0.0026520467,2.5566137,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				textures="NATOArid";
+			};
+			id=2725;
+			type="CUP_B_nM1025_SOV_M2_USMC_DES";
+			atlOffset=3.8146973e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="VehicleCustomization";
+					expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=2;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="NATOArid";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="ARRAY";
+										class value
+										{
+											items=50;
+											class Item0
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_front_left_antenna";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_front_right_antenna";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_left_antenna";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_right_antenna";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_left_mirror";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_right_mirror";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_brushguard";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item14
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_blue_force_tracker";
+												};
+											};
+											class Item15
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item16
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_jerrycans";
+												};
+											};
+											class Item17
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item18
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_spare_wheel";
+												};
+											};
+											class Item19
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item20
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_spare_wheel_mount";
+												};
+											};
+											class Item21
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item22
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_door_front_left";
+												};
+											};
+											class Item23
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item24
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_door_front_right";
+												};
+											};
+											class Item25
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item26
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_door_rear_left";
+												};
+											};
+											class Item27
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item28
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_door_rear_right";
+												};
+											};
+											class Item29
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item30
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_cip";
+												};
+											};
+											class Item31
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item32
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_view_camera";
+												};
+											};
+											class Item33
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item34
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_radio_small";
+												};
+											};
+											class Item35
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item36
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_radio_large";
+												};
+											};
+											class Item37
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item38
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_old_front_bumper";
+												};
+											};
+											class Item39
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item40
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_old_rear_bumper";
+												};
+											};
+											class Item41
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=1;
+												};
+											};
+											class Item42
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_tarp_roll";
+												};
+											};
+											class Item43
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item44
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_rack_content";
+												};
+											};
+											class Item45
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item46
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_rear_rack";
+												};
+											};
+											class Item47
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+											class Item48
+											{
+												class data
+												{
+													singleType="STRING";
+													value="hide_backpacks";
+												};
+											};
+											class Item49
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
