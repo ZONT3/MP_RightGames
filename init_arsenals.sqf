@@ -41,8 +41,8 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_aa,
-	["AA"],
+	ars_rb,
+	["RB"],
 	"Запросить арсенал 972-й ОРТВ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
@@ -79,5 +79,12 @@
 	ars_india,
 	["India"],
 	"Запросить арсенал 300 Эскдрильи",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_aa,
+	["AA"],
+	"Запросить арсенал 8-го Отдельного Взвода ПВО",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
