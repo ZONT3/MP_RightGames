@@ -1,5 +1,5 @@
 [ _this,
-	ars_msv,
+	ars_mcv,
 	["MCV"],
 	"Запросить арсенал 3-й МСБ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
@@ -13,7 +13,7 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_shatb,
+	ars_shtab,
 	["HQ"],
 	"Запросить арсенал Штаба",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
