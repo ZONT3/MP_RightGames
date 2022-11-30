@@ -27,7 +27,7 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_GRU,
+	ars_gru,
 	["GRU"],
 	"Запросить арсенал 154-й СпН ГРУ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
