@@ -63,11 +63,7 @@ private _fn_moveToCustomSpawn = {
   if _vdv exitWith { [_player, true, 'MP_spawn_vdv'] call _fn_moveToSpawn };
     private _gru = [["GRU"]] call ZONT_fnc_checkRole;
   if _gru exitWith { [_player, true, 'MP_spawn_gru'] call _fn_moveToSpawn };
-   private _train = [["Train"]] call ZONT_fnc_checkRole;
-  if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
-    private _train = [["Train"]] call ZONT_fnc_checkRole;
-  if _train exitWith { [_player, true, 'MP_spawn_train'] call _fn_moveToSpawn };
-    private _mcv = [["MCV"]] call ZONT_fnc_checkRole;
+       private _mcv = [["MCV"]] call ZONT_fnc_checkRole;
   if _mcv exitWith { [_player, true, 'MP_spawn_mcv'] call _fn_moveToSpawn };
     private _aa = [["AA"]] call ZONT_fnc_checkRole;
   if _aa exitWith { [_player, true, 'MP_spawn_aa'] call _fn_moveToSpawn };
