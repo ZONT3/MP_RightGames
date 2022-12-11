@@ -1,7 +1,7 @@
 [ _this,
-	ars_mcv,
-	["MCV"],
-	"Запросить арсенал 3-й МСБ",
+	ars_partizan,
+	["PARTIZAN"],
+	"Запросить арсенал Партизан",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
