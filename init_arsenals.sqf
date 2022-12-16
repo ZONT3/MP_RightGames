@@ -20,9 +20,9 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_vk,
-	["VK"],
-	"Запросить арсенал Военной комендатуры",
+	ars_nk,
+	["NKVD"],
+	"Запросить арсенал НКВД",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
 
