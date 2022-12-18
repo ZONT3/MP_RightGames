@@ -6,20 +6,6 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_aa,
-	["AA"],
-	"Запросить арсенал 292-й ОВП",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
-	ars_shtab,
-	["HQ"],
-	"Запросить арсенал Штаба",
-	[["Здарова", "Hello"], ["Бб", "Бывай"]]
-] call ZONT_fnc_attachArsenal;
-
-[ _this,
 	ars_nk,
 	["NKVD"],
 	"Запросить арсенал НКВД",
@@ -37,5 +23,19 @@
 	ars_vdv,
 	["VDV"],
 	"Запросить арсенал 345-й гвардейский парашютно-десантный полк",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_aa,
+	["AA"],
+	"Запросить арсенал 292-й ОВП",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_shtab,
+	["HQ"],
+	"Запросить арсенал Штаба",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
