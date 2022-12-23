@@ -20,8 +20,8 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_vdv,
-	["VDV"],
+	ars_plen,
+	["PLEN"],
 	"Запросить арсенал 345-й гвардейский парашютно-десантный полк",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;

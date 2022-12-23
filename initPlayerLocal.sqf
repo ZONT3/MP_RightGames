@@ -59,8 +59,8 @@ private _fn_moveToCustomSpawn = {
   params ['_player','_fn_moveToSpawn'];
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
 
-    private _vdv = [["VDV"]] call ZONT_fnc_checkRole;
-  if _vdv exitWith { [_player, true, 'MP_spawn_vdv'] call _fn_moveToSpawn };
+    private _plen = [["PLEN"]] call ZONT_fnc_checkRole;
+  if _plen exitWith { [_player, true, 'MP_spawn_plen'] call _fn_moveToSpawn };
     private _gru = [["GRU"]] call ZONT_fnc_checkRole;
   if _gru exitWith { [_player, true, 'MP_spawn_gru'] call _fn_moveToSpawn };
        private _partizan = [["PARTIZAN"]] call ZONT_fnc_checkRole;
