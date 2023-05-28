@@ -12,7 +12,7 @@ ZONT_fnc_filterVVS = {
   	case "BMO": { VVS_BMO };
   	case "VDV": { VVS_VDV };
 	  case "ART": { VVS_ART };
-	  case "TV": { VVS_TV };
+	  case "REG": { VVS_REG };
   	case "Wheeled": { VVS_Wheeled };
   	case "SWheeled": { VVS_Wheeled_Spec };
 
@@ -55,11 +55,12 @@ ZONT_fnc_onSpawnVVS = {
     case "OPTRE_M412_IFV_UNSC": {
       [_vehicle, "colortan"] call BIS_fnc_initVehicle;
     };
-    case "OPTRE_M413_MGS_UNSC": {
-      [_vehicle, "colortan"] call BIS_fnc_initVehicle;
-    };
-    case "OPTRE_M494": {
-      [_vehicle, "colordes"] call BIS_fnc_initVehicle;
+    case "gm_cz_army_bmp1sp2": {
+      _vehicle removeweaponturret ["gm_maljutka_launcher", [0]];
+      _vehicle removemagazinesturret ["rhs_mag_pg15v_20", [0]];
+      _vehicle removemagazinesturret ["rhs_mag_og15v_20", [0]];
+      _vehicle removemagazinesturret ["gm_1000Rnd_762x54mmR_B_T_7t2_pk", [0]];
+      _vehicle setFuel 0.1;
     };
   };
 };
@@ -72,30 +73,23 @@ VVS_Wheeled = [
 ];
 
 VVS_BMO = [
-  "rhs_tigr_vdv",
-  "rhs_tigr_sts_vdv",
-  "rhs_tigr_m_3camo_vdv",
-  "RHS_Ural_Fuel_VDV_01",
-  "RHS_Ural_Repair_VDV_01",
-  "rhs_gaz66_flat_vdv",
-  "RHS_Ural_VDV_01"
+  "gm_gc_army_uaz469_cargo",
+  "gm_gc_army_ural4320_cargo",
+  "gm_gc_army_ural4320_reammo",
+  "gm_gc_army_ural4320_repair",
+  "gm_gc_army_ural375d_cargo",
+  "gm_gc_army_ural375d_medic"
 ];
 
-VVS_TV = [
-  "rhs_t72be_tv",
-  "rhs_t90sab_tv",
-  "rhs_t80um"
+VVS_REG = [
+  "gm_cz_army_bmp1sp2"
 ];
 
 VVS_ART = [
-  "rhs_2s1_tv"
 ];
 
 VVS_VDV = [
-  "rhs_bmd4ma_vdv",
-  "rhs_bmd4m_vdv",
-  "rhs_btr80a_vdv",
-  "rhs_btr80_vdv"
+
 ];
 
 VVS_Wheeled_Spec = [

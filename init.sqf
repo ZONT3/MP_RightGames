@@ -26,3 +26,12 @@ east setFriend [west, 0];
 east setFriend [resistance, 0];
 resistance setFriend [west, 1];
 resistance setFriend [east, 0];
+
+/*pmp-60
+if (isServer) then {
+    null = [] execVM "truck_load.sqf";
+    null = [] execVM "place_pontoon.sqf";
+
+};*/
+
+[] execVM "briefing.sqf";
