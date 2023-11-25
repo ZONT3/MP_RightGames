@@ -32,16 +32,16 @@ ZONT_fnc_filterVVS = {
 ZONT_fnc_onSpawnVVS = {
   params ["_vehicle", "_class", "_mode"];
 
-  _clearAll = {
+  private _clearAll = {
       _vehicle setVehicleAmmo 0;
       _vehicle setFuel 0.01;
       clearWeaponCargoGlobal _vehicle;
       clearMagazineCargoGlobal _vehicle;
       clearItemCargoGlobal _vehicle;
       clearBackpackCargoGlobal _vehicle;
-  }
+  };
 
-  private _fnc_class = switch (_class) do {
+  switch (_class) do {
     case "OPTRE_M808S": {
       [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
     };
@@ -49,9 +49,9 @@ ZONT_fnc_onSpawnVVS = {
       call _clearAll;
       // [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
     };
-    default: {
+    default {
       call _clearAll;
-    }
+    };
   };
 };
 

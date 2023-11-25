@@ -7,9 +7,37 @@ MPS_spawn_BDINIT = [] spawn {
       ["status"] call ZONT_fnc_bd_initCustom;
   MPS_BDL_lockers =
       ["lockers"] call ZONT_fnc_bd_initCustom;
+  MPS_BDL_garage =
+      ["garage"] call ZONT_fnc_bd_initCustom;
 };
 
 MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
+
+
+/******                             Garage                               ******/
+[] spawn {
+    waitUntil {sleep 1; !isNil {MPS_BDL_garage} && {!isNil {HR_Garage_Init} && {HR_Garage_Init}}};
+    private _contents = [MPS_BDL_garage, "getGarage", []] call ZONT_fnc_bd_customRequest;
+    
+    try { _contents = _contents select 0 select 0 }
+    catch { _contents = nil };
+    if ( isNil '_contents' || { typeName _contents != typeName [] }) exitWith {
+        diag_log "GARAGE LOAD FROM DB ERROR!";
+        diag_log ("Contents: " + !isNil '_contents' && {str _contents} || {'nil'});
+    };
+
+    if (count _contents > 0) then {
+        [[
+            (_contents select 0) apply { createHashMapFromArray _x },
+            _contents#1, _contents#2
+        ]] call HR_Garage_fnc_loadSaveData;
+    };
+
+    while {true} do {
+        sleep 60;
+        [MPS_BDL_garage, "updGarage", [[] call HR_Garage_fnc_getSaveData]] call ZONT_fnc_bd_customRequest;
+    }
+};
 
 
 /******                               ???                                ******/
