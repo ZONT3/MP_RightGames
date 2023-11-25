@@ -40,3 +40,18 @@ private _fortif_list = [
 
 [] spawn ZONT_fnc_ZZL_initServer;
 [] spawn ZONT_fnc_initPresistentCrates;
+
+//["Initialize"] call BIS_fnc_dynamicGroups;
+/*
+[] spawn
+{
+    while {true} do
+    {
+        {
+            sleep 5;
+            _x addCuratorEditableObjects [allPlayers, true];
+            _x addCuratorEditableObjects [vehicles, true];
+            sleep 120;
+        } forEach allCurators;
+    };
+};*/

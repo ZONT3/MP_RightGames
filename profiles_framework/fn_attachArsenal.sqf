@@ -21,7 +21,8 @@ if (isServer) then {
   _unit enableAI "radioprotocol";
   _unit disableAI 'ANIM';
 
-  private _logic = group _unit createUnit ['Logic', getPosATL _unit, [], 0, 'NONE'];                    [_unit, _logic] call BIS_fnc_attachToRelative;
+  private _logic = group _unit createUnit ['Logic', getPosATL _unit, [], 0, 'NONE'];
+  [_unit, _logic] call BIS_fnc_attachToRelative;
   if (isnil {_unit getVariable ["ZARS_ambientAnimations_anims", nil]}) then {
     _unit setVariable ['ZARS_ambientAnimations_anims', ["hubstandingub_idle1","hubstandingub_idle2","hubstandingub_idle3","hubstandingub_move1"]];
     ZONT_fnc_ambientAnimations_play = {

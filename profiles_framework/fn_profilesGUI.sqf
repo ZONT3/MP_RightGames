@@ -16,7 +16,7 @@ if (isNil "_headerOverride") then {
     "<t size='1.2'>Поскольку ты в первый раз зашел на наш сервер, " +
     "убедись, что ты ознакомился с правилами и уставом! <t size='0.8'>[ ссылки кликабельны ]</t><br/>" +
     "<a size='2.9' href='https://discord.gg/HHdQZFE'><img image='pic\dis.paa'/></a><br/>" +
-    "<a size='1.8' href='https://docs.google.com/document/d/13KvnvSIP2fGQsu39qdsHtUesWyb4LCEdPNQrOIkXULo'>" +
+    "<a size='1.8' href='https://docs.google.com/document/d/1f_kZj9vl3tu-Ti-fxIDSyNY5egX43iLTRE6xRcv3iXo'>" +
     "<img image='pic\doc.paa'/><t colorLink='#0788ff' color='#0788ff'> Устав</t></a><br/>" +
     "<t size='0.8'>Ниже выбери подразделение. Если нужное тебе недоступно - свяжись со своим КМД.</t><br/>",
     // "<t size='0.8'>Скорее всего, просто выбери ""Другой"".</t>",

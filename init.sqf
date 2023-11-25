@@ -21,11 +21,11 @@ enableSentences false;
 enableSaving [false, false];
 
 west setFriend [east, 0];
-west setFriend [resistance, 1];
+west setFriend [resistance, 0];
 east setFriend [west, 0];
-east setFriend [resistance, 0];
-resistance setFriend [west, 1];
-resistance setFriend [east, 0];
+east setFriend [resistance, 1];
+resistance setFriend [west, 0];
+resistance setFriend [east, 1];
 
 /*pmp-60
 if (isServer) then {
@@ -34,4 +34,23 @@ if (isServer) then {
 
 };*/
 
-[] execVM "briefing.sqf";
+
+// маркеры для одной стороны
+/*[] spawn {
+    while { !isDedicated } do {
+        waitUntil { sleep 1; alive player};
+        {
+            _arr = _x splitString "_";
+            _pre = _arr select 0;
+            if (_pre in ["WEST","EAST","GUER","CIV"]) then {
+                if (format["%1",side player] == _pre) then {
+                    _x setMarkerAlphaLocal 1;
+                } else {
+                    _x setMarkerAlphaLocal 0;
+                };
+            };
+
+        } count allMapMarkers;
+    };
+};
+*/
