@@ -15,7 +15,7 @@ MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHan
 
 
 /******                             Garage                               ******/
-[] spawn {
+ZXC_GARAGE_SPAWN = [] spawn {
     waitUntil {sleep 1; !isNil {MPS_BDL_garage} && {!isNil {HR_Garage_Init} && {HR_Garage_Init}}};
     private _contents = [MPS_BDL_garage, "getGarage", []] call ZONT_fnc_bd_customRequest;
     
@@ -23,7 +23,7 @@ MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHan
     catch { _contents = nil };
     if ( isNil '_contents' || { typeName _contents != typeName [] }) exitWith {
         diag_log "GARAGE LOAD FROM DB ERROR!";
-        diag_log ("Contents: " + !isNil '_contents' && {str _contents} || {'nil'});
+        diag_log ("Contents: " + (if (!isNil '_contents') then {str _contents} else {'nil'}));
     };
 
     if (count _contents > 0) then {
@@ -39,6 +39,20 @@ MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHan
     }
 };
 
+
+ZXC_LARS_SPAWN = [] spawn {
+    waitUntil {sleep 1; !isNil {MPS_BDL_garage}};
+    
+    ZXC_LARS_OBJECTS = [];
+
+    while {true} do {
+        sleep 60;
+        {
+            _x params ["_object", "_label"];
+            [MPS_BDL_garage, "updArsenal", [_object getVariable ["jna_datalist", []], _label]] call ZONT_fnc_bd_customRequest;
+        } foreach ZXC_LARS_OBJECTS;
+    }
+};
 
 /******                               ???                                ******/
 private _fortif_list = [
