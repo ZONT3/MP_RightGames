@@ -17,25 +17,38 @@ MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHan
 /******                             Garage                               ******/
 ZXC_GARAGE_SPAWN = [] spawn {
     waitUntil {sleep 1; !isNil {MPS_BDL_garage} && {!isNil {HR_Garage_Init} && {HR_Garage_Init}}};
-    private _contents = [MPS_BDL_garage, "getGarage", []] call ZONT_fnc_bd_customRequest;
-    
-    try { _contents = _contents select 0 select 0 }
-    catch { _contents = nil };
-    if ( isNil '_contents' || { typeName _contents != typeName [] }) exitWith {
-        diag_log "GARAGE LOAD FROM DB ERROR!";
-        diag_log ("Contents: " + (if (!isNil '_contents') then {str _contents} else {'nil'}));
-    };
+    private ['_contents'];
+    private _useDatabase = (["CfgConsts"] call BIS_fnc_getCfgIsClass) && {["CfgConsts", "garageDatabase"] call BIS_fnc_getCfgDataBool};
 
-    if (count _contents > 0) then {
-        [[
-            (_contents select 0) apply { createHashMapFromArray _x },
-            _contents#1, _contents#2
-        ]] call HR_Garage_fnc_loadSaveData;
+    if _useDatabase then {
+        _contents = [MPS_BDL_garage, "getGarage", []] call ZONT_fnc_bd_customRequest;
+        try { _contents = _contents select 0 select 0 }
+        catch { _contents = nil };
+        if ( isNil '_contents' || { typeName _contents != typeName [] }) exitWith {
+            diag_log "GARAGE LOAD FROM DB ERROR!";
+            diag_log ("Contents: " + (if (!isNil '_contents') then {str _contents} else {'nil'}));
+        };
+
+        if (count _contents > 0) then {
+            [[
+                (_contents select 0) apply { createHashMapFromArray _x },
+                _contents#1, _contents#2
+            ]] call HR_Garage_fnc_loadSaveData;
+        };
+    } else {
+        _contents = profileNamespace getVariable ["HR_garage_content", []];
+        [_contents] call HR_Garage_fnc_loadSaveData;
     };
 
     while {true} do {
         sleep 60;
-        [MPS_BDL_garage, "updGarage", [[] call HR_Garage_fnc_getSaveData]] call ZONT_fnc_bd_customRequest;
+
+        if _useDatabase then {
+            [MPS_BDL_garage, "updGarage", [[] call HR_Garage_fnc_getSaveData]] call ZONT_fnc_bd_customRequest;
+        } else {
+            profileNamespace setVariable ["HR_garage_content", [] call HR_Garage_fnc_getSaveData];
+            saveProfileNamespace;
+        };
     }
 };
 
