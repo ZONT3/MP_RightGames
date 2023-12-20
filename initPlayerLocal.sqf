@@ -138,4 +138,4 @@ MPH_DisplyChecker = [{
 
 [] spawn ZONT_fnc_ZZL_initPlayer;
 
-//["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
+["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;

@@ -55,7 +55,7 @@ ZXC_GARAGE_SPAWN = [] spawn {
 
 ZXC_LARS_SPAWN = [] spawn {
     waitUntil {sleep 1; !isNil {MPS_BDL_garage}};
-    
+
     ZXC_LARS_OBJECTS = [];
 
     while {true} do {
@@ -96,7 +96,7 @@ private _fortif_list = [
 [] spawn ZONT_fnc_ZZL_initServer;
 [] spawn ZONT_fnc_initPresistentCrates;
 
-//["Initialize"] call BIS_fnc_dynamicGroups;
+["Initialize"] call BIS_fnc_dynamicGroups;
 /*
 [] spawn
 {

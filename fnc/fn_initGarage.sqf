@@ -11,7 +11,7 @@ private _id = _object addAction [
         createDialog 'HR_Garage_VehicleSelect';
     ", nil, 1.5, true, true, ""
     , "
-	([['Logistics', 'HQ']] call ZONT_fnc_checkRole)
+	([['Logistics', 'HQ', 'VDVG', 'MVDG', 'USMCG', 'KGB']] call ZONT_fnc_checkRole)
 	&& {
 		((isNil {HR_Garage_Placing}) || {!HR_Garage_Placing})
 		&& player isEqualTo vehicle player

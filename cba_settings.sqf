@@ -259,7 +259,7 @@ force ace_medical_spontaneousWakeUpEpinephrineBoost = 30;
 force ace_medical_statemachine_AIUnconsciousness = false;
 force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force ace_medical_statemachine_cardiacArrestTime = 3600;
-force ace_medical_statemachine_fatalInjuriesAI = 0;
+force ace_medical_statemachine_fatalInjuriesAI = 1;
 force ace_medical_statemachine_fatalInjuriesPlayer = 1;
 force ace_medical_treatment_advancedBandages = 2;
 force ace_medical_treatment_advancedDiagnose = 2;
@@ -540,7 +540,7 @@ force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 // ACE Ð ÐµÐ¼Ð¾Ð½Ñ‚
 force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = false;
-force ace_repair_consumeItem_toolKit = 1;
+force ace_repair_consumeItem_toolKit = 0;
 force ace_repair_displayTextOnRepair = true;
 ace_repair_enabled = true;
 force ace_repair_engineerSetting_fullRepair = 0;
@@ -1182,7 +1182,7 @@ force greenmag_main_CBAS_simpleGM = true;
 // HR Garage
 force HR_Garage_dLock = false;
 force HR_Garage_PoolBase = 25;
-force HR_Garage_Pylons_Enabled = true;
+force HR_Garage_Pylons_Enabled = false;
 force HR_Garage_renderPlacementRays = false;
 force HR_Garage_ServiceDisabled_Rearm = true;
 force HR_Garage_ServiceDisabled_Refuel = true;
@@ -1791,3 +1791,22 @@ zen_faction_filter_3_plpCat_BeachObjects = true;
 force zen_faction_filter_3_UK3CB_ADC_C = true;
 force zen_faction_filter_3_UK3CB_CHC_C = true;
 zen_faction_filter_3_UK3CB_TKC_C = true;
+
+
+// Simplex Support Services
+SSS_setting_adminFullAccess = true;
+SSS_setting_adminLimitSide = false;
+SSS_setting_cleanupCrew = true;
+SSS_setting_deleteVehicleOnEntityRemoval = false;
+force SSS_setting_directActionRequirement = true;
+force SSS_setting_GiveUAVTerminal = false;
+force SSS_setting_milsimModeArtillery = true;
+force SSS_setting_milsimModeCAS = true;
+force SSS_setting_milsimModeLogistics = true;
+force SSS_setting_milsimModeTransport = true;
+SSS_setting_removeSupportOnVehicleDeletion = true;
+SSS_setting_resetVehicleOnRTB = true;
+SSS_setting_restoreCrewOnRTB = true;
+SSS_setting_slingLoadSearchRadius = 100;
+SSS_setting_slingLoadWhitelist = "";
+SSS_setting_useChatNotifications = false;
