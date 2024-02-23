@@ -6,8 +6,8 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_kgb,
-	["KGB" , "HQ"],
-	"Запросить арсенал КГБ",
+	ars_336,
+	["MVD" , "MVDG" , "HQ"],
+	"Запросить арсенал 336 ОГБМП",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
