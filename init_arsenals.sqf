@@ -11,3 +11,10 @@
 	"Запросить арсенал 336 ОГБМП",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_rg,
+	["RG" , "RGG" , "HQ"],
+	"Запросить арсенал разведки",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
