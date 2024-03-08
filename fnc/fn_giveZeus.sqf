@@ -13,7 +13,7 @@ if (not _ignoreRestrictions) then {
   if _onlyCivs then {
     if not (_uid in [
       "76561198331557593", // Basuda
-      "76561198267425745", // Ilyusha
+      //"76561198267425745", // Ilyusha
       "76561198122600375" // Timurka
     ]) then {
       if (side _player != civilian) exitWith {
@@ -21,7 +21,7 @@ if (not _ignoreRestrictions) then {
       };
     };
   };
-}
+};
 
 if (isNil 'MP_zuus') exitWith { ["GiveZeus: MP_zuus is absent!"] call BIS_fnc_error };
 
