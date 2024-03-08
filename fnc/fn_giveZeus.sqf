@@ -1,7 +1,28 @@
-params ["_player"];
+params [["_player", objNull, [objNull]], ["_ignoreRestrictions", false, [false]]];
 if (!isServer) exitWith {};
+if (isNull _player) exitWith {};
+
 private _uid = getPlayerUID _player;
 if (_uid == "") exitWith {};
+
+// Калообрáзный костыль 🤡
+if (not _ignoreRestrictions) then {
+  private _curators = call ZONT_fnc_retrieveCurators;
+  if not (_uid in _curators) exitWith { };
+  private _onlyCivs = (["CfgConsts"] call BIS_fnc_getCfgIsClass) && {["CfgConsts", "zeusOnlyOnCivillian"] call BIS_fnc_getCfgDataBool};
+  if _onlyCivs then {
+    if not (_uid in [
+      "76561198331557593", // Basuda
+      "76561198267425745", // Ilyusha
+      "76561198122600375" // Timurka
+    ]) then {
+      if (side _player != civilian) exitWith {
+        ["Зевс доступен только на слотах гражданских"] remoteExec ["systemChat", _player];
+      };
+    };
+  };
+}
+
 if (isNil 'MP_zuus') exitWith { ["GiveZeus: MP_zuus is absent!"] call BIS_fnc_error };
 
 private _var = format ["MPS_C_%1", _uid];
