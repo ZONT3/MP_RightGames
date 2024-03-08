@@ -1,3 +1,5 @@
+/*
+
 [ _this,
 	ars_ger,
 	["FRG" , "US"],
@@ -18,3 +20,5 @@
 	"Запросить арсенал USMC",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+
+*\
