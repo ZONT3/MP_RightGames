@@ -6,6 +6,7 @@ private _uid = getPlayerUID _player;
 if (_uid == "") exitWith {};
 
 // Калообрáзный костыль 🤡
+private _leave = false;
 if (not _ignoreRestrictions) then {
   private _curators = call ZONT_fnc_retrieveCurators;
   if not (_uid in _curators) exitWith { };
@@ -18,11 +19,13 @@ if (not _ignoreRestrictions) then {
     ]) then {
       if (side _player != civilian) exitWith {
         ["Зевс доступен только на слотах гражданских"] remoteExec ["systemChat", _player];
+        _leave = true;
       };
     };
   };
 };
 
+if (_leave) exitWith {};
 if (isNil 'MP_zuus') exitWith { ["GiveZeus: MP_zuus is absent!"] call BIS_fnc_error };
 
 private _var = format ["MPS_C_%1", _uid];
