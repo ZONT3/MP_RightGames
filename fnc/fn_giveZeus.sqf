@@ -5,7 +5,7 @@ if (isNull _player) exitWith {};
 private _uid = getPlayerUID _player;
 if (_uid == "") exitWith {};
 
-// Калообрáзный костыль 🤡
+// Калообрáзный костыль
 private _leave = false;
 if (not _ignoreRestrictions) then {
   private _curators = call ZONT_fnc_retrieveCurators;
