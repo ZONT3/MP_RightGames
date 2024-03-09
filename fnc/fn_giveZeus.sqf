@@ -9,7 +9,7 @@ if (_uid == "") exitWith {};
 private _leave = false;
 if (not _ignoreRestrictions) then {
   private _curators = call ZONT_fnc_retrieveCurators;
-  if not (_uid in _curators) exitWith { };
+  if not (_uid in _curators) exitWith { _leave = true; };
   private _onlyCivs = (["CfgConsts"] call BIS_fnc_getCfgIsClass) && {["CfgConsts", "zeusOnlyOnCivillian"] call BIS_fnc_getCfgDataBool};
   if _onlyCivs then {
     if not (_uid in [
