@@ -9,6 +9,8 @@ waitUntil {vehicle player == player};
 //[] spawn ZONT_fnc_addReverse;
 [] spawn ZONT_fnc_PlaneReverse;
 
+[] execVM "external\intro.sqf";
+
 [] execVM "chatCommands.sqf";
 
 [] execVM "initPlayerAfterRespawn.sqf";
@@ -60,14 +62,12 @@ private _fn_moveToCustomSpawn = {
   params ['_player','_fn_moveToSpawn'];
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
 
-  private _bso = [["ARC" , "ARCP" , "ARCE" , "ARF" , "ARFP" , "AARFE" , "RC" , "RCP" , "RCE"]] call ZONT_fnc_checkRole;
-  if _bso exitWith { [_player, true, 'mp_spawn_bso'] call _fn_moveToSpawn };
-  private _cgu = [["CGU" , "CGP" , "CGE"]] call Zont_fnc_checkrole;
-  if _cgu exitWith { [_player, true, 'mp_spawn_cgu'] call _fn_moveToSpawn };
-  private _pmc = [["PMC"]] call Zont_fnc_checkrole;
-  if _pmc exitWith { [_player, true, 'mp_spawn_pmc'] call _fn_moveToSpawn };
-  private _srg = [["SRG"]] call Zont_fnc_checkrole;
-  if _srg exitWith { [_player, true, 'mp_spawn_srg'] call _fn_moveToSpawn };
+  private _vse = [["VDV" , "RG" , "MP"]] call ZONT_fnc_checkRole;
+  if _vse exitWith { [_player, true, 'mp_spawn_vse'] call _fn_moveToSpawn };
+  private _hq = [["HQ"]] call Zont_fnc_checkrole;
+  if _hq exitWith { [_player, true, 'mp_spawn_hq'] call _fn_moveToSpawn };
+  private _fsb = [["MVD"]] call Zont_fnc_checkrole;
+  if _fsb exitWith { [_player, true, 'mp_spawn_fsb'] call _fn_moveToSpawn };
 };
 
 private _fn_moveToSpawn = {
