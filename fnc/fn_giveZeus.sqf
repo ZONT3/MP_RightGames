@@ -16,9 +16,6 @@ if (not _ignoreRestrictions) then {
       "76561198331557593", // Basuda
       "76561198267425745", // Ilyusha
       "76561198122600375", // Timurka
-      "76561198049381049", // Ilyusha Ghost
-      "76561199012036762", // Девченка
-      "76561198267661737" // Дед
     ]) then {
       if (side _player != civilian) exitWith {
         ["Зевс доступен только на слотах гражданских"] remoteExec ["systemChat", _player];

@@ -6,7 +6,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в Северной Германии","size = '0.7'"],
+				["Где-то в центральной Африке","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -20,7 +20,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в Северной Германии","size = '0.7'"],
+				["Где-то в центральной Африке","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -34,7 +34,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в Северной Германии","size = '0.7'"],
+				["Где-то в центральной Африке","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -48,7 +48,7 @@ switch (playerSide) do
 };
 
 sleep 20;
-_role1 = "Добро пожаловать на Right Games | Millitary";
+_role1 = "Добро пожаловать на Right Games";
 _role1names = [profileName];
 _role2 = "Игровой проект Right Games";
 _role2names = ["Лучший проект в Arma 3"];
