@@ -73,10 +73,11 @@ class CfgFunctions {
   };
   #include "external\VVS\Functions.ext"
   #include "external\JeroenArsenal\functions.hpp"
+  #include "HG\Functions\HG_Functions.h"
 };
 
 class CfgSounds {
-  sounds[] = {};
+  #include "HG\Sounds\HG_Sounds.h"
 };
 
 author			  = "RG Team";
@@ -142,6 +143,7 @@ class CfgDebriefing {
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };
+  #include "HG\Config\HG_Debriefing.h"
 };
 
 class CfgConsts {
@@ -164,3 +166,22 @@ class CfgDiscordRichPresence {
 };
 
 zeusCompositionScriptLevel = 2;
+
+__EXEC(HG_Profile = allVariables profileNamespace)
+
+/*
+    Classes
+*/
+
+#include "HG\UI\HG_DialogsMaster.h"
+
+class RscTitles
+{
+    #include "HG\UI\Dialogs\HG_HUD.h"
+	#include "HG\UI\Dialogs\HG_Tags.h"
+};
+
+class CfgClient
+{
+    #include "HG\Config\HG_Config.h"
+};

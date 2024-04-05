@@ -12,11 +12,11 @@ private _id = _object addAction [
     ", nil, 1.5, true, true, ""
     , "
 	([['Logistics', 'HQ', 'PMC']] call ZONT_fnc_checkRole)
-	&& {D
+	&& {
 		((isNil {HR_Garage_Placing}) || {!HR_Garage_Placing})
 		&& player isEqualTo vehicle player
 	}
-    ", 3
+    ", 6
 ];
 _object setVariable ["HR_Garage_GarageID", _id, true];
 

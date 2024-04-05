@@ -97,6 +97,8 @@ private _fortif_list = [
 [] spawn ZONT_fnc_initPresistentCrates;
 
 ["Initialize"] call BIS_fnc_dynamicGroups;
+
+[] execVM "HG\Setup\fn_serverInitialization.sqf";
 /*
 [] spawn
 {

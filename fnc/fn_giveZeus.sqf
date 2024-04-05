@@ -15,7 +15,7 @@ if (not _ignoreRestrictions) then {
     if not (_uid in [
       "76561198331557593", // Basuda
       "76561198267425745", // Ilyusha
-      "76561198122600375", // Timurka
+      "76561198122600375" // Timurka
     ]) then {
       if (side _player != civilian) exitWith {
         ["Зевс доступен только на слотах гражданских"] remoteExec ["systemChat", _player];
