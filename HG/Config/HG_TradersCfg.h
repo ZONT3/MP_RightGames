@@ -20,10 +20,10 @@ class HG_DefaultTrader // HG_DefaultTrader is just a placeholder for testing pur
 
 	interestedIn[] =
 	{
-		{"ItemMap",50},
-		{"ItemRadio",50},
-		{"ItemCompass",50},
-		{"ACE_Banana",10},
+		{"ItemMap", 50},
+		{"ItemRadio", 50},
+		{"ItemCompass", 50},
+		{"ACE_Banana", 10},
 		{"ACE_WaterBottle", 50},
 		{"ACE_personalAidKit", 500},
 		{"ACE_adenosine", 100},
@@ -42,7 +42,7 @@ class HG_DefaultTrader // HG_DefaultTrader is just a placeholder for testing pur
 		{"ACE_plasmaIV_250", 100},
 		{"ACE_plasmaIV_500", 200},
 		{"ACE_elasticBandage", 10},
-		{"ACE_fieldDressing",, 10},
+		{"ACE_fieldDressing", 10},
 		{"ACE_packingBandage", 10},
 		{"ACE_surgicalKit", 1000},
 		{"ACE_splint", 50},
