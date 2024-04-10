@@ -27,6 +27,14 @@ east setFriend [resistance, 0];
 resistance setFriend [west, 0];
 resistance setFriend [east, 0];
 
+_Per_Frame_Handler = [{
+    {
+        if (isnil {_x getVariable "HG_RG_EventHandler_AI_activ"}) then {
+            _x setVariable ["HG_RG_EventHandler_AI_activ", true, true];
+            [_x] call HG_fnc_aiUnitSetup;
+        };
+    }forEach allUnits;
+}, 1] call CBA_fnc_addPerFrameHandler;
 
 /*pmp-60
 if (isServer) then {

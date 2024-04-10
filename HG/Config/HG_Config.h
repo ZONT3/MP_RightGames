@@ -82,7 +82,7 @@ hudType = 1;
 enablePaycheck = true;
 enableKillReward = true;
 enableDeathPenalty = true;
-enableTeamKillPenalty = false;
+enableTeamKillPenalty = true;
 enableCrate = true;
 enableGiveMoney = true;
 enableBuyToGarage = false;
@@ -131,8 +131,8 @@ class HG_MasterCfg
 		startBank = 0;
 		killedReward = 100;
 		xpPenaltyDeath = 25;
-		tkPenaltyPlayer = 500;
-		tkPenaltyAI = 250;
+		tkPenaltyPlayer = 1000;
+		tkPenaltyAI = 1000;
 		xpPenaltyPlayer = 10;
 		xpPenaltyAI = 5;
 		xpReward = 10;
@@ -150,7 +150,7 @@ class HG_MasterCfg
 		killedReward = 100;
 		xpPenaltyDeath = 50;
 		tkPenaltyPlayer = 1000;
-		tkPenaltyAI = 500;
+		tkPenaltyAI = 1000;
 		xpPenaltyPlayer = 20;
 		xpPenaltyAI = 10;
 		xpReward = 20;
@@ -168,7 +168,7 @@ class HG_MasterCfg
 		killedReward = 100;
 		xpPenaltyDeath = 75;
 		tkPenaltyPlayer = 1500;
-		tkPenaltyAI = 750;
+		tkPenaltyAI = 1000;
 		xpPenaltyPlayer = 30;
 		xpPenaltyAI = 15;
 		xpReward = 30;
