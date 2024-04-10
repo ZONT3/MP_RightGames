@@ -15,6 +15,8 @@ waitUntil {vehicle player == player};
 
 [] execVM "initPlayerAfterRespawn.sqf";
 
+[] execVM "claimVehicle.sqf";
+
 /******                            Zeus list                             ******/
 /* MCH_ZEUS_LIST = [{
   if (isnull (finddisplay 312)) exitWith {};

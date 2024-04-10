@@ -84,7 +84,7 @@ enableKillReward = true;
 enableDeathPenalty = true;
 enableTeamKillPenalty = false;
 enableCrate = true;
-enableGiveMoney = false;
+enableGiveMoney = true;
 enableBuyToGarage = false;
 clearInventory = false;
 storeVehiclesOnDisconnect = true;
@@ -107,12 +107,12 @@ whitelistSides[] = {"east"};
 admins[] = {"_SP_PLAYER_","76561198331557593"};
 
 /* KEYS */
-atmKey = 0x14;
-lockUnlockKey = 0x15;
-giveMoneyKey = 0x23;
-giveKeyKey = 0x21;
-adminKey = 0x3E;
-hudKey = 0x37;
+atmKey = 0x14; /* Кнопка T*/ 
+lockUnlockKey = 0x41; /* Кнопка F7*/ 
+giveMoneyKey = 0x24; /* Кнопка J*/ 
+giveKeyKey = 0x21; /* Кнопка F*/ 
+adminKey = 0x3E; /* Кнопка F4*/ 
+hudKey = 0x40; /* Кнопка F6*/
 
 /* SAVING */
 savingMethod = "Profile";
