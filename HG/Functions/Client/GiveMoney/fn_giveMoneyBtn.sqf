@@ -18,6 +18,8 @@ hint format[(localize "STR_HG_SENT_MONEY"),([_value,true] call HG_fnc_currencyTo
 private _msg = format[(localize "STR_HG_RECEIVED_MONEY"),([_value,true] call HG_fnc_currencyToText),profileName];
 _msg remoteExecCall ["hint",HG_CURSOR_OBJECT,false];
 
+format ["[HG MONEY TRANSFER] %1 -> %2: %3", name profileName, name HG_CURSOR_OBJECT, [_value,true] call HG_fnc_currencyToText] remoteExecCall ["diag_log",2,false];
+
 closeDialog 0;
 
 true;

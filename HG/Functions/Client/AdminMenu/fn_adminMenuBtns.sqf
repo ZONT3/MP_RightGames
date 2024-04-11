@@ -17,6 +17,15 @@ if(_mode in [0,1,2,3]) then
 	if(_value <= 0) exitWith {hint (localize "STR_HG_NEGATIVE_OR_ZERO");};
 };
 
+private _log_money = {
+	format [
+		"[HG MONEY ADMIN SET] %1 -> %2: %3 %4", 
+		name profileName, name HG_OBJECT,
+		if (_this) then {"-"} else {"+"},
+		[_value,true] call HG_fnc_currencyToText
+	] remoteExecCall ["diag_log",2,false];
+};
+
 switch(_mode) do
 {
 	// Set XP
@@ -56,6 +65,8 @@ switch(_mode) do
 		} else {
 		    [_value,0] remoteExecCall ["HG_fnc_addOrSubCash",HG_OBJECT,false];
 		};
+
+		(cbChecked HG_ADM_CASH_SUB) call _log_money;
 		
 		HG_ADM_CASH_EDIT ctrlSetText "1";
 	};
@@ -69,6 +80,8 @@ switch(_mode) do
 		    [_value,0,1] remoteExecCall ["HG_fnc_addOrSubCash",HG_OBJECT,false];
 		};
 		
+		(cbChecked HG_ADM_CASH_SUB) call _log_money;
+
 		HG_ADM_BANK_EDIT ctrlSetText "1";
 	};
 	// Kill
