@@ -551,4 +551,44 @@ class HG_DefaultShop {
     };
   };
 
+  class Grenade {
+    displayName = "$STR_HG_SHOP_GRENADE";
+    items[] = {
+      {"ACE_Chemlight_White", 2, "true"},
+      {"ACE_Chemlight_IR", 2, "true"},
+      {"ACE_Chemlight_Orange", 2, "true"},
+      {"ACE_Chemlight_UltraHiOrange", 2, "true"},
+      {"ACE_Chemlight_HiYellow", 2, "true"},
+      {"ACE_Chemlight_HiGreen", 2, "true"},
+      {"ACE_Chemlight_HiRed", 2, "true"},
+      {"ACE_Chemlight_HiWhite", 2, "true"},
+      {"SmokeShellYellow", 3, "true"},
+      {"SmokeShellGreen", 3, "true"},
+      {"SmokeShellRed", 3, "true"},
+      {"SmokeShellOrange", 3, "true"},
+      {"SmokeShellPurple", 3, "true"},
+      {"SmokeShellBlue", 3, "true"},
+      {"CUP_HandGrenade_RGD5", 5, "true"},
+      {"CUP_HandGrenade_M67", 6, "true"},
+      {"CUP_HandGrenade_RGO", 7, "true"},
+      {"ACE_CTS9", 7, "true"},
+      {"CUP_HandGrenade_L109A1_HE", 10, "true"},
+      {"CUP_HandGrenade_L109A2_HE", 10, "true"}
+    };
+  };
+
+  class Drones {
+    displayName = "$STR_HG_SHOP_DRONES";
+    items[] = {
+      {"Mavic_F1", 7, "true"},
+      {"Mavic_Vog25", 10, "true"},
+      {"mavick_M67_Impact_Grenade", 10, "true"},
+      {"mavick_V40_Impact_Grenade", 10, "true"},
+      {"Mavic_M433", 50, "true"},
+      {"Item_Mavic", 200, "true"},
+      {"Item_Mavic3T", 400, "true"},
+      {"LD_Colibri_Mag", 500, "true"}
+    };
+  };
+
 };
