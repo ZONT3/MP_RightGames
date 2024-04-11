@@ -19,7 +19,7 @@ if(_mode in [0,1,2,3]) then
 
 private _log_money = {
 	[format [
-		"%1 -> %2 (%3): %4 %5", 
+		"%1 -> %2 (%3) %4 %5", 
 		profileName, name HG_OBJECT, getPlayerUID HG_OBJECT,
 		if (_this) then {"-"} else {"+"},
 		[_value,true] call HG_fnc_currencyToText

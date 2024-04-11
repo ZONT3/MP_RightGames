@@ -43,6 +43,16 @@ switch(_mode) do
 	    private _unit = HG_TEMP_ARRAY select (HG_ATM_PLAYERS_COMBO lbValue (lbCurSel HG_ATM_PLAYERS_COMBO));
 		
 	    [_amount,1,1] call HG_fnc_addOrSubCash;
+
+		[format 
+		[
+			"%1 -> %2 (%3) %4",
+			profileName,
+			name _unit,
+			getPlayerUID _unit,
+			[_amount,true] call HG_fnc_currencyToText
+		], "HG Money Transfer", getPlayerUID player] remoteExecCall ["ZONT_fnc_log",2,false];
+
 		
 		hint format[(localize "STR_HG_ATM_TRANSFERED"),([_amount,true] call HG_fnc_currencyToText),(name _unit)];
 		[profileName,_amount] remoteExecCall ["HG_fnc_atmReceived",_unit,false];

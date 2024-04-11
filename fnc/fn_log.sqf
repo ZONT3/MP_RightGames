@@ -1,4 +1,4 @@
-params ["_text", "_type", "_uid"]
+params ["_text", "_type", "_uid"];
 
 if (!isServer) exitWith {};
 

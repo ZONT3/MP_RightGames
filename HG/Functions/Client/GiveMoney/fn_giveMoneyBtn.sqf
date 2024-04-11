@@ -19,7 +19,7 @@ private _msg = format[(localize "STR_HG_RECEIVED_MONEY"),([_value,true] call HG_
 _msg remoteExecCall ["hint",HG_CURSOR_OBJECT,false];
 
 [format [
-    "%1 -> %2 (%3): %4",
+    "%1 -> %2 (%3) %4",
     profileName,
     name HG_CURSOR_OBJECT,
     getPlayerUID HG_CURSOR_OBJECT,

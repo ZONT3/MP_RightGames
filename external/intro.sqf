@@ -47,13 +47,13 @@ switch (playerSide) do
 	case civilian: {};
 };
 
-sleep 20;
+sleep 15;
 _role1 = "Добро пожаловать на Right Games";
 _role1names = [profileName];
 _role2 = "Игровой проект Right Games";
 _role2names = ["Лучший проект в Arma 3"];
 _role3 = "Руководитель проекта - Москва";
-_role3names = "Техническая администрация - повесилась"
+_role3names = ["Техническая администрация - повесилась"];
 _role4 = "Посетите нашу группу VK";
 _role4names = ["https://vk.com/rgssww"];
 _role5 = "Присоединяйтесь к Discord";
