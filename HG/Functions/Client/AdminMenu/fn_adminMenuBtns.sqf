@@ -18,12 +18,12 @@ if(_mode in [0,1,2,3]) then
 };
 
 private _log_money = {
-	format [
-		"[HG MONEY ADMIN SET] %1 -> %2: %3 %4", 
-		name profileName, name HG_OBJECT,
+	[format [
+		"%1 -> %2 (%3): %4 %5", 
+		profileName, name HG_OBJECT, getPlayerUID HG_OBJECT,
 		if (_this) then {"-"} else {"+"},
 		[_value,true] call HG_fnc_currencyToText
-	] remoteExecCall ["diag_log",2,false];
+	], "HG Money Admin", getPlayerUID player] remoteExecCall ["ZONT_fnc_log",2,false];
 };
 
 switch(_mode) do

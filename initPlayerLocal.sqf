@@ -115,7 +115,7 @@ MPH_DisplyChecker = [{
   MPC_DISPLAY_OPENED = createHashMapFromArray _tmp;
   _report spawn {
     {
-      [format ["%1 [%2] OPENED %3", name player, getPlayerUID player, _this]] remoteExec ["ZONT_fnc_log", 2];
+      [_x, "Display opened", getPlayerUID player] remoteExec ["ZONT_fnc_log", 2];
     } forEach _this;
   };
 }, 1] call CBA_fnc_addPerFrameHandler;

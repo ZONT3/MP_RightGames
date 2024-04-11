@@ -9,6 +9,8 @@ MPS_spawn_BDINIT = [] spawn {
       ["lockers"] call ZONT_fnc_bd_initCustom;
   MPS_BDL_garage =
       ["garage"] call ZONT_fnc_bd_initCustom;
+  MPS_BDL_logs =
+      ["log"] call ZONT_fnc_bd_initCustom;
 };
 
 MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
