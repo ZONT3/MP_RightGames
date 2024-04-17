@@ -6,7 +6,6 @@ class HG_DefaultShop {
     items[] = {
       {"immersion_pops_poppack", 1, "true"},
       {"murshun_cigs_matches", 3, "true"},
-      {"ACE_CableTie", 3, "true"},
       {"ACE_RangeTable_82mm", 7, "true"},
       {"ACE_IR_Strobe_Item", 10, "true"},
       {"murshun_cigs_cigpack", 12, "true"},

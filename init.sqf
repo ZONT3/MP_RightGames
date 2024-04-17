@@ -36,6 +36,34 @@ _Per_Frame_Handler = [{
     }forEach allUnits;
 }, 1] call CBA_fnc_addPerFrameHandler;
 
+0 = [] spawn { 
+    while{true} do { 
+        { 
+            if(_x distance (getMarkerPos "safe_zone") < 200) then {_x allowDamage false} else {_x allowDamage true}; 
+        } forEach allUnits + vehicles; 
+        sleep 1; 
+    }; 
+};
+
+0 = [] spawn { 
+    while{true} do { 
+        { 
+            if(_x distance (getMarkerPos "safe_zone_1") < 50) then {_x allowDamage false} else {_x allowDamage true}; 
+        } forEach allUnits + vehicles; 
+        sleep 1; 
+    }; 
+};
+
+0 = [] spawn { 
+    while{true} do { 
+        { 
+            if(_x distance (getMarkerPos "safe_zone_2") < 50) then {_x allowDamage false} else {_x allowDamage true}; 
+        } forEach allUnits + vehicles; 
+        sleep 1; 
+    }; 
+};
+
+
 /*pmp-60
 if (isServer) then {
     null = [] execVM "truck_load.sqf";
