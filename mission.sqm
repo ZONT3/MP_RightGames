@@ -5,29 +5,29 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1546;
+	toggles=641;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=15930;
+		nextID=15952;
 	};
 	class MarkerIDProvider
 	{
-		nextID=39;
+		nextID=40;
 	};
 	class LayerIndexProvider
 	{
-		nextID=6243;
+		nextID=6361;
 	};
 	class Camera
 	{
-		pos[]={6690.8276,11.900158,1241.2631};
-		dir[]={-0.81724715,-0.53157568,0.222663};
-		up[]={-0.51288438,0.84700626,0.13973735};
-		aside[]={0.2628769,-4.5518391e-008,0.96485102};
+		pos[]={6693.3013,19.898863,1297.3591};
+		dir[]={-0.38814443,-0.42475396,0.81788021};
+		up[]={-0.1821101,0.90530884,0.38373408};
+		aside[]={0.90342677,0,0.42874259};
 	};
 };
 binarizationWanted=0;
@@ -257,13 +257,14 @@ addons[]=
 	"A3_Air_F_Orange_UAV_06",
 	"A3_Characters_F_Exp_Civil",
 	"A3_Characters_F_AoW",
-	"CUP_WheeledVehicles_Datsun"
+	"CUP_WheeledVehicles_Datsun",
+	"CUP_Ind_Garage01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=118;
+		items=119;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -992,6 +993,11 @@ class AddonsMetaData
 		{
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
+		};
+		class Item118
+		{
+			className="CUP_Ind_Garage01";
+			name="CUP_Ind_Garage01";
 		};
 	};
 };
@@ -3996,7 +4002,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=573;
+		items=578;
 		class Item0
 		{
 			dataType="Marker";
@@ -72298,14 +72304,134 @@ class Mission
 			dataType="Layer";
 			name="магазины (HG shop)";
 			id=15925;
-			atlOffset=0.012699842;
+			atlOffset=-23.449951;
 		};
 		class Item572
 		{
 			dataType="Layer";
 			name="HGShop";
 			id=15929;
-			atlOffset=-8.7976456e-005;
+			atlOffset=-23.449951;
+		};
+		class Item573
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6681.0088,4.0828075,1321.319};
+				angles[]={0.012217305,4.6882687,6.275785};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this addAction[""<img image='HG\UI\Icons\garage.paa' size='2' shadow='0'/><t color='#FF0000' font='RobotoCondensedBold'>""+(localize ""STR_HG_GARAGE"")+""</t>"",{_this call HG_fnc_dialogOnLoadGarage},""HG_DefaultGarage"",0,false,false,"""",'(alive player) && !dialog && player distance _target < 3'];";
+				name="garage";
+				dynamicSimulation=1;
+			};
+			id=15947;
+			type="Land_Ind_Garage01";
+			atlOffset=2.3841858e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="DoorStates";
+					expression="['init',_this,_value] call bis_fnc_3DENAttributeDoorStates;";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item574
+		{
+			dataType="Marker";
+			position[]={6689.644,2.6440001,1325.076};
+			name="garage_spawn_1";
+			type="mil_dot";
+			alpha=0;
+			id=15948;
+			atlOffset=-0.0002219677;
+		};
+		class Item575
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={6690.0581,2.6429999,1325.182};
+			};
+			title="метка garage_spawn_1(cлева от комента)";
+			id=15949;
+			atlOffset=-7.557869e-005;
+		};
+		class Item576
+		{
+			dataType="Marker";
+			position[]={6689.6992,2.6530001,1321.808};
+			name="garage_spawn_2";
+			type="mil_dot";
+			alpha=0;
+			id=15950;
+			atlOffset=0.00019526482;
+		};
+		class Item577
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={6690.688,2.6489999,1321.9449};
+				angles[]={0.0028471455,0,6.2810855};
+			};
+			title="метка garage_spawn_2(cлева от комента)";
+			id=15951;
+			atlOffset=-0.00022768974;
 		};
 	};
 	class Connections
