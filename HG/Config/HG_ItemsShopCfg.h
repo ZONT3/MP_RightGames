@@ -585,8 +585,7 @@ class HG_DefaultShop {
       {"mavick_V40_Impact_Grenade", 10, "true"},
       {"Mavic_M433", 50, "true"},
       {"Item_Mavic", 200, "true"},
-      {"Item_Mavic3T", 400, "true"},
-      {"LD_Colibri_Mag", 500, "true"}
+      {"Item_Mavic3T", 400, "true"}
     };
   };
 

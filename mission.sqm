@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=15908;
+		nextID=15930;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6013;
+		nextID=6243;
 	};
 	class Camera
 	{
-		pos[]={6664.9224,52.698223,1251.5215};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={6690.8276,11.900158,1241.2631};
+		dir[]={-0.81724715,-0.53157568,0.222663};
+		up[]={-0.51288438,0.84700626,0.13973735};
+		aside[]={0.2628769,-4.5518391e-008,0.96485102};
 	};
 };
 binarizationWanted=0;
@@ -3949,7 +3949,20 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=9;
+		class Attribute9
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		nAttributes=10;
 	};
 };
 class Mission
@@ -3983,7 +3996,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=571;
+		items=573;
 		class Item0
 		{
 			dataType="Marker";
@@ -42611,7 +42624,7 @@ class Mission
 							};
 							id=10427;
 							type="Land_Canteen_F";
-							atlOffset=0.13246679;
+							atlOffset=7.1525574e-007;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49337,7 +49350,6 @@ class Mission
 			};
 			id=10780;
 			type="Land_Canteen_F";
-			atlOffset=0.13246632;
 		};
 		class Item235
 		{
@@ -51104,6 +51116,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="[this] call ZONT_fnc_initGarage;" \n "[this, true, false, true] call HR_Garage_fnc_toggleGarageAccess";
 						name="bot1";
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -52038,6 +52051,7 @@ class Mission
 						init="this addAction[""<img image='HG\UI\Icons\money.paa' size='2' shadow='0'/><t color='#FF0000' font='RobotoCondensedBold'>""+(localize ""STR_HG_VEHICLES_SHOP"")+""</t>"",{_this call HG_fnc_dialogOnLoadVehicles},""HG_DefaultShop"",0,false,false,"""",'(alive player) && !dialog && player distance _target < 3'];";
 						name="bot8";
 						description="Армен Механик";
+						disableSimulation=1;
 						class Inventory
 						{
 							class uniform
@@ -53601,7 +53615,7 @@ class Mission
 			};
 			id=11506;
 			type="Land_CamoNetB_EAST";
-			atlOffset=0.0050001144;
+			atlOffset=0.004999876;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53789,7 +53803,7 @@ class Mission
 					};
 					id=11920;
 					type="Land_Pliers_F";
-					atlOffset=0.86654401;
+					atlOffset=0.86654186;
 				};
 				class Item9
 				{
@@ -53958,7 +53972,7 @@ class Mission
 				};
 			};
 			id=11926;
-			atlOffset=0.23505664;
+			atlOffset=0.23505831;
 		};
 		class Item358
 		{
@@ -54055,6 +54069,7 @@ class Mission
 					class Attributes
 					{
 						name="bot9";
+						disableSimulation=1;
 					};
 					id=11929;
 					type="I_L_Criminal_SMG_F";
@@ -55413,7 +55428,6 @@ class Mission
 					};
 					id=13427;
 					type="Land_Bandage_F";
-					atlOffset=0.021904945;
 				};
 				class Item22
 				{
@@ -55543,7 +55557,7 @@ class Mission
 				};
 			};
 			id=12203;
-			atlOffset=0.87984896;
+			atlOffset=0.87976313;
 		};
 		class Item407
 		{
@@ -55631,6 +55645,7 @@ class Mission
 					{
 						init="this addAction[""<img image='HG\UI\Icons\money.paa' size='2' shadow='0'/><t color='#FF0000' font='RobotoCondensedBold'>""+(localize ""STR_HG_ITEMS_SHOP"")+""</t>"",{_this call HG_fnc_dialogOnLoadItems},""HG_DefaultShop"",0,false,false,"""",'(alive player) && !dialog && player distance _target < 3'];";
 						name="bot7";
+						disableSimulation=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -55886,16 +55901,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5622.814,29.690453,7500.7856};
+						position[]={5622.916,29.690641,7500.6128};
 						angles[]={0,2.3239057,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this addAction[""<img image='HG\UI\Icons\money.paa' size='2' shadow='0'/><t color='#FF0000' font='RobotoCondensedBold'>""+(localize ""STR_HG_TRADER"")+""</t>"",{_this call HG_fnc_dialogOnLoadTrader},""HG_DefaultTrader"",0,false,false,"""",'(alive player) && !dialog && player distance _target < 3'];";
 						name="bot10";
 						description="Скупщик";
+						disableSimulation=1;
 						class Inventory
 						{
 							class handgun
@@ -55924,49 +55940,23 @@ class Mission
 					};
 					id=12211;
 					type="CUP_O_RUS_M_Soldier_Survivor_VKPO_Winter";
-					atlOffset=0.58499908;
+					atlOffset=0.00061607361;
 					class CustomAttributes
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="allowDamage";
+							expression="_this allowdamage _value;";
 							class Value
 							{
 								class data
 								{
-									singleType="STRING";
-									value="";
+									singleType="BOOL";
+									value=0;
 								};
 							};
 						};
 						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male01RUS";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute3
 						{
 							property="ENH_removeFromRemainsCollector";
 							expression="if (!is3DEN && _value) then {removeFromRemainsCollector [this]}";
@@ -55979,7 +55969,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
 							property="unitName";
 							expression="_this setname _value;";
@@ -55992,7 +55982,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
 						{
 							property="ENH_doStop";
 							expression="if (!is3DEN && _value) then {doStop _this}";
@@ -56005,7 +56008,113 @@ class Mission
 								};
 							};
 						};
-						nAttributes=6;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="ENH_AmbientAnimations";
+							expression="      if !(_value # 0 isEqualTo '') then      {        _value params ['_animSet', '_anims', '_canExit', '_attach'];                _this setVariable ['ENH_ambientAnimations_anims', _anims];        _this disableAI 'ANIM';        if (_attach && !is3DEN) then        {          private _logic = group _this createUnit ['Logic', getPosATL _this, [], 0, 'NONE'];          _this setVariable ['ENH_ambientAnimations_logic', _logic];          [_this, _logic] call BIS_fnc_attachToRelative;        };                ENH_fnc_ambientAnimations_play =        {          params ['_unit'];          private _anim = selectRandom (_unit getVariable ['ENH_ambientAnimations_anims', []]);          [_unit, _anim] remoteExec ['switchMove', 0];        };                ENH_fnc_ambientAnimations_exit =        {          params ['_unit'];          if !(_unit getVariable ['ENH_ambientAnimations_exit', true]) exitWith {false};          _unit setVariable ['ENH_ambientAnimations_exit', true];          detach _unit;          deleteVehicle (_unit getVariable ['ENH_ambientAnimations_logic', objNull]);          if (alive _unit) then          {            [_unit, ''] remoteExec ['switchMove', 0];            _unit enableAI 'ANIM';          };          _unit removeEventHandler ['Killed', _unit getVariable ['ENH_EHKilled',-1]];          _unit removeEventHandler ['Dammaged', _unit getVariable ['ENH_EHDammaged',-1]];          _unit removeEventHandler ['AnimDone', _unit getVariable ['ENH_EHAnimDone',-1]];        };                private _EHAnimDone = _this addEventHandler ['AnimDone',          {            params ['_unit'];            if (alive _unit) then            {              _unit call ENH_fnc_ambientAnimations_play;            }            else            {              _unit call ENH_fnc_ambientAnimations_exit;            };          }        ];        _this setVariable ['ENH_EHAnimDone', _EHAnimDone];                if (_canExit && !is3DEN) then        {          private _EHKilled = _this addEventHandler ['Killed',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHKilled', _EHKilled];          private _EHDammaged = _this addEventHandler ['Dammaged',          {            (_this select 0) call ENH_fnc_ambientAnimations_exit;          }];          _this setVariable ['ENH_EHDammaged', _EHDammaged];          _this spawn          {            scriptName 'ENH_Attribute_AmbientAnimations';            params ['_unit'];            waitUntil            {              sleep 1; (_unit getVariable ['ENH_ambientAnimations_exit', false]) || {behaviour _unit == 'COMBAT'}            };            _unit call ENH_fnc_ambientAnimations_exit;          };        };        _this call ENH_fnc_ambientAnimations_play;      };";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="STRING";
+												value="GUARD";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="ARRAY";
+												class value
+												{
+													items=2;
+													class Item0
+													{
+														class data
+														{
+															singleType="STRING";
+															value="inbasemoves_handsbehindback1";
+														};
+													};
+													class Item1
+													{
+														class data
+														{
+															singleType="STRING";
+															value="inbasemoves_handsbehindback2";
+														};
+													};
+												};
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="BOOL";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male01RUS";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=9;
 					};
 				};
 			};
@@ -56013,7 +56122,7 @@ class Mission
 			{
 			};
 			id=12210;
-			atlOffset=0.58499908;
+			atlOffset=0.00061607361;
 		};
 		class Item412
 		{
@@ -59673,6 +59782,7 @@ class Mission
 						init="this addAction[""<img image='HG\UI\Icons\car.paa' size='2' shadow='0'/><t color='#FF0000' font='RobotoCondensedBold'>""+(localize ""STR_HG_DEALER"")+""</t>"",{_this call HG_fnc_dialogOnLoadDealer},""HG_DefaultDealer"",0,false,false,"""",'(alive player) && !dialog && player distance _target < 3'];";
 						name="bot2";
 						presenceCondition="false";
+						disableSimulation=1;
 						class Inventory
 						{
 							class handgun
@@ -60066,6 +60176,7 @@ class Mission
 					{
 						name="npc1";
 						presenceCondition="false";
+						disableSimulation=1;
 					};
 					id=13479;
 					type="I_L_Criminal_SG_F";
@@ -72181,6 +72292,20 @@ class Mission
 			colorName="ColorWhite";
 			id=15907;
 			atlOffset=-0.00040817261;
+		};
+		class Item571
+		{
+			dataType="Layer";
+			name="магазины (HG shop)";
+			id=15925;
+			atlOffset=0.012699842;
+		};
+		class Item572
+		{
+			dataType="Layer";
+			name="HGShop";
+			id=15929;
+			atlOffset=-8.7976456e-005;
 		};
 	};
 	class Connections

@@ -129,7 +129,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 1000;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 25;
 		tkPenaltyPlayer = 1000;
 		tkPenaltyAI = 1000;
@@ -147,7 +147,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 1500;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 50;
 		tkPenaltyPlayer = 1000;
 		tkPenaltyAI = 1000;
@@ -165,7 +165,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 2000;
 		startBank = =0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 75;
 		tkPenaltyPlayer = 1500;
 		tkPenaltyAI = 1000;
@@ -183,7 +183,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 2300;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 100;
 		tkPenaltyPlayer = 2000;
 		tkPenaltyAI = 1000;
@@ -201,7 +201,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 2500;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 125;
 		tkPenaltyPlayer = 2500;
 		tkPenaltyAI = 1250;
@@ -219,7 +219,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 2700;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 150;
 		tkPenaltyPlayer = 3000;
 		tkPenaltyAI = 1500;
@@ -237,7 +237,7 @@ class HG_MasterCfg
 		paycheckPeriod = 40;
 		startCash = 3000;
 		startBank = 0;
-		killedReward = 100;
+		killedReward = 50;
 		xpPenaltyDeath = 175;
 		tkPenaltyPlayer = 3500;
 		tkPenaltyAI = 1750;
