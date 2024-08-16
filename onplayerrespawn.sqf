@@ -16,7 +16,9 @@ titleText [_text, "PLAIN", 0.2, true, true];
 
 
 [player, {
-  _this call ZONT_fnc_giveZeus;
+private _curators = call ZONT_fnc_retrieveCurators;
+if not ((getPlayerUID _this) in _curators) exitWith { };
+_this call ZONT_fnc_giveZeus;
 }] remoteExec ["bis_fnc_call", 2];
 
 

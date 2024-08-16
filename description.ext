@@ -24,9 +24,7 @@ class CfgFunctions {
       class getConst { };
       class forceExit { };
       class addReverse { };
-      class initLimitedArsenal { };
       class initArsenals { };
-      class initGarage { };
       class log { };
       class initHookah { };
       class hookahEffect { };
@@ -61,7 +59,7 @@ class CfgFunctions {
       class loadDone { };
       class newProfile { };
       class checkRole { };
-	    class restrictAccess { };
+	  class restrictAccess { };
       class updProfile { };
 
       class saveProfile { };
@@ -72,18 +70,16 @@ class CfgFunctions {
     #include "dev\include.ext"
   };
   #include "external\VVS\Functions.ext"
-  #include "external\JeroenArsenal\functions.hpp"
-  #include "HG\Functions\HG_Functions.h"
 };
 
 class CfgSounds {
-  #include "HG\Sounds\HG_Sounds.h"
+  sounds[] = {};
 };
 
 author			  = "RG Team";
 onLoadName		= "Military | RG";
 onLoadMission	= "";
-loadScreen = "";
+loadScreen = "pic\loading.jpg";
 class Header {
 	gameType   = RPG;
 	minPlayers =   0;
@@ -143,12 +139,10 @@ class CfgDebriefing {
 		pictureBackground = "";
 		picture = "pic\monk.paa";
   };
-  #include "HG\Config\HG_Debriefing.h"
 };
 
 class CfgConsts {
   ztt_terminals[] = {"aaaaaaa"};
-  zeusOnlyOnCivillian = 1;
 };
 
 //Discord info
@@ -163,25 +157,4 @@ class CfgDiscordRichPresence {
 	defaultSmallImageText="ArmA 3";
 	defaultButtons[]={"Discord", "https://discord.gg/6KjeqyX7b9", "VK", "https://vk.com/rgssww"};
 	useTimeElapsed=1;
-};
-
-zeusCompositionScriptLevel = 2;
-
-__EXEC(HG_Profile = allVariables profileNamespace)
-
-/*
-    Classes
-*/
-
-#include "HG\UI\HG_DialogsMaster.h"
-
-class RscTitles
-{
-    #include "HG\UI\Dialogs\HG_HUD.h"
-	#include "HG\UI\Dialogs\HG_Tags.h"
-};
-
-class CfgClient
-{
-    #include "HG\Config\HG_Config.h"
 };

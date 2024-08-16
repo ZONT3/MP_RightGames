@@ -4,18 +4,12 @@ waitUntil {vehicle player == player};
 [] spawn ZONT_fnc_autoSaveInit;
 
 [] spawn ZONT_fnc_initTeleportTerminals;
-//[] spawn ZONT_fnc_initArsenals;
 
-//[] spawn ZONT_fnc_addReverse;
-[] spawn ZONT_fnc_PlaneReverse;
-
-[] execVM "external\intro.sqf";
+[] spawn ZONT_fnc_addReverse;
 
 [] execVM "chatCommands.sqf";
 
 [] execVM "initPlayerAfterRespawn.sqf";
-
-[] execVM "claimVehicle.sqf";
 
 /******                            Zeus list                             ******/
 /* MCH_ZEUS_LIST = [{
@@ -37,16 +31,10 @@ waitUntil {vehicle player == player};
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler; */
 
-MPC_Whitelist = true; // кикать людей без роли
 
 private _fn_checkSlotPermission = {
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
-
-  if (( isNil 'ZPR_roles' ) or { MPC_Whitelist and (count ZPR_roles) == 0 }) exitWith {
-    ["whitelist"] call ZONT_fnc_forceExit;
-  };
-
-  if not ([[],[],_this] call ZONT_fnc_checkRole) exitWith {
+  if not ([[],[],_this] call ZONT_fnc_checkRole) then {
     ["absrole"] call ZONT_fnc_forceExit;
   };
 };
@@ -56,20 +44,18 @@ private _varg = group player getVariable ["ZPR_rr", ""];
 private _vars =       player getVariable ["ZPR_rr", ""];
 if (_varg != "") then { _var pushBack _varg };
 if (_vars != "") then { _var pushBack _vars };
-if (MPC_Whitelist or { count _var > 0 }) then {
+if (count _var > 0) then {
   _var spawn _fn_checkSlotPermission;
 };
+
 
 private _fn_moveToCustomSpawn = {
   params ['_player','_fn_moveToSpawn'];
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
-
-  private _vse = [["VDV" , "RG" , "MP"]] call ZONT_fnc_checkRole;
-  if _vse exitWith { [_player, true, 'mp_spawn_vse'] call _fn_moveToSpawn };
-  private _hq = [["HQ"]] call Zont_fnc_checkrole;
-  if _hq exitWith { [_player, true, 'mp_spawn_hq'] call _fn_moveToSpawn };
-  private _fsb = [["MVD"]] call Zont_fnc_checkrole;
-  if _fsb exitWith { [_player, true, 'mp_spawn_fsb'] call _fn_moveToSpawn };
+  /*
+  private _mechanicus = [["Mechanicus"]] call ZONT_fnc_checkRole;
+  if _mechanicus exitWith { [_player, true, 'MP_spawn_mech'] call _fn_moveToSpawn };
+  */
 };
 
 private _fn_moveToSpawn = {
@@ -81,7 +67,6 @@ private _fn_moveToSpawn = {
     if (_side == east)       then { _spawn = MP_spawn_east };
     if (_side == west)       then { _spawn = MP_spawn_west };
     if (_side == resistance) then { _spawn = MP_spawn_guer };
-    if (_side == civilian)   then { _spawn = MP_spawn_civ };
   } else {
     _spawn = missionNamespace getVariable _spawnName;
   };
@@ -115,7 +100,7 @@ MPH_DisplyChecker = [{
   MPC_DISPLAY_OPENED = createHashMapFromArray _tmp;
   _report spawn {
     {
-      [_x, "Display opened", getPlayerUID player] remoteExec ["ZONT_fnc_log", 2];
+      [format ["%1 [%2] OPENED %3", name player, getPlayerUID player, _this]] remoteExec ["ZONT_fnc_log", 2];
     } forEach _this;
   };
 }, 1] call CBA_fnc_addPerFrameHandler;
@@ -137,17 +122,3 @@ MPH_DisplyChecker = [{
   	sleep 0.01; false;
   };
 };*/
-
-[] spawn ZONT_fnc_ZZL_initPlayer;
-
-["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
-
-/*
-    Author - HoverGuy
-    Website - https://northernimpulse.com
-    Player initialization
-*/
-
-if(!hasInterface) exitWith {}; // If headless then exit
-
-[] execVM "HG\Setup\fn_clientInitialization.sqf";

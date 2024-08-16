@@ -20,49 +20,12 @@ enableRadio false;
 enableSentences false;
 enableSaving [false, false];
 
-west setFriend [east, 0];
+west setFriend [east, 1];
 west setFriend [resistance, 0];
-east setFriend [west, 0];
+east setFriend [west, 1];
 east setFriend [resistance, 0];
 resistance setFriend [west, 0];
 resistance setFriend [east, 0];
-
-_Per_Frame_Handler = [{
-    {
-        if (isnil {_x getVariable "HG_RG_EventHandler_AI_activ"}) then {
-            _x setVariable ["HG_RG_EventHandler_AI_activ", true, true];
-            [_x] call HG_fnc_aiUnitSetup;
-        };
-    }forEach allUnits;
-}, 1] call CBA_fnc_addPerFrameHandler;
-
-0 = [] spawn { 
-    while{true} do { 
-        { 
-            if(_x distance (getMarkerPos "safe_zone") < 200) then {_x allowDamage false} else {_x allowDamage true}; 
-        } forEach allUnits + vehicles; 
-        sleep 1; 
-    }; 
-};
-
-0 = [] spawn { 
-    while{true} do { 
-        { 
-            if(_x distance (getMarkerPos "safe_zone_1") < 50) then {_x allowDamage false} else {_x allowDamage true}; 
-        } forEach allUnits + vehicles; 
-        sleep 1; 
-    }; 
-};
-
-0 = [] spawn { 
-    while{true} do { 
-        { 
-            if(_x distance (getMarkerPos "safe_zone_2") < 50) then {_x allowDamage false} else {_x allowDamage true}; 
-        } forEach allUnits + vehicles; 
-        sleep 1; 
-    }; 
-};
-
 
 /*pmp-60
 if (isServer) then {
@@ -73,7 +36,7 @@ if (isServer) then {
 
 
 // маркеры для одной стороны
-/*[] spawn {
+[] spawn {
     while { !isDedicated } do {
         waitUntil { sleep 1; alive player};
         {
@@ -90,4 +53,3 @@ if (isServer) then {
         } count allMapMarkers;
     };
 };
-*/
