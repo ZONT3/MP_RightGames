@@ -6,7 +6,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в центральной Африке","size = '0.7'"],
+				["Внешний сектор, планета Andelm IV","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -20,7 +20,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в центральной Африке","size = '0.7'"],
+				["Внешний сектор, планета Andelm IV","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -34,12 +34,11 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Где-то в центральной Африке","size = '0.7'"],
+				["Внешний сектор, планета Andelm IV","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
-				["","<br/>"],
-				["Проект команды Right Games"]
+				["","<br/>"]
 			],
 			safeZoneX / 45.5, safeZoneH / 2, true, "<t font='PuristaBold'>%1</t>", [], {false}, true
 		] spawn BIS_fnc_typeText2;
@@ -47,19 +46,18 @@ switch (playerSide) do
 	case civilian: {};
 };
 
-sleep 15;
-_role1 = "Добро пожаловать на Right Games";
+sleep 20;
+_role1 = "Добро пожаловать на сервер The Great Republic";
 _role1names = [profileName];
 _role2 = "Игровой проект Right Games";
-_role2names = ["Лучший проект в Arma 3"];
-_role3 = "Руководитель проекта - Москва";
-_role3names = ["Техническая администрация - повесилась"];
+_role2names = ["Intro created by Lucas from IW"];
+_role3 = "Разработчиков нет)";
+_role3names = ["RGTEAM"];
 _role4 = "Посетите нашу группу VK";
 _role4names = ["https://vk.com/rgssww"];
 _role5 = "Присоединяйтесь к Discord";
-_role5names = ["https://discord.gg/Aj7hbc2mGG"];
-_role6 = "Помни о правилах и соблюдай РП";
-_role6names = [profileName];
+_role5names = ["https://discord.gg/Cz6uBG6YCV"];
+_role6 = "За республику!";
 _onScreenTime=3;
 
 {
@@ -86,5 +84,5 @@ _onScreenTime=3;
 	[_role3, _role3names],
 	[_role4, _role4names],
 	[_role5, _role5names],
-	[_role6, _role6names]
+	[_role6]
 ];

@@ -5,9 +5,14 @@ MPS_spawn_BDINIT = [] spawn {
       ["profiles"] call ZONT_fnc_bd_initCustom;
   MPS_BDL_status =
       ["status"] call ZONT_fnc_bd_initCustom;
+  MPS_BDL_lockers =
+      ["lockers"] call ZONT_fnc_bd_initCustom;
 };
 
 MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
+
+[] spawn ZONT_fnc_ZZL_initServer;
+[] spawn ZONT_fnc_initPresistentCrates;
 
 /******                               ???                                ******/
 private _fortif_list = [

@@ -1,8 +1,7 @@
-/*
+
 [ _this,
-	ars_shturm,
-	["FLEG" , "FLEGE" , "FLEGP"],
-	"Запросить арсенал 501th",
+	ars_rs,
+	["Train"],
+	"Запросить арсенал РБ",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
-*\

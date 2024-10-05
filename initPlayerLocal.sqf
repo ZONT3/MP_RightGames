@@ -4,12 +4,17 @@ waitUntil {vehicle player == player};
 [] spawn ZONT_fnc_autoSaveInit;
 
 [] spawn ZONT_fnc_initTeleportTerminals;
+//[] spawn ZONT_fnc_initArsenals;
 
 [] spawn ZONT_fnc_addReverse;
+[] spawn ZONT_fnc_ZZL_initPlayer;
 
 [] execVM "chatCommands.sqf";
 
 [] execVM "initPlayerAfterRespawn.sqf";
+[] execVM "external\intro.sqf";
+//скрипты стар варса
+[] execVM "external\swgovno\terminal.sqf";
 
 /******                            Zeus list                             ******/
 /* MCH_ZEUS_LIST = [{
@@ -31,10 +36,16 @@ waitUntil {vehicle player == player};
   hintSilent parseText _str;
 }, 1] call CBA_fnc_addPerFrameHandler; */
 
+MPC_Whitelist = false; // кикать людей без роли
 
 private _fn_checkSlotPermission = {
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
-  if not ([[],[],_this] call ZONT_fnc_checkRole) then {
+
+  if (( isNil 'ZPR_roles' ) or { MPC_Whitelist and (count ZPR_roles) == 0 }) exitWith {
+    ["whitelist"] call ZONT_fnc_forceExit;
+  };
+
+  if not ([[],[],_this] call ZONT_fnc_checkRole) exitWith {
     ["absrole"] call ZONT_fnc_forceExit;
   };
 };
@@ -44,18 +55,22 @@ private _varg = group player getVariable ["ZPR_rr", ""];
 private _vars =       player getVariable ["ZPR_rr", ""];
 if (_varg != "") then { _var pushBack _varg };
 if (_vars != "") then { _var pushBack _vars };
-if (count _var > 0) then {
+if (MPC_Whitelist or { count _var > 0 }) then {
   _var spawn _fn_checkSlotPermission;
 };
-
 
 private _fn_moveToCustomSpawn = {
   params ['_player','_fn_moveToSpawn'];
   waituntil { sleep 0.1; !isNil 'ZPR_roles' };
-  /*
-  private _mechanicus = [["Mechanicus"]] call ZONT_fnc_checkRole;
-  if _mechanicus exitWith { [_player, true, 'MP_spawn_mech'] call _fn_moveToSpawn };
-  */
+
+  private _bso = [["ARC" , "ARF", "RC"]] call ZONT_fnc_checkRole;
+  if _bso exitWith { [_player, true, 'mp_spawn_bso'] call _fn_moveToSpawn };
+  private _cgu = [["CGU" , "CGP" , "CGE"]] call Zont_fnc_checkrole;
+  if _cgu exitWith { [_player, true, 'mp_spawn_cgu'] call _fn_moveToSpawn };
+  private _train = [["Train" , "TrainP" , "TrainE"]] call Zont_fnc_checkrole;
+  if _train exitWith { [_player, true, 'mp_spawn_train'] call _fn_moveToSpawn };
+  private _zek = [["ZEK"]] call Zont_fnc_checkrole;
+  if _zek exitWith { [_player, true, 'mp_spawn_zek'] call _fn_moveToSpawn };
 };
 
 private _fn_moveToSpawn = {
