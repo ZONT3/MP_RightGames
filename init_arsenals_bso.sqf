@@ -14,7 +14,7 @@
 ] call ZONT_fnc_attachArsenal;
 
 [ _this,
-	ars_rc,
+	ars_arf,
 	["ARF"],
 	"Запросить арсенал ARF",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
