@@ -236,7 +236,7 @@ ace_ui_weaponNameBackground = true;
 ace_ui_zeroing = true;
 
 // ACE Карта
-force ace_map_BFT_Enabled = true;
+force ace_map_BFT_Enabled = false;
 force ace_map_BFT_HideAiGroups = true;
 force ace_map_BFT_Interval = 1;
 force ace_map_BFT_ShowPlayerNames = false;
@@ -799,7 +799,7 @@ force ace_common_checkPBOsWhitelist = "['extdb3']";
 ace_common_deployedSwayFactor = 1;
 ace_common_displayTextColor = [1,1,1,0];
 ace_common_displayTextFontColor = [1,1,1,1];
-ace_common_enableSway = true;
+force ace_common_enableSway = false;
 ace_common_epilepsyFriendlyMode = false;
 ace_common_progressBarInfo = 2;
 ace_common_restedSwayFactor = 1;
