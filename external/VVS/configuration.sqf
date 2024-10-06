@@ -120,9 +120,9 @@ VVS_AIR = [
 ];
 
 VVS_CODY = [
-"212th_3AS_LAAT_Doors", 
-"212th_3AS_LAAT_Floodlights", 
-"212th_3AS_LAAT_Turrets", 
+"212th_3AS_LAAT_Unmarked_Doors",
+"212th_3AS_LAAT_Unmarked_Floodlights",
+"212th_3AS_LAAT_Unmarked_Turrets",
 "Aux212_VWing", 
 "Aux212_3AS_Reaper_Z95_Headhunter", 
 "Aux212_3AS_Reaper_ARC170"

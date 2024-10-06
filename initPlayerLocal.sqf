@@ -14,7 +14,8 @@ waitUntil {vehicle player == player};
 [] execVM "initPlayerAfterRespawn.sqf";
 [] execVM "external\intro.sqf";
 //скрипты стар варса
-[] execVM "external\swgovno\terminal.sqf";
+[] execVM "external\scripts\terminal.sqf";
+
 
 /******                            Zeus list                             ******/
 /* MCH_ZEUS_LIST = [{
