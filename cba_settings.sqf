@@ -134,13 +134,13 @@ ace_csw_handleExtraMagazinesType = 1;
 force ace_csw_progressBarTimeCoefficent = 0.5;
 
 // ACE Детонация
-force ace_cookoff_ammoCookoffDuration = 0;
+force ace_cookoff_ammoCookoffDuration = 0.5;
 ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enable = 0;
 force ace_cookoff_enableAmmobox = false;
-force ace_cookoff_enableAmmoCookoff = false;
+force ace_cookoff_enableAmmoCookoff = true;
 force ace_cookoff_enableFire = false;
-force ace_cookoff_probabilityCoef = 0;
+force ace_cookoff_probabilityCoef = 0.3;
 
 // ACE Жесты на карте
 ace_map_gestures_allowCurator = true;
@@ -157,7 +157,7 @@ force ace_map_gestures_onlyShowFriendlys = true;
 
 // ACE Зевс
 force ace_zeus_autoAddObjects = true;
-force ace_zeus_canCreateZeus = -1;
+force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = true;
 force ace_zeus_remoteWind = false;
 force ace_zeus_revealMines = 0;
@@ -956,7 +956,7 @@ force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
 force ace_advanced_ballistics_simulationInterval = 0;
 
 // ACE Продвинутая усталость
-force ace_advanced_fatigue_enabled = true;
+force ace_advanced_fatigue_enabled = false;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
 force ace_advanced_fatigue_loadFactor = 0;
@@ -966,8 +966,8 @@ force ace_advanced_fatigue_terrainGradientFactor = 0;
 
 // ACE Продвинутое повреждение техники
 force ace_vehicle_damage_enableCarDamage = false;
-force ace_vehicle_damage_enabled = false;
-force ace_vehicle_damage_removeAmmoDuringCookoff = false;
+force ace_vehicle_damage_enabled = true;
+force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
 // ACE Ремонт
 force ace_repair_addSpareParts = true;
@@ -1810,12 +1810,12 @@ force TFAR_giveMicroDagrToSoldier = false;
 force TFAR_givePersonalRadioToRegularSoldier = false;
 force TFAR_globalRadioRangeCoef = 1;
 force TFAR_instantiate_instantiateAtBriefing = false;
-force TFAR_objectInterceptionEnabled = false;
+force TFAR_objectInterceptionEnabled = true;
 force TFAR_objectInterceptionStrength = 400;
 force tfar_radiocode_east = "_opfor";
 force tfar_radiocode_independent = "_independent";
 force tfar_radiocode_west = "_bluefor";
-force tfar_radioCodesDisabled = false;
+force tfar_radioCodesDisabled = true;
 force TFAR_SameLRFrequenciesForSide = false;
 force TFAR_SameSRFrequenciesForSide = false;
 force TFAR_setting_defaultFrequencies_lr_east = "";
@@ -1943,7 +1943,7 @@ force WBK_HeadLamps_IsAIActivateHeadlamps = true;
 force WBK_HeadLamps_IsVolumetricAppearOnAIParam = false;
 
 // WebKnight's Zombies
-WBK_ZombiesIsUseBitingAnimation = true;
+WBK_ZombiesIsUseBitingAnimation = false;
 WBK_ZombiesIsUseParticleDeathControl = true;
 WBK_ZombiesIsUseStatDeathControl = false;
 WBK_ZommbiesGoliathHealthParam = "15000";

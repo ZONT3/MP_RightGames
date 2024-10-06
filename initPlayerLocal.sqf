@@ -69,8 +69,15 @@ private _fn_moveToCustomSpawn = {
   if _cgu exitWith { [_player, true, 'mp_spawn_cgu'] call _fn_moveToSpawn };
   private _train = [["Train" , "TrainP" , "TrainE"]] call Zont_fnc_checkrole;
   if _train exitWith { [_player, true, 'mp_spawn_train'] call _fn_moveToSpawn };
-  private _zek = [["ZEK"]] call Zont_fnc_checkrole;
-  if _zek exitWith { [_player, true, 'mp_spawn_zek'] call _fn_moveToSpawn };
+  
+  private _tbat = [["TBAT" , "TBATP" , "TBATE"]] call Zont_fnc_checkrole;
+  if _tbat exitWith { [_player, true, 'mp_spawn_tbat'] call _fn_moveToSpawn };
+
+  private _doom = [["DU" , "DP" , "DE"]] call Zont_fnc_checkrole;
+  if _doom exitWith { [_player, true, 'mp_spawn_doom'] call _fn_moveToSpawn };
+
+   private _recon = [["Elite" , "EliteP" , "EliteE"]] call Zont_fnc_checkrole;
+  if _recon exitWith { [_player, true, 'mp_spawn_recon'] call _fn_moveToSpawn };
 };
 
 private _fn_moveToSpawn = {
