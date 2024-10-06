@@ -107,7 +107,14 @@ VVS_PODR = [
 "442_argon_transpor",
 "442_argon_repair",
 "442_argon_medical",
-"442_argon_fuel"
+"442_argon_fuel",
+"Aux212_Bantha_C_AA", 
+"Aux212_Bantha_C_IFV", 
+"Aux212_Bantha_C_Mortar", 
+"Aux212_Bantha_C_Unarmed", 
+"Aux212_Bantha_E_MSV", 
+"Aux212_Bantha_T_Assault", 
+"Aux212_Bantha_T_Cargo"
 ];
 
 VVS_AIR = [
