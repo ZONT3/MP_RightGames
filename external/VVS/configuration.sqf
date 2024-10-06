@@ -74,6 +74,7 @@ VVS_RS = [
 "3AS_ISP",
 "3AS_ISP_Transport",
 "3AS_BarcSideCar",
+"Aux212_Bantha_C_Unarmed",
 "442_argon_transport"
 ];
 
@@ -108,12 +109,12 @@ VVS_PODR = [
 "442_argon_repair",
 "442_argon_medical",
 "442_argon_fuel",
-"Aux212_Bantha_C_AA", 
-"Aux212_Bantha_C_IFV", 
-"Aux212_Bantha_C_Mortar", 
-"Aux212_Bantha_C_Unarmed", 
-"Aux212_Bantha_E_MSV", 
-"Aux212_Bantha_T_Assault", 
+"Aux212_Bantha_C_AA",
+"Aux212_Bantha_C_IFV",
+"Aux212_Bantha_C_Mortar",
+"Aux212_Bantha_C_Unarmed",
+"Aux212_Bantha_E_MSV",
+"Aux212_Bantha_T_Assault",
 "Aux212_Bantha_T_Cargo"
 ];
 

@@ -108,29 +108,6 @@ _this addAction [
   5
 ];
 
-_this addAction [
-  "Запрос наземной техники БСО",
-  VVS_fnc_openVVS,
-  [VVS_west_Land,"BSOL"],
-  6,
-  true,
-  true,
-  "",
-  "[['ARC']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники БСО",
-  VVS_fnc_openVVS,
-  [VVS_west_Land,"BSOL"],
-  6,
-  true,
-  true,
-  "",
-  "[['HQ']] call ZONT_fnc_checkRole",
-  5
-];
 
 /*
 _this addAction [
