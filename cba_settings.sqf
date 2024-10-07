@@ -257,7 +257,7 @@ ace_markers_timestampUTCOffset = 0;
 // ACE Медицина
 force ace_medical_ai_enabledFor = 0;
 ace_medical_ai_requireItems = 0;
-force ace_medical_AIDamageThreshold = 5;
+force ace_medical_AIDamageThreshold = 1;
 force ace_medical_bleedingCoefficient = 0.3;
 force ace_medical_blood_bloodLifetime = 300;
 force ace_medical_blood_enabledFor = 1;
@@ -875,7 +875,7 @@ force ace_overheating_unJamOnreload = true;
 force ace_overheating_unJamOnSwapBarrel = false;
 
 // ACE Перегрузки
-force ace_gforces_coef = 0;
+force ace_gforces_coef = 0.5;
 force ace_gforces_enabledFor = 2;
 
 // ACE Переключение юнитов

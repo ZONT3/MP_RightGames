@@ -161,7 +161,6 @@ VVS_BSOL = [
 "MTI_TX130_Recon",
 "MTI_TX130_Super",
 "MTI_Barc",
-"MTI_Barc_CovOps",
 "MTI_Barc_Sidecar",
 "MTI_Barc_Stretcher",
 "MTI_MUTT_C",
