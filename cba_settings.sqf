@@ -134,13 +134,13 @@ ace_csw_handleExtraMagazinesType = 1;
 force ace_csw_progressBarTimeCoefficent = 0.5;
 
 // ACE Детонация
-force ace_cookoff_ammoCookoffDuration = 0.5;
+force ace_cookoff_ammoCookoffDuration = 1;
 ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enable = 0;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = true;
 force ace_cookoff_enableFire = false;
-force ace_cookoff_probabilityCoef = 0.3;
+force ace_cookoff_probabilityCoef = 1;
 
 // ACE Жесты на карте
 ace_map_gestures_allowCurator = true;
