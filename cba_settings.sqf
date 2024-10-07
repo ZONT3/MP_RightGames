@@ -875,7 +875,7 @@ force ace_overheating_unJamOnreload = true;
 force ace_overheating_unJamOnSwapBarrel = false;
 
 // ACE Перегрузки
-force ace_gforces_coef = 0.5;
+force ace_gforces_coef = 0;
 force ace_gforces_enabledFor = 2;
 
 // ACE Переключение юнитов
