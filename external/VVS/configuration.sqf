@@ -14,6 +14,7 @@ ZONT_fnc_filterVVS = {
     case "AIR": { VVS_AIR };
     case "CODY": { VVS_CODY };
     case "BSOA": { VVS_BSOA };
+    case "BSOL": { VVS_BSOL };
 
   	default {[]};
   };
