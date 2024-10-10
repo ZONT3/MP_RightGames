@@ -1,22 +1,3 @@
-// 101st Aux Mod
-DBA_CapitalShips_Barrage_Velocity = 100;
-DBA_CapitalShips_MoveShip_ExternalCamera = true;
-DBA_Common_Debug = false;
-DBA_Hyperspace_Offset_Acclamator = 90;
-DBA_Hyperspace_Offset_Default = 0;
-DBA_Hyperspace_Offset_Munificent = 90;
-DBA_Hyperspace_Offset_Quasar = 270;
-DBA_LAAT_InteriorLight_PositionY = -5;
-DBA_LAAT_InteriorLight_PositionZ = 2;
-DBA_Stims_Adrenal_Duration = 30;
-DBA_Stims_Adrenal_Side_Effect_Duration = 60;
-DBA_Stims_Adrenal_Side_Effect_Speed = 0.75;
-DBA_Stims_Adrenal_Speed = 1.25;
-DBA_Stims_Battle_Stim_Duration = 120;
-DBA_Stims_Battle_Stim_Side_Effect_Duration = 60;
-DBA_Stims_Battle_Stim_Side_Effect_Pain_Multiplier = 2;
-DBA_Stims_Inject_Duration = 5;
-
 // 3AS
 TAS_fullShieldTime = 30;
 force TAS_jetcoolset = 3;
@@ -32,7 +13,7 @@ TAS_SquadShieldTime = 240;
 TAS_DroidekaDisabledShieldTime = 1;
 TAS_DroidekaShieldsRegenDisabled = true;
 
-// ACE Арсенал
+// ACE ÐÑ€ÑÐµÐ½Ð°Ð»
 force ace_arsenal_allowDefaultLoadouts = true;
 force ace_arsenal_allowSharedLoadouts = true;
 ace_arsenal_camInverted = false;
@@ -46,7 +27,7 @@ ace_arsenal_loadoutsSaveFace = true;
 ace_arsenal_loadoutsSaveInsignia = true;
 ace_arsenal_loadoutsSaveVoice = false;
 
-// ACE Артиллерия
+// ACE ÐÑ€Ñ‚Ð¸Ð»Ð»ÐµÑ€Ð¸Ñ
 force ace_artillerytables_advancedCorrections = true;
 force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = true;
@@ -54,11 +35,13 @@ force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
 force ace_mk6mortar_useAmmoHandling = true;
 
-// ACE Без категории
+// ACE Ð‘ÐµÐ· ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸
 ace_fastroping_autoAddFRIES = false;
 force ace_fastroping_requireRopeItems = false;
 force ace_gunbag_swapGunbagEnabled = true;
 force ace_hitreactions_minDamageToTrigger = 1;
+ace_hitreactions_weaponDropChanceArmHitAI = 0;
+ace_hitreactions_weaponDropChanceArmHitPlayer = 0;
 ace_inventory_inventoryDisplaySize = 0;
 force ace_laser_dispersionCount = 0;
 ace_laser_showLaserOnMap = 1;
@@ -67,32 +50,36 @@ force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
 force ace_noradio_enabled = true;
 ace_optionsmenu_showNewsOnMainMenu = false;
-force ace_overpressure_distanceCoefficient = -1;
+ace_overpressure_backblastDistanceCoefficient = 1;
+ace_overpressure_overpressureDistanceCoefficient = 1;
 force ace_parachute_failureChance = 0;
 ace_parachute_hideAltimeter = false;
 ace_tagging_quickTag = 1;
 
-// ACE Блокировка транспорта
+// ACE Ð‘Ð»Ð¾ÐºÐ¸Ñ€Ð¾Ð²ÐºÐ° Ñ‚Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚Ð°
 force ace_vehiclelock_defaultLockpickStrength = 1;
 force ace_vehiclelock_lockVehicleInventory = true;
 force ace_vehiclelock_vehicleStartingLockState = 0;
 
-// ACE Быстрая посадка
+// ACE Ð‘Ñ‹ÑÑ‚Ñ€Ð°Ñ Ð¿Ð¾ÑÐ°Ð´ÐºÐ°
 force ace_quickmount_distance = 10;
 force ace_quickmount_enabled = true;
 ace_quickmount_enableMenu = 3;
 ace_quickmount_priority = 0;
 force ace_quickmount_speed = 30;
 
-// ACE Взаимодействие
+// ACE Ð’Ð·Ð°Ð¸Ð¼Ð¾Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ
 force ace_interaction_disableNegativeRating = true;
+ace_interaction_enableAnimActions = true;
 force ace_interaction_enableGroupRenaming = true;
 ace_interaction_enableMagazinePassing = false;
 force ace_interaction_enableTeamManagement = true;
 ace_interaction_enableWeaponAttachments = true;
+ace_interaction_interactWithEnemyCrew = 0;
 force ace_interaction_interactWithTerrainObjects = false;
+ace_interaction_remoteTeamManagement = true;
 
-// ACE Взрывчатка
+// ACE Ð’Ð·Ñ€Ñ‹Ð²Ñ‡Ð°Ñ‚ÐºÐ°
 ace_explosives_customTimerDefault = 30;
 force ace_explosives_customTimerMax = 900;
 force ace_explosives_customTimerMin = 5;
@@ -100,24 +87,24 @@ force ace_explosives_explodeOnDefuse = false;
 force ace_explosives_punishNonSpecialists = false;
 force ace_explosives_requireSpecialist = false;
 
-// ACE Возгорание
+// ACE Ð’Ð¾Ð·Ð³Ð¾Ñ€Ð°Ð½Ð¸Ðµ
 force ace_fire_dropWeapon = 0;
 force ace_fire_enabled = true;
 force ace_fire_enableFlare = false;
 force ace_fire_enableScreams = true;
 
-// ACE Возрождение
+// ACE Ð’Ð¾Ð·Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ
 force ace_respawn_removeDeadBodiesDisconnected = true;
 force ace_respawn_savePreDeathGear = true;
 
-// ACE Гильзы
+// ACE Ð“Ð¸Ð»ÑŒÐ·Ñ‹
 ace_casings_enabled = true;
 ace_casings_maxCasings = 250;
 
-// ACE Гранаты
+// ACE Ð“Ñ€Ð°Ð½Ð°Ñ‚Ñ‹
 force ace_grenades_convertExplosives = false;
 
-// ACE Громкость
+// ACE Ð“Ñ€Ð¾Ð¼ÐºÐ¾ÑÑ‚ÑŒ
 acex_volume_enabled = true;
 acex_volume_fadeDelay = 0;
 acex_volume_lowerInVehicles = false;
@@ -125,7 +112,7 @@ acex_volume_reduction = 8;
 acex_volume_remindIfLowered = false;
 acex_volume_showNotification = true;
 
-// ACE Групповое вооружение (CSW)
+// ACE Ð“Ñ€ÑƒÐ¿Ð¿Ð¾Ð²Ð¾Ðµ Ð²Ð¾Ð¾Ñ€ÑƒÐ¶ÐµÐ½Ð¸Ðµ (CSW)
 force ace_csw_ammoHandling = 1;
 force ace_csw_defaultAssemblyMode = true;
 force ace_csw_dragAfterDeploy = false;
@@ -133,16 +120,17 @@ force ace_csw_handleExtraMagazines = true;
 ace_csw_handleExtraMagazinesType = 1;
 force ace_csw_progressBarTimeCoefficent = 0.5;
 
-// ACE Детонация
-force ace_cookoff_ammoCookoffDuration = 1;
+// ACE Ð”ÐµÑ‚Ð¾Ð½Ð°Ñ†Ð¸Ñ
+force ace_cookoff_ammoCookoffDuration = 0.3;
+ace_cookoff_cookoffDuration = 1;
 ace_cookoff_destroyVehicleAfterCookoff = false;
-force ace_cookoff_enable = 0;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = true;
-force ace_cookoff_enableFire = false;
+force ace_cookoff_enableFire = true;
 force ace_cookoff_probabilityCoef = 1;
+ace_cookoff_removeAmmoDuringCookoff = true;
 
-// ACE Жесты на карте
+// ACE Ð–ÐµÑÑ‚Ñ‹ Ð½Ð° ÐºÐ°Ñ€Ñ‚Ðµ
 ace_map_gestures_allowCurator = true;
 ace_map_gestures_allowSpectator = true;
 ace_map_gestures_briefingMode = 0;
@@ -155,7 +143,7 @@ force ace_map_gestures_maxRangeCamera = 14;
 ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 force ace_map_gestures_onlyShowFriendlys = true;
 
-// ACE Зевс
+// ACE Ð—ÐµÐ²Ñ
 force ace_zeus_autoAddObjects = true;
 force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = true;
@@ -164,16 +152,16 @@ force ace_zeus_revealMines = 0;
 force ace_zeus_zeusAscension = false;
 force ace_zeus_zeusBird = false;
 
-// ACE Зритель
+// ACE Ð—Ñ€Ð¸Ñ‚ÐµÐ»ÑŒ
 force ace_spectator_enableAI = false;
 ace_spectator_maxFollowDistance = 25;
 force ace_spectator_restrictModes = 0;
 force ace_spectator_restrictVisions = 0;
 
-// ACE ИИ
+// ACE Ð˜Ð˜
 ace_ai_assignNVG = false;
 
-// ACE Имена игроков
+// ACE Ð˜Ð¼ÐµÐ½Ð° Ð¸Ð³Ñ€Ð¾ÐºÐ¾Ð²
 force ace_nametags_ambientBrightnessAffectViewDist = 1;
 ace_nametags_defaultNametagColor = [1,0.6,0,1];
 ace_nametags_nametagColorBlue = [0,0,0.85,1];
@@ -191,12 +179,12 @@ ace_nametags_showSoundWaves = 1;
 ace_nametags_showVehicleCrewInfo = false;
 force ace_nametags_tagSize = 2;
 
-// ACE Инструменты карты
+// ACE Ð˜Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚Ñ‹ ÐºÐ°Ñ€Ñ‚Ñ‹
 ace_maptools_drawStraightLines = true;
 ace_maptools_plottingBoardAllowChannelDrawing = 1;
 ace_maptools_rotateModifierKey = 1;
 
-// ACE Интерфейс
+// ACE Ð˜Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ
 force ace_ui_allowSelectiveUI = true;
 ace_ui_ammoCount = true;
 ace_ui_ammoType = true;
@@ -235,7 +223,7 @@ ace_ui_weaponName = true;
 ace_ui_weaponNameBackground = true;
 ace_ui_zeroing = true;
 
-// ACE Карта
+// ACE ÐšÐ°Ñ€Ñ‚Ð°
 force ace_map_BFT_Enabled = false;
 force ace_map_BFT_HideAiGroups = true;
 force ace_map_BFT_Interval = 1;
@@ -254,10 +242,10 @@ ace_markers_timestampTimezone = 0;
 ace_markers_TimestampUTCMinutesOffset = 0;
 ace_markers_timestampUTCOffset = 0;
 
-// ACE Медицина
+// ACE ÐœÐµÐ´Ð¸Ñ†Ð¸Ð½Ð°
 force ace_medical_ai_enabledFor = 0;
 ace_medical_ai_requireItems = 0;
-force ace_medical_AIDamageThreshold = 1;
+force ace_medical_AIDamageThreshold = 5;
 force ace_medical_bleedingCoefficient = 0.3;
 force ace_medical_blood_bloodLifetime = 300;
 force ace_medical_blood_enabledFor = 1;
@@ -326,7 +314,7 @@ force ace_medical_treatment_woundReopenChance = 0;
 force ace_medical_treatment_woundStitchTime = 5;
 ace_medical_vitals_simulateSpO2 = true;
 
-// ACE Медицина Интерфейс
+// ACE ÐœÐµÐ´Ð¸Ñ†Ð¸Ð½Ð° Ð˜Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ
 ace_medical_feedback_bloodVolumeEffectType = 2;
 ace_medical_feedback_enableHUDIndicators = true;
 ace_medical_feedback_painEffectType = 3;
@@ -365,7 +353,7 @@ force ace_medical_gui_showBloodlossEntry = true;
 ace_medical_gui_showDamageEntry = false;
 ace_medical_gui_tourniquetWarning = false;
 
-// ACE Меню взаимодействия
+// ACE ÐœÐµÐ½ÑŽ Ð²Ð·Ð°Ð¸Ð¼Ð¾Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ
 ace_gestures_showOnInteractionMenu = 2;
 ace_interact_menu_actionOnKeyRelease = true;
 ace_interact_menu_addBuildingActions = true;
@@ -387,411 +375,7 @@ ace_interact_menu_textSize = 2;
 ace_interact_menu_useListMenu = true;
 ace_interact_menu_useListMenuSelf = true;
 
-// ACE Меню взаимодействия (с собой) - Другие
-ace_interact_menu_more__212_arfCamoMenu = false;
-ace_interact_menu_more__ACE_CheckAirTemperature = false;
-ace_interact_menu_more__ace_csw_deploy = false;
-ace_interact_menu_more__ACE_Equipment = false;
-ace_interact_menu_more__ACE_Equipment_enhanced = false;
-ace_interact_menu_more__ACE_Explosives = false;
-ace_interact_menu_more__ace_field_rations = false;
-ace_interact_menu_more__ace_fortify = false;
-ace_interact_menu_more__ace_gestures = false;
-ace_interact_menu_more__ace_intelitems = false;
-ace_interact_menu_more__ACE_MapFlashlight = false;
-ace_interact_menu_more__ACE_MapGpsHide = false;
-ace_interact_menu_more__ACE_MapGpsShow = false;
-ace_interact_menu_more__ACE_MapTools = false;
-ace_interact_menu_more__ACE_Medical = false;
-ace_interact_menu_more__ACE_Medical_Menu = false;
-ace_interact_menu_more__ACE_MoveRallypoint = false;
-ace_interact_menu_more__ACE_PlottingBoard = false;
-ace_interact_menu_more__ACE_PlottingBoardHide = false;
-ace_interact_menu_more__ACE_RepackMagazines = false;
-ace_interact_menu_more__ace_sandbag_place = false;
-ace_interact_menu_more__ACE_StartSurrenderingSelf = false;
-ace_interact_menu_more__ACE_StopEscortingSelf = false;
-ace_interact_menu_more__ACE_StopSurrenderingSelf = false;
-ace_interact_menu_more__ACE_Tags = false;
-ace_interact_menu_more__ACE_TeamManagement = false;
-ace_interact_menu_more__ace_zeus_create = false;
-ace_interact_menu_more__ace_zeus_delete = false;
-ace_interact_menu_more__aceax_ingame_gear = false;
-ace_interact_menu_more__acex_sitting_Stand = false;
-ace_interact_menu_more__DBA_Stims = false;
-ace_interact_menu_more__JLTS_repairWeapons = false;
-ace_interact_menu_more__kka3_anim = false;
-ace_interact_menu_more__kka3_gestures_ace = false;
-ace_interact_menu_more__LFP_BackRocket = false;
-ace_interact_menu_more__LFP_Flamethrower = false;
-ace_interact_menu_more__LFP_FlamethrowerReload = false;
-ace_interact_menu_more__LFP_LockOnRocket = false;
-ace_interact_menu_more__LFP_ReloadRocket = false;
-ace_interact_menu_more__LFP_SonarCharge = false;
-ace_interact_menu_more__LFP_SonarPing = false;
-ace_interact_menu_more__LFP_WristReloadRocket = false;
-ace_interact_menu_more__LFP_WristReloadRocketSmokeB = false;
-ace_interact_menu_more__LFP_WristReloadRocketSmokeR = false;
-ace_interact_menu_more__LFP_WristReloadRocketSmokeW = false;
-ace_interact_menu_more__LFP_WristRocket = false;
-ace_interact_menu_more__LFP_WristRocketB = false;
-ace_interact_menu_more__LFP_WristRocketR = false;
-ace_interact_menu_more__LFP_WristRocketW = false;
-ace_interact_menu_more__mti_equipment_beacon = false;
-ace_interact_menu_more__mti_equipment_bladeExtend = false;
-ace_interact_menu_more__mti_equipment_bladeRetract = false;
-ace_interact_menu_more__mti_equipment_eatMRE = false;
-ace_interact_menu_more__mti_equipment_intercom = false;
-ace_interact_menu_more__mti_equipment_squadShield = false;
-ace_interact_menu_more__mti_fortify = false;
-ace_interact_menu_more__mti_katarnOS_mainAction = false;
-ace_interact_menu_more__mti_weapons_core_improviseAmmo = false;
-force ace_interact_menu_more__RD501 Lights = true;
-ace_interact_menu_more__TFAR_Radio = false;
-ace_interact_menu_more__Zeus = false;
-
-// ACE Меню взаимодействия (с собой) - Переместить в корень
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_arcticCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_aridCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_desertCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_GeonosisCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_JungleCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_NightCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_standardCamo = false;
-ace_interact_menu_moveToRoot__212_arfCamoMenu__212_woodlandCamo = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_atragmx_open = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_attach_Attach = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_attach_Detach = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ACE_CheckDogtags = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ACE_Chemlights = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_dagr_menu = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_dagr_menu__ace_dagr_toggle = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_goggles_wipeGlasses = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_gunbag_actions = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_gunbag_actions__ace_gunbag_status = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_gunbag_actions__ace_gunbag_weaponOff = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_gunbag_actions__ace_gunbag_weaponSwap = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_gunbag_actions__ace_gunbag_weaponTo = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_huntir_open = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_interaction_weaponAttachments = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_kestrel4500_open = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_kestrel4500_open__ace_kestrel4500_hide = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_kestrel4500_open__ace_kestrel4500_show = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_marker_flags = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_microdagr_configure = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_microdagr_configure__ace_microdagr_close = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_microdagr_configure__ace_microdagr_show = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_minedetector_metalDetector = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_minedetector_metalDetector__ace_minedetector_activate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_minedetector_metalDetector__ace_minedetector_connectHeadphones = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_minedetector_metalDetector__ace_minedetector_deactivate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_minedetector_metalDetector__ace_minedetector_disconnectHeadphones = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_mk6mortar_rangetable = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_overheating_CheckTemperature = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_overheating_CheckTemperatureSpareBarrels = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_overheating_CoolWeaponWithItem = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_overheating_SwapBarrel = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_overheating_UnJam = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ACE_PutInEarplugs = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_rangecard_open = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_rangecard_open__ace_rangecard_makeCopy = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_rangecard_open__ace_rangecard_openCopy = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_reload_checkAmmo = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ACE_RemoveEarplugs = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_scopes_adjustZero = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_scopes_resetZero = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_spottingscope_place = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ACE_TacticalLadders = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__ace_trenches_digEnvelopeBig = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__ace_trenches_digEnvelopeSmall = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__grad_trenches_digEnvelopeGiant = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__grad_trenches_digEnvelopeLongNameEmplacment = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__grad_trenches_digEnvelopeShort = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_trenches__grad_trenches_digEnvelopeVehicle = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ace_tripod_place = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__bocr_main_onBack = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__bocr_main_onChest = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__bocr_main_swap = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ls_holomap_deploy = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__ls_meme_eatChocolate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_onBack = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_onChest = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_boc_swap = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_disguise_equip_disguise = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_disguise_remove_disguise = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_drones_unpack = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_knifePull = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_knifeStow = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9 = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_prepare = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_EMP = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_HE = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Ion = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_RTD = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Smoke = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Stun = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_reload_Training = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_mm9__mti_equipment_stow = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_repairRadio = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_taser = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_taser__mti_equipment_activate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_equipment_taser__mti_equipment_reload = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_explosives_magneticModeOff = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_explosives_magneticModeOn = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_flags_placeBlue = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_flags_placeRed = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_medical_stretcher_place = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_minedetector_detector = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_minedetector_detector__mti_minedetector_activate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_minedetector_detector__mti_minedetector_deactivate = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_tech_placeAntenna = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_weapons_core_airburst = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_weapons_core_airburst__disable = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_weapons_core_airburst__enable = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__mti_weapons_core_airburst__setTimer = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__RD501_Auto_Radio_Freq = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2_B = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2_I = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2_O = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2e_B = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2e_I = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_AR2e_O = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_LTD_B = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__SCH_Unpack__SCH_Unpack_LTD_BW = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__slingHelmet = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__slingHelmet__slingLeft = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__slingHelmet__slingRight = false;
-ace_interact_menu_moveToRoot__ACE_Equipment__unslingHelmet = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digBunker = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digEndTrench = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digEndtrench_Half = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digFoxhole = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digMiddleTrench = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digMiddleTrench_Half = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digNest = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digStraightrench = false;
-ace_interact_menu_moveToRoot__ACE_Equipment_enhanced__ace_trenches__ace_trenches_digStraightrench_Half = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__ACE_Cellphone = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__ACE_Place = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_clacker = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_MED = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_MED__mti_explosives_MED_setTimer = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_MED__mti_explosives_MED_useClacker = false;
-ace_interact_menu_moveToRoot__ACE_Explosives__mti_explosives_MED__mti_explosives_MED_useTimer = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Advance = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_CeaseFire = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Cover = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Engage = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Follow = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Forward = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Freeze = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Go = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Hold = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Point = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Regroup = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Stop = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Up = false;
-ace_interact_menu_moveToRoot__ace_gestures__ace_gestures_Warning = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign__ACE_MapToolsAlignCompass = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign__ACE_MapToolsAlignNorth = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign__ACE_MapToolsAlignToPlottingBoard = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign__ACE_MapToolsAlignToPlottingBoardAcrylic = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsAlign__ACE_MapToolsAlignToPlottingBoardRuler = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsHide = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsShowNormal = false;
-ace_interact_menu_moveToRoot__ACE_MapTools__ACE_MapToolsShowSmall = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_ArmLeft = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_ArmRight = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_Head = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_LegLeft = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_LegRight = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_Torso = false;
-ace_interact_menu_moveToRoot__ACE_Medical__ACE_Torso__TriageCard = false;
-ace_interact_menu_moveToRoot__ACE_Medical__Bacta = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignAcrylic = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignAcrylic__ACE_PlottingBoardAlignAcrylicMaptool = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignAcrylic__ACE_PlottingBoardAlignAcrylicUp = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignBoard = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignBoard__ACE_PlottingBoardAlignBoardMaptool = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignBoard__ACE_PlottingBoardAlignBoardUp = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignRuler = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignRuler__ACE_PlottingBoardAlignRulerMaptool = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardAlign__ACE_PlottingBoardAlignRuler__ACE_PlottingBoardAlignRulerUp = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardRulerHide = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardRulerShow = false;
-ace_interact_menu_moveToRoot__ACE_PlottingBoardHide__ACE_PlottingBoardWipe = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_BecomeLeader = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_JoinTeamBlue = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_JoinTeamGreen = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_JoinTeamRed = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_JoinTeamYellow = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_LeaveGroup = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_LeaveTeam = false;
-ace_interact_menu_moveToRoot__ACE_TeamManagement__ACE_RenameGroup = false;
-ace_interact_menu_moveToRoot__DBA_Stims__DBA_Stims_Adrenal = false;
-ace_interact_menu_moveToRoot__DBA_Stims__DBA_Stims_Battle = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_direonepeace = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_direonerock = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_Facepalm = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_kata = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_pissing = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_Pushup = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_Threaten = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_actions__kka3_Thumbsup = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_cancel = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_crouch = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_crouch_thumbup = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_EmergencyStop = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_EnginesOff = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_EnginesOn = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Launch = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Left = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Right = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Slow = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Stop = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_carrier__kka3_Straight = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_Crazy_Dance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_crazydrunkdance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_dubstepdance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_dubstepPop = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_DuoIvan = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_hiphopdance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_nightclubdance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_robotdance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_dance__kka3_russiandance = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone2 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone2__kka3_direone1b = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone2__kka3_direone2b = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone2__kka3_direone3b = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_1 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_2 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_3 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_4 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_5 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_6 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_direone__kka3_direone_7 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_mimic = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_mimic__kka3_Angry = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_mimic__kka3_Default = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_mimic__kka3_Sad = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_mimic__kka3_Smile = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_emotion__kka3_scared = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose1 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose10 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose2 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose3 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose4 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose5 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose6 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose7 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose8 = false;
-ace_interact_menu_moveToRoot__kka3_anim__kka3_poses__kka3_pose9 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_checkchamber = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_cigaret = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_dab = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_dab__kka3_dab1 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_dab__kka3_dab2 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_facepalm = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_facepalm__kka3_facepalm1 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_facepalm__kka3_facepalm2 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_facepalm__kka3_facepalm3 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_gestures_sneeze = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_gestures_yawn = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_scratch = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_actions__kka3_think = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_cancel = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_clapping = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_farewellkiss = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_handup = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_handup__kka3_handup1 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_handup__kka3_handup2 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_handup__kka3_handup3 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_handup__kka3_handup4 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_high_five = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_peace = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_pistolfinger = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_point = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_point__kka3_pointF = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_point__kka3_pointL = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_handsignals__kka3_point__kka3_pointR = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_marine_1 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_marine_2 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_selfie = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_selfie_peace = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_surrender = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_stance__kka3_surrender1 = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_aggressive = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_agreeing = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_approximate = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_defensive = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_disagreeing = false;
-ace_interact_menu_moveToRoot__kka3_gestures_ace__kka3_talk__kka3_dismissing = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_activate = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_channelOptions = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_channelOptions__mti_intercom_channel_0 = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_channelOptions__mti_intercom_channel_1 = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_channelOptions__mti_intercom_channel_2 = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_deactivate = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_volumeDown = false;
-ace_interact_menu_moveToRoot__mti_equipment_intercom__mti_equipment_volumeUp = false;
-ace_interact_menu_moveToRoot__mti_fortify__FOB_Parts = false;
-ace_interact_menu_moveToRoot__mti_fortify__Fortifications = false;
-ace_interact_menu_moveToRoot__mti_fortify__manageSavedCompositions = false;
-ace_interact_menu_moveToRoot__mti_fortify__Misc = false;
-ace_interact_menu_moveToRoot__mti_fortify__recallAll = false;
-ace_interact_menu_moveToRoot__mti_fortify__Statics = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_backpack = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_backpack__mti_katarnOS_beacon = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_backpack__mti_katarnOS_caltropDispenser = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_backpack__mti_katarnOS_dispenser = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_backpack__mti_katarnOS_squadShield = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_HUDParent = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_HUDParent__mti_katarnOS_disableHUD = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_HUDParent__mti_katarnOS_enableHUD = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_HUDParent__mti_katarnOS_resetWaypoint = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_activate = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_channelOptions = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_channelOptions__mti_intercom_channel_0 = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_channelOptions__mti_intercom_channel_1 = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_channelOptions__mti_intercom_channel_2 = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_deactivate = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_volumeDown = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_intercom__mti_katarnOS_volumeUp = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_nvSettings = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_nvSettings__mti_katarnOS_lowlightOff = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_helmet__mti_katarnOS_nvSettings__mti_katarnOS_lowlightOn = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast__mti_katarnOS_activate = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_RepulsorBlast__mti_katarnOS_reload = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield__mti_katarnOS_shieldOff = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_shield__mti_katarnOS_shieldOn = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_taser = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_taser__mti_katarnOS_activate = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_taser__mti_katarnOS_reload = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_TRX = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_TRX__mti_katarnOS_activateTRX = false;
-ace_interact_menu_moveToRoot__mti_katarnOS_mainAction__mti_katarnOS_suit__mti_katarnOS_TRX__mti_katarnOS_deactivateTRX = false;
-
-// ACE Общие
+// ACE ÐžÐ±Ñ‰Ð¸Ðµ
 force ace_common_allowFadeMusic = true;
 force ace_common_checkPBOsAction = 2;
 force ace_common_checkPBOsCheckAll = true;
@@ -807,7 +391,7 @@ ace_common_settingFeedbackIcons = 1;
 ace_common_settingProgressBarLocation = 0;
 ace_common_swayFactor = 1;
 
-// ACE Ограничение обзора
+// ACE ÐžÐ³Ñ€Ð°Ð½Ð¸Ñ‡ÐµÐ½Ð¸Ðµ Ð¾Ð±Ð·Ð¾Ñ€Ð°
 force acex_viewrestriction_mode = 0;
 force acex_viewrestriction_modeSelectiveAir = 0;
 force acex_viewrestriction_modeSelectiveFoot = 0;
@@ -815,7 +399,7 @@ force acex_viewrestriction_modeSelectiveLand = 0;
 force acex_viewrestriction_modeSelectiveSea = 0;
 acex_viewrestriction_preserveView = false;
 
-// ACE Ограничитель дальности видимости
+// ACE ÐžÐ³Ñ€Ð°Ð½Ð¸Ñ‡Ð¸Ñ‚ÐµÐ»ÑŒ Ð´Ð°Ð»ÑŒÐ½Ð¾ÑÑ‚Ð¸ Ð²Ð¸Ð´Ð¸Ð¼Ð¾ÑÑ‚Ð¸
 force ace_viewdistance_enabled = false;
 force ace_viewdistance_limitViewDistance = 12000;
 ace_viewdistance_objectViewDistanceCoeff = 0;
@@ -823,33 +407,34 @@ ace_viewdistance_viewDistanceAirVehicle = 0;
 ace_viewdistance_viewDistanceLandVehicle = 0;
 ace_viewdistance_viewDistanceOnFoot = 0;
 
-// ACE Окопы
+// ACE ÐžÐºÐ¾Ð¿Ñ‹
 force ace_trenches_bigEnvelopeDigDuration = 25;
 force ace_trenches_bigEnvelopeRemoveDuration = 15;
 force ace_trenches_smallEnvelopeDigDuration = 10;
 force ace_trenches_smallEnvelopeRemoveDuration = 5;
 
-// ACE Оружие
+// ACE ÐžÑ€ÑƒÐ¶Ð¸Ðµ
 ace_common_persistentLaserEnabled = false;
 ace_reload_displayText = true;
 ace_reload_showCheckAmmoSelf = false;
 ace_reloadlaunchers_displayStatusText = true;
 ace_weaponselect_displayText = true;
 
-// ACE Отклонение ветром
+// ACE ÐžÑ‚ÐºÐ»Ð¾Ð½ÐµÐ½Ð¸Ðµ Ð²ÐµÑ‚Ñ€Ð¾Ð¼
 force ace_winddeflection_enabled = false;
 force ace_winddeflection_simulationInterval = 0;
 force ace_winddeflection_vehicleEnabled = false;
 
-// ACE Отслеживание убийств
+// ACE ÐžÑ‚ÑÐ»ÐµÐ¶Ð¸Ð²Ð°Ð½Ð¸Ðµ ÑƒÐ±Ð¸Ð¹ÑÑ‚Ð²
+ace_killtracker_showCrewKills = false;
 ace_killtracker_trackAI = true;
 
-// ACE Очки
+// ACE ÐžÑ‡ÐºÐ¸
 ace_goggles_effects = 0;
 ace_goggles_showClearGlasses = false;
 ace_goggles_showInThirdPerson = false;
 
-// ACE ПНВ
+// ACE ÐŸÐÐ’
 force ace_nightvision_aimDownSightsBlur = 0;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0;
@@ -857,7 +442,7 @@ force ace_nightvision_fogScaling = 0;
 force ace_nightvision_noiseScaling = 0;
 ace_nightvision_shutterEffects = false;
 
-// ACE Перегрев
+// ACE ÐŸÐµÑ€ÐµÐ³Ñ€ÐµÐ²
 force ace_overheating_cookoffCoef = 1;
 force ace_overheating_coolingCoef = 1;
 ace_overheating_displayTextOnJam = true;
@@ -874,11 +459,11 @@ force ace_overheating_unJamFailChance = 0;
 force ace_overheating_unJamOnreload = true;
 force ace_overheating_unJamOnSwapBarrel = false;
 
-// ACE Перегрузки
-force ace_gforces_coef = 0.5;
+// ACE ÐŸÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ¸
+force ace_gforces_coef = 0;
 force ace_gforces_enabledFor = 2;
 
-// ACE Переключение юнитов
+// ACE ÐŸÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ ÑŽÐ½Ð¸Ñ‚Ð¾Ð²
 force ace_switchunits_enableSafeZone = false;
 force ace_switchunits_enableSwitchUnits = false;
 force ace_switchunits_safeZoneRadius = 0;
@@ -887,20 +472,20 @@ force ace_switchunits_switchToEast = false;
 force ace_switchunits_switchToIndependent = false;
 force ace_switchunits_switchToWest = false;
 
-// ACE Перепаковка магазинов
+// ACE ÐŸÐµÑ€ÐµÐ¿Ð°ÐºÐ¾Ð²ÐºÐ° Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð¾Ð²
 ace_magazinerepack_repackAnimation = true;
 force ace_magazinerepack_repackLoadedMagazines = true;
 force ace_magazinerepack_timePerAmmo = 1;
 force ace_magazinerepack_timePerBeltLink = 1;
 force ace_magazinerepack_timePerMagazine = 1;
 
-// ACE Перетаскивание
+// ACE ÐŸÐµÑ€ÐµÑ‚Ð°ÑÐºÐ¸Ð²Ð°Ð½Ð¸Ðµ
 ace_dragging_allowRunWithLightweight = true;
 ace_dragging_dragAndFire = true;
 ace_dragging_skipContainerWeight = false;
 ace_dragging_weightCoefficient = 1;
 
-// ACE Пилоны
+// ACE ÐŸÐ¸Ð»Ð¾Ð½Ñ‹
 force ace_pylons_enabledForZeus = true;
 force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = true;
@@ -909,19 +494,19 @@ force ace_pylons_requireToolkit = true;
 force ace_pylons_searchDistance = 50;
 force ace_pylons_timePerPylon = 1;
 
-// ACE Пленные
+// ACE ÐŸÐ»ÐµÐ½Ð½Ñ‹Ðµ
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
 force ace_captives_requireSurrender = 1;
 force ace_captives_requireSurrenderAi = true;
 
-// ACE Погода
+// ACE ÐŸÐ¾Ð³Ð¾Ð´Ð°
 force ace_weather_enabled = false;
 ace_weather_showCheckAirTemperature = false;
 force ace_weather_updateInterval = 0;
 force ace_weather_windSimulation = false;
 
-// ACE Полевые рационы
+// ACE ÐŸÐ¾Ð»ÐµÐ²Ñ‹Ðµ Ñ€Ð°Ñ†Ð¸Ð¾Ð½Ñ‹
 force acex_field_rations_affectAdvancedFatigue = false;
 force acex_field_rations_enabled = false;
 acex_field_rations_hudShowLevel = 10;
@@ -934,12 +519,13 @@ force acex_field_rations_timeWithoutFood = 504;
 force acex_field_rations_timeWithoutWater = 168;
 force acex_field_rations_waterSourceActions = 2;
 
-// ACE Прицелы
+// ACE ÐŸÑ€Ð¸Ñ†ÐµÐ»Ñ‹
 force ace_scopes_correctZeroing = false;
 force ace_scopes_deduceBarometricPressureFromTerrainAltitude = false;
 force ace_scopes_defaultZeroRange = 100;
 force ace_scopes_enabled = false;
 force ace_scopes_forceUseOfAdjustmentTurrets = false;
+ace_scopes_inScopeAdjustment = false;
 force ace_scopes_overwriteZeroRange = false;
 force ace_scopes_simplifiedZeroing = false;
 ace_scopes_useLegacyUI = false;
@@ -947,7 +533,7 @@ force ace_scopes_zeroReferenceBarometricPressure = 1013.25;
 force ace_scopes_zeroReferenceHumidity = 0;
 force ace_scopes_zeroReferenceTemperature = 15;
 
-// ACE Продвинутая баллистика
+// ACE ÐŸÑ€Ð¾Ð´Ð²Ð¸Ð½ÑƒÑ‚Ð°Ñ Ð±Ð°Ð»Ð»Ð¸ÑÑ‚Ð¸ÐºÐ°
 force ace_advanced_ballistics_ammoTemperatureEnabled = false;
 force ace_advanced_ballistics_barrelLengthInfluenceEnabled = false;
 force ace_advanced_ballistics_bulletTraceEnabled = false;
@@ -955,7 +541,7 @@ force ace_advanced_ballistics_enabled = false;
 force ace_advanced_ballistics_muzzleVelocityVariationEnabled = false;
 force ace_advanced_ballistics_simulationInterval = 0;
 
-// ACE Продвинутая усталость
+// ACE ÐŸÑ€Ð¾Ð´Ð²Ð¸Ð½ÑƒÑ‚Ð°Ñ ÑƒÑÑ‚Ð°Ð»Ð¾ÑÑ‚ÑŒ
 force ace_advanced_fatigue_enabled = false;
 force ace_advanced_fatigue_enableStaminaBar = true;
 ace_advanced_fatigue_fadeStaminaBar = true;
@@ -964,12 +550,11 @@ force ace_advanced_fatigue_performanceFactor = 2;
 force ace_advanced_fatigue_recoveryFactor = 5;
 force ace_advanced_fatigue_terrainGradientFactor = 0;
 
-// ACE Продвинутое повреждение техники
+// ACE ÐŸÑ€Ð¾Ð´Ð²Ð¸Ð½ÑƒÑ‚Ð¾Ðµ Ð¿Ð¾Ð²Ñ€ÐµÐ¶Ð´ÐµÐ½Ð¸Ðµ Ñ‚ÐµÑ…Ð½Ð¸ÐºÐ¸
 force ace_vehicle_damage_enableCarDamage = false;
 force ace_vehicle_damage_enabled = true;
-force ace_vehicle_damage_removeAmmoDuringCookoff = true;
 
-// ACE Ремонт
+// ACE Ð ÐµÐ¼Ð¾Ð½Ñ‚
 force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = true;
 force ace_repair_consumeItem_toolKit = 0;
@@ -994,17 +579,16 @@ ace_repair_timeCoefficientFullRepair = 1.5;
 ace_repair_wheelChangeTime = 10;
 force ace_repair_wheelRepairRequiredItems = [];
 
-// ACE Сидение
+// ACE Ð¡Ð¸Ð´ÐµÐ½Ð¸Ðµ
 force acex_sitting_enable = true;
 
-// ACE Симуляция осколков
-force ace_frag_enabled = false;
-force ace_frag_maxTrack = 0;
-force ace_frag_maxTrackPerFrame = 0;
+// ACE Ð¡Ð¸Ð¼ÑƒÐ»ÑÑ†Ð¸Ñ Ð¾ÑÐºÐ¾Ð»ÐºÐ¾Ð²
+force ace_frag_enabled = true;
 force ace_frag_reflectionsEnabled = false;
 force ace_frag_spallEnabled = false;
+ace_frag_spallIntensity = 1;
 
-// ACE Слух
+// ACE Ð¡Ð»ÑƒÑ…
 ace_hearing_autoAddEarplugsToUnits = 1;
 force ace_hearing_disableEarRinging = true;
 force ace_hearing_earplugsVolume = 0.3;
@@ -1012,14 +596,14 @@ force ace_hearing_enableCombatDeafness = false;
 force ace_hearing_enabledForZeusUnits = true;
 force ace_hearing_unconsciousnessVolume = 0.1;
 
-// ACE Транспорт
+// ACE Ð¢Ñ€Ð°Ð½ÑÐ¿Ð¾Ñ€Ñ‚
 ace_novehicleclanlogo_enabled = false;
 ace_vehicles_hideEjectAction = false;
 force ace_vehicles_keepEngineRunning = true;
 ace_vehicles_speedLimiterStep = 10;
 ace_viewports_enabled = true;
 
-// ACE Указание пальцем
+// ACE Ð£ÐºÐ°Ð·Ð°Ð½Ð¸Ðµ Ð¿Ð°Ð»ÑŒÑ†ÐµÐ¼
 force ace_finger_enabled = true;
 ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 ace_finger_indicatorForSelf = true;
@@ -1027,7 +611,7 @@ force ace_finger_maxRange = 15;
 ace_finger_proximityScaling = false;
 ace_finger_sizeCoef = 1;
 
-// ACE Улучшенный бросок гранат
+// ACE Ð£Ð»ÑƒÑ‡ÑˆÐµÐ½Ð½Ñ‹Ð¹ Ð±Ñ€Ð¾ÑÐ¾Ðº Ð³Ñ€Ð°Ð½Ð°Ñ‚
 ace_advanced_throwing_enabled = true;
 force ace_advanced_throwing_enablePickUp = true;
 force ace_advanced_throwing_enablePickUpAttached = true;
@@ -1035,33 +619,20 @@ ace_advanced_throwing_enableTempWindInfo = true;
 ace_advanced_throwing_showMouseControls = true;
 ace_advanced_throwing_showThrowArc = true;
 
-// ACE Фортификация
+// ACE Ð¤Ð¾Ñ€Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ
 force ace_fortify_markObjectsOnMap = 0;
 force ace_fortify_timeCostCoefficient = 1;
 force ace_fortify_timeMin = 1.5;
 acex_fortify_settingHint = 1;
 
-// Ace Extension (Gestures)
-kka3_gesture1 = "kka3_arrested";
-kka3_gesture2 = "kka3_arrested";
-kka3_gesture3 = "kka3_arrested";
-kka3_gesture4 = "kka3_arrested";
-kka3_gesture5 = "kka3_arrested";
-kka3_gesture6 = "kka3_arrested";
-kka3_gesture7 = "kka3_arrested";
-kka3_gesture8 = "kka3_arrested";
-kka3_gesture9 = "kka3_arrested";
-kka3_hotkeydisabled = false;
-kka3_placeholder = false;
-
-// ACE Headless клиент
+// ACE Headless ÐºÐ»Ð¸ÐµÐ½Ñ‚
 force acex_headless_delay = 0;
-force acex_headless_enabled = false;
+force acex_headless_enabled = true;
 force acex_headless_endMission = 0;
-force acex_headless_log = false;
+force acex_headless_log = true;
 force acex_headless_transferLoadout = 1;
 
-// ACE: Логистика
+// ACE: Ð›Ð¾Ð³Ð¸ÑÑ‚Ð¸ÐºÐ°
 ace_cargo_carryAfterUnload = true;
 force ace_cargo_enable = true;
 ace_cargo_enableDeploy = true;
@@ -1074,6 +645,7 @@ ace_rearm_enabled = true;
 force ace_rearm_level = 0;
 force ace_rearm_supply = 0;
 ace_refuel_cargoRate = 10;
+ace_refuel_enabled = true;
 force ace_refuel_hoseLength = 50;
 ace_refuel_progressDuration = 2;
 force ace_refuel_rate = 3;
@@ -1095,12 +667,6 @@ AR_DefaultAnimationPlayed = "ARMA_AlternativeRun";
 AR_DefaultAnimationPlayed_Bolt = "ARMA_AlternativeRun_WW2Style";
 AR_DefaultAnimationPlayed_MG = "ARMA_AlternativeRunLowered";
 
-// Aux212
-Aux212_jumppack_setting_cycleHide_Cancel = true;
-Aux212_jumppack_setting_cycleHide_Dash = true;
-Aux212_jumppack_setting_cycleHide_Forward = false;
-Aux212_jumppack_setting_cycleHide_Short = false;
-
 // Aux212 HeadLamps
 Aux212_HeadLamps_IsAIActivateHeadlamps = false;
 Aux212_HeadLamps_IsVolumetricAppearOnAIParam = false;
@@ -1121,18 +687,10 @@ cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
 
 // Crows Zeus Additions
-crowsZA_CBA_Setting_pingbox_enabled = true;
-crowsZA_CBA_Setting_pingbox_fade_duration = 300;
-crowsZA_CBA_Setting_pingbox_fade_enabled = true;
-crowsZA_CBA_Setting_pingbox_oldLimit = 600;
 crowsza_pingbox_CBA_Setting_enabled = true;
 crowsza_pingbox_CBA_Setting_fade_duration = 300;
 crowsza_pingbox_CBA_Setting_fade_enabled = true;
 crowsza_pingbox_CBA_Setting_oldLimit = 600;
-crowsZA_zeus_rc_helper = true;
-crowsZA_zeus_rc_helper_color = [1,1,1,1];
-crowsZA_zeus_surrender_helper = true;
-crowsZA_zeus_surrender_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_OnKilledModule_helper = true;
 crowsza_zeus_text_CBA_Setting_OnKilledModule_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_rc_helper = true;
@@ -1142,56 +700,8 @@ crowsza_zeus_text_CBA_Setting_surrender_helper_color = [1,1,1,1];
 crowsza_zeus_text_CBA_Setting_zeusTextLine1 = true;
 crowsza_zeus_text_CBA_Setting_zeusTextLine2 = true;
 crowsza_zeus_text_CBA_Setting_zeusTextLine3 = false;
-crowsZA_zeusTextLine1 = true;
-crowsZA_zeusTextLine2 = true;
-crowsZA_zeusTextLine3 = false;
 
-// DBA CIS
-DBA_B2Revive = true;
-DBA_B2ReviveChanceOverride = 0.2;
-DBA_B2ReviveOverride = false;
-DBA_BuffLevel = 1;
-DBA_CentralComputerBuff = true;
-DBA_CentralComputerBuffOther = 0;
-DBA_CentralComputerDisable = 0;
-DBA_CentralComputerEnable = 0;
-DBA_CentralComputerSwitch = true;
-DBA_DisabledSuperTacticalDroidSystem = 0.5;
-DBA_DisabledSystem = 0.5;
-DBA_DisabledTacticalDroidSystem = 0.5;
-DBA_OOMStatus = false;
-DBA_SuperTacticalBuffLevel = 0.95;
-DBA_SuperTacticalDroidBuff = true;
-DBA_SuperTacticalDroidBuffOther = 2;
-DBA_TacticalBuffLevel = 0.85;
-DBA_TacticalDroidBuff = true;
-DBA_TacticalDroidBuffOther = 2;
-
-// DBA Core
-DBA_IgniteArmoured = true;
-DBA_IgniteDroids = true;
-DBA_IgniteEnable = true;
-DBA_IgniteThermallyInsulated = false;
-DBA_JammerBaseRange = 2000;
-DBA_OverLoadTimer = 2;
-DBA_PowerAmplification = 1;
-DBA_StunArmoured = false;
-DBA_StunDroids = false;
-DBA_StunDuration = 5;
-DBA_StunEnable = true;
-DBA_StunHeavyDroids = false;
-
-// Drongo's DYEL
-dyelActiveInventory = true;
-dyelArrestDebug = true;
-dyelCarryBodies = true;
-dyelChat = true;
-dyelDebug = false;
-dyelGroupManagement = true;
-dyelInventoryMenu = true;
-dyelWeightLimit = "1000";
-
-// DUI - Радар команды - Именные жетоны
+// DUI - Ð Ð°Ð´Ð°Ñ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ - Ð˜Ð¼ÐµÐ½Ð½Ñ‹Ðµ Ð¶ÐµÑ‚Ð¾Ð½Ñ‹
 diwako_dui_nametags_customRankStyle = "[[""PRIVATE"",""CORPORAL"",""SERGEANT"",""LIEUTENANT"",""CAPTAIN"",""MAJOR"",""COLONEL""],[""Pvt."",""Cpl."",""Sgt."",""Lt."",""Capt."",""Maj."",""Col.""]]";
 diwako_dui_nametags_deadColor = [0.2,0.2,0.2,1];
 diwako_dui_nametags_deadRenderDistance = 3.5;
@@ -1216,7 +726,7 @@ diwako_dui_nametags_showUnconAsDead = true;
 diwako_dui_nametags_useLIS = true;
 diwako_dui_nametags_useSideIsFriendly = true;
 
-// DUI - Радар команды - Индикаторы
+// DUI - Ð Ð°Ð´Ð°Ñ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ - Ð˜Ð½Ð´Ð¸ÐºÐ°Ñ‚Ð¾Ñ€Ñ‹
 force diwako_dui_indicators_crew_range_enabled = true;
 diwako_dui_indicators_fov_scale = false;
 diwako_dui_indicators_icon_buddy = false;
@@ -1230,7 +740,7 @@ diwako_dui_indicators_size = 1;
 diwako_dui_indicators_style = "standard";
 diwako_dui_indicators_useACENametagsRange = false;
 
-// DUI - Радар команды - Основное
+// DUI - Ð Ð°Ð´Ð°Ñ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ - ÐžÑÐ½Ð¾Ð²Ð½Ð¾Ðµ
 diwako_dui_ace_hide_interaction = true;
 diwako_dui_colors = "standard";
 diwako_dui_font = "RobotoCondensed";
@@ -1245,7 +755,7 @@ diwako_dui_main_squadYellow = [1,1,0,1];
 diwako_dui_main_trackingColor = [0.93,0.26,0.93,1];
 diwako_dui_reset_ui_pos = false;
 
-// DUI - Радар команды - Радар
+// DUI - Ð Ð°Ð´Ð°Ñ€ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ - Ð Ð°Ð´Ð°Ñ€
 diwako_dui_compass_hide_alone_group = false;
 diwako_dui_compass_hide_blip_alone_group = false;
 diwako_dui_compass_icon_scale = 1;
@@ -1314,7 +824,7 @@ force EHT_TrenchMiddle_HalfRemoveDuration = 20;
 force EHT_TrenchMiddleDigDuration = 40;
 force EHT_TrenchMiddleRemoveDuration = 20;
 
-// GRAD окопы
+// GRAD Ð¾ÐºÐ¾Ð¿Ñ‹
 force grad_trenches_functions_allowBigEnvelope = true;
 force grad_trenches_functions_allowCamouflage = false;
 force grad_trenches_functions_allowDigging = true;
@@ -1360,15 +870,6 @@ WBK_HWF_AllowProneShootSetting = true;
 WBK_HWF_AllowRecoilSetting = true;
 WBK_HWF_WeapsArraySetting = "['MMG_01_hex_F','MMG_01_hex_ARCO_LP_F','MMG_01_tan_F','MMG_02_black_F','MMG_02_black_RCO_BI_F','MMG_02_sand_F','MMG_02_sand_RCO_LP_F','MMG_02_camo_F','OPTRE_M247H_Etilka','OPTRE_M247H_Shield_Etilka','JLTS_Z6','SWLW_Z6','IDA_Z6','HLC_wp_M134Painless','Aux501_Weaps_Z6','LFP_Z6']";
 
-// HR Garage
-HR_Garage_dLock = false;
-HR_Garage_PoolBase = 10;
-HR_Garage_Pylons_Enabled = true;
-HR_Garage_renderPlacementRays = false;
-HR_Garage_ServiceDisabled_Rearm = false;
-HR_Garage_ServiceDisabled_Refuel = false;
-HR_Garage_ServiceDisabled_Repair = false;
-
 // Improved Melee System (Client Settings)
 IMS_CustomCamer_Y = 3;
 IMS_CustomCameraUsedByUserAllowed = true;
@@ -1397,7 +898,7 @@ force IMS_StealthAI_Eyes = 40;
 force IMS_WBK_CUSTOMCAMSERVER = true;
 IMS_WBK_MAINFPTP = true;
 
-// JLTS - Оружие
+// JLTS - ÐžÑ€ÑƒÐ¶Ð¸Ðµ
 force JLTS_settings_Common_dropShield = true;
 force JLTS_settings_EMP_EMPEffectScope = 3;
 force JLTS_settings_EMP_mainSwitch = 1;
@@ -1408,7 +909,7 @@ force JLTS_settings_EMP_repairTimeSecondary = 15;
 force JLTS_settings_Stun_mainSwitch = 1;
 force JLTS_settings_Stun_worksInVehicles = true;
 
-// JLTS - Отладка
+// JLTS - ÐžÑ‚Ð»Ð°Ð´ÐºÐ°
 force JLTS_settings_Debug_chat = true;
 force JLTS_settings_Debug_mainSwitch = 0;
 force JLTS_settings_Debug_rpt = true;
@@ -1612,6 +1113,76 @@ mti_weapons_core_tracking_scanDelay = 10;
 // MokTech Industries - Zeus
 mti_zeus_ZEN_useTraits = true;
 
+// OPTRE Powered MJOLNIR
+OPTRE_HUD_ENEMY_COLOR = [1,0.2,0.2,1];
+OPTRE_HUD_FRIENDLY_COLOR = [0.7,1,1,1];
+OPTRE_HUD_GROUP_COLOR = [1,1,1,1];
+OPTRE_HUD_HUMAN_ICON = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudTargetInfantry.paa";
+OPTRE_HUD_HUMAN_SIZE = 0.3;
+OPTRE_HUD_NEUTRAL_COLOR = [1,1,0,1];
+OPTRE_HUD_STATIC_ICON = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudTargetEmplacement.paa";
+OPTRE_HUD_STATIC_SIZE = 0.4;
+OPTRE_HUD_VEHICLE_ICON = "\OPTRE_Suit_Scripts\textures\OPTRE_MJOLNIR_hudTargetVehicle.paa";
+OPTRE_HUD_VEHICLE_SIZE = 0.6;
+OPTRE_JUMP_SUITS_SETTING = "OPTRE_MJOLNIR_Undersuit,OPTRE_MJOLNIR_Dress_Uniform,OPTRE_FC_MJOLNIR_MKVI_Undersuit,OPTRE_FC_Elite_CombatSkin";
+OPTRE_MJOLNIR_ACTIVATE_AI = true;
+OPTRE_MJOLNIR_ALLOW_LOWLIGHT_SETTING = true;
+OPTRE_MJOLNIR_ALLOW_TARGETING_SETTING = true;
+OPTRE_MJOLNIR_BOOTUP_COLOR = [0.694,0.933,0.345,1];
+OPTRE_MJOLNIR_CAMSHAKE = true;
+OPTRE_MJOLNIR_CHARGE_EFFECT_COLOR = [0.8,1,1,0.2];
+OPTRE_MJOLNIR_CHARGE_TEXTURE_COLOR = [0.8,1,1,1];
+OPTRE_MJOLNIR_DEPLETED_ALERT_COLOR = [1,0.2,0.2,0.8];
+OPTRE_MJOLNIR_DEPLETED_EFFECT_COLOR = [1,0.2,0.2,1];
+OPTRE_MJOLNIR_ENABLE_JUMP = true;
+OPTRE_MJOLNIR_ENABLE_SPARKS_HIT = true;
+OPTRE_MJOLNIR_ENABLE_SPARKS_SHIELD = true;
+OPTRE_MJOLNIR_ENERGY_BAR_ACTIVE = true;
+OPTRE_MJOLNIR_ENERGY_BAR_COLOR = [0.7,1,1,0.8];
+OPTRE_MJOLNIR_ENERGY_BAR_TEXT_COLOR = [0.7,1,1,0.8];
+OPTRE_MJOLNIR_HITEFFECT_COLOR = [1,1,0.2,1];
+OPTRE_MJOLNIR_HITEFFECT_DEPLETED_COLOR = [1,0.2,0.2,1];
+OPTRE_MJOLNIR_HUD_ACTIVE_INTRO = true;
+OPTRE_MJOLNIR_INCREASED_SPEED = true;
+OPTRE_MJOLNIR_INFODISPLAY_COLOR = [0.7,1,1,0.8];
+OPTRE_MJOLNIR_INFOTEXT_COLOR = [0.7,1,1,0.8];
+OPTRE_MJOLNIR_JUMP_FORWARD = 3;
+OPTRE_MJOLNIR_JUMP_UP_HIGH = 3;
+OPTRE_MJOLNIR_JUMP_UP_LOW = 5;
+OPTRE_MJOLNIR_OVERLAY_COLOR = [0.7,1,1,0.4];
+OPTRE_MJOLNIR_OVERWRITE_CONFIG_SHIELD = false;
+OPTRE_MJOLNIR_PREVENT_FALLDAMAGE = true;
+OPTRE_MJOLNIR_RADAR_COLOR = [0.7,1,1,0.8];
+OPTRE_MJOLNIR_RECOIL_MODIFIER = 0.3;
+OPTRE_MJOLNIR_SHIELD_DELAY = 0.1;
+OPTRE_MJOLNIR_SHIELD_ENERGY = 100;
+OPTRE_MJOLNIR_SHIELD_ENERGY_AI = 100;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_1 = 1;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_2 = 1.5;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_3 = 2;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_4 = 2.5;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_5 = 3;
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_1 = "OPTRE_FC_Elite_Armor_Minor,OPTRE_Grunt_Shield";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_2 = "OPTRE_FC_Elite_Armor_Major,OPTRE_FC_Elite_Armor_SpecOps,OPTRE_FC_Elite_Armor_Officer";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_3 = "OPTRE_FC_Elite_Armor_Ultra";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_4 = "OPTRE_FC_Elite_Armor_Zealot,OPTRE_FC_Elite_Armor_FieldMarshal";
+OPTRE_MJOLNIR_SHIELD_MODIFIER_SUITS_5 = "OPTRE_FC_Elite_Armor_HonorGuard,OPTRE_FC_Elite_Armor_HonorGuard_Ultra";
+OPTRE_MJOLNIR_SHIELD_REGEN = 1;
+OPTRE_MJOLNIR_SHIELD_REGEN_AI = 1;
+OPTRE_MJOLNIR_SHOW_ACTIVATE = true;
+OPTRE_MJOLNIR_SHOW_DEACTIVATE = false;
+OPTRE_MJOLNIR_SHOW_OUTLINE = true;
+OPTRE_MJOLNIR_SHOW_OVERLAY = true;
+OPTRE_MJOLNIR_SPEED_MODIFIER = 1.3;
+OPTRE_MJOLNIR_SUPPRESS_RECOIL = true;
+OPTRE_MJOLNIR_TARGETING_INTERVAL_RANGE_SETTING = 100;
+OPTRE_MJOLNIR_TARGETING_MAX_RANGE_SETTING = 1000;
+OPTRE_MJOLNIR_TARGETING_MIN_RANGE_SETTING = 100;
+OPTRE_MJOLNIR_WEAPON_ICON_COLOR = [0.7,1,1,0.8];
+OPTRE_POWERED_HELMETS = "OPTRE_MJOLNIR_Mk4Helmet,OPTRE_MJOLNIR_Mk4Helmet_Blue,OPTRE_MJOLNIR_Mk4Helmet_Red,OPTRE_FC_MJOLNIR_MKV_Helmet,OPTRE_FC_MJOLNIR_MKV_Helmet_Black,OPTRE_FC_MJOLNIR_MKV_Helmet_117,OPTRE_FC_MJOLNIR_MKV_Helmet_Caboose,OPTRE_FC_MJOLNIR_MKV_Helmet_Freeman,OPTRE_FC_MJOLNIR_MKV_Helmet_Church,OPTRE_FC_MJOLNIR_MKV_Helmet_Donut,OPTRE_FC_MJOLNIR_MKV_Helmet_Simmons,OPTRE_FC_MJOLNIR_MKV_Helmet_Night,OPTRE_FC_MJOLNIR_MKV_Helmet_Olive,OPTRE_FC_MJOLNIR_MKV_Helmet_Grif,OPTRE_FC_MJOLNIR_MKV_Helmet_Sarge,OPTRE_FC_MJOLNIR_MKV_Helmet_Tucker,OPTRE_MJOLNIR_MkVBHelmet,OPTRE_MJOLNIR_MkVBHelmet_UA,OPTRE_MJOLNIR_MkVBHelmet_UA_HUL,OPTRE_MJOLNIR_MkVBHelmet_Red,OPTRE_MJOLNIR_MkVBHelmet_Blue,OPTRE_MJOLNIR_MkVBHelmet_Black,OPTRE_MJOLNIR_Commando,OPTRE_MJOLNIR_Commando_HUL3,OPTRE_MJOLNIR_Commando_DefaultV_HUL3,OPTRE_MJOLNIR_Commando_SilverV_HUL3,OPTRE_MJOLNIR_Commando_BlueV_HUL3,OPTRE_MJOLNIR_Commando_BlackV_HUL3,OPTRE_MJOLNIR_Commando_Black_HUL3,OPTRE_MJOLNIR_Commando_Black_DefaultV_HUL3,OPTRE_MJOLNIR_Commando_Black_SilverV_HUL3,OPTRE_MJOLNIR_Commando_Black_BlueV_HUL3,OPTRE_MJOLNIR_Commando_Black_BlackV_HUL3,OPTRE_MJOLNIR_Commando_Blue_HUL3,OPTRE_MJOLNIR_Commando_Blue_DefaultV_HUL3,OPTRE_MJOLNIR_Commando_Blue_SilverV_HUL3,OPTRE_MJOLNIR_Commando_Blue_BlueV_HUL3,OPTRE_MJOLNIR_Commando_Blue_BlackV_HUL3,OPTRE_MJOLNIR_Commando_Red_HUL3,OPTRE_MJOLNIR_Commando_Red_DefaultV_HUL3,OPTRE_MJOLNIR_Commando_Red_SilverV_HUL3,OPTRE_MJOLNIR_Commando_Red_BlueV_HUL3,OPTRE_MJOLNIR_Commando_Red_BlackV_HUL3,OPTRE_MJOLNIR_MkVBHelmet_BLKV,OPTRE_MJOLNIR_MkVBHelmet_BLUV,OPTRE_MJOLNIR_MkVBHelmet_SLVV,OPTRE_MJOLNIR_MkVBHelmet_Black_SLVV,OPTRE_MJOLNIR_Commando_DefaultV,OPTRE_MJOLNIR_Commando_SilverV,OPTRE_MJOLNIR_Commando_BlueV,OPTRE_MJOLNIR_Commando_BlackV,OPTRE_MJOLNIR_Commando_Black,OPTRE_MJOLNIR_Commando_Black_DefaultV,OPTRE_MJOLNIR_Commando_Black_SilverV,OPTRE_MJOLNIR_Commando_Black_BlueV,OPTRE_MJOLNIR_Commando_Black_BlackV,OPTRE_MJOLNIR_Commando_Blue,OPTRE_MJOLNIR_Commando_Blue_DefaultV,OPTRE_MJOLNIR_Commando_Blue_SilverV,OPTRE_MJOLNIR_Commando_Blue_BlueV,OPTRE_MJOLNIR_Commando_Blue_BlackV,OPTRE_MJOLNIR_Commando_Red,OPTRE_MJOLNIR_Commando_Red_DefaultV,OPTRE_MJOLNIR_Commando_Red_SilverV,OPTRE_MJOLNIR_Commando_Red_BlueV,OPTRE_MJOLNIR_Commando_Red_BlackV,OPTRE_MJOLNIR_CQB,OPTRE_MJOLNIR_CQC,OPTRE_MJOLNIR_Pilot,OPTRE_MJOLNIR_Operator,OPTRE_MJOLNIR_EOD,OPTRE_MJOLNIR_ODST,OPTRE_FC_MJOLNIR_Mark_VI_Helmet,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_White,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Olive,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Tan,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Tex,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Caboose,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Church,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Donut,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Grif,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Simmons,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Sarge,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Kaikaina,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Lopez,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Doc,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_North,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_South,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_York,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Washington,OPTRE_FC_MJOLNIR_Mark_VI_Helmet_Tucker,OPTRE_MJOLNIR_EVAHelmet,OPTRE_MJOLNIR_EVAHelmet_Emily,OPTRE_MJOLNIR_MPHelmet,OPTRE_MJOLNIR_ReconHelmet,OPTRE_FC_Elite_Helmet_FieldMarshal,OPTRE_FC_Elite_Helmet_HonorGuard_Ultra,OPTRE_FC_Elite_Helmet_HonorGuard,OPTRE_FC_Elite_Helmet_Major,OPTRE_FC_Elite_Helmet_Officer,OPTRE_FC_Elite_Helmet_Minor,OPTRE_FC_Elite_Helmet_SpecOps,OPTRE_FC_Elite_Helmet_Ultra,OPTRE_FC_Elite_Helmet_Zealot";
+OPTRE_POWERED_SUITS_SETTING = "OPTRE_Grunt_Shield,OPTRE_MJOLNIR_Mk4Armor,OPTRE_MJOLNIR_Mk4Armor_Blue,OPTRE_MJOLNIR_Mk4Armor_Red,OPTRE_FC_MJOLNIR_MKV_Armor,OPTRE_FC_MJOLNIR_MKV_Armor_Black,OPTRE_FC_MJOLNIR_MKV_Armor_117,OPTRE_FC_MJOLNIR_MKV_Armor_Caboose,OPTRE_FC_MJOLNIR_MKV_Armor_Freeman,OPTRE_FC_MJOLNIR_MKV_Armor_Church,OPTRE_FC_MJOLNIR_MKV_Armor_Donut,OPTRE_FC_MJOLNIR_MKV_Armor_Simmons,OPTRE_FC_MJOLNIR_MKV_Armor_Night,OPTRE_FC_MJOLNIR_MKV_Armor_Olive,OPTRE_FC_MJOLNIR_MKV_Armor_Grif,OPTRE_FC_MJOLNIR_MKV_Armor_Sarge,OPTRE_FC_MJOLNIR_MKV_Armor_Tucker,OPTRE_MJOLNIR_MkVBArmor,OPTRE_FC_MJOLNIR_Mark_VI_Armor,OPTRE_FC_MJOLNIR_Mark_VI_Armor_White,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Olive,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Tan,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Tex,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Caboose,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Church,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Tucker,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Donut,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Grif,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Simmons,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Sarge,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Kaikaina,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Lopez,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Doc,OPTRE_FC_MJOLNIR_Mark_VI_Armor_North,OPTRE_FC_MJOLNIR_Mark_VI_Armor_South,OPTRE_FC_MJOLNIR_Mark_VI_Armor_York,OPTRE_FC_MJOLNIR_Mark_VI_Armor_Washington,OPTRE_FC_Elite_Armor_FieldMarshal,OPTRE_FC_Elite_Armor_HonorGuard_Ultra,OPTRE_FC_Elite_Armor_HonorGuard,OPTRE_FC_Elite_Armor_Major,OPTRE_FC_Elite_Armor_Officer,OPTRE_FC_Elite_Armor_Minor,OPTRE_FC_Elite_Armor_SpecOps,OPTRE_FC_Elite_Armor_Ultra,OPTRE_FC_Elite_Armor_Zealot,OPTRE_MJOLNIR_MkVBArmor2,OPTRE_MJOLNIR_MkVBArmor3,OPTRE_MJOLNIR_MkVBArmor4,OPTRE_MJOLNIR_MkVBArmor5,OPTRE_MJOLNIR_MkVBArmor6,OPTRE_MJOLNIR_MkVBArmor7,OPTRE_MJOLNIR_MkVBArmor8,OPTRE_MJOLNIR_MkVBArmor_FJPARA1,OPTRE_MJOLNIR_MkVBArmor_FJPARA2,OPTRE_MJOLNIR_MkVBArmor_FJPARA3,OPTRE_MJOLNIR_MkVBArmor_FJPARA4,OPTRE_MJOLNIR_MkVBArmor_FJPARA5,OPTRE_MJOLNIR_MkVBArmor_FJPARA6,OPTRE_MJOLNIR_MkVBArmor_FJPARA7,OPTRE_MJOLNIR_MkVBArmor_FJPARA8,OPTRE_MJOLNIR_MkVBArmor_FJPARA9,OPTRE_MJOLNIR_MkVBArmor_Commando,OPTRE_MJOLNIR_MkVBArmor_Commando2,OPTRE_MJOLNIR_MkVBArmor_Commando3,OPTRE_MJOLNIR_MkVBArmor_Commando4,OPTRE_MJOLNIR_MkVBArmor_Commando5,OPTRE_MJOLNIR_MkVBArmor_Commando6,OPTRE_MJOLNIR_MkVBArmor_Commando7,OPTRE_MJOLNIR_MkVBArmor_Commando8,OPTRE_MJOLNIR_MkVBArmor_MkV,OPTRE_MJOLNIR_MkVBArmor_MkV2,OPTRE_MJOLNIR_MkVBArmor_MkV3,OPTRE_MJOLNIR_MkVBArmor_MkV4,OPTRE_MJOLNIR_MkVBArmor_MkV5,OPTRE_MJOLNIR_MkVBArmor_MkV6,OPTRE_MJOLNIR_MkVBArmor_MkV7,OPTRE_MJOLNIR_MkVBArmor_MkV8,OPTRE_MJOLNIR_MkVBArmor_Red,OPTRE_MJOLNIR_MkVBArmor_Blue,OPTRE_MJOLNIR_MkVBArmor_Black,OPTRE_MJOLNIR_MkVBArmor_Default,OPTRE_MJOLNIR_MkVBArmor_Default2,OPTRE_MJOLNIR_MkVBArmor_Default3,OPTRE_MJOLNIR_MkVBArmor_Default4,OPTRE_MJOLNIR_MkVBArmor_Default5,OPTRE_MJOLNIR_MkVBArmor_Default6,OPTRE_MJOLNIR_MkVBArmor_Default7,OPTRE_MJOLNIR_MkVBArmor_Default8,OPTRE_MJOLNIR_MkVBArmor_Default9,OPTRE_MJOLNIR_MkVBArmor_Default10,OPTRE_MJOLNIR_MkVBArmor_Default11,OPTRE_MJOLNIR_MkVBArmor_Default_Black,OPTRE_MJOLNIR_MkVBArmor_Default_Red,OPTRE_MJOLNIR_MkVBArmor_Default_Blue,OPTRE_MJOLNIR_MkVBArmor_Grenadier,OPTRE_MJOLNIR_MkVBArmor_Grenadier2,OPTRE_MJOLNIR_MkVBArmor_Grenadier3,OPTRE_MJOLNIR_MkVBArmor_Grenadier4,OPTRE_MJOLNIR_MkVBArmor_Grenadier5,OPTRE_MJOLNIR_MkVBArmor_Grenadier6,OPTRE_MJOLNIR_MkVBArmor_Grenadier7,OPTRE_MJOLNIR_MkVBArmor_Grenadier8,OPTRE_MJOLNIR_MkVBArmor_Grenadier9,OPTRE_MJOLNIR_MkVBArmor_CQC,OPTRE_MJOLNIR_MkVBArmor_CQC2,OPTRE_MJOLNIR_MkVBArmor_CQC3,OPTRE_MJOLNIR_MkVBArmor_CQC4,OPTRE_MJOLNIR_MkVBArmor_CQC5,OPTRE_MJOLNIR_MkVBArmor_CQC6,OPTRE_MJOLNIR_MkVBArmor_CQC7,OPTRE_MJOLNIR_MkVBArmor_CQC8,OPTRE_MJOLNIR_MkVBArmor_CQC9,OPTRE_MJOLNIR_MkVBArmor_CQC10,OPTRE_MJOLNIR_MkVBArmor_CQC11,OPTRE_MJOLNIR_MkVBArmor_CQC12,OPTRE_MJOLNIR_MkVBArmor_CQC13,OPTRE_MJOLNIR_MkVBArmor_CQC14,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees3,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees4,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees5,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees6,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA2,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA3,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA4,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA5,OPTRE_MJOLNIR_MkVBArmor_Collar_Gren_UA6OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Knees1,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Knees2,OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Knees_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Knees_Collar2,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Collar,OPTRE_MJOLNIR_MkVBArmor_Commando_Collar,OPTRE_MJOLNIR_MkVBArmor_MkV_Collar,OPTRE_MJOLNIR_MkVBArmor_Grenadier_Collar,OPTRE_MJOLNIR_MkVBArmor_CQC_Collar,OPTRE_MJOLNIR_MkVBArmor2_Collar,OPTRE_MJOLNIR_MkVBArmor_FJPARA_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor_Commando_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor_MkV_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor_Grenadier_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor_CQC_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor2_Knees_CollarBase,OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_ParaCQC_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaCommando_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaGrenadier_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaMarkV_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_ParaSecurity_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CQCPara_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCCommando_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCGrenadier_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCMarkV_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CQCSecurity_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_CommandoPara_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoCQC_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoGrenadier_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoMarkV_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_CommandoSecurity_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_GrenadierPara_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCQC_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierCommando_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierMarkV_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_GrenadierSecurity_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_MarkVPara_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVCQC_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVCommando_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVGrenadier_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_MarkVSecurity_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Collar1,OPTRE_MJOLNIR_MkVBArmor_SecurityPara_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityCQC_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityCommando_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityGrenadier_FJPARA_Collar2,OPTRE_MJOLNIR_MkVBArmor_SecurityMarkV_FJPARA_Collar2";
+OPTRE_START_ON_INIT = true;
+
 // OPTRE Settings
 OPTRE_AircraftHUD_colour = [0.082,0.408,0.039,1];
 OPTRE_Debug_Mode = false;
@@ -1630,38 +1201,6 @@ OPTRE_Spartan_Randomize = true;
 WBK_OB_ArsenalSetting = true;
 WBK_OB_EnablePlayerFlinches = false;
 WBK_OB_ShowSubtSetting = true;
-
-// Project SFX: Remastered
-force SFX_AdEXP = true;
-force SFX_Breathsnd = false;
-force SFX_Exbs = true;
-force SFX_FemaleFacesArraySetting = "['F_clair','F_jill','B_female_bun_01','B_female_bun_02','B_female_bun_03','B_female_bun_04','fsof_femaleCauc01_BlueEyes_NoHair','fsof_femaleCauc01_BrownEyes_NoHair','fsof_femaleCauc01_GreenEyes_NoHair','fsof_femaleCauc01_HazelEyes_NoHair','fsof_femaleCauc01_BlueEyes_Bun_BlondeHair','fsof_femaleCauc01_BrownEyes_Bun_BlondeHair','fsof_femaleCauc01_GreenEyes_Bun_BlondeHair','fsof_femaleCauc01_HazelEyes_Bun_BlondeHair','fsof_femaleCauc01_BlueEyes_Bun_LBrownHair','fsof_femaleCauc01_BrownEyes_Bun_LBrownHair','fsof_femaleCauc01_GreenEyes_Bun_LBrownHair','fsof_femaleCauc01_HazelEyes_Bun_LBrownHair','fsof_femaleCauc01_BlueEyes_Bun_BrownHair','fsof_femaleCauc01_BrownEyes_Bun_BrownHair','fsof_femaleCauc01_GreenEyes_Bun_BrownHair','fsof_femaleCauc01_HazelEyes_Bun_BrownHair','fsof_femaleCauc01_BlueEyes_Bun_BlackHair','fsof_femaleCauc01_BrownEyes_Bun_BlackHair','fsof_femaleCauc01_GreenEyes_Bun_BlackHair','fsof_femaleCauc01_HazelEyes_Bun_BlackHair','fsof_femaleCauc01t2_BlueEyes_NoHair','fsof_femaleCauc01t2_BrownEyes_NoHair','fsof_femaleCauc01t2_GreenEyes_NoHair','fsof_femaleCauc01t2_HazelEyes_NoHair','fsof_FemaleCauc01t2_BlueEyes_Bun_BlondeHair','fsof_FemaleCauc01t2_BrownEyes_Bun_BlondeHair','fsof_FemaleCauc01t2_GreenEyes_Bun_BlondeHair','fsof_FemaleCauc01t2_HazelEyes_Bun_BlondeHair','fsof_FemaleCauc01t2_BlueEyes_Bun_LBrownHair','fsof_FemaleCauc01t2_BrownEyes_Bun_LBrownHair','fsof_FemaleCauc01t2_GreenEyes_Bun_LBrownHair','fsof_FemaleCauc01t2_HazelEyes_Bun_LBrownHair','fsof_FemaleCauc01t2_BlueEyes_Bun_BrownHair','fsof_FemaleCauc01t2_BrownEyes_Bun_BrownHair','fsof_FemaleCauc01t2_GreenEyes_Bun_BrownHair','fsof_FemaleCauc01t2_HazelEyes_Bun_BrownHair','fsof_FemaleCauc01t2_BlueEyes_Bun_BlackHair','fsof_FemaleCauc01t2_BrownEyes_Bun_BlackHair','fsof_FemaleCauc01t2_GreenEyes_Bun_BlackHair','fsof_FemaleCauc01t2_HazelEyes_Bun_BlackHair','fsof_FemaleCauc01t3_BlueEyes_NoHair','fsof_FemaleCauc01t3_BrownEyes_NoHair','fsof_FemaleCauc01t3_GreenEyes_NoHair','fsof_FemaleCauc01t3_HazelEyes_NoHair','fsof_FemaleCauc01t3_BlueEyes_Bun_BlondeHair','fsof_FemaleCauc01t3_BrownEyes_Bun_BlondeHair','fsof_FemaleCauc01t3_GreenEyes_Bun_BlondeHair','fsof_FemaleCauc01t3_HazelEyes_Bun_BlondeHair','fsof_FemaleCauc01t3_BlueEyes_Bun_LBrownHair','fsof_FemaleCauc01t3_BrownEyes_Bun_LBrownHair','fsof_FemaleCauc01t3_GreenEyes_Bun_LBrownHair','fsof_FemaleCauc01t3_HazelEyes_Bun_LBrownHair','fsof_FemaleCauc01t3_BlueEyes_Bun_BrownHair','fsof_FemaleCauc01t3_BrownEyes_Bun_BrownHair','fsof_FemaleCauc01t3_GreenEyes_Bun_BrownHair','fsof_FemaleCauc01t3_HazelEyes_Bun_BrownHair','fsof_FemaleCauc01t3_BlueEyes_Bun_BlackHair','fsof_FemaleCauc01t3_BrownEyes_Bun_BlackHair','fsof_FemaleCauc01t3_GreenEyes_Bun_BlackHair','fsof_FemaleCauc01t3_HazelEyes_Bun_BlackHair','fsof_FemaleCauc01t4_BlueEyes_NoHair','fsof_FemaleCauc01t4_BrownEyes_NoHair','fsof_FemaleCauc01t4_GreenEyes_NoHair','fsof_FemaleCauc01t4_HazelEyes_NoHair','fsof_FemaleCauc01t4_BlueEyes_Bun_BlondeHair','fsof_FemaleCauc01t4_BrownEyes_Bun_BlondeHair','fsof_FemaleCauc01t4_GreenEyes_Bun_BlondeHair','fsof_FemaleCauc01t4_HazelEyes_Bun_BlondeHair','fsof_FemaleCauc01t4_BlueEyes_Bun_LBrownHair','fsof_FemaleCauc01t4_BrownEyes_Bun_LBrownHair','fsof_FemaleCauc01t4_GreenEyes_Bun_LBrownHair','fsof_FemaleCauc01t4_HazelEyes_Bun_LBrownHair','fsof_FemaleCauc01t4_BlueEyes_Bun_BrownHair','fsof_FemaleCauc01t4_BrownEyes_Bun_BrownHair','fsof_FemaleCauc01t4_GreenEyes_Bun_BrownHair','fsof_FemaleCauc01t4_HazelEyes_Bun_BrownHair','fsof_FemaleCauc01t4_BlueEyes_Bun_BlackHair','fsof_FemaleCauc01t4_BrownEyes_Bun_BlackHair','fsof_FemaleCauc01t4_GreenEyes_Bun_BlackHair','fsof_FemaleCauc01t4_HazelEyes_Bun_BlackHair','fsof_femaleCauc02_BlueEyes_NoHair','fsof_femaleCauc02_BrownEyes_NoHair','fsof_femaleCauc02_GreenEyes_NoHair','fsof_femaleCauc02_HazelEyes_NoHair','fsof_femaleCauc02_BlueEyes_Bun_BlondeHair','fsof_femaleCauc02_BrownEyes_Bun_BlondeHair','fsof_femaleCauc02_GreenEyes_Bun_BlondeHair','fsof_femaleCauc02_HazelEyes_Bun_BlondeHair','fsof_femaleCauc02_BlueEyes_Bun_LBrownHair','fsof_femaleCauc02_BrownEyes_Bun_LBrownHair','fsof_femaleCauc02_GreenEyes_Bun_LBrownHair','fsof_femaleCauc02_HazelEyes_Bun_LBrownHair','fsof_femaleCauc02_BlueEyes_Bun_BrownHair','fsof_femaleCauc02_BrownEyes_Bun_BrownHair','fsof_femaleCauc02_GreenEyes_Bun_BrownHair','fsof_femaleCauc02_HazelEyes_Bun_BrownHair','fsof_femaleCauc02_BlueEyes_Bun_BlackHair','fsof_femaleCauc02_BrownEyes_Bun_BlackHair','fsof_femaleCauc02_GreenEyes_Bun_BlackHair','fsof_femaleCauc02_HazelEyes_Bun_BlackHair','fsof_femaleCauc02t2_BlueEyes_NoHair','fsof_femaleCauc02t2_BrownEyes_NoHair','fsof_femaleCauc02t2_GreenEyes_NoHair','fsof_femaleCauc02t2_HazelEyes_NoHair','fsof_femaleCauc02t2_BlueEyes_Bun_BlondeHair','fsof_femaleCauc02t2_BrownEyes_Bun_BlondeHair','fsof_femaleCauc02t2_GreenEyes_Bun_BlondeHair','fsof_femaleCauc02t2_HazelEyes_Bun_BlondeHair','fsof_femaleCauc02t2_BlueEyes_Bun_LBrownHair','fsof_femaleCauc02t2_BrownEyes_Bun_LBrownHair','fsof_femaleCauc02t2_GreenEyes_Bun_LBrownHair','fsof_femaleCauc02t2_HazelEyes_Bun_LBrownHair','fsof_femaleCauc02t2_BlueEyes_Bun_BrownHair','fsof_femaleCauc02t2_BrownEyes_Bun_BrownHair','fsof_femaleCauc02t2_GreenEyes_Bun_BrownHair','fsof_femaleCauc02t2_HazelEyes_Bun_BrownHair','fsof_femaleCauc02t2_BlueEyes_Bun_BlackHair','fsof_femaleCauc02t2_BrownEyes_Bun_BlackHair','fsof_femaleCauc02t2_GreenEyes_Bun_BlackHair','fsof_femaleCauc02t2_HazelEyes_Bun_BlackHair','fsof_femaleCauc02t3_BlueEyes_NoHair','fsof_femaleCauc02t3_BrownEyes_NoHair','fsof_femaleCauc02t3_GreenEyes_NoHair','fsof_femaleCauc02t3_HazelEyes_NoHair','fsof_femaleCauc02t3_BlueEyes_Bun_BlondeHair','fsof_femaleCauc02t3_BrownEyes_Bun_BlondeHair','fsof_femaleCauc02t3_GreenEyes_Bun_BlondeHair','fsof_femaleCauc02t3_HazelEyes_Bun_BlondeHair','fsof_femaleCauc02t3_BlueEyes_Bun_LBrownHair','fsof_femaleCauc02t3_BrownEyes_Bun_LBrownHair','fsof_femaleCauc02t3_GreenEyes_Bun_LBrownHair','fsof_femaleCauc02t3_HazelEyes_Bun_LBrownHair','fsof_femaleCauc02t3_BlueEyes_Bun_BrownHair','fsof_femaleCauc02t3_BrownEyes_Bun_BrownHair','fsof_femaleCauc02t3_GreenEyes_Bun_BrownHair','fsof_femaleCauc02t3_HazelEyes_Bun_BrownHair','fsof_femaleCauc02t3_BlueEyes_Bun_BlackHair','fsof_femaleCauc02t3_BrownEyes_Bun_BlackHair','fsof_femaleCauc02t3_GreenEyes_Bun_BlackHair','fsof_femaleCauc02t3_HazelEyes_Bun_BlackHair','fsof_femaleCauc02t4_BlueEyes_NoHair','fsof_femaleCauc02t4_BrownEyes_NoHair','fsof_femaleCauc02t4_GreenEyes_NoHair','fsof_femaleCauc02t4_HazelEyes_NoHair','fsof_femaleCauc02t4_BlueEyes_Bun_BlondeHair','fsof_femaleCauc02t4_BrownEyes_Bun_BlondeHair','fsof_femaleCauc02t4_GreenEyes_Bun_BlondeHair','fsof_femaleCauc02t4_HazelEyes_Bun_BlondeHair','fsof_femaleCauc02t4_BlueEyes_Bun_LBrownHair','fsof_femaleCauc02t4_BrownEyes_Bun_LBrownHair','fsof_femaleCauc02t4_GreenEyes_Bun_LBrownHair','fsof_femaleCauc02t4_HazelEyes_Bun_LBrownHair','fsof_femaleCauc02t4_BlueEyes_Bun_BrownHair','fsof_femaleCauc02t4_BrownEyes_Bun_BrownHair','fsof_femaleCauc02t4_GreenEyes_Bun_BrownHair','fsof_femaleCauc02t4_HazelEyes_Bun_BrownHair','fsof_femaleCauc02t4_BlueEyes_Bun_BlackHair','fsof_femaleCauc02t4_BrownEyes_Bun_BlackHair','fsof_femaleCauc02t4_GreenEyes_Bun_BlackHair','fsof_femaleCauc02t4_HazelEyes_Bun_BlackHair','fsof_femaleBlk01_HazelEyes_BlkHair','fsof_femaleBlk01_BrownEyes_BlkHair','fsof_femaleBlk01_BrownEyes_NoHair','fsof_femaleBlk01_HazelEyes_NoHair','fsof_femaleAsi01_BrownEyes_BlkHair','fsof_femaleAsi01_BrownEyes_NoHair','TCGM_Fem_Gonzalez','TCGM_Fem_Fox','TCGM_Fem_FoxBun','TCGM_Fem_Fenty','TCGM_Fem_Liu','TCGM_Fem_Zhu','TCGM_Fem_Stone','TCGM_Fem_StoneBun','TCGM_Fem_Eilish','TCGM_Fem_EilishBun','TCGM_Fem_Portman','TCGM_Fem_Ayres','TCGM_Fem_Hobson','TCGM_Fem_Lynch','TCGM_MakF_FoxClub1','TCGM_MakF_FoxClub2','TCGM_MakF_FoxGothic1','TCGM_MakF_FoxViking1','TCGM_MakF_FoxPunk1','TCGM_MakF_FoxCommand','TCGM_MakF_FoxQuiet','TCGM_MakF_GonzalezClub1','TCGM_MakF_GonzalezClub2','TCGM_MakF_GonzalezGothic1','TCGM_MakF_GonzalezViking1','TCGM_MakF_GonzalezPunk1','TCGM_MakF_GonzalezCommand','TCGM_MakF_GonzalezQuiet','TCGM_MakF_FentyClub1','TCGM_MakF_FentyClub2','TCGM_MakF_FentyGothic1','TCGM_MakF_FentyViking1','TCGM_MakF_FentyPunk1','TCGM_MakF_FentyCommand','TCGM_MakF_FentyQuiet','TCGM_MakF_LiuClub1','TCGM_MakF_LiuClub2','TCGM_MakF_LiuGothic1','TCGM_MakF_LiuViking1','TCGM_MakF_LiuPunk1','TCGM_MakF_LiuCommand','TCGM_MakF_LiuQuiet','TCGM_MakF_StoneClub1','TCGM_MakF_StoneClub2','TCGM_MakF_StoneGothic1','TCGM_MakF_StoneViking1','TCGM_MakF_StonePunk1','TCGM_MakF_StoneCommand','TCGM_MakF_StoneQuiet','TCGM_MakF_EilishClub1','TCGM_MakF_EilishClub2','TCGM_MakF_EilishGothic1','TCGM_MakF_EilishViking1','TCGM_MakF_EilishPunk1','TCGM_MakF_EilishCommand','TCGM_MakF_EilishQuiet','TCGM_MakF_PortmanClub1','TCGM_MakF_PortmanClub2','TCGM_MakF_PortmanGothic1','TCGM_MakF_PortmanViking1','TCGM_MakF_PortmanPunk1','TCGM_MakF_PortmanCommand','TCGM_MakF_PortmanQuiet','TCGM_MakF_AyresClub1','TCGM_MakF_AyresClub2','TCGM_MakF_AyresGothic1','TCGM_MakF_AyresViking1','TCGM_MakF_AyresPunk1','TCGM_MakF_AyresCommand','TCGM_MakF_AyresQuiet','TCGM_MakF_HobsonClub1','TCGM_MakF_HobsonClub2','TCGM_MakF_HobsonGothic1','TCGM_MakF_HobsonViking1','TCGM_MakF_HobsonPunk1','TCGM_MakF_HobsonCommand','TCGM_MakF_HobsonQuiet','TCGM_MakF_ZhuClub1','TCGM_MakF_ZhuClub2','TCGM_MakF_ZhuGothic1','TCGM_MakF_ZhuViking1','TCGM_MakF_ZhuPunk1','TCGM_MakF_ZhuCommand','TCGM_MakF_ZhuQuiet','TCGM_MakF_LynchClub1','TCGM_MakF_LynchClub2','TCGM_MakF_LynchGothic1','TCGM_MakF_LynchViking1','TCGM_MakF_LynchPunk1','TCGM_MakF_LynchCommand','TCGM_MakF_LynchQuiet','ZEPHIK_Female_face_1','Smith_v2','Tyler','Oakes_v2', 'Mason_v2','Arnott','Arnott_h','Mason','Mason_h','Oakes','Oakes_h','Smith','Smith_h', 'max_female1','max_female2','max_female3','max_female4','max_female5','max_female6','max_female7','max_female8','max_female9','max_female10','max_female11','max_female12','max_female13','max_female14','max_female15','Fem_1','Fem_2','Fem_3','Fem_4','Fem_5','Fem_6','Fem_7','Fem_8','Fem_9','Fem_3B','Fem_5B','Fem_7B','Fem_A','Fem_B','Fem_C','Fem_D','Fem_E','Fem_F']";
-force SFX_Head = true;
-force SFX_HoD = false;
-force SFX_Inventory = true;
-force SFX_IronSights = true;
-force SFX_LAC = true;
-force SFX_Mapsnd = true;
-force SFX_Shelshock = true;
-force SFX_Suppressionsnd = false;
-SFX_Suppressionsnd_snp = false;
-
-// RD501
-rd501_awacs_UpdateRate = 1;
-RD501_CRML_RandomMissileSpawnAllowed = true;
-RD501_CRML_RandomMissileSpawnReloadSpeed = 10;
-RD501_CRML_RandomMissileWeaponClass = "RD501_VLS_Launcher_Weapon";
-rd501_fallheight_enabled = false;
-rd501_fallheight_height = 10;
-rd501_fortify_useAmmo = false;
-rd501_fortify_usePreset = false;
-RD501_LogGlobally = true;
-rd501_medical_notification_enabled = true;
-rd501_medical_notification_message = "%1 is asking that you kindly hold still.";
-rd501_mfd_colours_custom = [0.5,0.5,0.5];
-rd501_mfd_colours_custom_alpha = 1;
-RD501_MinimumLogLevel = 2;
-RD501_ZL_Enabled = true;
 
 // Sci-fi Support PLUS
 ScifiSupportPlus_Archer = true;
@@ -1792,7 +1331,7 @@ stx_military_smokeColorGUER = 0;
 stx_military_smokeColorWEST = 0;
 stx_military_smokeEnabled = true;
 
-// TFAR - Глобальные настройки
+// TFAR - Ð“Ð»Ð¾Ð±Ð°Ð»ÑŒÐ½Ñ‹Ðµ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸
 force TFAR_AICanHearPlayer = false;
 force TFAR_AICanHearSpeaker = false;
 force TFAR_allowDebugging = true;
@@ -1845,7 +1384,7 @@ force TFAR_Teamspeak_Channel_Password = "zeba";
 force tfar_terrain_interception_coefficient = 7;
 force TFAR_voiceCone = true;
 
-// TFAR - Настройки клиента
+// TFAR - ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ ÐºÐ»Ð¸ÐµÐ½Ñ‚Ð°
 TFAR_curatorCamEars = true;
 TFAR_default_radioVolume = 6;
 TFAR_intercomDucking = 0.2;
@@ -1999,7 +1538,7 @@ zen_vision_enableRedHotCold = false;
 zen_vision_enableWhiteHot = false;
 zen_vision_enableWhiteHotRedCold = false;
 
-// Zeus Enhanced - Атрибуты
+// Zeus Enhanced - ÐÑ‚Ñ€Ð¸Ð±ÑƒÑ‚Ñ‹
 zen_attributes_enableAbilities = true;
 zen_attributes_enableAmmo = true;
 zen_attributes_enableAmmoCargo = true;
@@ -2050,7 +1589,6 @@ zen_attributes_enableWaypointTimeout = true;
 zen_attributes_enableWaypointType = true;
 
 // Zeus Enhanced - Faction Filter
-zen_faction_filter_0_ = true;
 force zen_faction_filter_0_212_Arcus_B1_Faction = false;
 zen_faction_filter_0_212_Arcus_BX_Faction = true;
 zen_faction_filter_0_3AS_CIS = true;
@@ -2061,7 +1599,6 @@ zen_faction_filter_0_HL_RES_F = true;
 zen_faction_filter_0_JLTS_CIS = true;
 zen_faction_filter_0_JMM_f_ox02_e_o_faction = true;
 zen_faction_filter_0_JMM_f_ox02_o_faction = true;
-zen_faction_filter_0_JMSFALL_militia_fact = true;
 zen_faction_filter_0_LS_CIS = true;
 zen_faction_filter_0_LS_PIRATES = true;
 zen_faction_filter_0_MEOP_batarian = true;
@@ -2073,14 +1610,13 @@ zen_faction_filter_0_MEOP_mercR = true;
 zen_faction_filter_0_MEOP_mercR_groups = true;
 zen_faction_filter_0_MEOP_reaper = true;
 zen_faction_filter_0_MEOP_valluv = true;
-zen_faction_filter_0_O_DBA_CIS_F = true;
 zen_faction_filter_0_OPF_F = true;
 zen_faction_filter_0_OPF_G_F = true;
 zen_faction_filter_0_OPF_GEN_F = true;
 zen_faction_filter_0_OPF_R_F = true;
 zen_faction_filter_0_OPF_T_F = true;
 zen_faction_filter_0_OPTRE_Ins = true;
-zen_faction_filter_0_PT2_TF2_Militia = true;
+zen_faction_filter_0_OPTRE_Ins_groups = true;
 zen_faction_filter_0_SC_Faction_SE = true;
 zen_faction_filter_0_SC_MDF = true;
 zen_faction_filter_0_SC_MDF_groups = true;
@@ -2093,7 +1629,6 @@ zen_faction_filter_0_WBK_Droid_groups = true;
 zen_faction_filter_0_WBK_HL_Resistance = true;
 zen_faction_filter_1_3AS_Imperial = true;
 zen_faction_filter_1_3AS_Rep = true;
-zen_faction_filter_1_B_DBA_Neutral_F_Faction = true;
 zen_faction_filter_1_B_SCI212thAB = true;
 zen_faction_filter_1_B_SCI212thAB_groups = true;
 zen_faction_filter_1_BLU_CTRG_F = true;
@@ -2105,7 +1640,6 @@ zen_faction_filter_1_BLU_W_F = true;
 zen_faction_filter_1_HL_CMB_F = true;
 zen_faction_filter_1_JLTS_GAR = true;
 zen_faction_filter_1_JMM_f_pdf_b_faction = true;
-zen_faction_filter_1_JMSFALL_imc_fact = true;
 zen_faction_filter_1_LS_CSF = true;
 zen_faction_filter_1_LS_GAR = true;
 zen_faction_filter_1_LS_ORSF = true;
@@ -2126,7 +1660,7 @@ zen_faction_filter_1_MEOP_salarians = true;
 zen_faction_filter_1_MEOP_turians = true;
 zen_faction_filter_1_mti_faction_SOB = true;
 zen_faction_filter_1_OPTRE_UNSC = true;
-zen_faction_filter_1_PT2_TF2_IMC = true;
+zen_faction_filter_1_OPTRE_UNSC_groups = true;
 zen_faction_filter_1_SC_Faction_AR = true;
 zen_faction_filter_1_SWLB_GAR = true;
 zen_faction_filter_1_SWLB_GAR_SOB = true;
@@ -2153,9 +1687,14 @@ zen_faction_filter_2_MEOP_ERCS = true;
 zen_faction_filter_2_MEOP_ERCS_groups = true;
 zen_faction_filter_2_MEOP_humanI = true;
 zen_faction_filter_2_MEOP_merc = true;
+zen_faction_filter_2_MEOP_merc_groups = true;
 zen_faction_filter_2_MEOP_turiansI = true;
 zen_faction_filter_2_MEOP_turiansI_groups = true;
-zen_faction_filter_2_PT2_TF2_MERC = true;
+zen_faction_filter_2_OPTRE_CAA = true;
+zen_faction_filter_2_OPTRE_DME = true;
+zen_faction_filter_2_OPTRE_Ins = true;
+zen_faction_filter_2_OPTRE_PD = true;
+zen_faction_filter_2_OPTRE_UEG_Civ = true;
 zen_faction_filter_2_SC_ArchonsFaction = true;
 zen_faction_filter_2_SC_Faction_AC = true;
 zen_faction_filter_2_SC_Faction_AC_groups = true;
@@ -2169,4 +1708,53 @@ zen_faction_filter_3_HL_CIV_F = true;
 zen_faction_filter_3_IND_L_F = true;
 zen_faction_filter_3_LS_CIV = true;
 zen_faction_filter_3_MEOP_civil = true;
+zen_faction_filter_3_OPTRE_UEG_Civ = true;
 zen_faction_filter_3_SWZT_Pack_Civil = true;
+
+// Zeus Framerate Monitor
+zfm_setting_font = "RobotoCondensed";
+zfm_setting_low_fps_limit = 20;
+zfm_setting_low_text_colour = [1,0,0,0.5];
+zfm_setting_low_text_outline = 0;
+zfm_setting_low_text_size = 0.04;
+zfm_setting_regular_text_colour = [1,1,1,0.75];
+zfm_setting_regular_text_outline = 0;
+zfm_setting_regular_text_size = 0.03;
+zfm_setting_toggle = true;
+zfm_setting_viewdistance_max = 500;
+zfm_setting_viewdistance_min = 0;
+
+// ZHC Caching
+zhc_dynsim_CycleDelay = 30;
+zhc_dynsim_EmptyDist = 250;
+zhc_dynsim_Enabled = false;
+zhc_dynsim_GroupDist = 500;
+zhc_dynsim_MoveMult = 1;
+zhc_dynsim_Override = false;
+zhc_dynsim_PropDist = 50;
+zhc_dynsim_VehDist = 350;
+
+// ZHC Settings
+zhc_offload_badNames = "'ignore'";
+zhc_offload_badTypes = "";
+zhc_offload_BlacklistAllVehicles = false;
+zhc_offload_CheckDelay = 5;
+zhc_offload_CycleDelay = 20;
+zhc_offload_debugGuids = "";
+zhc_offload_DebugMode = 2;
+zhc_offload_EmergencyOffloadDelay = 5;
+zhc_offload_Enabled = false;
+zhc_offload_EnableRebal = false;
+zhc_offload_EnableZeusHolding = false;
+zhc_offload_GarrisonTimeout = 30;
+zhc_offload_OffloadDelay = 15;
+zhc_offload_RebalanceDelay = 30;
+zhc_offload_StartDelay = 5;
+zhc_offload_StrtMsg = false;
+zhc_offload_TransferLoadout = 1;
+zhc_offload_Verbosity = 0;
+zhc_stat_DebugRPT = false;
+zhc_stat_DebugRPTForm = 0;
+zhc_stat_EnableFPSCounter = true;
+zhc_stat_MapFpsPos = 0;
+zhc_stat_RPTFreq = 15;
