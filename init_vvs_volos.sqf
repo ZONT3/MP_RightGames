@@ -3,7 +3,7 @@ _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autoco
 _this addAction [
   "Запрос наземной техники РБ",
   VVS_fnc_openVVS,
-  [VVS_west_Land, "RS"],
+  [VVS_west_Land_volos, "RS"],
   6,
   true,
   true,
@@ -15,7 +15,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -27,7 +27,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -39,7 +39,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -51,7 +51,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -63,7 +63,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -75,7 +75,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -87,7 +87,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -99,7 +99,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники подразделений",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"PODR"],
+  [VVS_west_Land_volos,"PODR"],
   6,
   true,
   true,
@@ -111,7 +111,7 @@ _this addAction [
 _this addAction [
   "Запрос наземной техники БСО",
   VVS_fnc_openVVS,
-  [VVS_west_Land,"BSOL"],
+  [VVS_west_Land_volos,"BSOL"],
   6,
   true,
   true,
