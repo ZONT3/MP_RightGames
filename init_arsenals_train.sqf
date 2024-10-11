@@ -16,6 +16,13 @@
 [ _this,
 	ars_wolf,
 	["TBAT"],
-	"Запросить арсенал 104",
+	"Запросить арсенал 104-o",
+	[["Здарова", "Hello"], ["Бб", "Бывай"]]
+] call ZONT_fnc_attachArsenal;
+
+[ _this,
+	ars_rex,
+	["FLEG"],
+	"Запросить арсенал 501-o",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
