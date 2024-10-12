@@ -122,12 +122,12 @@ force ace_csw_progressBarTimeCoefficent = 0.5;
 
 // ACE Ð”ÐµÑ‚Ð¾Ð½Ð°Ñ†Ð¸Ñ
 force ace_cookoff_ammoCookoffDuration = 0.3;
-ace_cookoff_cookoffDuration = 1;
+force ace_cookoff_cookoffDuration = 0.5;
 ace_cookoff_destroyVehicleAfterCookoff = false;
 force ace_cookoff_enableAmmobox = false;
 force ace_cookoff_enableAmmoCookoff = true;
 force ace_cookoff_enableFire = true;
-force ace_cookoff_probabilityCoef = 1;
+force ace_cookoff_probabilityCoef = 0.3;
 ace_cookoff_removeAmmoDuringCookoff = true;
 
 // ACE Ð–ÐµÑÑ‚Ñ‹ Ð½Ð° ÐºÐ°Ñ€Ñ‚Ðµ
