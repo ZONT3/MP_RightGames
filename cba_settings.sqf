@@ -626,11 +626,11 @@ force ace_fortify_timeMin = 1.5;
 acex_fortify_settingHint = 1;
 
 // ACE Headless ÐºÐ»Ð¸ÐµÐ½Ñ‚
-force acex_headless_delay = 0;
+force acex_headless_delay = 30;
 force acex_headless_enabled = true;
 force acex_headless_endMission = 0;
 force acex_headless_log = true;
-force acex_headless_transferLoadout = 1;
+force acex_headless_transferLoadout = 2;
 
 // ACE: Ð›Ð¾Ð³Ð¸ÑÑ‚Ð¸ÐºÐ°
 ace_cargo_carryAfterUnload = true;
