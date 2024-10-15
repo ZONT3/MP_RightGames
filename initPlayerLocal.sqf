@@ -145,3 +145,10 @@ MPH_DisplyChecker = [{
   	sleep 0.01; false;
   };
 };*/
+
+0 enableChannel [true, false]; // Global (can't be disabled for admins)
+1 enableChannel [true, false]; // Side
+2 enableChannel [false, false]; // Command
+3 enableChannel [true, false]; // Group
+4 enableChannel [false, false]; // Vehicle
+5 enableChannel [true, false]; // Direct
