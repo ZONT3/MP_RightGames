@@ -627,7 +627,7 @@ acex_fortify_settingHint = 1;
 
 // ACE Headless ÐºÐ»Ð¸ÐµÐ½Ñ‚
 force acex_headless_delay = 30;
-force acex_headless_enabled = true;
+force acex_headless_enabled = false;
 force acex_headless_endMission = 0;
 force acex_headless_log = true;
 force acex_headless_transferLoadout = 2;
@@ -952,7 +952,7 @@ mti_aircraft_serviceTime_long = 60;
 mti_aircraft_serviceTime_short = 20;
 
 // MokTech Industries - Backpack on Chest
-mti_boc_disabled = false;
+mti_boc_disabled = true;
 
 // MokTech Industries - catTab (UI)
 mti_catTab_ui_androidDesktopBackgroundMode = 0;
@@ -972,7 +972,7 @@ mti_common_respawnUpdateEnabled = true;
 mti_common_stanceChangeEnabled = true;
 mti_common_teleporterDuration = 2;
 mti_common_wsway_adjust = 1;
-mti_common_wsway_enabled = true;
+mti_common_wsway_enabled = false;
 
 // MokTech Industries - CuffBreak
 mti_cuffbreak_ai_enabled = true;
@@ -996,13 +996,13 @@ mti_equipment_knifeEnabled = true;
 mti_equipment_nvg_customBrightness = 5;
 mti_equipment_nvg_customColour = [0.592,0.89,0.306];
 mti_equipment_nvg_customContrast = 5;
-mti_equipment_nvg_customEnabled = true;
+mti_equipment_nvg_customEnabled = false;
 mti_equipment_nvg_customWhiteP = false;
 
 // MokTech Industries - Explosives
 mti_explosives_advSetup_requireDemo = true;
 mti_explosives_DP3_destroyAttached = true;
-mti_explosives_magneticModeEnabled = true;
+mti_explosives_magneticModeEnabled = false;
 
 // MokTech Industries - Field Defibrillator
 mti_medical_defib_arrest_chance = 0.1;
@@ -1743,13 +1743,13 @@ force zhc_offload_CycleDelay = 20;
 force zhc_offload_debugGuids = "";
 force zhc_offload_DebugMode = 2;
 force zhc_offload_EmergencyOffloadDelay = 5;
-force zhc_offload_Enabled = false;
+force zhc_offload_Enabled = true;
 force zhc_offload_EnableRebal = false;
 force zhc_offload_EnableZeusHolding = false;
 force zhc_offload_GarrisonTimeout = 30;
 force zhc_offload_OffloadDelay = 15;
 force zhc_offload_RebalanceDelay = 30;
-force zhc_offload_StartDelay = 5;
+force zhc_offload_StartDelay = 15;
 force zhc_offload_StrtMsg = false;
 force zhc_offload_TransferLoadout = 1;
 force zhc_offload_Verbosity = 0;
