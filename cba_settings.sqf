@@ -1737,7 +1737,7 @@ force zhc_dynsim_VehDist = 350;
 // ZHC Settings
 force zhc_offload_badNames = "'ignore'";
 force zhc_offload_badTypes = "";
-force zhc_offload_BlacklistAllVehicles = false;
+force zhc_offload_BlacklistAllVehicles = true;
 force zhc_offload_CheckDelay = 5;
 force zhc_offload_CycleDelay = 20;
 force zhc_offload_debugGuids = "";
