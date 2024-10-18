@@ -44,7 +44,7 @@ if (_arc) then
 	player addAction ["<t color='#2ECC71'>Вколоть экспериментальный стимулятор</t>", {[] execVM "external\scripts\stimpack.sqf"}, [], 10, false, true, "", "'JLTS_drugs_stimulant_battle' in (items player)"];
 };
 
-// init ARC 
+// init RC 
 private _rc = [["RC"]] call ZONT_fnc_checkrole;
 if (_rc) then 
 {
@@ -52,5 +52,6 @@ if (_rc) then
 	player setvariable ["ACE_medical_medicclass", 2, true];
 	player setvariable ["ACE_isengineer", 2, true];
 	player setvariable ["ACE_medical_playerdamagethreshold", 15, true];
-   player addAction ["<t color='#42AAFF'>Использовать Модернизированный коагулянт</t>", {[] execVM "external\scripts\redBacta1.sqf"}, [], 10, false, true, "", "'JLTS_drugs_bacta_red' in (items player)"];
+	player addAction ["<t color='#42AAFF'>Использовать Модернизированный коагулянт</t>", {[] execVM "external\scripts\redBacta1.sqf"}, [], 10, false, true, "", "'JLTS_drugs_bacta_red' in (items player)"];
+	[] execVM "external\scripts\autobacta.sqf";
 };
