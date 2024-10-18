@@ -32,6 +32,19 @@ _this addAction [
   true,
   true,
   "",
+  "[['HQQ']] call ZONT_fnc_checkRole",
+  5
+];
+
+
+_this addAction [
+  "Запрос наземной техники подразделений",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"PODR"],
+  6,
+  true,
+  true,
+  "",
   "[['Elite']] call ZONT_fnc_checkRole",
   5
 ];
