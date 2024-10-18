@@ -134,6 +134,8 @@ VVS_CODY = [
 "212th_3AS_LAAT_Unmarked_Turrets",
 "Aux212_VWing",
 "Aux212_3AS_Reaper_Z95_Headhunter",
+"Aux212_VWing", 
+"MTI_Z95",
 "Aux212_3AS_Reaper_ARC170"
 ];
 
