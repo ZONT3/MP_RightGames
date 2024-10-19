@@ -22,7 +22,7 @@
 
 [ _this,
 	ars_rex,
-	["FLEG"],
+	["FLEG", "FLEGP", "FLEGE"],
 	"Запросить арсенал 501-o",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
