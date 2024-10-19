@@ -26,7 +26,7 @@ east setFriend [west, 0];
 east setFriend [resistance, 0];
 resistance setFriend [west, 0];
 resistance setFriend [east, 0];
-
+/*
 //Cloak
 [player, 120, 60] spawn tts_cloak_fnc_giveCloak;
 
@@ -39,3 +39,9 @@ tts_cloak_playSounds = true;
 tts_cloak_playVoice = true;
 tts_cloak_useUI = true;
 tts_cloak_useUIVehicle = true;
+*/
+if (!isServer && !hasInterface) then {
+    setViewDistance 1600;
+
+    execVM "scripts\server\offloading\show_fps.sqf";
+};

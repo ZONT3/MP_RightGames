@@ -626,11 +626,11 @@ force ace_fortify_timeMin = 1.5;
 acex_fortify_settingHint = 1;
 
 // ACE Headless ÐºÐ»Ð¸ÐµÐ½Ñ‚
-force acex_headless_delay = 30;
-force acex_headless_enabled = false;
+force acex_headless_delay = 15;
+force acex_headless_enabled = true;
 force acex_headless_endMission = 0;
 force acex_headless_log = true;
-force acex_headless_transferLoadout = 2;
+force acex_headless_transferLoadout = 1;
 
 // ACE: Ð›Ð¾Ð³Ð¸ÑÑ‚Ð¸ÐºÐ°
 ace_cargo_carryAfterUnload = true;
@@ -1743,7 +1743,7 @@ force zhc_offload_CycleDelay = 20;
 force zhc_offload_debugGuids = "";
 force zhc_offload_DebugMode = 2;
 force zhc_offload_EmergencyOffloadDelay = 5;
-force zhc_offload_Enabled = true;
+force zhc_offload_Enabled = false;
 force zhc_offload_EnableRebal = false;
 force zhc_offload_EnableZeusHolding = false;
 force zhc_offload_GarrisonTimeout = 30;
@@ -1755,6 +1755,6 @@ force zhc_offload_TransferLoadout = 1;
 force zhc_offload_Verbosity = 0;
 force zhc_stat_DebugRPT = false;
 force zhc_stat_DebugRPTForm = 0;
-force zhc_stat_EnableFPSCounter = true;
+force zhc_stat_EnableFPSCounter = false;
 force zhc_stat_MapFpsPos = 0;
 force zhc_stat_RPTFreq = 15;

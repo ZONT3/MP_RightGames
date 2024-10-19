@@ -39,3 +39,7 @@ private _fortif_list = [
 [west,       15000, _fortif_list] call acex_fortify_fnc_registerObjects;
 [east,       15000, _fortif_list] call acex_fortify_fnc_registerObjects;
 [resistance, 15000, _fortif_list] call acex_fortify_fnc_registerObjects;
+
+
+
+
