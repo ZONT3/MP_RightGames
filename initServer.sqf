@@ -42,4 +42,5 @@ private _fortif_list = [
 
 
 
-
+[] execVM "external\scripts\showfps.sqf";
+//diag_log text "--------------------[Executed show_fps on Server]--------------------"; //will show in server logs
