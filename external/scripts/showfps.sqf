@@ -38,7 +38,7 @@ if (!isServer) then {
         _sourcestr = "HC3";
         _position = 3;
     };
-    if (isNil "HC4") exitWith {
+    /*if (isNil "HC4") exitWith {
         HC4 = true;
         publicVariable "HC4";
         _sourcestr = "HC4";
@@ -49,7 +49,7 @@ if (!isServer) then {
         publicVariable "HC5";
         _sourcestr = "HC5";
         _position = 5;
-    };
+    };*/
 };
 
 private _myfpsmarker = createMarker [format ["fpsmarker%1", _sourcestr], [0, -500 - (500 * _position)]];
