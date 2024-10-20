@@ -497,8 +497,8 @@ force ace_pylons_timePerPylon = 1;
 // ACE ÐŸÐ»ÐµÐ½Ð½Ñ‹Ðµ
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
-force ace_captives_requireSurrender = 1;
-force ace_captives_requireSurrenderAi = true;
+force ace_captives_requireSurrender = 2;
+force ace_captives_requireSurrenderAi = false;
 
 // ACE ÐŸÐ¾Ð³Ð¾Ð´Ð°
 force ace_weather_enabled = false;
