@@ -944,10 +944,10 @@ force IMS_LightSabers_Mana_Padawan = "0.002";
 mti_admin_messages_enable = true;
 
 // MokTech Industries - Aircraft
-mti_aircraft_cmColoursEnabled = true;
+mti_aircraft_cmColoursEnabled = false;
 mti_aircraft_laatc_loadDistance = 20;
 mti_aircraft_laatc_loadSpeed = 10;
-mti_aircraft_requirePilot = true;
+mti_aircraft_requirePilot = false;
 mti_aircraft_serviceTime_long = 60;
 mti_aircraft_serviceTime_short = 20;
 
@@ -959,16 +959,16 @@ mti_catTab_ui_androidDesktopBackgroundMode = 0;
 mti_catTab_ui_androidDesktopBackgroundPreset = "\z\mti\addons\catTab_data\img\ui\desktop\classic\android_desktop_background_0_co.paa";
 mti_catTab_ui_androidDesktopColor = [0.239,0.863,0.517];
 mti_catTab_ui_androidDesktopCustomImageName = "android_desktop_background_co.jpg";
-mti_catTab_ui_enableCustomBackground = true;
+mti_catTab_ui_enableCustomBackground = false;
 mti_catTab_ui_tabletDesktopBackgroundMode = 0;
 mti_catTab_ui_tabletDesktopBackgroundPreset = "\z\mti\addons\catTab_data\img\ui\desktop\classic\tablet_desktop_background_0_co.paa";
 mti_catTab_ui_tabletDesktopColor = [0,0.443,0.348];
 mti_catTab_ui_tabletDesktopCustomImageName = "tablet_desktop_background_co.jpg";
 
 // MokTech Industries - Common
-mti_common_enableLogging = true;
-mti_common_loadoutWeightCheck = true;
-mti_common_respawnUpdateEnabled = true;
+mti_common_enableLogging = false;
+mti_common_loadoutWeightCheck = false;
+mti_common_respawnUpdateEnabled = false;
 mti_common_stanceChangeEnabled = true;
 mti_common_teleporterDuration = 2;
 mti_common_wsway_adjust = 1;
@@ -1000,7 +1000,7 @@ mti_equipment_nvg_customEnabled = false;
 mti_equipment_nvg_customWhiteP = false;
 
 // MokTech Industries - Explosives
-mti_explosives_advSetup_requireDemo = true;
+mti_explosives_advSetup_requireDemo = false;
 mti_explosives_DP3_destroyAttached = true;
 mti_explosives_magneticModeEnabled = false;
 
@@ -1009,8 +1009,8 @@ mti_medical_defib_arrest_chance = 0.1;
 mti_medical_defib_success_chance = 0.6;
 
 // MokTech Industries - Fortify
-mti_fortify_allowSaving = true;
-mti_fortify_fortifyAllowed = true;
+mti_fortify_allowSaving = false;
+mti_fortify_fortifyAllowed = false;
 mti_fortify_markObjectsOnMap = 1;
 mti_fortify_recallTimeCoef = 0.25;
 mti_fortify_timeCostCoefficient = 0.25;
@@ -1037,9 +1037,9 @@ mti_logistics_spawnCooldown = 60;
 mti_logistics_spawnDuration = 30;
 
 // MokTech Industries - Logistics (Cratefiller)
-mti_logistics_cratefiller_param_cratefillerOverview = true;
+mti_logistics_cratefiller_param_cratefillerOverview = false;
 mti_logistics_cratefiller_param_inventoryBlacklist = "[]";
-mti_logistics_cratefiller_param_spawnAndDelete = true;
+mti_logistics_cratefiller_param_spawnAndDelete = false;
 mti_logistics_cratefiller_param_usageRadius = 25;
 
 // MokTech Industries - Medical
@@ -1065,7 +1065,7 @@ mti_medical_medicRequired_symoxin = 0;
 mti_medical_medicRequired_vutalamine = 1;
 mti_medical_nevastrin8_maxCount = 5;
 mti_medical_pba_cpr_boost = 5;
-mti_medical_pba_od_enabled = true;
+mti_medical_pba_od_enabled = false;
 mti_medical_pba_od_time = 90;
 mti_medical_pba_pain_boost = 10;
 mti_medical_pba_speed_boost = 1.2;
@@ -1101,17 +1101,17 @@ mti_tech_hackremote_firewalls = 3;
 
 // MokTech Industries - Weapons
 mti_weapons_core_acid_duration = 300;
-mti_weapons_core_airburstEnabledSettings = true;
+mti_weapons_core_airburstEnabledSettings = false;
 mti_weapons_core_ion_charge_max = 5;
 mti_weapons_core_ion_duration = 10;
 mti_weapons_core_stun_charge_max = 5;
 mti_weapons_core_stun_duration = 10;
 mti_weapons_core_tracking_duration = 900;
-mti_weapons_core_tracking_enabled = true;
+mti_weapons_core_tracking_enabled = false;
 mti_weapons_core_tracking_scanDelay = 10;
 
 // MokTech Industries - Zeus
-mti_zeus_ZEN_useTraits = true;
+mti_zeus_ZEN_useTraits = false;
 
 // OPTRE Powered MJOLNIR
 OPTRE_HUD_ENEMY_COLOR = [1,0.2,0.2,1];
