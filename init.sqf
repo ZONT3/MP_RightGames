@@ -44,3 +44,5 @@ if (!isDedicated && !hasInterface && isMultiplayer) then { //anything in here ge
     [] execVM "external\scripts\showfps.sqf";
     diag_log text "--------------------[Executed show_fps on HC]--------------------"; //this will only show in  the HCs logs
 };
+
+[] execVM "external\scripts\HC.sqf";
