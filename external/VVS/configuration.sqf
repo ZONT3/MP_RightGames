@@ -69,9 +69,7 @@ VVS_HQ = [
 ];
 
 VVS_RS = [
-"212th_B_APC_Wheeled_unarmed_F",
-"212th_BARC",
-"212th_BARC",
+"3AS_Barc",
 "3AS_ISP",
 "3AS_ISP_Transport",
 "3AS_BarcSideCar",
@@ -80,17 +78,10 @@ VVS_RS = [
 ];
 
 VVS_PODR = [
-"212th_B_APC_Wheeled_unarmed_F",
-"212th_BARC",
-"212th_BARC",
+"3AS_Barc",
 "3AS_ISP",
 "3AS_ISP_Transport",
 "3AS_BarcSideCar",
-"Aux212_3AS_ATTE_F",
-"212th_B_APC_Wheeled_fs_cannon_F",
-"212th_B_APC_Wheeled_02_cannon_F",
-"212th_B_APC_Wheeled_aa_cannon_F",
-"212th_B_APC_Wheeled_mg_F",
 "3AS_Saber_M1",
 "3as_saber_AA_Tier_LF",
 "3AS_Saber_M1Recon",
@@ -120,24 +111,23 @@ VVS_PODR = [
 ];
 
 VVS_AIR = [
-"212th_3AS_LAAT_Unmarked_Doors",
-"212th_3AS_LAAT_Unmarked_Floodlights",
-"212th_3AS_LAAT_Unmarked_Turrets",
-"Aux212_VWing",
-"Aux212_3AS_Reaper_Z95_Headhunter",
-"Aux212_3AS_Reaper_Y_Wing",
-"Aux212_3AS_Reaper_ARC170"
+"3AS_LAAT_Mk2", 
+"3AS_LAAT_Mk1", 
+"3AS_LAAT_Mk2Lights", 
+"3AS_Z95_Republic", 
+"3as_Vwing_base", 
+"3AS_ARC_170_Red",
+"MTI_Z95"
 ];
 
 VVS_CODY = [
-"212th_3AS_LAAT_Unmarked_Doors",
-"212th_3AS_LAAT_Unmarked_Floodlights",
-"212th_3AS_LAAT_Unmarked_Turrets",
-"Aux212_VWing",
-"Aux212_3AS_Reaper_Z95_Headhunter",
-"Aux212_VWing", 
-"MTI_Z95",
-"Aux212_3AS_Reaper_ARC170"
+"3AS_LAAT_Mk2", 
+"3AS_LAAT_Mk1", 
+"3AS_LAAT_Mk2Lights", 
+"3AS_Z95_Republic", 
+"3as_Vwing_base", 
+"3AS_ARC_170_Red",
+"MTI_Z95"
 ];
 
 VVS_BSOA = [
