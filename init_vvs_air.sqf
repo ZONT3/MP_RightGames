@@ -70,3 +70,15 @@ _this addAction [
   "[['FLEGP']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос воздушной техники",
+  VVS_fnc_openVVS,
+  [VVS_laat_Land,"CODY"],
+  6,
+  true,
+  true,
+  "",
+  "[['UBP']] call ZONT_fnc_checkRole",
+  5
+];

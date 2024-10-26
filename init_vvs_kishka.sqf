@@ -1,6 +1,6 @@
 _this disableAI "move"; _this disableAI "radioprotocol"; _this disableAI "autocombat"; _this disableAI "weaponaim";
 
-_this addAction [
+/*_this addAction [
   "Запрос наземной техники РБ",
   VVS_fnc_openVVS,
   [VVS_kishka_Land, "RS"],
@@ -10,7 +10,7 @@ _this addAction [
   "",
   "true",
   5
-];
+];*/
 
 _this addAction [
   "Запрос наземной техники подразделений",
@@ -20,91 +20,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['TBAT']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['Elite']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['DU']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['FLEG']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['ARC']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['ARF']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['FLEG']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос наземной техники подразделений",
-  VVS_fnc_openVVS,
-  [VVS_kishka_Land,"PODR"],
-  6,
-  true,
-  true,
-  "",
-  "[['RC']] call ZONT_fnc_checkRole",
+  "true",
   5
 ];
 
