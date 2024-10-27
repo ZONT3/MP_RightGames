@@ -117,7 +117,10 @@ VVS_AIR = [
 "3AS_Z95_Republic", 
 "3as_Vwing_base", 
 "3AS_ARC_170_Red",
-"MTI_Z95"
+"MTI_Z95",
+"3AS_BTLB_Bomber", 
+"lsd_heli_laati_ab", 
+"lsd_heli_laati"
 ];
 
 VVS_CODY = [
