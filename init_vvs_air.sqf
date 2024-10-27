@@ -82,3 +82,15 @@ _this addAction [
   "[['UBP']] call ZONT_fnc_checkRole",
   5
 ];
+
+_this addAction [
+  "Запрос воздушной техники",
+  VVS_fnc_openVVS,
+  [VVS_laat_Land,"CODY"],
+  6,
+  true,
+  true,
+  "",
+  "[['ARC']] call ZONT_fnc_checkRole",
+  5
+];
