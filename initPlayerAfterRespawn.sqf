@@ -55,3 +55,9 @@ if (_rc) then
 	player addAction ["<t color='#42AAFF'>Использовать Модернизированный коагулянт</t>", {[] execVM "external\scripts\redBacta1.sqf"}, [], 10, false, true, "", "'JLTS_drugs_bacta_red' in (items player)"];
 	[] execVM "external\scripts\autobacta.sqf";
 };
+
+// Если есть карточка медика, то игрок получает класс Врача
+if (alive player && ("JLTS_ids_gar_medical" in (items player))) then 
+{
+	player setVariable ["ace_medical_medicclass, 2, true"];
+};
