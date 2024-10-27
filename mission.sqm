@@ -13,7 +13,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=20425;
+		nextID=20426;
 	};
 	class MarkerIDProvider
 	{
@@ -25,10 +25,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11557.436,75.206703,8451.1982};
-		dir[]={-0.72416848,-0.6019454,-0.33658692};
-		up[]={-0.54589063,0.79850823,-0.25372344};
-		aside[]={-0.42149583,-3.8358849e-07,0.90685576};
+		pos[]={12196.993,246.95358,7352.5098};
+		dir[]={-0.11559434,-0.7325207,0.67086267};
+		up[]={-0.12438536,0.68074417,0.72188336};
+		aside[]={0.98548073,5.3230906e-08,0.16980503};
 	};
 };
 binarizationWanted=0;
@@ -2082,7 +2082,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=2169;
+		items=2170;
 		class Item0
 		{
 			dataType="Layer";
@@ -83781,13 +83781,13 @@ class Mission
 		class Item1022
 		{
 			dataType="Marker";
-			position[]={-3543.272,74.183998,9043.8252};
+			position[]={-3571.8325,73.796959,9056.6953};
 			name="marker_113";
-			text="Рота Doom - ""Бастион""";
+			text="327-й Корпус - ""Бастион""";
 			type="b_inf";
 			colorName="ColorBlack";
 			id=13815;
-			atlOffset=0.31529236;
+			atlOffset=7.6293945e-06;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -134926,6 +134926,73 @@ class Mission
 			id=20407;
 			type="3AS_FOB_Banner_CIS_Prop";
 			atlOffset=0.61636829;
+		};
+		class Item2169
+		{
+			dataType="Marker";
+			position[]={-3566.1719,81.167435,8819.0313};
+			name="marker_117";
+			text="315-й Батальон - ""Меч""";
+			type="b_inf";
+			colorName="ColorBlack";
+			id=20425;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="markerblink";
+					expression="if ((_value # 0 isNotEqualTo 0) || (_value # 1 isNotEqualTo 0)) then {[_this, _value # 0, _value # 1] spawn BIS_fnc_blinkMarker};";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=3;
+								class Item0
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+								class Item2
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=0;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="markerAttach";
+					expression="if (_value isNotEqualTo objNull) then {[_this, _value] spawn expEden_fnc_markerAttachToObject};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="<NULL-object>";
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections
