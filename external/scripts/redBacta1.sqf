@@ -4,6 +4,7 @@ _timerUpTime = 240;
 if (_cooldownArmorArc == 0) then
 {
 	player removeItem "JLTS_drugs_bacta_red";
+    player playActionNow "WBK_HL_HealShot";
 	player say3D "ACE_hit_Male06ENG_high_1";
     _endUptimeArmor = time + _timerUpTime;
     player setVariable ["cooldownArmorArc", _timerCD];

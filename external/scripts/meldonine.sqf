@@ -8,6 +8,7 @@ if (_cdMove < time) then
   player setVariable ["_cdStimMove", time + _cdStimMove];
   player setVariable ["_energyStimMove", time + _energyStimMove];
   player removeItem "JLTS_drugs_stimulant_hyperAdrenal";
+  player playActionNow "WBK_HL_HealShot";
   hint "Стимулятор продержится 3 минуты";
   sleep 2.5;
 	hintSilent "";

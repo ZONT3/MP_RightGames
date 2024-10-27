@@ -6,6 +6,7 @@ if (_cd < time) then
 	player setVariable ["_cdStimpack", time + _cdStimpack];
 	player setVariable ["_energyStimpack", time + _energyStimpack];
 	player removeItem "JLTS_drugs_stimulant_battle";
+	player playActionNow "WBK_HL_HealShot";
 	hint "Стимулятор продержится 3 минуты";
 	sleep 2.5;
 	hintSilent "";
@@ -23,6 +24,10 @@ while {_energy > time} do
 	player setVariable ["ace_medical_pain", 0];
 	player setVariable ["ace_medical_heartrate", 80];
 	player setVariable ["ace_medical_bloodvolume", 6];
-	sleep 30
-	if (player getvariable ["ACE_isUnconscious", true]) then {player call ace_medical_treatment_fnc_fullHealLocal};
+	player setAnimSpeedCoef 1.5
+};
+
+
+if (_energy < time) then {
+  player setAnimSpeedCoef 1;
 };

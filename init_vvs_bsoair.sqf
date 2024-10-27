@@ -1,4 +1,4 @@
-_this addAction [
+/*_this addAction [
   "Запрос воздушной техники БСО",
   VVS_fnc_openVVS,
   [VVS_bso_Land,"BSOA"],
@@ -32,4 +32,4 @@ _this addAction [
   "",
   "[['HQ']] call ZONT_fnc_checkRole",
   5
-];
+];*/
