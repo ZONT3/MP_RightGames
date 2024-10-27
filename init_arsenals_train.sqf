@@ -36,7 +36,7 @@
 
 [ _this,
 	ars_327,
-	["Train", "TrainP"],
+	["STARS", "STARSP"],
 	"Запросить арсенал 327-гo",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;

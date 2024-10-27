@@ -31,7 +31,7 @@ _this addAction [
   true,
   true,
   "",
-  "[['TrainP']] call ZONT_fnc_checkRole",
+  "[['STARSP']] call ZONT_fnc_checkRole",
   5
 ];
 
