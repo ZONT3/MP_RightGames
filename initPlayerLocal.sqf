@@ -67,16 +67,16 @@ private _fn_moveToCustomSpawn = {
   private _bso = [["ARC" , "ARF", "RC"]] call ZONT_fnc_checkRole;
   if _bso exitWith { [_player, true, 'mp_spawn_bso'] call _fn_moveToSpawn };
 
-  private _star = [["STARS" , "STARSP" , "STARSE"]] call Zont_fnc_checkrole;
+  private _star = [["STARS", "STARSP", "STARSE"]] call Zont_fnc_checkrole;
   if _star exitWith { [_player, true, 'mp_spawn_stars'] call _fn_moveToSpawn };
   
-  private _tbat = [["TBAT" , "TBATP" , "TBATE"]] call Zont_fnc_checkrole;
+  private _tbat = [["TBAT", "TBATP", "TBATE"]] call Zont_fnc_checkrole;
   if _tbat exitWith { [_player, true, 'mp_spawn_tbat'] call _fn_moveToSpawn };
 
-  private _doom = [["DU" , "DP" , "DE"]] call Zont_fnc_checkrole;
+  private _doom = [["DU", "DP", "DE"]] call Zont_fnc_checkrole;
   if _doom exitWith { [_player, true, 'mp_spawn_doom'] call _fn_moveToSpawn };
 
-   private _recon = [["Elite" , "EliteP" , "EliteE"]] call Zont_fnc_checkrole;
+   private _recon = [["Elite", "EliteP", "EliteE"]] call Zont_fnc_checkrole;
   if _recon exitWith { [_player, true, 'mp_spawn_recon'] call _fn_moveToSpawn };
 };
 
