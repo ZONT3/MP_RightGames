@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=13290;
+		nextID=13296;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1332;
+		nextID=1353;
 	};
 	class Camera
 	{
-		pos[]={9396.7363,14.886326,812.26599};
-		dir[]={-0.070688896,-0.74504524,0.66331273};
-		up[]={-0.078951411,0.66700447,0.74086046};
-		aside[]={0.99441379,-7.2846888e-07,0.10597505};
+		pos[]={9290.6348,42.024883,859.26166};
+		dir[]={-0.76514715,-0.56709456,0.30500844};
+		up[]={-0.52680737,0.82363588,0.21000102};
+		aside[]={0.37030762,-4.9197115e-07,0.92895889};
 	};
 };
 binarizationWanted=0;
@@ -58,13 +58,14 @@ addons[]=
 	"ls_flags",
 	"JLTS_weapons_crates",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Signs_F_Signs_Ad"
+	"A3_Signs_F_Signs_Ad",
+	"a3u_mod"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=25;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -213,6 +214,12 @@ class AddonsMetaData
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item24
+		{
+			className="A3U_Mod";
+			name="A3U Mod";
+			author="Spyke";
 		};
 	};
 };
@@ -1056,7 +1063,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=31;
 		class Item0
 		{
 			dataType="Logic";
@@ -1388,14 +1395,14 @@ class Mission
 								};
 								class Attribute2
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};
@@ -1427,14 +1434,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -23398,7 +23405,7 @@ class Mission
 					b=5;
 					angle=329.99985;
 					id=2278;
-					atlOffset=32.744438;
+					atlOffset=29.740772;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44130,7 +44137,7 @@ class Mission
 					b=5;
 					angle=90;
 					id=2584;
-					atlOffset=85.756142;
+					atlOffset=80.450279;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -91628,7 +91635,7 @@ class Mission
 					b=5;
 					angle=329.99985;
 					id=1741;
-					atlOffset=130.61774;
+					atlOffset=128.88005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -95888,7 +95895,7 @@ class Mission
 					b=5;
 					angle=329.99985;
 					id=1802;
-					atlOffset=43.918121;
+					atlOffset=34.335655;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99864,7 +99871,7 @@ class Mission
 					b=5;
 					angle=90;
 					id=1861;
-					atlOffset=34.87989;
+					atlOffset=29.753372;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -104692,7 +104699,7 @@ class Mission
 					b=5;
 					angle=329.99985;
 					id=1930;
-					atlOffset=62.772514;
+					atlOffset=54.888718;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -105260,7 +105267,7 @@ class Mission
 					b=5;
 					angle=329.99985;
 					id=1938;
-					atlOffset=86.46843;
+					atlOffset=84.347466;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -135579,6 +135586,505 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item28
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9404.3965,1.8413457,821.30603};
+			};
+			id=13290;
+			type="A3U_ModuleSTC";
+			atlOffset=-1.1920929e-07;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="STC_Info_ON";
+					expression="_this setVariable ['STC_Info_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="STC_ON";
+					expression="_this setVariable ['STC_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="STC_Debug_ON";
+					expression="_this setVariable ['STC_Debug_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item29
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9407.2979,1.9217992,824.34998};
+			};
+			id=13291;
+			type="A3U_ModuleSTCH";
+			atlOffset=-2.3841858e-07;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="STC_FailureInfo";
+					expression="_this setVariable ['STC_FailureInfo_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="HeliON_Input_ON";
+					expression="_this setVariable ['HeliON_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Heli_GEAR_WP_Num";
+					expression="_this setVariable ['Heli_GEAR_WP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=15;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="STC_Effects";
+					expression="_this setVariable ['STC_Effects_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Heli_GEAR_VP";
+					expression="_this setVariable ['Heli_GEAR_VP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="Heli_MED_Num";
+					expression="_this setVariable ['Heli_MED_Num_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="Heli_GEAR_VP_Num";
+					expression="_this setVariable ['Heli_GEAR_VN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="Heli_GEAR_ON";
+					expression="_this setVariable ['Heli_GEAR_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="Heli_GEAR_BP";
+					expression="_this setVariable ['Heli_GEAR_BP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="Heli_GEAR_UP_Num";
+					expression="_this setVariable ['Heli_GEAR_UN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="Heli_GEAR_UP";
+					expression="_this setVariable ['Heli_GEAR_UP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="Heli_MED_ON";
+					expression="_this setVariable ['Heli_MED_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="STC_GearInfo";
+					expression="_this setVariable ['STC_GearInfo_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="Heli_GEAR_BP_Num";
+					expression="_this setVariable ['Heli_GEAR_BN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="HeliSound_ON";
+					expression="_this setVariable ['HeliSound_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="Heli_STCDuration_Num";
+					expression="_this setVariable ['Heli_STCDuration_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=30;
+						};
+					};
+				};
+				nAttributes=16;
+			};
+		};
+		class Item30
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9410.0605,1.8777198,823.44299};
+			};
+			id=13292;
+			type="A3U_ModuleSTCA";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="STC_FailureInfo";
+					expression="_this setVariable ['STC_FailureInfo_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="HeliON_Input_ON";
+					expression="_this setVariable ['HeliON_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Heli_GEAR_WP_Num";
+					expression="_this setVariable ['Heli_GEAR_WP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=20;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="STC_Effects";
+					expression="_this setVariable ['STC_Effects_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Heli_GEAR_VP";
+					expression="_this setVariable ['Heli_GEAR_VP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="Heli_MED_Num";
+					expression="_this setVariable ['Heli_MED_Num_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="Heli_GEAR_VP_Num";
+					expression="_this setVariable ['Heli_GEAR_VN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="Heli_GEAR_ON";
+					expression="_this setVariable ['Heli_GEAR_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="Heli_GEAR_BP";
+					expression="_this setVariable ['Heli_GEAR_BP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="Heli_GEAR_UP_Num";
+					expression="_this setVariable ['Heli_GEAR_UN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=5;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="Heli_GEAR_UP";
+					expression="_this setVariable ['Heli_GEAR_UP_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=40;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="Heli_MED_ON";
+					expression="_this setVariable ['Heli_MED_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="STC_GearInfo";
+					expression="_this setVariable ['STC_GearInfo_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="Heli_GEAR_BP_Num";
+					expression="_this setVariable ['Heli_GEAR_BN_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=10;
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="HeliSound_ON";
+					expression="_this setVariable ['HeliSound_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="Heli_STCDuration_Num";
+					expression="_this setVariable ['Heli_STCDuration_C',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=30;
+						};
+					};
+				};
+				nAttributes=16;
 			};
 		};
 	};

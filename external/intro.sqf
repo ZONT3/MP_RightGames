@@ -6,7 +6,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Внешний сектор, планета Andelm IV","size = '0.7'"],
+				["Внешний сектор, планета Batuu","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -20,7 +20,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Внешний сектор, планета Andelm IV","size = '0.7'"],
+				["Внешний сектор, планета Batuu","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -34,7 +34,7 @@ switch (playerSide) do
 		_dayTime = [daytime] call BIS_fnc_timeToString;
 		[
 			[
-				["Внешний сектор, планета Andelm IV","size = '0.7'"],
+				["Внешний сектор, планета Batuu","size = '0.7'"],
 				["","<br/>"],
 				["Местное время: ","size = '0.7'"],
 				[str _dayTime,"size = '0.7'"],
@@ -57,7 +57,6 @@ _role4 = "Посетите нашу группу VK";
 _role4names = ["https://vk.com/rgssww"];
 _role5 = "Присоединяйтесь к Discord";
 _role5names = ["https://discord.gg/Cz6uBG6YCV"];
-_role6 = "За республику!";
 _onScreenTime=3;
 
 {
