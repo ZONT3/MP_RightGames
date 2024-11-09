@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1353;
+		nextID=1374;
 	};
 	class Camera
 	{
@@ -231,6 +231,7 @@ randomSeed=8047500;
 class ScenarioData
 {
 	author="Yunikki";
+	disabledAI=1;
 	respawn=3;
 	respawnDelay=10;
 	corpseManagerMode=1;
@@ -1041,6 +1042,7 @@ class Mission
 {
 	class Intel
 	{
+		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startFog=0.15000001;
@@ -1395,14 +1397,14 @@ class Mission
 								};
 								class Attribute2
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -1434,14 +1436,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};
