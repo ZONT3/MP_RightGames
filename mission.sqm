@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=13296;
+		nextID=13297;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1374;
+		nextID=1395;
 	};
 	class Camera
 	{
-		pos[]={9290.6348,42.024883,859.26166};
-		dir[]={-0.76514715,-0.56709456,0.30500844};
-		up[]={-0.52680737,0.82363588,0.21000102};
-		aside[]={0.37030762,-4.9197115e-07,0.92895889};
+		pos[]={6660.0752,168.93811,1608.2186};
+		dir[]={-0.33764359,-0.369486,0.86573249};
+		up[]={-0.13425668,0.92923319,0.34423888};
+		aside[]={0.93165904,-4.232279e-07,0.36335528};
 	};
 };
 binarizationWanted=0;
-sourceName="MP_RightGames_SW";
+sourceName="SW";
 addons[]=
 {
 	"A3_Modules_F",
@@ -59,13 +59,14 @@ addons[]=
 	"JLTS_weapons_crates",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Signs_F_Signs_Ad",
-	"a3u_mod"
+	"a3u_mod",
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -220,6 +221,13 @@ class AddonsMetaData
 			className="A3U_Mod";
 			name="A3U Mod";
 			author="Spyke";
+		};
+		class Item25
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1065,7 +1073,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			dataType="Logic";
@@ -1397,14 +1405,14 @@ class Mission
 								};
 								class Attribute2
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="face";
+									expression="_this setface _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};
@@ -1436,14 +1444,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="face";
-									expression="_this setface _value;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -136087,6 +136095,75 @@ class Mission
 					};
 				};
 				nAttributes=16;
+			};
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6817.5313,1.0209961,1308.1555};
+				angles[]={-0,0,0.027993103};
+			};
+			name="mp_zuus";
+			id=13296;
+			type="ModuleCurator_F";
+			atlOffset=0.00012457371;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Zeus";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="SCALAR";
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 	};
