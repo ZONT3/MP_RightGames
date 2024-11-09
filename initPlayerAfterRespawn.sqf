@@ -28,7 +28,6 @@ player setUnitTrait ['engineer', _mechanicus];
 */
 
 player setCustomAimCoef 0.01;
-
 player enablestamina false;
 player enableFatigue false;
 [] execVM "external\scripts\medMenu.sqf";
