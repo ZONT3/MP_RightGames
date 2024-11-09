@@ -69,45 +69,18 @@ VVS_HQ = [
 ];
 
 VVS_RS = [
-"3AS_Barc",
-"3AS_ISP",
-"3AS_ISP_Transport",
-"3AS_BarcSideCar",
-"Aux212_Bantha_C_Unarmed",
-"442_argon_transport"
+"OPTRE_M12_FAV_APC", 
+"OPTRE_M813_TT"
 ];
 
 VVS_PODR = [
-"3AS_Barc",
-"3AS_ISP",
-"3AS_ISP_Transport",
-"3AS_BarcSideCar",
-"3AS_Saber_M1",
-"3as_saber_AA_Tier_LF",
-"3AS_Saber_M1Recon",
-"3as_saber_m1Recon_Tier_LF",
-"3AS_Saber_Super",
-"3as_saber_super_Tier_LF",
-"3as_saber_m1_Tier_LF",
-"3AS_Saber_M1G",
-"3as_saber_m1G_Tier_LF",
-"3AS_RX200_Base",
-"3AS_ATAP_Base",
-"3AS_ATTE_Ryloth",
-"3AS_ATTE_TCW",
-"442_argon_ammo",
-"442_argon_covered",
-"442_argon_transpor",
-"442_argon_repair",
-"442_argon_medical",
-"442_argon_fuel",
-"Aux212_Bantha_C_AA",
-"Aux212_Bantha_C_IFV",
-"Aux212_Bantha_C_Mortar",
-"Aux212_Bantha_C_Unarmed",
-"Aux212_Bantha_E_MSV",
-"Aux212_Bantha_T_Assault",
-"Aux212_Bantha_T_Cargo"
+"OPTRE_M12_FAV_APC", 
+"OPTRE_M12_LRV", 
+"OPTRE_M813_TT", 
+"Aux212_Bantha_C_Unarmed", 
+"Aux212_Bantha_T_Assault", 
+"Aux212_Bantha_E_MSV", 
+"3AS_PX10_REP_F"
 ];
 
 VVS_AIR = [
@@ -128,10 +101,6 @@ VVS_CODY = [
 "3AS_LAAT_Mk1", 
 "3AS_LAAT_Mk2Lights", 
 "3AS_Z95_Republic", 
-"3as_Vwing_base", 
-"3AS_ARC_170_Red",
-"MTI_Z95",
-"3AS_BTLB_Bomber", 
 "lsd_heli_laati_ab", 
 "lsd_heli_laati"
 ];

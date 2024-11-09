@@ -96,6 +96,30 @@ _this addAction [
   5
 ];
 
+_this addAction [
+  "Запрос наземной техники подразделений",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"PODR"],
+  6,
+  true,
+  true,
+  "",
+  "[['ARC']] call ZONT_fnc_checkRole",
+  5
+];
+
+_this addAction [
+  "Запрос наземной техники",
+  VVS_fnc_openVVS,
+  [VVS_west_Land,"PODR"],
+  6,
+  true,
+  true,
+  "",
+  "[['RC']] call ZONT_fnc_checkRole",
+  5
+];
+
 /*_this addAction [
   "Запрос наземной техники РБ",
   VVS_fnc_openVVS,
