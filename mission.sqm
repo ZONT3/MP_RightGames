@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=13298;
+		nextID=13302;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1437;
+		nextID=1521;
 	};
 	class Camera
 	{
-		pos[]={6822.9458,36.290146,1515.3267};
-		dir[]={-0.60338259,-0.39925295,0.69033331};
-		up[]={-0.26275852,0.91683269,0.30062422};
-		aside[]={0.75294596,4.1211024e-08,0.65810925};
+		pos[]={9378.3545,8.5467148,855.77441};
+		dir[]={0.17299435,-0.5720346,-0.80178696};
+		up[]={0.12064742,0.82022572,-0.55917317};
+		aside[]={-0.97751236,-6.3038897e-08,-0.21090831};
 	};
 };
 binarizationWanted=0;
@@ -1073,7 +1073,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			dataType="Logic";
@@ -105998,7 +105998,7 @@ class Mission
 							name="Lights";
 							class Entities
 							{
-								items=11;
+								items=12;
 								class Item0
 								{
 									dataType="Object";
@@ -106186,9 +106186,26 @@ class Mission
 									type="3AS_FOB_Light_Tall_Prop";
 									atlOffset=-0.14750671;
 								};
+								class Item11
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={6874.647,30.449982,1511.2235};
+										angles[]={0,4.8782263,0};
+									};
+									side="Empty";
+									flags=5;
+									class Attributes
+									{
+									};
+									id=13298;
+									type="3AS_FOB_Light_Tall_Prop";
+									atlOffset=1.9073486e-06;
+								};
 							};
 							id=8479;
-							atlOffset=0.0011291504;
+							atlOffset=0.074361801;
 						};
 						class Item1
 						{
@@ -106549,8 +106566,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={6826.7144,29.293182,1498.9822};
-										angles[]={0,4.701334,0};
+										position[]={6826.7139,29.293558,1498.9821};
+										angles[]={0,4.7013412,0};
 									};
 									side="Empty";
 									flags=4;
@@ -106559,7 +106576,7 @@ class Mission
 									};
 									id=8509;
 									type="land_3AS_Imperial_Barrack_Black";
-									atlOffset=0.17161751;
+									atlOffset=0.17200089;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -106647,7 +106664,7 @@ class Mission
 								};
 							};
 							id=8496;
-							atlOffset=0.0050067902;
+							atlOffset=0.0050525665;
 						};
 						class Item3
 						{
@@ -111614,11 +111631,11 @@ class Mission
 						};
 					};
 					id=8478;
-					atlOffset=23.896736;
+					atlOffset=23.940193;
 				};
 			};
 			id=8653;
-			atlOffset=23.896736;
+			atlOffset=23.940193;
 		};
 		class Item17
 		{
@@ -125738,7 +125755,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9392.2822,1.9906242,825.33368};
+										position[]={9392.2822,1.9906244,825.33368};
 										angles[]={6.259192,2.6559548,6.2711902};
 									};
 									side="Empty";
@@ -125749,7 +125766,7 @@ class Mission
 									};
 									id=13249;
 									type="JLTS_Ammobox_support_GAR";
-									atlOffset=3.5762787e-07;
+									atlOffset=5.9604645e-07;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -128493,7 +128510,7 @@ class Mission
 									};
 									title="arc";
 									id=13250;
-									atlOffset=0.10503912;
+									atlOffset=0.10503888;
 								};
 								class Item5
 								{
@@ -131299,7 +131316,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={9390.6152,1.9737283,824.80402};
+										position[]={9390.6152,1.9737285,824.80402};
 										angles[]={6.251193,2.656112,0};
 									};
 									side="Empty";
@@ -131310,7 +131327,7 @@ class Mission
 									};
 									id=13262;
 									type="JLTS_Ammobox_support_GAR";
-									atlOffset=2.3841858e-07;
+									atlOffset=4.7683716e-07;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -136218,6 +136235,54 @@ class Mission
 					};
 				};
 				nAttributes=4;
+			};
+		};
+		class Item32
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9382.3428,3.2229362,845.91791};
+				angles[]={0,3.1161807,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="[this] call ZONT_fnc_initGarage;" \n "[this, true, true, true] call HR_Garage_fnc_toggleGarageAccess;";
+			};
+			id=13301;
+			type="SignAd_Sponsor_F";
+			atlOffset=2.3841858e-07;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="baza\pic\car.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

@@ -7,6 +7,8 @@ MPS_spawn_BDINIT = [] spawn {
       ["status"] call ZONT_fnc_bd_initCustom;
   MPS_BDL_lockers =
       ["lockers"] call ZONT_fnc_bd_initCustom;
+  MPS_BDL_garage =
+      ["garage"] call ZONT_fnc_bd_initCustom;
 };
 
 MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHandler;
@@ -49,7 +51,7 @@ ZXC_GARAGE_SPAWN = [] spawn {
             profileNamespace setVariable ["HR_garage_content", [] call HR_Garage_fnc_getSaveData];
             saveProfileNamespace;
         };
-    }
+    };
 };
 
 
