@@ -12,7 +12,7 @@
 	"Запросить арсенал Штаба",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
-
+/*
 [ _this,
 	ars_wolf,
 	["TBAT"],
@@ -26,6 +26,7 @@
 	"Запросить арсенал 501-o",
 	[["Здарова", "Hello"], ["Бб", "Бывай"]]
 ] call ZONT_fnc_attachArsenal;
+*/
 
 [ _this,
 	ars_315,

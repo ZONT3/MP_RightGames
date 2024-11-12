@@ -17,6 +17,7 @@ MPH_COMMITER = [{ [] call ZONT_fnc_commitInfo }, 20] call CBA_fnc_addPerFrameHan
 [] spawn ZONT_fnc_initPresistentCrates;
 
 /******                             Garage                               ******/
+/*
 ZXC_GARAGE_SPAWN = [] spawn {
     waitUntil {sleep 1; !isNil {MPS_BDL_garage} && {!isNil {HR_Garage_Init} && {HR_Garage_Init}}};
     private ['_contents'];
@@ -52,7 +53,7 @@ ZXC_GARAGE_SPAWN = [] spawn {
             saveProfileNamespace;
         };
     };
-};
+};*/
 
 
 ZXC_LARS_SPAWN = [] spawn {

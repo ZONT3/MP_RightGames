@@ -1,4 +1,4 @@
-params [ ["_object", objNull, [objNull]] ];
+/*params [ ["_object", objNull, [objNull]] ];
 
 if (isNull _object) exitWith {false};
 private _oldID = _object getVariable ["HR_Garage_GarageID", -1];
@@ -24,4 +24,4 @@ _object setVariable ["HR_Garage_GarageID", _id, true];
 if (isNil "HR_Garage_accessPoints") then {HR_Garage_accessPoints = []};
 HR_Garage_accessPoints pushBackUnique _object;
 
-true;
+true;*/
