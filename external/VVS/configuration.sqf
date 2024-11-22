@@ -84,6 +84,7 @@ VVS_PODR = [
 ];
 
 VVS_AIR = [
+"212th_LAAT_Cargo_3AS",
 "3AS_LAAT_Mk2", 
 "3AS_LAAT_Mk1", 
 "3AS_LAAT_Mk2Lights", 
