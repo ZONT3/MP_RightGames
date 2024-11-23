@@ -1,9 +1,9 @@
 // 3AS
 TAS_fullShieldTime = 30;
-force TAS_jetcoolset = 3;
-force TAS_jetfuelset = 3;
+force TAS_jetcoolset = 1;
+force TAS_jetfuelset = 1;
 force TAS_jetheatset = 1;
-force TAS_jetsoundvol = 0.1;
+force TAS_jetsoundvol = 0.6;
 force TAS_lcLoadDist = 20;
 TAS_lcLoadSpeed = 10;
 TAS_shieldTime = 30;
@@ -29,7 +29,7 @@ force ace_arsenal_allowDefaultLoadouts = true;
 force ace_arsenal_allowSharedLoadouts = true;
 ace_arsenal_camInverted = false;
 ace_arsenal_defaultToFavorites = false;
-force ace_arsenal_enableIdentityTabs = true;
+force ace_arsenal_enableIdentityTabs = false;
 ace_arsenal_enableModIcons = true;
 ace_arsenal_EnableRPTLog = false;
 ace_arsenal_favoritesColor = [0.9,0.875,0.6];
@@ -155,7 +155,7 @@ ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 force ace_map_gestures_onlyShowFriendlys = true;
 
 // ACE Ð—ÐµÐ²Ñ
-force ace_zeus_autoAddObjects = false;
+force ace_zeus_autoAddObjects = true;
 force ace_zeus_canCreateZeus = 0;
 force ace_zeus_radioOrdnance = true;
 force ace_zeus_remoteWind = false;
@@ -604,7 +604,7 @@ ace_hearing_autoAddEarplugsToUnits = 1;
 force ace_hearing_disableEarRinging = true;
 force ace_hearing_earplugsVolume = 0.3;
 force ace_hearing_enableCombatDeafness = false;
-force ace_hearing_enabledForZeusUnits = true;
+force ace_hearing_enabledForZeusUnits = false;
 ace_hearing_explosionDeafnessCoefficient = 1;
 force ace_hearing_unconsciousnessVolume = 0.1;
 
@@ -1403,9 +1403,9 @@ mti_catTab_ui_tabletDesktopColor = [0,0.443,0.348];
 mti_catTab_ui_tabletDesktopCustomImageName = "tablet_desktop_background_co.jpg";
 
 // MokTech Industries - Common
-force mti_common_enableLogging = false;
-force mti_common_loadoutWeightCheck = false;
-force mti_common_respawnUpdateEnabled = false;
+force mti_common_enableLogging = true;
+force mti_common_loadoutWeightCheck = true;
+force mti_common_respawnUpdateEnabled = true;
 force mti_common_stanceChangeEnabled = true;
 force mti_common_teleporterDuration = 2;
 force mti_common_wsway_adjust = 1;
@@ -1437,7 +1437,7 @@ force mti_equipment_nvg_customEnabled = false;
 mti_equipment_nvg_customWhiteP = false;
 
 // MokTech Industries - Explosives
-force mti_explosives_advSetup_requireDemo = false;
+force mti_explosives_advSetup_requireDemo = true;
 force mti_explosives_DP3_destroyAttached = true;
 force mti_explosives_magneticModeEnabled = false;
 
