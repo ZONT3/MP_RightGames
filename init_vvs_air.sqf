@@ -2,95 +2,11 @@
 _this addAction [
   "Запрос воздушной техники",
   VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
+  [VVS_laat_Land,"AIR"],
   6,
   true,
   true,
   "",
-  "[['EliteP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['DP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['STARSP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['TBATP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['HQ']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['FLEGP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['UBP']] call ZONT_fnc_checkRole",
-  5
-];
-
-_this addAction [
-  "Запрос воздушной техники",
-  VVS_fnc_openVVS,
-  [VVS_laat_Land,"CODY"],
-  6,
-  true,
-  true,
-  "",
-  "[['ARC']] call ZONT_fnc_checkRole",
+  "true",
   5
 ];

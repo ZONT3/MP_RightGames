@@ -9,8 +9,8 @@ VVS_Premade_List = false;
 ZONT_fnc_filterVVS = {
   switch(_this) do {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
-    case "RS": { VVS_RS };
     case "PODR": { VVS_PODR };
+    case "HIGT": { VVS_HIGT };
     case "AIR": { VVS_AIR };
     case "CODY": { VVS_CODY };
     case "BSOA": { VVS_BSOA };
@@ -68,43 +68,75 @@ ZONT_fnc_onSpawnVVS = {
 VVS_HQ = [
 ];
 
-VVS_RS = [
+VVS_PODR = [
+"212th_BARC", 
+"212th_BARC_Sidecar", 
+"212th_Bantha_MK1", 
+"Aux212_Bantha_C_AA", 
+"Aux212_Bantha_C_IFV", 
+"Aux212_Bantha_C_Mortar", 
+"Aux212_Bantha_C_Unarmed", 
+"Aux212_Bantha_E_MSV", 
+"Aux212_Bantha_T_Assault", 
+"Aux212_Bantha_T_Cargo", 
 "OPTRE_M12_FAV_APC", 
-"OPTRE_M813_TT"
+"OPTRE_M12_FAV", 
+"OPTRE_M813_TT", 
+"OPTRE_m1087_stallion_unsc", 
+"OPTRE_m1087_stallion_unsc_resupply", 
+"OPTRE_m1087_stallion_cover_unsc", 
+"OPTRE_m1087_stallion_unsc_refuel", 
+"OPTRE_m1087_stallion_unsc_medical", 
+"OPTRE_m1087_stallion_unsc_repair", 
+"OPTRE_M12_FAV_APC_MED", 
+"OPTRE_M12_LRV", 
+"OPTRE_M12A1_LRV", 
+"OPTRE_M12R_AA", 
+"OPTRE_M274_ATV", 
+"OPTRE_M914_RV", 
+"OPTRE_cart"
 ];
 
-VVS_PODR = [
-"OPTRE_M12_FAV_APC", 
-"OPTRE_M12_LRV", 
-"OPTRE_M813_TT", 
-"Aux212_Bantha_C_Unarmed", 
-"Aux212_Bantha_T_Assault", 
-"Aux212_Bantha_E_MSV", 
-"3AS_PX10_REP_F"
+VVS_HIGT = [
+"Aux212_3AS_ATTE_F", 
+"OPTRE_M411_APC_UNSC", 
+"OPTRE_M412_IFV_UNSC", 
+"OPTRE_M413_MGS_UNSC", 
+"OPTRE_M313_UNSC", 
+"OPTRE_M808B_UNSC", 
+"OPTRE_M808BM_UNSC", 
+"OPTRE_M808R_Engineer_UNSC", 
+"OPTRE_M808S", 
+"OPTRE_M850_UNSC", 
+"101st_Warden_Tank", 
+"DBA_Warrior_Testbed", 
+"MTI_AV7", 
+"MTI_RX200", 
+"DBA_TX130_Recon_Test", 
+"DBA_TX130_Test", 
+"DBA_TX130G_Test", 
+"DBA_TX130M_Test"
 ];
 
 VVS_AIR = [
-"212th_LAAT_Cargo_3AS",
-"Aux212_3AS_RhoClass_Shuttle",
-"3AS_LAAT_Mk2", 
-"3AS_LAAT_Mk1", 
-"3AS_LAAT_Mk2Lights", 
-"3AS_Z95_Republic", 
-"3as_Vwing_base", 
-"3AS_ARC_170_Red",
-"MTI_Z95",
-"3AS_BTLB_Bomber", 
-"lsd_heli_laati_ab", 
-"lsd_heli_laati"
-];
-
-VVS_CODY = [
-"3AS_LAAT_Mk2", 
-"3AS_LAAT_Mk1", 
-"3AS_LAAT_Mk2Lights", 
-"3AS_Z95_Republic", 
-"lsd_heli_laati_ab", 
-"lsd_heli_laati"
+"212th_LAAT_Cargo_3AS", 
+"212th_3AS_LAAT_Unmarked_Doors", 
+"212th_3AS_LAAT_Unmarked_Floodlights", 
+"212th_3AS_LAAT_Unmarked_Turrets", 
+"Aux212_3AS_NuClass_Shuttle", 
+"Aux212_3AS_Reaper_Y_Wing", 
+"Aux212_VWing", 
+"Aux212_3AS_Reaper_Z95_Headhunter", 
+"Aux212_3AS_RhoClass_Shuttle", 
+"OPTRE_UNSC_hornet_CAP", 
+"OPTRE_AV22C_Sparrowhawk", 
+"OPTRE_AV22A_Sparrowhawk", 
+"OPTRE_Pelican_unarmed", 
+"OPTRE_Pelican_armed_70mm", 
+"OPTRE_UNSC_falcon_medical", 
+"OPTRE_UNSC_falcon_snow", 
+"OPTRE_UNSC_falcon", 
+"OPTRE_UNSC_falcon_armed_S"
 ];
 
 VVS_BSOA = [
