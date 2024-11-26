@@ -31,27 +31,59 @@ ZONT_fnc_onSpawnVVS = {
   };
 
   switch (_class) do {
-    case "OPTRE_M808S": {
-      [_vehicle, "colorsand"] call BIS_fnc_initVehicle;
+    case "OPTRE_M413_MGS_UNSC": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
     };
-    case "rhsusf_stryker_m1126_m2_wd": {
+    case "OPTRE_M412_IFV_UNSC": {
       call _clearAll;
-      // [_vehicle, "rhs_sand"] call BIS_fnc_initVehicle;
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
     };
-    case "CUP_B_nM1151_Unarmed_NATO": {
-      [_vehicle, "Black"] call BIS_fnc_initVehicle;
-      call _clearAll;
-    };
-    case "CUP_O_Tigr_233011_RU": {
-      [_vehicle, "Black"] call BIS_fnc_initVehicle;
+    case "OPTRE_M411_APC_UNSC": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
       call _clearAll;
     };
-    case "CUP_O_BTR80A_SLA": {
-      [_vehicle, "ION"] call BIS_fnc_initVehicle;
+    case "OPTRE_M12R_AA": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
       call _clearAll;
     };
-    case "rhsusf_m1165a1_gmv_m134d_m240_socom_d": {
-      [_vehicle, "rhs_sofwoodland"] call BIS_fnc_initVehicle;
+    case "OPTRE_M12A1_LRV": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M12_LRV": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M12_FAV_APC_MED": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M12_FAV_APC": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M12_FAV": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M813_TT": {
+      [_vehicle, "colorsnow"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M494": {
+      [_vehicle, "colortund"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M493_M37": {
+      [_vehicle, "colortund"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M493_AIE": {
+      [_vehicle, "colortund"] call BIS_fnc_initVehicle;
+      call _clearAll;
+    };
+    case "OPTRE_M493_APC": {
+      [_vehicle, "colortund"] call BIS_fnc_initVehicle;
       call _clearAll;
     };
     case "HS_SCP_Truck_03_repair_F": {
@@ -71,51 +103,46 @@ VVS_HQ = [
 VVS_PODR = [
 "212th_BARC", 
 "212th_BARC_Sidecar", 
-"212th_Bantha_MK1", 
-"Aux212_Bantha_C_AA", 
 "Aux212_Bantha_C_IFV", 
 "Aux212_Bantha_C_Mortar", 
 "Aux212_Bantha_C_Unarmed", 
 "Aux212_Bantha_E_MSV", 
 "Aux212_Bantha_T_Assault", 
 "Aux212_Bantha_T_Cargo", 
+"3AS_RTT_Wheeled", 
 "OPTRE_M12_FAV_APC", 
 "OPTRE_M12_FAV", 
 "OPTRE_M813_TT", 
-"OPTRE_m1087_stallion_unsc", 
-"OPTRE_m1087_stallion_unsc_resupply", 
-"OPTRE_m1087_stallion_cover_unsc", 
-"OPTRE_m1087_stallion_unsc_refuel", 
-"OPTRE_m1087_stallion_unsc_medical", 
-"OPTRE_m1087_stallion_unsc_repair", 
 "OPTRE_M12_FAV_APC_MED", 
 "OPTRE_M12_LRV", 
 "OPTRE_M12A1_LRV", 
 "OPTRE_M12R_AA", 
 "OPTRE_M274_ATV", 
-"OPTRE_M914_RV", 
-"OPTRE_cart"
-];
-
-VVS_HIGT = [
-"Aux212_3AS_ATTE_F", 
 "OPTRE_M411_APC_UNSC", 
 "OPTRE_M412_IFV_UNSC", 
 "OPTRE_M413_MGS_UNSC", 
-"OPTRE_M313_UNSC", 
-"OPTRE_M808B_UNSC", 
-"OPTRE_M808BM_UNSC", 
-"OPTRE_M808R_Engineer_UNSC", 
-"OPTRE_M808S", 
-"OPTRE_M850_UNSC", 
-"101st_Warden_Tank", 
-"DBA_Warrior_Testbed", 
-"MTI_AV7", 
-"MTI_RX200", 
-"DBA_TX130_Recon_Test", 
-"DBA_TX130_Test", 
-"DBA_TX130G_Test", 
-"DBA_TX130M_Test"
+"3AS_ISP", 
+"3AS_ISP_Transport", 
+"OPTRE_m1087_stallion_unsc", 
+"OPTRE_m1087_stallion_cover_unsc", 
+"OPTRE_m1087_stallion_unsc_repair"
+];
+
+VVS_HIGT = [
+"OPTRE_M493_APC", 
+"OPTRE_M493_AIE", 
+"OPTRE_M493_M37", 
+"OPTRE_M494", 
+"Aux212_3AS_ATTE_F", 
+"3AS_ATAP_Base", 
+"3AS_Saber_M1", 
+"3AS_Saber_M1Recon", 
+"3AS_Saber_Super", 
+"3AS_Saber_M1G", 
+"3as_Jug", 
+"3AS_PX10_REP_R3", 
+"3AS_PX10_REP_UP", 
+"3AS_RX200_Base"
 ];
 
 VVS_AIR = [
@@ -127,16 +154,7 @@ VVS_AIR = [
 "Aux212_3AS_Reaper_Y_Wing", 
 "Aux212_VWing", 
 "Aux212_3AS_Reaper_Z95_Headhunter", 
-"Aux212_3AS_RhoClass_Shuttle", 
-"OPTRE_UNSC_hornet_CAP", 
-"OPTRE_AV22C_Sparrowhawk", 
-"OPTRE_AV22A_Sparrowhawk", 
-"OPTRE_Pelican_unarmed", 
-"OPTRE_Pelican_armed_70mm", 
-"OPTRE_UNSC_falcon_medical", 
-"OPTRE_UNSC_falcon_snow", 
-"OPTRE_UNSC_falcon", 
-"OPTRE_UNSC_falcon_armed_S"
+"Aux212_3AS_RhoClass_Shuttle"
 ];
 
 VVS_BSOA = [
