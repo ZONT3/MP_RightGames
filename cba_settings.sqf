@@ -1278,7 +1278,7 @@ kat_pharma_treatmentTime_Pervitin = 5;
 kat_pharma_treatmentTime_Phenylephrine = 7;
 kat_pharma_treatmentTime_Reorientation = 2;
 kat_pharma_treatmentTime_TXA = 7;
-kat_pharma_weapon_sway_pervitin = true;
+force kat_pharma_weapon_sway_pervitin = false;
 
 // KAT - ADV Medical: Surgery
 kat_surgery_closedLocation = 0;
