@@ -11,7 +11,7 @@ ZONT_fnc_filterVVS = {
   	case "HQ": { VVS_HQ + VVS_Wheeled };
     case "PODR": { VVS_PODR };
     case "HIGT": { VVS_HIGT };
-    case "AIR": { VVS_AIR };
+    case "LET": { VVS_LET };
     case "CODY": { VVS_CODY };
 
   	default {[]};
@@ -143,7 +143,7 @@ VVS_HIGT = [
 "3AS_RX200_Base"
 ];
 
-VVS_AIR = [
+VVS_LET = [
 "3AS_LAATC", 
 "3AS_LAAT_Mk2", 
 "3AS_LAAT_Mk2Lights", 
