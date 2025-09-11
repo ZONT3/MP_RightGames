@@ -41,13 +41,9 @@ _closeButton ctrlCommit 0;
 
 //список игроков
 {
-    if (isPlayer _x) then { // Убрали проверку _x != player
+    if (isPlayer _x && { _x != player }) then {
         _index = _playerList lbAdd (name _x);
         _playerList lbSetData [_index, getPlayerUID _x];
-        // Подсветим себя в списке
-        if (_x == player) then {
-            _playerList lbSetColor [_index, [0.8, 0.8, 0.1, 1]];
-        }
     };
 } forEach allPlayers;
 
@@ -61,35 +57,9 @@ private _allRoles = call ZONT_fnc_getRoles;
     };
 } forEach _allRoles;
 
-_grantButton ctrlAddEventHandler ["ButtonClick", {
-    params ["_ctrl"];
-    
-    private _display = ctrlParent _ctrl;
-    private _playerList = _display displayCtrl 100;
-    private _roleList = _display displayCtrl 101;
-    
-    private _playerIndex = lbCurSel _playerList;
-    private _roleIndex = lbCurSel _roleList;
-    
-    if (_playerIndex == -1 || _roleIndex == -1) exitWith {
-        hint "Выберите игрока и роль";
-    };
-    
-    private _targetUID = _playerList lbData _playerIndex;
-    private _roleClass = _roleList lbData _roleIndex;
-    private _target = [_targetUID] call BIS_fnc_getUnitByUid;
-    
-    if (isNull _target) exitWith {
-        hint "Игрок не найден";
-    };
-    
-    [_target, _roleClass] remoteExec ["ZONT_fnc_grantRole", 2];
-    hint format["Роль %1 выдана игроку %2", _roleList lbText _roleIndex, _playerList lbText _playerIndex];
-}];
-
 _closeButton ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrl"];
-    (ctrlParent _ctrl) closeDisplay 0;
+    closeDialog 0;
 }];
 
 _grantButton ctrlAddEventHandler ["ButtonClick", {
@@ -119,7 +89,7 @@ _grantButton ctrlAddEventHandler ["ButtonClick", {
     };
     
     // Проверка командир
-    if (!([[], [], [100]] call ZONT_fnc_checkRole)) exitWith {
+    if (!([["commander"]] call ZONT_fnc_checkRole)) exitWith {
         hint "У вас больше нет прав командира";
         closeDialog 0;
     };
